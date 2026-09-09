@@ -1,0 +1,35 @@
+/* Additional compact controls; content uses the shared procurement color tokens. */
+.draft-kind[data-slot="select-trigger"] {
+  width: 150px;
+  height: 32px;
+  font-size: 10px;
+  background: white;
+}
+.audit-json {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 11px;
+  background: #f5f7f8;
+  padding: 14px;
+  max-height: 280px;
+  overflow: auto;
+  border: 1px solid #e5eaed;
+  border-radius: 5px;
+}
+.tier-editor {
+  margin-top: 20px;
+  border-top: 1px solid #e4e9e6;
+  padding-top: 15px;
+}
+.tier-editor h3 {
+  font-size: 11px;
+}
+.tier-editor label {
+  font-size: 10px;
+}
+.tier-editor small {
+  color: #84978b;
+  font-size: 9px;
+  display: block;
+  margin-top: 12px;
+}

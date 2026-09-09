@@ -1,0 +1,2 @@
+po_number,date,supplier,sku,quantity,unit_price,currency,uom,lead_time_days,expected_delivery,actual_delivery
+PO-IMPORT-001,2026-08-01,Meridian Components,AX-100,5000,4.48,USD,EA,24,2026-08-25,2026-08-24

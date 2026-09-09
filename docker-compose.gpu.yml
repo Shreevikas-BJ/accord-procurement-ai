@@ -1,0 +1,17 @@
+# Optional model server only. Standard compose never asks for GPU resources.
+services:
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - '127.0.0.1:11434:11434'
+    volumes:
+      - ollama_data:/root/.ollama
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+volumes:
+  ollama_data:

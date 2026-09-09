@@ -1,0 +1,87 @@
+name: accord-procurement
+services:
+  db:
+    image: pgvector/pgvector:pg17
+    environment:
+      POSTGRES_USER: procurement
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-procurement_local}
+      POSTGRES_DB: procurement
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U procurement -d procurement']
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  redis:
+    image: redis:7-alpine
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: [CMD, redis-cli, ping]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    env_file: .env
+    environment:
+      DATABASE_URL: ${DATABASE_URL:-postgresql+psycopg://procurement:procurement_local@db:5432/procurement}
+      REDIS_URL: redis://redis:6379/0
+      LOCAL_STORAGE_PATH: /app/data/uploads
+    command: sh -c 'alembic upgrade head && if [ "$${SEED_DEMO:-true}" = "true" ]; then python -m app.seed; fi && uvicorn app.main:app --host 0.0.0.0 --port 8000'
+    volumes:
+      - ./data/uploads:/app/data/uploads
+    ports:
+      - '127.0.0.1:8000:8000'
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 60s
+  worker:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    env_file: .env
+    environment:
+      DATABASE_URL: ${DATABASE_URL:-postgresql+psycopg://procurement:procurement_local@db:5432/procurement}
+      REDIS_URL: redis://redis:6379/0
+      LOCAL_STORAGE_PATH: /app/data/uploads
+    command: python -m app.worker
+    volumes:
+      - ./data/uploads:/app/data/uploads
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+    depends_on:
+      api:
+        condition: service_healthy
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+      args:
+        API_URL: http://api:8000
+    environment:
+      API_URL: http://api:8000
+      HOSTNAME: 0.0.0.0
+      PORT: 3000
+    ports:
+      - '127.0.0.1:3000:3000'
+    depends_on:
+      api:
+        condition: service_healthy
+volumes:
+  postgres_data:
+  redis_data:

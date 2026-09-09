@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Atlas_RFQ1001.pdf",
+    "ground_truth": "Atlas_RFQ1001.json",
+    "rfq": 1
+  },
+  {
+    "name": "Meridian_RFQ1001.xlsx",
+    "ground_truth": "Meridian_RFQ1001.json",
+    "rfq": 1
+  },
+  {
+    "name": "Nova_RFQ1001.csv",
+    "ground_truth": "Nova_RFQ1001.json",
+    "rfq": 1
+  },
+  {
+    "name": "Vertex_RFQ1001.pdf",
+    "ground_truth": "Vertex_RFQ1001.json",
+    "rfq": 1
+  },
+  {
+    "name": "Atlas_RFQ1002.pdf",
+    "ground_truth": "Atlas_RFQ1002.json",
+    "rfq": 2
+  },
+  {
+    "name": "Meridian_RFQ1002.xlsx",
+    "ground_truth": "Meridian_RFQ1002.json",
+    "rfq": 2
+  },
+  {
+    "name": "Nova_RFQ1002.csv",
+    "ground_truth": "Nova_RFQ1002.json",
+    "rfq": 2
+  },
+  {
+    "name": "Vertex_RFQ1002.pdf",
+    "ground_truth": "Vertex_RFQ1002.json",
+    "rfq": 2
+  },
+  {
+    "name": "Atlas_RFQ1003.pdf",
+    "ground_truth": "Atlas_RFQ1003.json",
+    "rfq": 3
+  },
+  {
+    "name": "Meridian_RFQ1003.xlsx",
+    "ground_truth": "Meridian_RFQ1003.json",
+    "rfq": 3
+  },
+  {
+    "name": "Nova_RFQ1003.csv",
+    "ground_truth": "Nova_RFQ1003.json",
+    "rfq": 3
+  },
+  {
+    "name": "Vertex_RFQ1003.pdf",
+    "ground_truth": "Vertex_RFQ1003.json",
+    "rfq": 3
+  },
+  {
+    "name": "Atlas_RFQ1004.pdf",
+    "ground_truth": "Atlas_RFQ1004.json",
+    "rfq": 4
+  },
+  {
+    "name": "Meridian_RFQ1004.xlsx",
+    "ground_truth": "Meridian_RFQ1004.json",
+    "rfq": 4
+  },
+  {
+    "name": "Nova_RFQ1004.csv",
+    "ground_truth": "Nova_RFQ1004.json",
+    "rfq": 4
+  },
+  {
+    "name": "Vertex_RFQ1004.pdf",
+    "ground_truth": "Vertex_RFQ1004.json",
+    "rfq": 4
+  },
+  {
+    "name": "Atlas_RFQ1005.pdf",
+    "ground_truth": "Atlas_RFQ1005.json",
+    "rfq": 5
+  },
+  {
+    "name": "Meridian_RFQ1005.xlsx",
+    "ground_truth": "Meridian_RFQ1005.json",
+    "rfq": 5
+  },
+  {
+    "name": "Nova_RFQ1005.csv",
+    "ground_truth": "Nova_RFQ1005.json",
+    "rfq": 5
+  },
+  {
+    "name": "Vertex_RFQ1005.pdf",
+    "ground_truth": "Vertex_RFQ1005.json",
+    "rfq": 5
+  }
+]

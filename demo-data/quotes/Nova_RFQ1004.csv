@@ -1,0 +1,49 @@
+supplier_name: Nova Supply Group
+supplier_email: sales@nova.example
+quote_number: NOV-1004-26
+rfq_number: RFQ-1004
+quote_date: 2026-09-09
+expiration_date: 2026-11-30
+currency: EUR
+payment_terms: Net 30
+shipping_terms: Delivered to Apex receiving dock
+shipping_cost: 500.00
+tax: 0.00
+confidence: 0.98
+notes: Prices in USD. No purchase commitment. Quote subject to availability.
+--- LINE ITEM ---
+supplier_sku: AX-100
+manufacturer_part_number: AX-100
+description: Industrial Relay
+quantity: 5000
+uom: EA
+unit_price: 4.55
+moq: 500
+lead_time_days: 18
+lead_time_min: 18
+delivery_date: 2026-09-27
+confidence: 0.98
+--- LINE ITEM ---
+supplier_sku: BX-220
+manufacturer_part_number: BX-220
+description: Control Module
+quantity: 1000
+uom: EA
+unit_price: 47.20
+moq: 500
+lead_time_days: 18
+lead_time_min: 18
+delivery_date: 2026-09-27
+confidence: 0.98
+--- LINE ITEM ---
+supplier_sku: CX-300
+manufacturer_part_number: CX-300
+description: Industrial Switch
+quantity: 2500
+uom: EA
+unit_price: 19.90
+moq: 500
+lead_time_days: 18
+lead_time_min: 18
+delivery_date: 2026-09-27
+confidence: 0.98
