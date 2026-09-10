@@ -160,6 +160,8 @@ def dashboard(user=Depends(current_user), db: Session = Depends(get_db)):
 
 @router.get("/settings/scoring")
 def settings(user=Depends(current_user), db: Session = Depends(get_db)):
+    from .local_ai import connection_status
+
     org = db.get(Organization, user.organization_id)
     row = db.scalar(select(ScoringSettings).where(ScoringSettings.organization_id == org.id))
     return {
@@ -170,6 +172,7 @@ def settings(user=Depends(current_user), db: Session = Depends(get_db)):
         "ai_model": os.getenv("AI_MODEL", ""),
         "ocr_provider": "Tesseract CPU",
         "storage_provider": "Local filesystem",
+        **(connection_status() if os.getenv("AI_MODE", "demo") == "local" else {}),
     }
 
 

@@ -1,4 +1,8 @@
 import logging
+import os
+import time
+import copy
+from decimal import Decimal
 from datetime import datetime, timezone
 from sqlalchemy import select
 from .db import SessionLocal
@@ -26,7 +30,7 @@ def invalidate(db, rfq):
         rfq.status = "Quotes Received"
 
 
-def persist_extraction(db, document, extraction: QuoteExtraction, provider):
+def persist_extraction(db, document, extraction: QuoteExtraction, provider, diagnostics=None):
     org = document.organization_id
     supplier = match_supplier(db, org, extraction.supplier_name, extraction.supplier_email)
     rfq = (
@@ -37,7 +41,21 @@ def persist_extraction(db, document, extraction: QuoteExtraction, provider):
         )
     )
     payload = extraction.model_dump(mode="json")
-    db.add(DocumentExtraction(organization_id=org, document_id=document.id, provider=provider, payload=payload))
+    diagnostics = dict(diagnostics or {})
+    if provider == "local" and not supplier:
+        diagnostics.setdefault("findings", []).append(
+            {
+                "code": "SUPPLIER_UNMATCHED",
+                "field": "supplier_name",
+                "message": "Supplier requires confirmation against this organization's catalog.",
+            }
+        )
+        diagnostics.update(confidence_band="LOW", needs_review=True)
+        extraction.confidence = min(extraction.confidence, Decimal("0.4"))
+    extraction_record = DocumentExtraction(
+        organization_id=org, document_id=document.id, provider=provider, payload=payload, diagnostics={}
+    )
+    db.add(extraction_record)
     values = extraction.model_dump(exclude={"line_items", "source_references"})
     for ref in payload["source_references"].values():
         ref["document_id"] = document.id
@@ -51,25 +69,37 @@ def persist_extraction(db, document, extraction: QuoteExtraction, provider):
     )
     db.add(quote)
     db.flush()
-    for line in extraction.line_items:
+    line_ids = {}
+    for index, line in enumerate(extraction.line_items):
         item, method, _ = match_item(
             db, org, quote.supplier_id, line.supplier_sku, line.manufacturer_part_number, line.description
         )
         fields = line.model_dump(exclude={"source_references", "price_tiers"})
+        if provider == "local" and not item:
+            diagnostics.setdefault("findings", []).append(
+                {
+                    "code": "SKU_UNMATCHED",
+                    "field": "supplier_sku",
+                    "message": "Catalog item requires buyer confirmation.",
+                }
+            )
+            diagnostics.update(confidence_band="LOW", needs_review=True)
+            quote.confidence = min(quote.confidence, Decimal("0.4"))
         refs = line.model_dump(mode="json")["source_references"]
         for ref in refs.values():
             ref["document_id"] = document.id
-        db.add(
-            QuoteItem(
-                organization_id=org,
-                quote_id=quote.id,
-                item_id=item.id if item else None,
-                match_method=method,
-                source_references=refs,
-                price_tiers=line.model_dump(mode="json")["price_tiers"],
-                **fields,
-            )
+        record = QuoteItem(
+            organization_id=org,
+            quote_id=quote.id,
+            item_id=item.id if item else None,
+            match_method=method,
+            source_references=refs,
+            price_tiers=line.model_dump(mode="json")["price_tiers"],
+            **fields,
         )
+        db.add(record)
+        db.flush()
+        line_ids[record.id] = index
     document.rfq_id = quote.rfq_id
     document.classification = "Supplier Quotation"
     document.status = "Needs Review"
@@ -90,7 +120,22 @@ def persist_extraction(db, document, extraction: QuoteExtraction, provider):
     db.flush()
     if rfq:
         invalidate(db, rfq)
-        refresh_alerts(db, org, rfq, document.uploaded_by)
+        comparison = refresh_alerts(db, org, rfq, document.uploaded_by)
+        if provider == "local":
+            result = next(row for row in comparison["quotes"] if row["id"] == quote.id)
+            diagnostics["procurement_findings"] = result["alerts"]
+            if any(a["code"] == "PRICE_INCREASE" for a in result["alerts"]):
+                diagnostics.update(confidence_band="LOW", needs_review=True)
+                diagnostics.setdefault("findings", []).append(
+                    {
+                        "code": "HISTORICAL_PRICE_ANOMALY",
+                        "field": "unit_price",
+                        "message": "Extracted price exceeds the configured historical anomaly threshold.",
+                    }
+                )
+                quote.confidence = min(quote.confidence, Decimal("0.4"))
+    diagnostics["line_ids"] = line_ids
+    extraction_record.diagnostics = copy.deepcopy(diagnostics)
     return quote
 
 
@@ -113,13 +158,25 @@ def process_document(document_id, organization_id):
             log.info("document_processing", extra={"document_id": document_id, "stage": name})
 
         try:
+            started = time.monotonic()
+            diagnostics = {}
             stage("Reading Document")
             path = LocalStorageProvider().path(document.storage_key)
             stage("Extracting Text")
-            text = parser_for(document.filename).parse(path)
+            document_input = None
+            if os.getenv("AI_MODE", "demo") == "local":
+                from .document_input import prepare_document
+
+                document_input = prepare_document(path)
+                text = document_input.text
+            else:
+                text = parser_for(document.filename).parse(path)
             document.raw_text = text[:200000]
             stage("Extracting Quote")
-            extraction, provider = extract_quote(text, document.sha256)
+            extraction, provider = extract_quote(
+                text, document.sha256, document_input, diagnostics, allow_fallback=False
+            )
+            diagnostics["total_seconds"] = round(time.monotonic() - started, 4)
             stage("Matching Supplier")
             stage("Matching Items")
             stage("Analyzing Pricing")
@@ -129,11 +186,24 @@ def process_document(document_id, organization_id):
                 select(Quote).where(Quote.organization_id == organization_id, Quote.document_id == document_id)
             ):
                 return
-            persist_extraction(db, document, extraction, provider)
+            persist_extraction(db, document, extraction, provider, diagnostics)
             db.commit()
         except Exception as error:
             db.rollback()
             document = db.get(Document, document_id)
+            if os.getenv("AI_MODE", "demo") == "local":
+                diagnostics.update(
+                    success=False, error_type=type(error).__name__, total_seconds=round(time.monotonic() - started, 4)
+                )
+                db.add(
+                    DocumentExtraction(
+                        organization_id=organization_id,
+                        document_id=document_id,
+                        provider="local",
+                        payload={},
+                        diagnostics=diagnostics,
+                    )
+                )
             document.status = "Needs Review"
             document.stage = "Review Required"
             document.error = (

@@ -8,6 +8,7 @@ export interface User {
   organization_id: string;
 }
 export interface Evidence {
+  evidence_type?: "text" | "ocr" | "visual" | "missing";
   page?: number;
   source_text: string;
   confidence: string | number;
@@ -21,9 +22,9 @@ export interface Finding {
 export interface Line {
   id: string;
   item_id: string | null;
-  supplier_sku: string;
+  supplier_sku: string | null;
   manufacturer_part_number: string | null;
-  description: string;
+  description: string | null;
   quantity: string | null;
   uom: string | null;
   unit_price: string | null;
@@ -62,13 +63,13 @@ export interface Quote {
   document_id: string;
   rfq_id: string | null;
   supplier_id: string | null;
-  supplier_name: string;
+  supplier_name: string | null;
   supplier_email: string | null;
-  quote_number: string;
+  quote_number: string | null;
   rfq_number: string | null;
   quote_date: string | null;
   expiration_date: string | null;
-  currency: string;
+  currency: string | null;
   payment_terms: string | null;
   shipping_terms: string | null;
   shipping_cost: string | null;
@@ -94,6 +95,11 @@ export interface Quote {
   delivery_date: string | null;
   historical_orders: number;
   extraction_provider?: string;
+  extraction_diagnostics?: {
+    model?: string;
+    confidence_band?: string;
+    findings?: { code: string; field: string; message: string }[];
+  };
   document: {
     id: string;
     filename: string;

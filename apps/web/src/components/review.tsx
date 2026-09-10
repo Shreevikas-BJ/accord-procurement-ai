@@ -175,7 +175,7 @@ function ReviewEditor({
       </Link>
       <PageHeader
         eyebrow="DOCUMENT REVIEW"
-        title={quote.supplier_name}
+        title={quote.supplier_name || "Supplier identity needs review"}
         description={`${quote.quote_number} · ${quote.document.filename}`}
       >
         <Status value={quote.review_status} />
@@ -206,6 +206,30 @@ function ReviewEditor({
           after saving.
         </span>
       </div>
+      {quote.extraction_diagnostics?.confidence_band && (
+        <div className="review-trust">
+          <span>
+            Local extraction:{" "}
+            <strong>{quote.extraction_diagnostics.confidence_band}</strong> ·{" "}
+            {quote.extraction_diagnostics.model}. Human approval required.
+          </span>
+        </div>
+      )}
+      {!!quote.extraction_diagnostics?.findings?.length && (
+        <details className="review-trust">
+          <summary>
+            Extraction review findings (
+            {quote.extraction_diagnostics.findings.length})
+          </summary>
+          <ul>
+            {quote.extraction_diagnostics.findings.map((finding, index) => (
+              <li key={`${finding.code}-${index}`}>
+                {finding.field}: {finding.message}
+              </li>
+            ))}
+          </ul>
+        </details>
+      )}
       <div className="review-layout">
         <section className="document-pane">
           <div className="pane-heading">
@@ -254,7 +278,19 @@ function ReviewEditor({
               <div className="eyebrow">
                 SOURCE EVIDENCE · PAGE {evidence.page || "UNKNOWN"}
               </div>
-              <blockquote>“{evidence.source_text}”</blockquote>
+              {evidence.evidence_type === "visual" ? (
+                <p>
+                  Visual page evidence. Verify this value against the original
+                  image; no verbatim quotation is available.
+                </p>
+              ) : evidence.evidence_type === "missing" ? (
+                <p>
+                  Source evidence is missing. Verify this value in the original
+                  document.
+                </p>
+              ) : (
+                <blockquote>“{evidence.source_text}”</blockquote>
+              )}
               <small>
                 Original confidence:{" "}
                 {(Number(evidence.confidence) * 100).toFixed(0)}%. Evidence is
@@ -402,8 +438,8 @@ function ReviewEditor({
                 <div className="line-form">
                   {!line.item_id && canEdit && (
                     <NewItem
-                      sku={line.supplier_sku}
-                      description={line.description}
+                      sku={line.supplier_sku || ""}
+                      description={line.description || ""}
                       onCreated={(item) => {
                         items.reload();
                         updateLine(index, "item_id", item.id);

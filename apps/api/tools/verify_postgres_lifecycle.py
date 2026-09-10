@@ -42,7 +42,7 @@ def main():
                         {
                             "result": "PASS",
                             "fresh_postgresql": True,
-                            "migration": "0001",
+                            "migration": conn.scalar(text("SELECT version_num FROM alembic_version")),
                             "idempotent_seed_counts": counts,
                         }
                     )

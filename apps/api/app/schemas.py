@@ -19,6 +19,7 @@ class Evidence(Strict):
     source_text: str = Field(max_length=4000)
     confidence: Confidence = Decimal("1")
     bounding_box: list[float] | None = None
+    evidence_type: Literal["text", "ocr", "visual", "missing"] = "text"
 
 
 class PriceTier(Strict):
@@ -34,9 +35,9 @@ class PriceTier(Strict):
 
 
 class LineItemExtraction(Strict):
-    supplier_sku: str = Field(min_length=1, max_length=200)
+    supplier_sku: str | None = Field(default=None, min_length=1, max_length=200)
     manufacturer_part_number: str | None = None
-    description: str = Field(min_length=1, max_length=2000)
+    description: str | None = Field(default=None, min_length=1, max_length=2000)
     quantity: Quantity | None = None
     uom: str | None = None
     unit_price: Money | None = None
@@ -61,13 +62,13 @@ class LineItemExtraction(Strict):
 
 
 class QuoteExtraction(Strict):
-    supplier_name: str = Field(min_length=1, max_length=300)
+    supplier_name: str | None = Field(default=None, min_length=1, max_length=300)
     supplier_email: str | None = None
-    quote_number: str = Field(min_length=1, max_length=200)
+    quote_number: str | None = Field(default=None, min_length=1, max_length=200)
     rfq_number: str | None = None
     quote_date: date | None = None
     expiration_date: date | None = None
-    currency: str = Field(pattern=r"^[A-Z]{3}$")
+    currency: str | None = Field(default=None, pattern=r"^[A-Z]{3}$")
     payment_terms: str | None = None
     shipping_terms: str | None = None
     shipping_cost: Money | None = None

@@ -195,16 +195,32 @@ class HostedAIProvider(OpenAICompatibleLocalProvider):
     pass
 
 
-def extract_quote(text, sha256):
+def extract_quote(text, sha256, document_input=None, metadata=None, allow_fallback=True):
+    from .local_ai import OllamaProvider
+    from .document_input import DocumentInput
+    from .extraction_validation import validate_extraction
+
     mode = os.getenv("AI_MODE", "demo")
-    provider = {"demo": DemoAIProvider, "local": OpenAICompatibleLocalProvider, "api": HostedAIProvider}.get(mode)
+    provider = {"demo": DemoAIProvider, "local": OllamaProvider, "api": HostedAIProvider}.get(mode)
     if not provider:
         raise ValueError("AI_MODE must be demo, local, or api.")
     try:
-        return provider().extract(text, sha256), mode
+        instance = provider()
+        if mode == "local":
+            document_input = document_input or DocumentInput(text)
+            try:
+                result = instance.extract(text, sha256, document_input)
+            finally:
+                if metadata is not None:
+                    metadata.update(instance.metadata)
+            validation = validate_extraction(result, document_input)
+            if metadata is not None:
+                metadata.update(validation)
+            return result, mode
+        return instance.extract(text, sha256), mode
     except Exception as error:
         log.warning("ai_extraction_failed", extra={"mode": mode, "error_type": type(error).__name__})
-        if mode != "demo":
+        if mode != "demo" and allow_fallback:
             try:
                 result = DemoAIProvider().extract(text, sha256)
                 log.warning("demo_fallback_used")
@@ -212,7 +228,9 @@ def extract_quote(text, sha256):
             except ValueError:
                 pass
         raise ValueError(
-            str(error) if mode == "demo" else "AI extraction unavailable or invalid. Retry or review manually."
+            str(error)
+            if isinstance(error, ValueError)
+            else "AI extraction unavailable or invalid. Retry or review manually."
         ) from error
 
 

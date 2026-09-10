@@ -137,6 +137,7 @@ class DocumentExtraction(Tenant, Base):
     document_id: Mapped[str] = mapped_column(ForeignKey("documents.id"), index=True)
     provider: Mapped[str]
     payload: Mapped[dict] = mapped_column(JSON)
+    diagnostics: Mapped[dict] = mapped_column(JSON, default=dict)
 
 
 class Quote(Tenant, Base):
@@ -144,13 +145,13 @@ class Quote(Tenant, Base):
     document_id: Mapped[str] = mapped_column(ForeignKey("documents.id"), unique=True)
     rfq_id: Mapped[str | None] = mapped_column(ForeignKey("rfqs.id"), index=True)
     supplier_id: Mapped[str | None] = mapped_column(ForeignKey("suppliers.id"), index=True)
-    supplier_name: Mapped[str]
+    supplier_name: Mapped[str | None]
     supplier_email: Mapped[str | None]
-    quote_number: Mapped[str]
+    quote_number: Mapped[str | None]
     rfq_number: Mapped[str | None]
     quote_date: Mapped[datetime | None] = mapped_column(Date)
     expiration_date: Mapped[datetime | None] = mapped_column(Date)
-    currency: Mapped[str] = mapped_column(default="USD")
+    currency: Mapped[str | None]
     payment_terms: Mapped[str | None]
     shipping_terms: Mapped[str | None]
     shipping_cost: Mapped[Decimal | None] = mapped_column(Numeric(18, 4))
@@ -168,9 +169,9 @@ class QuoteItem(Tenant, Base):
     __tablename__ = "quote_items"
     quote_id: Mapped[str] = mapped_column(ForeignKey("quotes.id"), index=True)
     item_id: Mapped[str | None] = mapped_column(ForeignKey("items.id"))
-    supplier_sku: Mapped[str]
+    supplier_sku: Mapped[str | None]
     manufacturer_part_number: Mapped[str | None]
-    description: Mapped[str]
+    description: Mapped[str | None]
     quantity: Mapped[Decimal | None] = mapped_column(Numeric(18, 4))
     uom: Mapped[str | None]
     unit_price: Mapped[Decimal | None] = mapped_column(Numeric(18, 6))
@@ -253,6 +254,7 @@ class FieldCorrection(Tenant, Base):
     original_value: Mapped[dict] = mapped_column(JSON)
     corrected_value: Mapped[dict] = mapped_column(JSON)
     corrected_by: Mapped[str] = mapped_column(ForeignKey("users.id"))
+    provenance: Mapped[dict] = mapped_column(JSON, default=dict)
 
 
 class ScoringSettings(Tenant, Base):

@@ -5,7 +5,7 @@ from .models import Supplier, Item, ItemAlias, SupplierItemMapping
 
 
 def normalized(value: str) -> str:
-    return re.sub(r"[^a-z0-9]", "", value.lower())
+    return re.sub(r"[^a-z0-9]", "", (value or "").lower())
 
 
 def match_supplier(db, org, name, email=None):

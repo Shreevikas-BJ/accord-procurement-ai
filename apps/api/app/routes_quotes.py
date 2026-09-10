@@ -47,7 +47,7 @@ def enqueue(db, doc):
             process_document,
             doc.id,
             doc.organization_id,
-            job_timeout=300,
+            job_timeout=600,
             result_ttl=3600,
             on_failure=Callback(job_failed),
         )
@@ -216,6 +216,7 @@ def quote_detail(id: str, user=Depends(current_user), db: Session = Depends(get_
         "total": str(total) if total is not None else None,
         "document": document(q.document_id, user, db),
         "extraction_provider": extraction.provider if extraction else "unknown",
+        "extraction_diagnostics": extraction.diagnostics if extraction else {},
     }
 
 
@@ -234,9 +235,24 @@ def review(id: str, payload: Review, user=Depends(buyer), db: Session = Depends(
         raise HTTPException(409, "This quote changed since you opened it. Reload before saving.")
     if payload.supplier_id:
         supplier = owned(db, Supplier, payload.supplier_id, user.organization_id)
-        if payload.supplier_name != supplier.name:
+        if payload.supplier_name and payload.supplier_name != supplier.name:
             supplier.aliases = list(set([*supplier.aliases, payload.supplier_name]))
     old = serialize(q)
+    extraction = db.scalar(
+        select(DocumentExtraction)
+        .where(
+            DocumentExtraction.organization_id == user.organization_id, DocumentExtraction.document_id == q.document_id
+        )
+        .order_by(DocumentExtraction.created_at.desc())
+    )
+    provenance = {
+        "document_id": q.document_id,
+        "extraction_id": extraction.id if extraction else None,
+        **{
+            k: (extraction.diagnostics or {}).get(k) if extraction else None
+            for k in ("model", "prompt_version", "pipeline_version")
+        },
+    }
     fields = payload.model_dump(exclude={"line_items", "version", "confirm_review", "source_references"})
     for k, v in fields.items():
         setattr(q, k, v)
@@ -311,6 +327,14 @@ def review(id: str, payload: Review, user=Depends(buyer), db: Session = Depends(
                         original_value={"value": before[key]},
                         corrected_value={"value": after[key]},
                         corrected_by=user.id,
+                        provenance={
+                            **provenance,
+                            "original_ai_value": extraction.payload.get("line_items", [])[
+                                extraction.diagnostics["line_ids"][line.id]
+                            ].get(key)
+                            if extraction and line.id in (extraction.diagnostics or {}).get("line_ids", {})
+                            else None,
+                        },
                     )
                 )
                 audit(
@@ -340,6 +364,7 @@ def review(id: str, payload: Review, user=Depends(buyer), db: Session = Depends(
                     original_value={"value": value},
                     corrected_value={"value": current},
                     corrected_by=user.id,
+                    provenance={**provenance, "original_ai_value": extraction.payload.get(key) if extraction else None},
                 )
             )
     audit(

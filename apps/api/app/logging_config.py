@@ -10,7 +10,17 @@ class JSONFormatter(logging.Formatter):
                 "event": record.getMessage(),
                 **{
                     key: getattr(record, key)
-                    for key in ("document_id", "stage", "mode", "error_type")
+                    for key in (
+                        "document_id",
+                        "stage",
+                        "mode",
+                        "error_type",
+                        "model",
+                        "attempts",
+                        "success",
+                        "duration",
+                        "prompt_version",
+                    )
                     if hasattr(record, key)
                 },
             }

@@ -105,6 +105,8 @@ def comparison(db, org, rfq, today=None):
 
         if not quote.supplier_id:
             flag("UNMATCHED_SUPPLIER", "Confirm supplier identity.", "blocking")
+        if not quote.supplier_name or not quote.quote_number:
+            flag("MISSING_IDENTITY", "Supplier name or quote number is missing.", "blocking")
         if quote.currency != rfq.currency:
             flag(
                 "CURRENCY_MISMATCH",
@@ -128,6 +130,8 @@ def comparison(db, org, rfq, today=None):
             item = items.get(line.item_id)
             req = next((r for r in requirements if r.item_id == line.item_id), None)
             label = item.sku if item else line.supplier_sku
+            if not line.supplier_sku:
+                flag("MISSING_SKU", "Supplier SKU is missing; verify the source part number.", "blocking")
             if not item:
                 flag("UNMATCHED_ITEM", f"{label}: confirm internal item mapping.", "blocking")
             if line.unit_price is None:

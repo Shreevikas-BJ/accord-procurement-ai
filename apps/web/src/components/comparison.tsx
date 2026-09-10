@@ -336,7 +336,7 @@ export function Comparison({ id }: { id: string }) {
               >
                 <div className="supplier-summary-title">
                   <div className="supplier-monogram">
-                    {q.supplier_name.slice(0, 1)}
+                    {(q.supplier_name || "?").slice(0, 1)}
                   </div>
                   <strong>{q.supplier_name}</strong>
                   <Link

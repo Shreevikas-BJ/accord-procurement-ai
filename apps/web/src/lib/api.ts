@@ -57,8 +57,10 @@ export function useResource<T>(path: string, poll = 0) {
   }, [path, revision, poll]);
   return { data, error, reload, setData };
 }
-export function currency(value: unknown, code = "USD") {
+export function currency(value: unknown, code: string | null = "USD") {
   if (value === null || value === undefined || value === "") return "—";
+  if (!code)
+    return `${Number(value).toLocaleString("en-US")} (currency missing)`;
   return new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: code,

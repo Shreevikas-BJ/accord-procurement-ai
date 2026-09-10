@@ -25,6 +25,9 @@ interface Settings {
   lead_time_behavior: string;
   ai_mode: string;
   ai_model: string;
+  ai_provider?: string;
+  ai_connection?: string;
+  ai_connection_detail?: string;
   ocr_provider: string;
   storage_provider: string;
 }
@@ -212,8 +215,18 @@ function SettingsEditor({ initial }: { initial: Settings }) {
                   <p>
                     {settings.ai_model || "Deterministic fixture extraction"}
                   </p>
+                  {settings.ai_provider && (
+                    <p>
+                      {settings.ai_provider} · {settings.ai_connection}
+                    </p>
+                  )}
+                  {settings.ai_connection_detail && (
+                    <small>{settings.ai_connection_detail}</small>
+                  )}
                 </div>
-                <span className="live-dot" />
+                {settings.ai_connection !== "Unavailable" && (
+                  <span className="live-dot" />
+                )}
               </div>
               <div>
                 <Database size={20} />
