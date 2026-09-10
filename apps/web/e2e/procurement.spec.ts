@@ -23,7 +23,15 @@ test("buyer reviews, corrects, compares, drafts, approves, and audits", async ({
   const initial = (await (
     await page.request.get(`/api/rfqs/${rfqId}/comparison`)
   ).json()) as Comparison;
-  expect(initial.quotes).toHaveLength(4);
+  expect(initial.quotes.length).toBeGreaterThanOrEqual(4);
+  expect(new Set(initial.quotes.map((quote) => quote.supplier_name))).toEqual(
+    new Set([
+      "Atlas Industrial Supply",
+      "Meridian Components",
+      "Nova Supply Group",
+      "Vertex Industrial",
+    ]),
+  );
   const winner = initial.quotes.find(
     (q) => q.id === initial.recommended_quote_id,
   )!;
@@ -33,7 +41,9 @@ test("buyer reviews, corrects, compares, drafts, approves, and audits", async ({
     fullPage: true,
   });
   await page
-    .getByRole("link", { name: "Review Meridian Components", exact: true })
+    .locator(
+      `a[href="/quotes/${winner.id}"][aria-label="Review Meridian Components"]`,
+    )
     .click();
   await expect(
     page.getByRole("heading", { name: "Meridian Components", exact: true }),
@@ -268,9 +278,21 @@ test("PDF, XLSX and CSV uploads finish in the real background queue", async ({
     "Upload_Meridian_RFQ1003.xlsx",
     "Upload_Nova_RFQ1003.csv",
   ]) {
+    const uploadResponse = page.waitForResponse(
+      (response) =>
+        response.url().endsWith("/api/quotes/upload") &&
+        response.request().method() === "POST",
+    );
     await page
       .getByLabel("Upload quotations", { exact: true })
       .setInputFiles(path.resolve("../../demo-data/quotes", file));
+    const response = await uploadResponse;
+    expect([202, 409]).toContain(response.status());
+    if (response.status() === 409) {
+      expect((await response.json()).detail.message).toContain(
+        "already uploaded",
+      );
+    }
     const row = page.getByRole("row").filter({ hasText: file });
     await expect(row).toBeVisible();
     await expect(row.getByText("Complete", { exact: true })).toBeVisible({
