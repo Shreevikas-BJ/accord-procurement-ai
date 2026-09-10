@@ -32,6 +32,8 @@ services:
       DATABASE_URL: ${DATABASE_URL:-postgresql+psycopg://procurement:procurement_local@db:5432/procurement}
       REDIS_URL: redis://redis:6379/0
       LOCAL_STORAGE_PATH: /app/data/uploads
+      REQUIRE_POSTGRES: 'true'
+      REQUIRE_REDIS: 'true'
     command: sh -c 'alembic upgrade head && if [ "$${SEED_DEMO:-true}" = "true" ]; then python -m app.seed; fi && uvicorn app.main:app --host 0.0.0.0 --port 8000'
     volumes:
       - ./data/uploads:/app/data/uploads
@@ -59,6 +61,7 @@ services:
       DATABASE_URL: ${DATABASE_URL:-postgresql+psycopg://procurement:procurement_local@db:5432/procurement}
       REDIS_URL: redis://redis:6379/0
       LOCAL_STORAGE_PATH: /app/data/uploads
+      REQUIRE_POSTGRES: 'true'
     command: python -m app.worker
     volumes:
       - ./data/uploads:/app/data/uploads
@@ -67,6 +70,12 @@ services:
     depends_on:
       api:
         condition: service_healthy
+    healthcheck:
+      test: [CMD, python, -m, app.worker_health]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
   web:
     build:
       context: .
@@ -82,6 +91,12 @@ services:
     depends_on:
       api:
         condition: service_healthy
+    healthcheck:
+      test: [CMD, node, -e, "fetch('http://127.0.0.1:3000/login').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
 volumes:
   postgres_data:
   redis_data:

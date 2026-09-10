@@ -6,6 +6,7 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 from redis import Redis
 from rq import Queue
+from rq.job import Callback
 from .db import get_db
 from .config import MAX_UPLOAD, REDIS_URL
 from .auth import current_user, buyer
@@ -43,7 +44,12 @@ MIME = {
 def enqueue(db, doc):
     try:
         Queue("documents", connection=Redis.from_url(REDIS_URL, socket_connect_timeout=2, socket_timeout=2)).enqueue(
-            process_document, doc.id, doc.organization_id, job_timeout=300, result_ttl=3600, on_failure=job_failed
+            process_document,
+            doc.id,
+            doc.organization_id,
+            job_timeout=300,
+            result_ttl=3600,
+            on_failure=Callback(job_failed),
         )
     except Exception:
         doc.status = "Error"

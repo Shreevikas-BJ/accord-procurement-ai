@@ -1,6 +1,11 @@
+import os
 from sqlalchemy import create_engine, event
+from sqlalchemy.engine import make_url
 from sqlalchemy.orm import DeclarativeBase, sessionmaker
 from .config import DATABASE_URL, ROOT
+
+if os.getenv("REQUIRE_POSTGRES") == "true" and make_url(DATABASE_URL).get_backend_name() != "postgresql":
+    raise RuntimeError("Docker requires a PostgreSQL DATABASE_URL; SQLite fallback is disabled.")
 
 (ROOT / "data").mkdir(exist_ok=True)
 engine = create_engine(

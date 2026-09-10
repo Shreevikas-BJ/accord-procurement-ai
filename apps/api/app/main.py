@@ -1,27 +1,16 @@
-import json
-import logging
-from fastapi import FastAPI, Request
+import os
+from fastapi import FastAPI, Request, HTTPException
+from redis import Redis
 from fastapi.responses import JSONResponse
 from sqlalchemy import text
 from sqlalchemy.exc import IntegrityError
 from .db import engine
+from .config import REDIS_URL
+from .logging_config import configure_logging
 from . import routes_auth, routes_catalog, routes_quotes, routes_decisions
 
 
-class JSONFormatter(logging.Formatter):
-    def format(self, record):
-        return json.dumps(
-            {
-                "level": record.levelname,
-                "event": record.getMessage(),
-                **{k: getattr(record, k) for k in ("document_id", "stage", "mode", "error_type") if hasattr(record, k)},
-            }
-        )
-
-
-handler = logging.StreamHandler()
-handler.setFormatter(JSONFormatter())
-logging.basicConfig(level=logging.INFO, handlers=[handler])
+configure_logging()
 app = FastAPI(
     title="Accord Procurement API",
     version="1.0.0",
@@ -52,9 +41,14 @@ async def integrity_error(request, error):
 
 @app.get("/health")
 def health():
-    with engine.connect() as connection:
-        connection.execute(text("SELECT 1"))
-    return {"status": "ok"}
+    try:
+        with engine.connect() as connection:
+            connection.execute(text("SELECT 1"))
+        if os.getenv("REQUIRE_REDIS") == "true":
+            Redis.from_url(REDIS_URL, socket_connect_timeout=2, socket_timeout=2).ping()
+    except Exception as error:
+        raise HTTPException(503, "A required dependency is unavailable.") from error
+    return {"status": "ok", "database": engine.dialect.name}
 
 
 app.include_router(routes_auth.router)
