@@ -51,9 +51,9 @@ The application does not automatically normalize supplier promises into legal co
 
 ## Pipeline and failure boundaries
 
-`StorageProvider`, `DocumentParser`, `OCRProvider`, `AIProvider`, and `EmailProvider` are explicit interfaces. Local filesystem, Tesseract, supported file parsers, demo extraction and OpenAI-compatible inference are implemented. Cloud storage/OCR and actual email delivery are future adapters.
+`StorageProvider`, `DocumentParser`, `OCRProvider`, `AIProvider`, and `EmailProvider` are explicit interfaces. Local filesystem, Tesseract, supported file parsers, demo extraction, native multimodal Ollama and optional OpenAI-compatible hosted inference are implemented. Cloud storage/OCR and actual email delivery are future adapters. See [local AI architecture and limitations](local-ai.md).
 
-The RQ job is capped at five minutes. Individual OCR/model subprocesses have shorter timeouts. Processing stages are committed between steps. Result persistence rechecks document uniqueness. Queue errors, parser errors and model failures are visible; an RQ failure callback marks unhandled timeouts as retryable errors. A worker crash that prevents any callback can still require operator intervention; a heartbeat/reconciliation service is a future reliability improvement.
+The RQ job is capped at ten minutes. Individual OCR/model subprocesses have shorter timeouts. Processing stages are committed between steps. Result persistence rechecks document uniqueness. Queue errors, parser errors and model failures are visible; an RQ failure callback marks unhandled timeouts as retryable errors. A worker crash that prevents any callback can still require operator intervention; a heartbeat/reconciliation service is a future reliability improvement.
 
 A provider cannot alter application controls. It receives a JSON schema and untrusted source text, with no tools or action permissions. Pydantic rejects malformed structures and invalid numeric ranges. Unsupported source snippets are downgraded in confidence. This is a bounded extraction interface, not a general autonomous agent.
 

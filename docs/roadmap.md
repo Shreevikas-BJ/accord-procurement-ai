@@ -1,8 +1,8 @@
 # Next milestones
 
 1. Add automated Linux CI for the now-verified Docker/PostgreSQL/Redis/Tesseract stack, including the opt-in integration suite and browser workflows.
-2. Pilot the quote-review workflow with three to five procurement teams using anonymized real quotes. Measure corrections and time to a reviewed decision.
-3. Benchmark optional local extraction models against the checked-in ground truth and real pilot fixtures; measure field accuracy, latency and review burden.
+2. Test the benchmarked local Qwen extractor on an independent set of anonymized supplier documents. Prioritize omitted costs, instruction contamination, duplicate rows and lead-time/date errors from [Phase 2](extraction-benchmark.md).
+3. Decide whether to start a supervised three-to-five buyer pilot after reviewing independent accuracy and correction effort. The synthetic benchmark alone does not establish pilot readiness; no pilot is launched in Phase 2.
 4. Add RFQ creation/invitation management and supplier onboarding, richer manual entry, extraction bounding-box highlights, background imports and reliable queue reconciliation.
 5. Add Gmail/Outlook intake only when users validate the workflow; select one ERP integration based on actual customer demand, then expand.
 

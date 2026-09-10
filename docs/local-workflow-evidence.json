@@ -1,0 +1,562 @@
+{
+  "result": "PASS",
+  "organization": "Accord Evaluation Lab",
+  "verified_formats": 5,
+  "evaluation_documents": 6,
+  "evaluation_purchase_history": 0,
+  "evaluation_approvals": 0,
+  "apex_documents": 44,
+  "apex_purchase_history": 2006,
+  "records": [
+    {
+      "filename": "synthetic-001-standard_table.pdf",
+      "document_id": "3ed4e3bf-6aaf-4b30-b3bf-2a442e3fe96b",
+      "quote_id": "1be31f77-ff91-47c1-bf94-4dcaaf510e0d",
+      "sha256_verified": true,
+      "provider": "local",
+      "model": "qwen2.5vl:7b",
+      "prompt_version": "quote-v2",
+      "pipeline_version": "local-2",
+      "fallback": false,
+      "supplier_matched": true,
+      "items_matched": 1,
+      "original_missing_costs": [
+        "shipping_cost",
+        "tax"
+      ],
+      "original_supplier": "Cedar Components Ltd",
+      "current_supplier": "Cedar Components Ltd",
+      "current_subtotal": "25.00",
+      "current_total": "37.00",
+      "corrections": [
+        {
+          "field": "line.9b1d86fe-52b0-47ba-9f09-c7fcd214ecdf.unit_price",
+          "previous_value": {
+            "value": "1.250000"
+          },
+          "corrected_value": {
+            "value": "1.35"
+          },
+          "provenance": {
+            "document_id": "3ed4e3bf-6aaf-4b30-b3bf-2a442e3fe96b",
+            "extraction_id": "1201b054-f46a-4744-8bcc-4fc822bda40a",
+            "model": "qwen2.5vl:7b",
+            "prompt_version": "quote-v2",
+            "pipeline_version": "local-2",
+            "original_ai_value": "1.25"
+          },
+          "timestamp": "2026-09-10T17:07:04.227573+00:00",
+          "actor": "7c9e7591-f548-5b2a-9379-b69cfc66a1a6"
+        },
+        {
+          "field": "line.9b1d86fe-52b0-47ba-9f09-c7fcd214ecdf.match_method",
+          "previous_value": {
+            "value": "Exact SKU"
+          },
+          "corrected_value": {
+            "value": "Confirmed mapping"
+          },
+          "provenance": {
+            "document_id": "3ed4e3bf-6aaf-4b30-b3bf-2a442e3fe96b",
+            "extraction_id": "1201b054-f46a-4744-8bcc-4fc822bda40a",
+            "model": "qwen2.5vl:7b",
+            "prompt_version": "quote-v2",
+            "pipeline_version": "local-2",
+            "original_ai_value": null
+          },
+          "timestamp": "2026-09-10T17:07:04.227579+00:00",
+          "actor": "7c9e7591-f548-5b2a-9379-b69cfc66a1a6"
+        },
+        {
+          "field": "line.9b1d86fe-52b0-47ba-9f09-c7fcd214ecdf.unit_price",
+          "previous_value": {
+            "value": "1.350000"
+          },
+          "corrected_value": {
+            "value": "1.25"
+          },
+          "provenance": {
+            "document_id": "3ed4e3bf-6aaf-4b30-b3bf-2a442e3fe96b",
+            "extraction_id": "1201b054-f46a-4744-8bcc-4fc822bda40a",
+            "model": "qwen2.5vl:7b",
+            "prompt_version": "quote-v2",
+            "pipeline_version": "local-2",
+            "original_ai_value": "1.25"
+          },
+          "timestamp": "2026-09-10T17:10:20.431354+00:00",
+          "actor": "7c9e7591-f548-5b2a-9379-b69cfc66a1a6"
+        },
+        {
+          "field": "line.9b1d86fe-52b0-47ba-9f09-c7fcd214ecdf.unit_price",
+          "previous_value": {
+            "value": "1.250000"
+          },
+          "corrected_value": {
+            "value": "1.35"
+          },
+          "provenance": {
+            "document_id": "3ed4e3bf-6aaf-4b30-b3bf-2a442e3fe96b",
+            "extraction_id": "1201b054-f46a-4744-8bcc-4fc822bda40a",
+            "model": "qwen2.5vl:7b",
+            "prompt_version": "quote-v2",
+            "pipeline_version": "local-2",
+            "original_ai_value": "1.25"
+          },
+          "timestamp": "2026-09-10T17:10:20.763026+00:00",
+          "actor": "7c9e7591-f548-5b2a-9379-b69cfc66a1a6"
+        },
+        {
+          "field": "shipping_cost",
+          "previous_value": {
+            "value": null
+          },
+          "corrected_value": {
+            "value": "12"
+          },
+          "provenance": {
+            "document_id": "3ed4e3bf-6aaf-4b30-b3bf-2a442e3fe96b",
+            "extraction_id": "1201b054-f46a-4744-8bcc-4fc822bda40a",
+            "model": "qwen2.5vl:7b",
+            "prompt_version": "quote-v2",
+            "pipeline_version": "local-2",
+            "original_ai_value": null
+          },
+          "timestamp": "2026-09-10T17:10:20.769019+00:00",
+          "actor": "7c9e7591-f548-5b2a-9379-b69cfc66a1a6"
+        },
+        {
+          "field": "tax",
+          "previous_value": {
+            "value": null
+          },
+          "corrected_value": {
+            "value": "0"
+          },
+          "provenance": {
+            "document_id": "3ed4e3bf-6aaf-4b30-b3bf-2a442e3fe96b",
+            "extraction_id": "1201b054-f46a-4744-8bcc-4fc822bda40a",
+            "model": "qwen2.5vl:7b",
+            "prompt_version": "quote-v2",
+            "pipeline_version": "local-2",
+            "original_ai_value": null
+          },
+          "timestamp": "2026-09-10T17:10:20.769044+00:00",
+          "actor": "7c9e7591-f548-5b2a-9379-b69cfc66a1a6"
+        },
+        {
+          "field": "line.9b1d86fe-52b0-47ba-9f09-c7fcd214ecdf.unit_price",
+          "previous_value": {
+            "value": "1.350000"
+          },
+          "corrected_value": {
+            "value": "1.25"
+          },
+          "provenance": {
+            "document_id": "3ed4e3bf-6aaf-4b30-b3bf-2a442e3fe96b",
+            "extraction_id": "1201b054-f46a-4744-8bcc-4fc822bda40a",
+            "model": "qwen2.5vl:7b",
+            "prompt_version": "quote-v2",
+            "pipeline_version": "local-2",
+            "original_ai_value": "1.25"
+          },
+          "timestamp": "2026-09-10T17:12:46.110855+00:00",
+          "actor": "7c9e7591-f548-5b2a-9379-b69cfc66a1a6"
+        },
+        {
+          "field": "line.9b1d86fe-52b0-47ba-9f09-c7fcd214ecdf.unit_price",
+          "previous_value": {
+            "value": "1.250000"
+          },
+          "corrected_value": {
+            "value": "1.35"
+          },
+          "provenance": {
+            "document_id": "3ed4e3bf-6aaf-4b30-b3bf-2a442e3fe96b",
+            "extraction_id": "1201b054-f46a-4744-8bcc-4fc822bda40a",
+            "model": "qwen2.5vl:7b",
+            "prompt_version": "quote-v2",
+            "pipeline_version": "local-2",
+            "original_ai_value": "1.25"
+          },
+          "timestamp": "2026-09-10T17:12:46.457274+00:00",
+          "actor": "7c9e7591-f548-5b2a-9379-b69cfc66a1a6"
+        },
+        {
+          "field": "shipping_cost",
+          "previous_value": {
+            "value": "12.0000"
+          },
+          "corrected_value": {
+            "value": "12"
+          },
+          "provenance": {
+            "document_id": "3ed4e3bf-6aaf-4b30-b3bf-2a442e3fe96b",
+            "extraction_id": "1201b054-f46a-4744-8bcc-4fc822bda40a",
+            "model": "qwen2.5vl:7b",
+            "prompt_version": "quote-v2",
+            "pipeline_version": "local-2",
+            "original_ai_value": null
+          },
+          "timestamp": "2026-09-10T17:12:46.462384+00:00",
+          "actor": "7c9e7591-f548-5b2a-9379-b69cfc66a1a6"
+        },
+        {
+          "field": "tax",
+          "previous_value": {
+            "value": "0.0000"
+          },
+          "corrected_value": {
+            "value": "0"
+          },
+          "provenance": {
+            "document_id": "3ed4e3bf-6aaf-4b30-b3bf-2a442e3fe96b",
+            "extraction_id": "1201b054-f46a-4744-8bcc-4fc822bda40a",
+            "model": "qwen2.5vl:7b",
+            "prompt_version": "quote-v2",
+            "pipeline_version": "local-2",
+            "original_ai_value": null
+          },
+          "timestamp": "2026-09-10T17:12:46.462390+00:00",
+          "actor": "7c9e7591-f548-5b2a-9379-b69cfc66a1a6"
+        },
+        {
+          "field": "line.9b1d86fe-52b0-47ba-9f09-c7fcd214ecdf.unit_price",
+          "previous_value": {
+            "value": "1.350000"
+          },
+          "corrected_value": {
+            "value": "1.25"
+          },
+          "provenance": {
+            "document_id": "3ed4e3bf-6aaf-4b30-b3bf-2a442e3fe96b",
+            "extraction_id": "1201b054-f46a-4744-8bcc-4fc822bda40a",
+            "model": "qwen2.5vl:7b",
+            "prompt_version": "quote-v2",
+            "pipeline_version": "local-2",
+            "original_ai_value": "1.25"
+          },
+          "timestamp": "2026-09-10T17:12:46.674966+00:00",
+          "actor": "7c9e7591-f548-5b2a-9379-b69cfc66a1a6"
+        },
+        {
+          "field": "shipping_cost",
+          "previous_value": {
+            "value": "12.0000"
+          },
+          "corrected_value": {
+            "value": "12"
+          },
+          "provenance": {
+            "document_id": "3ed4e3bf-6aaf-4b30-b3bf-2a442e3fe96b",
+            "extraction_id": "1201b054-f46a-4744-8bcc-4fc822bda40a",
+            "model": "qwen2.5vl:7b",
+            "prompt_version": "quote-v2",
+            "pipeline_version": "local-2",
+            "original_ai_value": null
+          },
+          "timestamp": "2026-09-10T17:12:46.680269+00:00",
+          "actor": "7c9e7591-f548-5b2a-9379-b69cfc66a1a6"
+        },
+        {
+          "field": "tax",
+          "previous_value": {
+            "value": "0.0000"
+          },
+          "corrected_value": {
+            "value": "0"
+          },
+          "provenance": {
+            "document_id": "3ed4e3bf-6aaf-4b30-b3bf-2a442e3fe96b",
+            "extraction_id": "1201b054-f46a-4744-8bcc-4fc822bda40a",
+            "model": "qwen2.5vl:7b",
+            "prompt_version": "quote-v2",
+            "pipeline_version": "local-2",
+            "original_ai_value": null
+          },
+          "timestamp": "2026-09-10T17:12:46.680276+00:00",
+          "actor": "7c9e7591-f548-5b2a-9379-b69cfc66a1a6"
+        },
+        {
+          "field": "line.9b1d86fe-52b0-47ba-9f09-c7fcd214ecdf.unit_price",
+          "previous_value": {
+            "value": "1.250000"
+          },
+          "corrected_value": {
+            "value": "1.35"
+          },
+          "provenance": {
+            "document_id": "3ed4e3bf-6aaf-4b30-b3bf-2a442e3fe96b",
+            "extraction_id": "1201b054-f46a-4744-8bcc-4fc822bda40a",
+            "model": "qwen2.5vl:7b",
+            "prompt_version": "quote-v2",
+            "pipeline_version": "local-2",
+            "original_ai_value": "1.25"
+          },
+          "timestamp": "2026-09-10T22:12:17.477918+00:00",
+          "actor": "7c9e7591-f548-5b2a-9379-b69cfc66a1a6"
+        },
+        {
+          "field": "shipping_cost",
+          "previous_value": {
+            "value": "12.0000"
+          },
+          "corrected_value": {
+            "value": "12"
+          },
+          "provenance": {
+            "document_id": "3ed4e3bf-6aaf-4b30-b3bf-2a442e3fe96b",
+            "extraction_id": "1201b054-f46a-4744-8bcc-4fc822bda40a",
+            "model": "qwen2.5vl:7b",
+            "prompt_version": "quote-v2",
+            "pipeline_version": "local-2",
+            "original_ai_value": null
+          },
+          "timestamp": "2026-09-10T22:12:17.485871+00:00",
+          "actor": "7c9e7591-f548-5b2a-9379-b69cfc66a1a6"
+        },
+        {
+          "field": "tax",
+          "previous_value": {
+            "value": "0.0000"
+          },
+          "corrected_value": {
+            "value": "0"
+          },
+          "provenance": {
+            "document_id": "3ed4e3bf-6aaf-4b30-b3bf-2a442e3fe96b",
+            "extraction_id": "1201b054-f46a-4744-8bcc-4fc822bda40a",
+            "model": "qwen2.5vl:7b",
+            "prompt_version": "quote-v2",
+            "pipeline_version": "local-2",
+            "original_ai_value": null
+          },
+          "timestamp": "2026-09-10T22:12:17.485876+00:00",
+          "actor": "7c9e7591-f548-5b2a-9379-b69cfc66a1a6"
+        },
+        {
+          "field": "line.9b1d86fe-52b0-47ba-9f09-c7fcd214ecdf.unit_price",
+          "previous_value": {
+            "value": "1.350000"
+          },
+          "corrected_value": {
+            "value": "1.25"
+          },
+          "provenance": {
+            "document_id": "3ed4e3bf-6aaf-4b30-b3bf-2a442e3fe96b",
+            "extraction_id": "1201b054-f46a-4744-8bcc-4fc822bda40a",
+            "model": "qwen2.5vl:7b",
+            "prompt_version": "quote-v2",
+            "pipeline_version": "local-2",
+            "original_ai_value": "1.25"
+          },
+          "timestamp": "2026-09-10T22:12:17.698500+00:00",
+          "actor": "7c9e7591-f548-5b2a-9379-b69cfc66a1a6"
+        },
+        {
+          "field": "shipping_cost",
+          "previous_value": {
+            "value": "12.0000"
+          },
+          "corrected_value": {
+            "value": "12"
+          },
+          "provenance": {
+            "document_id": "3ed4e3bf-6aaf-4b30-b3bf-2a442e3fe96b",
+            "extraction_id": "1201b054-f46a-4744-8bcc-4fc822bda40a",
+            "model": "qwen2.5vl:7b",
+            "prompt_version": "quote-v2",
+            "pipeline_version": "local-2",
+            "original_ai_value": null
+          },
+          "timestamp": "2026-09-10T22:12:17.704253+00:00",
+          "actor": "7c9e7591-f548-5b2a-9379-b69cfc66a1a6"
+        },
+        {
+          "field": "tax",
+          "previous_value": {
+            "value": "0.0000"
+          },
+          "corrected_value": {
+            "value": "0"
+          },
+          "provenance": {
+            "document_id": "3ed4e3bf-6aaf-4b30-b3bf-2a442e3fe96b",
+            "extraction_id": "1201b054-f46a-4744-8bcc-4fc822bda40a",
+            "model": "qwen2.5vl:7b",
+            "prompt_version": "quote-v2",
+            "pipeline_version": "local-2",
+            "original_ai_value": null
+          },
+          "timestamp": "2026-09-10T22:12:17.704261+00:00",
+          "actor": "7c9e7591-f548-5b2a-9379-b69cfc66a1a6"
+        }
+      ]
+    },
+    {
+      "filename": "synthetic-002-supplier_sku_and_mpn.scan.pdf",
+      "document_id": "15163c42-4653-487c-bd20-6de2e34c9cfa",
+      "quote_id": "2c31c678-0d00-4655-934e-fdc1f17cb7b2",
+      "sha256_verified": true,
+      "provider": "local",
+      "model": "qwen2.5vl:7b",
+      "prompt_version": "quote-v2",
+      "pipeline_version": "local-2",
+      "fallback": false,
+      "supplier_matched": true,
+      "items_matched": 2,
+      "original_missing_costs": [
+        "shipping_cost",
+        "tax"
+      ],
+      "original_supplier": "Harbor Fasteners",
+      "current_supplier": "Harbor Fasteners",
+      "current_subtotal": "523.83",
+      "current_total": null,
+      "corrections": []
+    },
+    {
+      "filename": "synthetic-003-comma_thousands.png",
+      "document_id": "1fe6bb08-f3f2-430c-a6b6-07a17c572fe7",
+      "quote_id": "955e081a-62e2-4a96-813c-238451df6e9c",
+      "sha256_verified": true,
+      "provider": "local",
+      "model": "qwen2.5vl:7b",
+      "prompt_version": "quote-v2",
+      "pipeline_version": "local-2",
+      "fallback": false,
+      "supplier_matched": true,
+      "items_matched": 3,
+      "original_missing_costs": [
+        "shipping_cost",
+        "tax"
+      ],
+      "original_supplier": "J uniper Motion Systems",
+      "current_supplier": "Juniper Motion Systems",
+      "current_subtotal": "13488.40",
+      "current_total": null,
+      "corrections": [
+        {
+          "field": "line.af3a4007-5254-4795-afcf-9f7ae315713b.match_method",
+          "previous_value": {
+            "value": "Exact SKU"
+          },
+          "corrected_value": {
+            "value": "Confirmed mapping"
+          },
+          "provenance": {
+            "document_id": "1fe6bb08-f3f2-430c-a6b6-07a17c572fe7",
+            "extraction_id": "488fb57f-08a3-4b21-8dd6-fc8832523687",
+            "model": "qwen2.5vl:7b",
+            "prompt_version": "quote-v2",
+            "pipeline_version": "local-2",
+            "original_ai_value": null
+          },
+          "timestamp": "2026-09-10T17:13:50.425507+00:00",
+          "actor": "7c9e7591-f548-5b2a-9379-b69cfc66a1a6"
+        },
+        {
+          "field": "line.c5dd5561-025f-4e65-b235-35ab8c51d18e.match_method",
+          "previous_value": {
+            "value": "Exact SKU"
+          },
+          "corrected_value": {
+            "value": "Confirmed mapping"
+          },
+          "provenance": {
+            "document_id": "1fe6bb08-f3f2-430c-a6b6-07a17c572fe7",
+            "extraction_id": "488fb57f-08a3-4b21-8dd6-fc8832523687",
+            "model": "qwen2.5vl:7b",
+            "prompt_version": "quote-v2",
+            "pipeline_version": "local-2",
+            "original_ai_value": null
+          },
+          "timestamp": "2026-09-10T17:13:50.432317+00:00",
+          "actor": "7c9e7591-f548-5b2a-9379-b69cfc66a1a6"
+        },
+        {
+          "field": "line.47838c13-29aa-4acf-856a-5cd819ef2af9.match_method",
+          "previous_value": {
+            "value": "Exact SKU"
+          },
+          "corrected_value": {
+            "value": "Confirmed mapping"
+          },
+          "provenance": {
+            "document_id": "1fe6bb08-f3f2-430c-a6b6-07a17c572fe7",
+            "extraction_id": "488fb57f-08a3-4b21-8dd6-fc8832523687",
+            "model": "qwen2.5vl:7b",
+            "prompt_version": "quote-v2",
+            "pipeline_version": "local-2",
+            "original_ai_value": null
+          },
+          "timestamp": "2026-09-10T17:13:50.436444+00:00",
+          "actor": "7c9e7591-f548-5b2a-9379-b69cfc66a1a6"
+        },
+        {
+          "field": "supplier_name",
+          "previous_value": {
+            "value": "J uniper Motion Systems"
+          },
+          "corrected_value": {
+            "value": "Juniper Motion Systems"
+          },
+          "provenance": {
+            "document_id": "1fe6bb08-f3f2-430c-a6b6-07a17c572fe7",
+            "extraction_id": "488fb57f-08a3-4b21-8dd6-fc8832523687",
+            "model": "qwen2.5vl:7b",
+            "prompt_version": "quote-v2",
+            "pipeline_version": "local-2",
+            "original_ai_value": "J uniper Motion Systems"
+          },
+          "timestamp": "2026-09-10T17:13:50.441659+00:00",
+          "actor": "7c9e7591-f548-5b2a-9379-b69cfc66a1a6"
+        }
+      ]
+    },
+    {
+      "filename": "synthetic-005-lead_time_range-v21.xlsx",
+      "document_id": "2fe00c08-c6d6-43ab-b3cb-22cfb2fcef34",
+      "quote_id": "dd76a921-c5aa-49a3-b945-629a5e5c9c53",
+      "sha256_verified": true,
+      "provider": "local",
+      "model": "qwen2.5vl:7b",
+      "prompt_version": "quote-v2",
+      "pipeline_version": "local-2.1",
+      "fallback": false,
+      "supplier_matched": true,
+      "items_matched": 1,
+      "original_missing_costs": [
+        "shipping_cost",
+        "tax"
+      ],
+      "original_supplier": "Meadow Cable Supply",
+      "current_supplier": "Meadow Cable Supply",
+      "current_subtotal": "247.28",
+      "current_total": null,
+      "corrections": []
+    },
+    {
+      "filename": "synthetic-006-weeks.csv",
+      "document_id": "e04a7f30-9062-425a-9370-4bf1f7185456",
+      "quote_id": "b8e4394e-c2e6-4a30-a84b-8e9dbf629cc3",
+      "sha256_verified": true,
+      "provider": "local",
+      "model": "qwen2.5vl:7b",
+      "prompt_version": "quote-v2",
+      "pipeline_version": "local-2.1",
+      "fallback": false,
+      "supplier_matched": true,
+      "items_matched": 2,
+      "original_missing_costs": [
+        "shipping_cost",
+        "tax"
+      ],
+      "original_supplier": "Northstar Bearings",
+      "current_supplier": "Northstar Bearings",
+      "current_subtotal": "1350.75",
+      "current_total": null,
+      "corrections": []
+    }
+  ],
+  "correction_note": "Scripted price edits/restorations and test retries are included; this is not natural buyer correction effort."
+}

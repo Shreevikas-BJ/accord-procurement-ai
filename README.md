@@ -4,7 +4,7 @@
 
 Accord is a local B2B procurement application for comparing supplier quotations, finding price and delivery risks, reviewing source evidence, and recording a human decision. It includes a real Next.js frontend, FastAPI backend, relational database, document pipeline, and deterministic procurement engine.
 
-**Verification status:** the full Docker stack is verified on Windows with Linux containers: Next.js, FastAPI, PostgreSQL/pgvector, Redis/RQ, private bind-mounted files, PDF/XLSX/CSV parsing and Tesseract OCR. Final results: 52 fast backend tests, 15 live Docker integration tests, two Playwright workflows, lint/typecheck/build, fresh PostgreSQL migration/idempotent seed and persistence after a full Compose restart. See [concrete evidence and limitations](docs/verification.md). GPU and local/hosted model inference remain optional and unverified.
+**Verification status:** the Docker stack and actual local `qwen2.5vl:7b` inference are verified on Windows with Linux containers. Phase 2 checks include 85 fast backend tests, 15 live Docker integration tests, two demo Playwright workflows, two real-model checks and a five-format local buyer workflow. See [Phase 2 verification](docs/phase2-verification.md), [the 100-document benchmark and measured limitations](docs/extraction-benchmark.md), and [original Docker evidence](docs/verification.md). Hosted API mode remains optional and was not exercised with external supplier data.
 
 ## Quick start
 
@@ -85,7 +85,7 @@ flowchart LR
     API --> Redis[(Redis / RQ)]
     Redis --> Worker[Python worker]
     Worker --> Parsers[PDF / XLSX / CSV / Text / Tesseract]
-    Parsers --> Provider[Demo or OpenAI-compatible extraction]
+    Parsers --> Provider[Demo / native Ollama / hosted API extraction]
     Provider --> Validation[Pydantic validation]
     Validation --> Matching[Supplier and item matching]
     Matching --> Engine[Decimal procurement engine]
@@ -137,11 +137,13 @@ Copying `.env.example` supplies all required defaults. No secret/API key is requ
 | `REDIS_URL` | Set to internal Redis by Compose |
 | `LOCAL_STORAGE_PATH` | `/app/data/uploads`, backed by `./data/uploads` |
 | `AI_MODE` | `demo`, `local`, or `api` |
-| `AI_BASE_URL` | OpenAI-compatible `/v1` endpoint; default host port 11434 |
+| `AI_BASE_URL` | Local: native Ollama root URL, default `http://host.docker.internal:11434`; hosted: OpenAI-compatible `/v1` URL |
 | `AI_MODEL` | Required for local/API inference; no model assumed |
-| `AI_API_KEY` | Optional in local mode; hosted-provider credential when needed |
-| `AI_TIMEOUT` | Model HTTP timeout, default 45 seconds |
-| `AI_PROVIDER` | Descriptive future provider setting; compatible protocol is used today |
+| `AI_API_KEY` | Hosted-provider credential; not sent by the native local provider |
+| `AI_TIMEOUT` | Local model HTTP timeout, default 120 seconds |
+| `AI_CONTEXT` | Local context tokens, default 8192 |
+| `AI_MAX_PAGES` | Selected PDF page limit, default 3 (clamped to 1–4) |
+| `AI_PROVIDER` | `ollama` for the verified local configuration; AI_MODE selects the transport |
 | `STORAGE_PROVIDER` | `local`; other implementations are extension points |
 | `OCR_PROVIDER` | `tesseract`; other providers are extension points |
 | `PRICE_ANOMALY_THRESHOLD` | Initial seed default, `0.10`; persisted settings control subsequent analysis |
@@ -173,13 +175,13 @@ An unfamiliar document in demo mode becomes **Needs Review**. Its source remains
 
 ## Local AI and optional RTX 5060
 
-Run Ollama, LM Studio, or another OpenAI-compatible server yourself, then set:
+Use the existing host Ollama installation. Inspect `ollama list`, then set the exact installed model:
 
 ```dotenv
 AI_MODE=local
-AI_BASE_URL=http://host.docker.internal:11434/v1
-AI_MODEL=your-installed-model
-AI_API_KEY=
+AI_BASE_URL=http://host.docker.internal:11434
+AI_MODEL=qwen2.5vl:7b
+AI_TIMEOUT=120
 ```
 
 Recreate the API and worker after editing `.env`:
@@ -188,17 +190,9 @@ Recreate the API and worker after editing `.env`:
 docker compose up -d --force-recreate api worker
 ```
 
-The model must support structured JSON completion. Extraction timeouts, connection errors, invalid JSON, or GPU/VRAM errors become reviewable failures. Known demo files fall back to their fixture, with fallback usage recorded as the extraction provider and in structured logs. Recommendations and drafts remain deterministic even without a model.
+The native local provider supports selected-page vision and text with strict JSON/Pydantic validation. Extraction timeouts, connection errors, invalid JSON, or GPU/VRAM errors become reviewable failures. The production local pipeline never substitutes a fixture answer. Recommendations and drafts remain deterministic even without a model. See [routing, evidence, concurrency and troubleshooting](docs/local-ai.md).
 
-Optional Ollama container with NVIDIA access:
-
-```bash
-docker compose -f docker-compose.yml -f docker-compose.gpu.yml up --build
-```
-
-Pull a model that you have chosen for the laptop’s available memory using the Ollama CLI, and set `AI_MODEL` to that installed model. No VRAM capacity or model is assumed for the RTX 5060. Only the Ollama service receives GPU resources. PostgreSQL, Redis, frontend, API, worker and OCR do not require CUDA.
-
-The GPU override requires compatible NVIDIA drivers and container support. If unavailable, omit it and use the standard CPU-only application, or run your local model server in its CPU mode. Docker itself cannot silently satisfy an unavailable GPU device reservation; inference failures never take down the procurement application.
+Host Ollama used the RTX 5060 Laptop GPU during verification. PostgreSQL, Redis, frontend, API, worker and OCR do not require CUDA. The legacy optional `docker-compose.gpu.yml` is retained but is not the verified Phase 2 setup; it is unnecessary when using the existing host installation. No new model download is required. If GPU inference is unavailable, Ollama can use CPU resources while the application's manual review workflow remains available.
 
 ## Hosted AI
 
@@ -337,6 +331,8 @@ This is a local MVP, not a production security certification. Before external de
 
 ## Known limitations and next milestone
 
-The standard Docker/PostgreSQL/Redis/OCR stack has passed verification on this host. Optional local/hosted inference and GPU acceleration have adapters/configuration but have not been benchmarked on this laptop. Fuzzy item matches are suggestions; semantic matching is a future extension. Manual entry uses a structured JSON form. Email drafts are templates. No exchange rates, UOM conversions, split awards, real email sending, purchase orders, ERP integrations, or payments are implemented.
+The Docker/PostgreSQL/Redis/OCR stack and actual local Qwen extraction are implemented. See [local AI setup and failure handling](docs/local-ai.md) and the [100-document extraction benchmark](docs/extraction-benchmark.md) for measured results, review safeguards and remaining limitations. Fuzzy item matches remain suggestions; semantic matching is a future extension. Manual entry uses a structured JSON form. Email drafts are templates. No exchange rates, UOM conversions, split awards, real email sending, purchase orders, ERP integrations, or payments are implemented.
 
-The next milestone is a procurement-user pilot with anonymized real quotations and automated Linux CI for the verified stack. See [roadmap and user-validation questions](docs/roadmap.md).
+The installed local model is `qwen2.5vl:7b` on Ollama 0.30.11. Inspect `ollama list` before configuring another machine, and use `ollama ps` / `nvidia-smi` to observe acceleration. For Docker set `AI_MODE=local`, `AI_MODEL=qwen2.5vl:7b`, `AI_BASE_URL=http://host.docker.internal:11434` and `AI_TIMEOUT=120` in `.env`, then recreate API and worker. If the CLI is not on PATH on Windows, use `& "$env:LOCALAPPDATA\Programs\Ollama\ollama.exe" list`. A stopped/missing model produces Needs Review with the source preserved; production local mode does not fall back to fixtures. `AI_MODE=demo` and the optional `AI_MODE=api` remain available.
+
+The next evaluation uses independent anonymized quotations and measured buyer correction effort before deciding whether to start a 3–5 buyer pilot. This phase does not launch a pilot. See [roadmap and user-validation questions](docs/roadmap.md).

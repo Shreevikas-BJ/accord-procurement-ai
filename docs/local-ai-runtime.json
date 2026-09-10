@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-09-10T17:01:41.6051833Z",
+  "ollama_version": "0.30.11",
+  "model": {
+    "name": "qwen2.5vl:7b",
+    "model": "qwen2.5vl:7b",
+    "modified_at": "2026-09-09T18:54:23.2358846-07:00",
+    "size": 5969245856,
+    "digest": "5ced39dfa4bac325dc183dd1e4febaa1c46b3ea28bce48896c8e69c1e79611cc",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen25vl",
+      "families": [
+        "qwen25vl"
+      ],
+      "parameter_size": "8.3B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 128000,
+      "embedding_length": 3584
+    },
+    "capabilities": [
+      "vision",
+      "completion"
+    ]
+  },
+  "loaded_models": [
+    {
+      "name": "qwen2.5vl:7b",
+      "model": "qwen2.5vl:7b",
+      "size": 5726168677,
+      "digest": "5ced39dfa4bac325dc183dd1e4febaa1c46b3ea28bce48896c8e69c1e79611cc",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen25vl",
+        "families": [
+          "qwen25vl"
+        ],
+        "parameter_size": "8.3B",
+        "quantization_level": "Q4_K_M"
+      },
+      "expires_at": "2026-09-10T10:11:38.2432189-07:00",
+      "size_vram": 5726168677,
+      "context_length": 8192
+    }
+  ],
+  "ollama_ps": "NAME            ID              SIZE      PROCESSOR    CONTEXT    UNTIL              \r\nqwen2.5vl:7b    5ced39dfa4ba    5.7 GB    100% GPU     8192       9 minutes from now",
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 8151 MiB, 7796 MiB, 94 %, 616.56"
+}
