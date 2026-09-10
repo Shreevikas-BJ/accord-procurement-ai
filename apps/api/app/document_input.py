@@ -1,7 +1,9 @@
 """Bounded, page-aware input preparation. Never consults benchmark labels."""
 
 import base64
+import csv
 import io
+import json
 import os
 import re
 import subprocess
@@ -13,7 +15,7 @@ from pathlib import Path
 from PIL import Image
 from pypdf import PdfReader
 
-PIPELINE_VERSION = "local-1"
+PIPELINE_VERSION = "local-2"
 
 
 @dataclass
@@ -49,12 +51,35 @@ def prepare_document(path: Path) -> DocumentInput:
         if reader.is_encrypted or len(reader.pages) > 50:
             raise ValueError("Use an unlocked PDF with at most 50 pages.")
         pages = {i + 1: p.extract_text(extraction_mode="layout") or "" for i, p in enumerate(reader.pages)}
+        selection_text = dict(pages)
+        if len(pages) > limit and sum(len(p.strip()) < 80 for p in pages.values()) > limit:
+            selection_started = time.monotonic()
+            with tempfile.TemporaryDirectory() as temporary:
+                prefix = Path(temporary) / "thumb"
+                subprocess.run(
+                    ["pdftoppm", "-png", "-scale-to", "700", str(path), str(prefix)],
+                    check=True,
+                    capture_output=True,
+                    timeout=90,
+                )
+                for thumbnail in sorted(Path(temporary).glob("thumb-*.png")):
+                    number = int(thumbnail.stem.rsplit("-", 1)[1])
+                    if time.monotonic() - selection_started > 60:
+                        result.metadata["page_selection_incomplete"] = True
+                        break
+                    if len(pages[number].strip()) < 80:
+                        selection_text[number] = TesseractOCRProvider().extract(thumbnail)
+            selection_seconds = time.monotonic() - selection_started
+            ocr_seconds += selection_seconds
+            result.metadata["page_selection_ocr_seconds"] = round(selection_seconds, 4)
 
         # Always retain identity on page one; rank remaining pages by commercial signals.
         def score(number):
             return len(
                 re.findall(
-                    r"quote|quotation|unit price|quantity|sku|moq|delivery|subtotal|total|pricing", pages[number], re.I
+                    r"quote|quotation|unit price|quantity|sku|moq|delivery|subtotal|total|pricing",
+                    selection_text[number],
+                    re.I,
                 )
             )
 
@@ -106,6 +131,40 @@ def prepare_document(path: Path) -> DocumentInput:
         ocr_seconds = time.monotonic() - t
         result.pages = {1: content}
         result.text = "[Page 1]\n" + content
+    elif suffix in (".xlsx", ".csv"):
+        # Existing parsers enforce ZIP expansion and row limits first.
+        parser_for(path.name).parse(path)
+        tables = []
+        if suffix == ".xlsx":
+            from openpyxl import load_workbook
+
+            workbook = load_workbook(path, read_only=True, data_only=True)
+            try:
+                tables = [(sheet.title, list(sheet.iter_rows(values_only=True))) for sheet in workbook]
+            finally:
+                workbook.close()
+        else:
+            with path.open(encoding="utf-8-sig", newline="") as stream:
+                tables = [("CSV", list(csv.reader(stream)))]
+        chunks = []
+        for name, rows in tables:
+            headers = None
+            for index, raw in enumerate(rows):
+                row = list(raw)
+                while row and row[-1] is None:
+                    row.pop()
+                labels = [str(value or "").strip().lower() for value in row]
+                if "sku" in labels and ("qty" in labels or "quantity" in labels) and "unit price" in labels:
+                    headers = list(map(str, row))
+                record = (
+                    dict(zip(headers, row))
+                    if headers and len(headers) == len(row) and labels != [h.lower() for h in headers]
+                    else row
+                )
+                chunks.append(
+                    json.dumps({"sheet": name, "row": index + 1, "cells": record}, ensure_ascii=False, default=str)
+                )
+        result.text = "Structured spreadsheet rows; empty cells are missing values.\n" + "\n".join(chunks)
     else:
         result.text = parser_for(path.name).parse(path)
     # Reject oversize input rather than silently extract a truncated quotation.

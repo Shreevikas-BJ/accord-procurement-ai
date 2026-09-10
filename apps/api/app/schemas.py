@@ -4,8 +4,9 @@ from decimal import Decimal
 from typing import Annotated, Literal
 from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
-Money = Annotated[Decimal, Field(ge=0, le=Decimal("100000000000"), allow_inf_nan=False)]
-Quantity = Annotated[Decimal, Field(gt=0, le=Decimal("1000000000"), allow_inf_nan=False)]
+Money = Annotated[Decimal, Field(ge=0, le=Decimal("100000000000"), decimal_places=6, allow_inf_nan=False)]
+Cost = Annotated[Decimal, Field(ge=0, le=Decimal("100000000000"), decimal_places=4, allow_inf_nan=False)]
+Quantity = Annotated[Decimal, Field(gt=0, le=Decimal("1000000000"), decimal_places=4, allow_inf_nan=False)]
 Confidence = Annotated[Decimal, Field(ge=0, le=1)]
 
 
@@ -41,11 +42,11 @@ class LineItemExtraction(Strict):
     quantity: Quantity | None = None
     uom: str | None = None
     unit_price: Money | None = None
-    moq: Money | None = None
+    moq: Cost | None = None
     lead_time_days: int | None = Field(default=None, ge=0, le=3650)
     lead_time_min: int | None = Field(default=None, ge=0, le=3650)
     delivery_date: date | None = None
-    stated_line_total: Money | None = None
+    stated_line_total: Cost | None = None
     confidence: Confidence = Decimal("0.5")
     source_references: dict[str, Evidence] = Field(default_factory=dict)
     price_tiers: list[PriceTier] = Field(default_factory=list, max_length=30)
@@ -71,10 +72,10 @@ class QuoteExtraction(Strict):
     currency: str | None = Field(default=None, pattern=r"^[A-Z]{3}$")
     payment_terms: str | None = None
     shipping_terms: str | None = None
-    shipping_cost: Money | None = None
-    tax: Money | None = None
-    stated_subtotal: Money | None = None
-    stated_total: Money | None = None
+    shipping_cost: Cost | None = None
+    tax: Cost | None = None
+    stated_subtotal: Cost | None = None
+    stated_total: Cost | None = None
     notes: str | None = None
     confidence: Confidence = Decimal("0.5")
     source_references: dict[str, Evidence] = Field(default_factory=dict)

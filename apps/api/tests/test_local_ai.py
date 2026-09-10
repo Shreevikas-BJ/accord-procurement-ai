@@ -93,6 +93,18 @@ def test_schema_repair_stops_after_two_attempts(ollama):
     assert len(calls) == 2
 
 
+def test_storage_precision_does_not_ask_model_to_round_source(ollama):
+    payload = quote().model_dump(mode="json")
+    payload["line_items"][0]["stated_line_total"] = "0.051975"
+    calls = ollama([response(json.dumps(payload))])
+    provider = OllamaProvider()
+    with pytest.raises(ValueError, match="PRECISION_UNSUPPORTED"):
+        provider.extract("Stated total: 0.051975")
+    assert len(calls) == 1
+    assert "0.051975" in provider.raw_response
+    assert provider.metadata["success"] is False
+
+
 @pytest.mark.parametrize(
     "status,body,code",
     [
@@ -232,3 +244,41 @@ def test_long_pdf_selects_commercial_pages_without_rasterizing(tmp_path, monkeyp
     assert len(document.metadata["selected_pages"]) == 3
     assert document.metadata["image_count"] == 0
     assert len(document.metadata["omitted_pages"]) == 17
+
+
+def test_evidence_follows_sku_blocks_not_neighboring_prices():
+    q = quote()
+    q.line_items[0].manufacturer_part_number = "C-12"
+    source = "Supplier: Cedar Components\nQuote: Q-124\nCurrency: USD\nShipping: 5\nTax: 0\n--- LINE ITEM ---\nsupplier_sku: C-12\nmanufacturer_part_number: C-12\nquantity: 10\nuom: EA\nunit_price: 4.25\nmoq: 5\nlead_time_days: 14\n--- LINE ITEM ---\nsupplier_sku: OTHER\nunit_price: 42.50"
+    result = validate_extraction(q, DocumentInput(source, pages={1: source}))
+    ref = q.line_items[0].source_references["unit_price"]
+    assert ref.source_text == "unit_price: 4.25" and ref.page == 1
+    assert result["confidence_band"] == "HIGH"
+    q.line_items[0].unit_price = Decimal("42.50")
+    validate_extraction(q, DocumentInput(source, pages={1: source}))
+    assert q.line_items[0].source_references["unit_price"].evidence_type == "missing"
+
+
+def test_csv_commas_remain_inside_cells(tmp_path):
+    path = tmp_path / "quote.csv"
+    path.write_text('Supplier,Cedar Components\nSKU,Qty,Unit price,MOQ\nC-12,"1,200","2,50",5\n', encoding="utf-8")
+    document = prepare_document(path)
+    assert '"Qty": "1,200"' in document.text
+    assert '"Unit price": "2,50"' in document.text
+
+
+def test_untrusted_model_confidence_does_not_override_missing_evidence():
+    q = quote(confidence="1")
+    q.line_items[0].confidence = Decimal("1")
+    result = validate_extraction(q, DocumentInput("No relevant source evidence"))
+    assert q.confidence < Decimal("0.8")
+    assert result["needs_review"] is True
+
+
+def test_generation_schema_omits_model_confidence_and_dynamic_evidence():
+    from app.local_ai import generation_schema
+
+    schema = generation_schema()
+    assert "confidence" not in schema["properties"]
+    assert "source_references" not in schema["$defs"]["LineItemExtraction"]["properties"]
+    assert "unit_price" in schema["$defs"]["LineItemExtraction"]["properties"]

@@ -80,6 +80,7 @@ test("local Qwen extracts five unknown formats through Inbox and preserves corre
       await page.request.get(`/api/quotes/${document.quote_id}`)
     ).json()) as Quote;
     expect(quote.extraction_provider).toBe("local");
+    expect(quote.extraction_diagnostics?.fallback).toBe(false);
     expect(quote.extraction_diagnostics?.model).toBe("qwen2.5vl:7b");
     const truthName = filename.replace(
       /\.(scan\.pdf|pdf|png|xlsx|csv)$/,
@@ -100,6 +101,7 @@ test("local Qwen extracts five unknown formats through Inbox and preserves corre
       expect(Number(line.unit_price)).toBe(Number(expected.unit_price));
     }
     const line = quote.line_items[0];
+    expect(line.source_references.unit_price.evidence_type).not.toBe("missing");
     await page
       .getByRole("button", {
         name: `Source for Unit price · ${line.supplier_sku}`,
@@ -136,6 +138,24 @@ test("local Qwen extracts five unknown formats through Inbox and preserves corre
       expect(saved.line_items[0].source_references).toEqual(
         line.source_references,
       );
+      await page.screenshot({
+        path: "test-results/local-corrected.png",
+        fullPage: true,
+      });
+      await page
+        .getByLabel(`Unit price · ${line.supplier_sku}`, { exact: true })
+        .fill(Number(truth.line_items[0].unit_price).toFixed(2));
+      await page
+        .getByRole("button", { name: "Save corrections", exact: true })
+        .click();
+      await expect
+        .poll(async () =>
+          Number(
+            (await (await page.request.get(`/api/quotes/${quote.id}`)).json())
+              .line_items[0].unit_price,
+          ),
+        )
+        .toBe(Number(truth.line_items[0].unit_price));
     }
     results.push({
       filename,

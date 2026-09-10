@@ -96,6 +96,7 @@ export interface Quote {
   historical_orders: number;
   extraction_provider?: string;
   extraction_diagnostics?: {
+    fallback?: boolean;
     model?: string;
     confidence_band?: string;
     findings?: { code: string; field: string; message: string }[];

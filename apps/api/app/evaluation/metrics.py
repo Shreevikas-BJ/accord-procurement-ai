@@ -52,13 +52,15 @@ def evaluate(expected, extracted, document_id):
     errors = []
     critical_correct = critical_total = 0
 
-    def compare(key, wanted, actual, location, ref=None):
+    def compare(key, wanted, actual, location, ref=None, extra_line=False):
         nonlocal critical_correct, critical_total
-        correct = extracted is not None and normalized(key, wanted) == normalized(key, actual)
+        correct = not extra_line and extracted is not None and normalized(key, wanted) == normalized(key, actual)
         score = fields[key]
         score["total"] += 1
         score["correct"] += int(correct)
-        score["exact"] += int(extracted is not None and type(wanted) is type(actual) and wanted == actual)
+        score["exact"] += int(
+            not extra_line and extracted is not None and type(wanted) is type(actual) and wanted == actual
+        )
         group = "null" if wanted is None else "present"
         score[group + "_total"] += 1
         score[group + "_correct"] += int(correct)
@@ -88,7 +90,7 @@ def evaluate(expected, extracted, document_id):
                     "field": location,
                     "expected": wanted,
                     "extracted": actual,
-                    "error_type": code,
+                    "error_type": "TABLE_ASSOCIATION_ERROR" if extra_line else code,
                     "source_page": (ref or {}).get("page"),
                     "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts.",
                 }
@@ -135,7 +137,7 @@ def evaluate(expected, extracted, document_id):
             )
     for _, extra in remaining:
         for key in LINE_FIELDS:
-            compare(key, None, extra.get(key), "extra_line." + key)
+            compare(key, None, extra.get(key), "extra_line." + key, extra_line=True)
     return {
         "fields": dict(fields),
         "critical_correct": critical_correct,

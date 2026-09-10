@@ -293,6 +293,8 @@ test("PDF, XLSX and CSV uploads finish in the real background queue", async ({
         "already uploaded",
       );
     }
+    // Existing uploads may be on later pages after repeated live regression runs.
+    await page.getByRole("textbox", { name: "Search inbox" }).fill(file);
     const row = page.getByRole("row").filter({ hasText: file });
     await expect(row).toBeVisible();
     await expect(row.getByText("Complete", { exact: true })).toBeVisible({

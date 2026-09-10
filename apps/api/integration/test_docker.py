@@ -15,6 +15,8 @@ from decimal import Decimal
 
 import httpx
 import pytest
+from alembic.config import Config
+from alembic.script import ScriptDirectory
 from redis import Redis
 from reportlab.pdfgen.canvas import Canvas
 from rq import Queue, Worker
@@ -103,7 +105,8 @@ def review_payload(detail):
 def test_postgresql_schema_numeric_and_constraints():
     assert engine.dialect.name == "postgresql", "Never substitute SQLite for this suite"
     with engine.connect() as conn:
-        assert conn.scalar(text("SELECT version_num FROM alembic_version")) == "0001"
+        migration_head = ScriptDirectory.from_config(Config("alembic.ini")).get_current_head()
+        assert conn.scalar(text("SELECT version_num FROM alembic_version")) == migration_head
         assert conn.scalar(text("SELECT extversion FROM pg_extension WHERE extname='vector'"))
         for table, minimum in {
             "suppliers": 50,

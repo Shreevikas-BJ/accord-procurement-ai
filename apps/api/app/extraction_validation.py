@@ -25,8 +25,11 @@ def normalize_uom(value):
 
 
 def validate_extraction(quote, document):
+    from .source_evidence import derive_references, supports
+
     started = time.monotonic()
     findings = []
+    derive_references(quote, document)
 
     def flag(code, field, message):
         findings.append({"code": code, "field": field, "message": message})
@@ -38,7 +41,12 @@ def validate_extraction(quote, document):
                 continue
             ref = value.source_references.get(key)
             page_text = document.pages.get(ref.page, "") if ref and document.pages else document.text
-            if ref and ref.source_text and ref.source_text in page_text:
+            if (
+                ref
+                and ref.source_text
+                and ref.source_text in page_text
+                and supports(key, getattr(value, key), ref.source_text)
+            ):
                 ref.evidence_type = "ocr" if ref.page in document.image_pages else "text"
                 ref.confidence = Decimal("0.8")
             elif ref and ref.page in document.image_pages:
@@ -53,11 +61,20 @@ def validate_extraction(quote, document):
                 )
 
     evidence(quote, ("supplier_name", "quote_number", "currency"), "")
+    evidence(quote, [field for field in ("shipping_cost", "tax") if getattr(quote, field) is not None], "")
+    for field in ("shipping_cost", "tax"):
+        if getattr(quote, field) is None:
+            flag("MISSING_COST", field, "Cost is not explicitly stated; the evaluated total remains unavailable.")
     derived = []
     seen = set()
     for index, line in enumerate(quote.line_items):
         prefix = f"line_items.{index}."
         evidence(line, ("supplier_sku", "quantity", "uom", "unit_price"), prefix)
+        evidence(
+            line,
+            [field for field in ("moq", "lead_time_days", "delivery_date") if getattr(line, field) is not None],
+            prefix,
+        )
         line.uom = normalize_uom(line.uom)
         identity = (line.supplier_sku, line.quantity, line.uom, line.unit_price)
         if identity in seen:
