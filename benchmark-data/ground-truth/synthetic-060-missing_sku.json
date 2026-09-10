@@ -1,0 +1,60 @@
+{
+  "supplier_name": "Quartz Sensor Works",
+  "quote_number": "EVAL-060-Q",
+  "rfq_number": "REQ-8159",
+  "currency": "AUD",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "71",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": null,
+      "description": "Packing sleeve",
+      "quantity": "1023",
+      "uom": "EA",
+      "unit_price": "24.26",
+      "moq": "5",
+      "lead_time_days": 10,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "24817.98"
+    },
+    {
+      "supplier_sku": null,
+      "description": "Copper terminal",
+      "quantity": "1143",
+      "uom": "EA",
+      "unit_price": "25.57",
+      "moq": "10",
+      "lead_time_days": 13,
+      "delivery_date": "2026-10-13",
+      "stated_line_total": "29226.51"
+    },
+    {
+      "supplier_sku": null,
+      "description": "Brass valve",
+      "quantity": "1263",
+      "uom": "EA",
+      "unit_price": "26.88",
+      "moq": "15",
+      "lead_time_days": 16,
+      "delivery_date": "2026-10-16",
+      "stated_line_total": "33949.44"
+    },
+    {
+      "supplier_sku": null,
+      "description": "Ball bearing",
+      "quantity": "1383",
+      "uom": "EA",
+      "unit_price": "28.19",
+      "moq": "20",
+      "lead_time_days": 19,
+      "delivery_date": "2026-10-19",
+      "stated_line_total": "38986.77"
+    }
+  ],
+  "stated_subtotal": "126980.70",
+  "stated_total": "127051.70",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

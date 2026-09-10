@@ -1,0 +1,258 @@
+{
+  "label_version": "source-audit-1",
+  "corrections": [
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-pdf",
+      "field": "line_items.0.uom",
+      "original_demo_label": "EA",
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-pdf",
+      "field": "line_items.0.lead_time_days",
+      "original_demo_label": 60,
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-pdf",
+      "field": "line_items.0.lead_time_min",
+      "original_demo_label": 60,
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-pdf",
+      "field": "line_items.0.delivery_date",
+      "original_demo_label": "2026-11-08",
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-pdf",
+      "field": "line_items.0.description",
+      "original_demo_label": "Industrial Relay",
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-pdf",
+      "field": "line_items.0.manufacturer_part_number",
+      "original_demo_label": "AX-100",
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-pdf",
+      "field": "line_items.1.uom",
+      "original_demo_label": "EA",
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-pdf",
+      "field": "line_items.1.lead_time_days",
+      "original_demo_label": 60,
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-pdf",
+      "field": "line_items.1.lead_time_min",
+      "original_demo_label": 60,
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-pdf",
+      "field": "line_items.1.delivery_date",
+      "original_demo_label": "2026-11-08",
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-pdf",
+      "field": "line_items.1.description",
+      "original_demo_label": "Control Module",
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-pdf",
+      "field": "line_items.1.manufacturer_part_number",
+      "original_demo_label": "BX-220",
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-pdf",
+      "field": "line_items.2.uom",
+      "original_demo_label": "EA",
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-pdf",
+      "field": "line_items.2.lead_time_days",
+      "original_demo_label": 60,
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-pdf",
+      "field": "line_items.2.lead_time_min",
+      "original_demo_label": 60,
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-pdf",
+      "field": "line_items.2.delivery_date",
+      "original_demo_label": "2026-11-08",
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-pdf",
+      "field": "line_items.2.description",
+      "original_demo_label": "Industrial Switch",
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-pdf",
+      "field": "line_items.2.manufacturer_part_number",
+      "original_demo_label": "CX-300",
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-png",
+      "field": "line_items.0.uom",
+      "original_demo_label": "EA",
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-png",
+      "field": "line_items.0.lead_time_days",
+      "original_demo_label": 60,
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-png",
+      "field": "line_items.0.lead_time_min",
+      "original_demo_label": 60,
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-png",
+      "field": "line_items.0.delivery_date",
+      "original_demo_label": "2026-11-08",
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-png",
+      "field": "line_items.0.description",
+      "original_demo_label": "Industrial Relay",
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-png",
+      "field": "line_items.0.manufacturer_part_number",
+      "original_demo_label": "AX-100",
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-png",
+      "field": "line_items.1.uom",
+      "original_demo_label": "EA",
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-png",
+      "field": "line_items.1.lead_time_days",
+      "original_demo_label": 60,
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-png",
+      "field": "line_items.1.lead_time_min",
+      "original_demo_label": 60,
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-png",
+      "field": "line_items.1.delivery_date",
+      "original_demo_label": "2026-11-08",
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-png",
+      "field": "line_items.1.description",
+      "original_demo_label": "Control Module",
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-png",
+      "field": "line_items.1.manufacturer_part_number",
+      "original_demo_label": "BX-220",
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-png",
+      "field": "line_items.2.uom",
+      "original_demo_label": "EA",
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-png",
+      "field": "line_items.2.lead_time_days",
+      "original_demo_label": 60,
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-png",
+      "field": "line_items.2.lead_time_min",
+      "original_demo_label": 60,
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-png",
+      "field": "line_items.2.delivery_date",
+      "original_demo_label": "2026-11-08",
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-png",
+      "field": "line_items.2.description",
+      "original_demo_label": "Industrial Switch",
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    },
+    {
+      "document_id": "demo-Scanned_Vertex_RFQ1004-png",
+      "field": "line_items.2.manufacturer_part_number",
+      "original_demo_label": "CX-300",
+      "evaluation_label": null,
+      "reason": "Not printed anywhere in the scan, verified against rendered source. Demo fixture includes additional assumed information."
+    }
+  ],
+  "policy": "Apply these same labels to both baseline and improved results. No model output is changed."
+}

@@ -1,0 +1,21 @@
+From: quotes@fictional.example
+Subject: Supplier offer
+
+SUPPLIER QUOTATION - FICTIONAL EVALUATION DOCUMENT
+Supplier | Blue Canyon Optics
+Quote number | EVAL-021-Q
+RFQ | REQ-8120
+Currency | USD
+Quote date | 2026-09-01
+Valid until | 2026-11-30
+Last order quantity (reference only) | 90000
+Warehouse stock (not quoted quantity) | 250000
+SKU | Description | Qty | UOM | Unit price | Line total | MOQ | Lead time | Delivery
+CT-140.1 | Copper terminal | 360 | PCS | 9.05 | 3258.00 | 5 | 27 days | 2026-10-10
+Subtotal | 3258.00
+Shipping | 32
+Tax | 0
+Grand total | 3290.00
+Payment terms | Net 30
+Shipping terms | FOB origin
+This quotation is not an invoice or purchase order.

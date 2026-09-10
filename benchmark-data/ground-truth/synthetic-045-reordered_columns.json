@@ -1,0 +1,27 @@
+{
+  "supplier_name": "Blue Canyon Optics",
+  "quote_number": "EVAL-045-Q",
+  "rfq_number": "REQ-8144",
+  "currency": "AUD",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "56",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "CB-164.1",
+      "description": "Shielded cable",
+      "quantity": "768",
+      "uom": "EA",
+      "unit_price": "18.41",
+      "moq": "5",
+      "lead_time_days": 23,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "14138.88"
+    }
+  ],
+  "stated_subtotal": "14138.88",
+  "stated_total": "14194.88",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

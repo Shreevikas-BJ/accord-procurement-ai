@@ -1,0 +1,282 @@
+{
+  "supplier_name": "Vertex Industrial",
+  "supplier_email": "sales@vertex.example",
+  "quote_number": "VER-1004-26-REV2",
+  "rfq_number": "RFQ-1004",
+  "quote_date": "2026-09-09",
+  "expiration_date": "2026-11-30",
+  "currency": "USD",
+  "payment_terms": "Net 30",
+  "shipping_terms": "Delivered to Apex receiving dock",
+  "shipping_cost": "500.00",
+  "tax": "0.00",
+  "confidence": "0.98",
+  "notes": "Prices in USD. No purchase commitment. Quote subject to availability.",
+  "source_references": {
+    "supplier_name": {
+      "page": 1,
+      "source_text": "supplier_name: Vertex Industrial",
+      "confidence": "0.98"
+    },
+    "supplier_email": {
+      "page": 1,
+      "source_text": "supplier_email: sales@vertex.example",
+      "confidence": "0.98"
+    },
+    "quote_number": {
+      "page": 1,
+      "source_text": "quote_number: VER-1004-26-REV2",
+      "confidence": "0.98"
+    },
+    "rfq_number": {
+      "page": 1,
+      "source_text": "rfq_number: RFQ-1004",
+      "confidence": "0.98"
+    },
+    "quote_date": {
+      "page": 1,
+      "source_text": "quote_date: 2026-09-09",
+      "confidence": "0.98"
+    },
+    "expiration_date": {
+      "page": 1,
+      "source_text": "expiration_date: 2026-11-30",
+      "confidence": "0.98"
+    },
+    "currency": {
+      "page": 1,
+      "source_text": "currency: USD",
+      "confidence": "0.98"
+    },
+    "payment_terms": {
+      "page": 1,
+      "source_text": "payment_terms: Net 30",
+      "confidence": "0.98"
+    },
+    "shipping_terms": {
+      "page": 1,
+      "source_text": "shipping_terms: Delivered to Apex receiving dock",
+      "confidence": "0.98"
+    },
+    "shipping_cost": {
+      "page": 1,
+      "source_text": "shipping_cost: 500.00",
+      "confidence": "0.98"
+    },
+    "tax": {
+      "page": 1,
+      "source_text": "tax: 0.00",
+      "confidence": "0.98"
+    },
+    "confidence": {
+      "page": 1,
+      "source_text": "confidence: 0.98",
+      "confidence": "0.98"
+    },
+    "notes": {
+      "page": 1,
+      "source_text": "notes: Prices in USD. No purchase commitment. Quote subject to availability.",
+      "confidence": "0.98"
+    }
+  },
+  "line_items": [
+    {
+      "supplier_sku": "AX-100",
+      "manufacturer_part_number": null,
+      "description": null,
+      "quantity": "5000",
+      "uom": null,
+      "unit_price": "4.49",
+      "moq": "10000",
+      "lead_time_days": null,
+      "lead_time_min": null,
+      "delivery_date": null,
+      "confidence": "0.62",
+      "price_tiers": [],
+      "source_references": {
+        "supplier_sku": {
+          "page": 1,
+          "source_text": "supplier_sku: AX-100",
+          "confidence": "0.62"
+        },
+        "manufacturer_part_number": {
+          "page": 1,
+          "source_text": "manufacturer_part_number: AX-100",
+          "confidence": "0.62"
+        },
+        "description": {
+          "page": 1,
+          "source_text": "description: Industrial Relay",
+          "confidence": "0.62"
+        },
+        "quantity": {
+          "page": 1,
+          "source_text": "quantity: 5000",
+          "confidence": "0.62"
+        },
+        "uom": {
+          "page": 1,
+          "source_text": "uom: EA",
+          "confidence": "0.62"
+        },
+        "unit_price": {
+          "page": 1,
+          "source_text": "unit_price: 4.49",
+          "confidence": "0.62"
+        },
+        "moq": {
+          "page": 1,
+          "source_text": "moq: 10000",
+          "confidence": "0.62"
+        },
+        "lead_time_days": {
+          "page": 1,
+          "source_text": "lead_time_days: 60",
+          "confidence": "0.62"
+        },
+        "lead_time_min": {
+          "page": 1,
+          "source_text": "lead_time_min: 60",
+          "confidence": "0.62"
+        },
+        "delivery_date": {
+          "page": 1,
+          "source_text": "delivery_date: 2026-11-08",
+          "confidence": "0.62"
+        }
+      }
+    },
+    {
+      "supplier_sku": "BX-220",
+      "manufacturer_part_number": null,
+      "description": null,
+      "quantity": "1000",
+      "uom": null,
+      "unit_price": "47.40",
+      "moq": "500",
+      "lead_time_days": null,
+      "lead_time_min": null,
+      "delivery_date": null,
+      "confidence": "0.98",
+      "price_tiers": [],
+      "source_references": {
+        "supplier_sku": {
+          "page": 1,
+          "source_text": "supplier_sku: BX-220",
+          "confidence": "0.98"
+        },
+        "manufacturer_part_number": {
+          "page": 1,
+          "source_text": "manufacturer_part_number: BX-220",
+          "confidence": "0.98"
+        },
+        "description": {
+          "page": 1,
+          "source_text": "description: Control Module",
+          "confidence": "0.98"
+        },
+        "quantity": {
+          "page": 1,
+          "source_text": "quantity: 1000",
+          "confidence": "0.98"
+        },
+        "uom": {
+          "page": 1,
+          "source_text": "uom: EA",
+          "confidence": "0.98"
+        },
+        "unit_price": {
+          "page": 1,
+          "source_text": "unit_price: 47.40",
+          "confidence": "0.98"
+        },
+        "moq": {
+          "page": 1,
+          "source_text": "moq: 500",
+          "confidence": "0.98"
+        },
+        "lead_time_days": {
+          "page": 1,
+          "source_text": "lead_time_days: 60",
+          "confidence": "0.98"
+        },
+        "lead_time_min": {
+          "page": 1,
+          "source_text": "lead_time_min: 60",
+          "confidence": "0.98"
+        },
+        "delivery_date": {
+          "page": 1,
+          "source_text": "delivery_date: 2026-11-08",
+          "confidence": "0.98"
+        }
+      }
+    },
+    {
+      "supplier_sku": "CX-300",
+      "manufacturer_part_number": null,
+      "description": null,
+      "quantity": "2500",
+      "uom": null,
+      "unit_price": "19.80",
+      "moq": "500",
+      "lead_time_days": null,
+      "lead_time_min": null,
+      "delivery_date": null,
+      "confidence": "0.98",
+      "price_tiers": [],
+      "source_references": {
+        "supplier_sku": {
+          "page": 1,
+          "source_text": "supplier_sku: CX-300",
+          "confidence": "0.98"
+        },
+        "manufacturer_part_number": {
+          "page": 1,
+          "source_text": "manufacturer_part_number: CX-300",
+          "confidence": "0.98"
+        },
+        "description": {
+          "page": 1,
+          "source_text": "description: Industrial Switch",
+          "confidence": "0.98"
+        },
+        "quantity": {
+          "page": 1,
+          "source_text": "quantity: 2500",
+          "confidence": "0.98"
+        },
+        "uom": {
+          "page": 1,
+          "source_text": "uom: EA",
+          "confidence": "0.98"
+        },
+        "unit_price": {
+          "page": 1,
+          "source_text": "unit_price: 19.80",
+          "confidence": "0.98"
+        },
+        "moq": {
+          "page": 1,
+          "source_text": "moq: 500",
+          "confidence": "0.98"
+        },
+        "lead_time_days": {
+          "page": 1,
+          "source_text": "lead_time_days: 60",
+          "confidence": "0.98"
+        },
+        "lead_time_min": {
+          "page": 1,
+          "source_text": "lead_time_min: 60",
+          "confidence": "0.98"
+        },
+        "delivery_date": {
+          "page": 1,
+          "source_text": "delivery_date: 2026-11-08",
+          "confidence": "0.98"
+        }
+      }
+    }
+  ]
+}

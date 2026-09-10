@@ -1,0 +1,27 @@
+{
+  "supplier_name": "Riverbend Hydraulics",
+  "quote_number": "BP/66/26",
+  "rfq_number": "REQ-8266",
+  "currency": "USD",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "12",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "BP/66-X.02",
+      "description": "Ceramic terminal block",
+      "quantity": "12",
+      "uom": "BOX",
+      "unit_price": "87.50",
+      "moq": "10",
+      "lead_time_days": 28,
+      "delivery_date": "2026-10-15",
+      "stated_line_total": "1050.00"
+    }
+  ],
+  "stated_subtotal": "1050.00",
+  "stated_total": "1062.00",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

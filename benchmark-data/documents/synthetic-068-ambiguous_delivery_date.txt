@@ -1,0 +1,21 @@
+From: quotations@fictional.example
+To: buyer@evaluation.example
+Subject: Current commercial quotation
+
+SUPPLIER QUOTATION - FICTIONAL EVALUATION DOCUMENT
+Supplier | Mesa Mechanical
+Quote number | BP/68/26
+RFQ | REQ-8268
+Currency | GBP
+Quote date | 2026-09-01
+Valid until | 2026-11-30
+SKU | Description | Qty | UOM | Unit price | Line total | MOQ | Lead time | Delivery
+BP/68-X.02 | Ceramic terminal block | 98 | PCS | 6.8 | 666.4 | 10 | 28 days | 10/11/2026
+Subtotal | 666.4
+Shipping | 12
+Tax | 0
+Grand total | 678.4
+Payment terms | Net 30
+Shipping terms | FOB origin
+This quotation is not an invoice or purchase order.
+Delivery date convention | Not specified; ask supplier to clarify month/day order

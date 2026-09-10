@@ -1,0 +1,38 @@
+{
+  "supplier_name": "Summit Tooling",
+  "quote_number": "EVAL-046-Q",
+  "rfq_number": "REQ-8145",
+  "currency": "USD",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "57",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "FT-165.1",
+      "description": "Steel fitting",
+      "quantity": "785",
+      "uom": "EA",
+      "unit_price": "18.8",
+      "moq": "5",
+      "lead_time_days": 24,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "14758.0"
+    },
+    {
+      "supplier_sku": "SW-165.2",
+      "description": "Limit switch",
+      "quantity": "905",
+      "uom": "EA",
+      "unit_price": "20.11",
+      "moq": "10",
+      "lead_time_days": 27,
+      "delivery_date": "2026-10-13",
+      "stated_line_total": "18199.55"
+    }
+  ],
+  "stated_subtotal": "32957.55",
+  "stated_total": "33014.55",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

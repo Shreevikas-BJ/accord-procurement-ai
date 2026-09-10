@@ -1,0 +1,18 @@
+SUPPLIER QUOTATION - FICTIONAL EVALUATION DOCUMENT
+Supplier,Summit Tooling
+Quote number,EVAL-034-Q
+RFQ,REQ-8133
+Currency,CAD
+Quote date,2026-09-01
+Valid until,2026-11-30
+Number format,Decimal comma; all amounts in stated currency
+SKU,Description,Qty,UOM,Unit price,Line total,MOQ,Lead time,Delivery
+SE-153.1,Optical sensor,"581,00",Each,"14,12","8203,72","5,00",12 days,2026-10-10
+CB-153.2,Shielded cable,"701,00",Each,"15,43","10816,43","10,00",15 days,2026-10-13
+Subtotal,"19020,15"
+Shipping,"45,00"
+Tax,"0,00"
+Grand total,"19065,15"
+Payment terms,Net 30
+Shipping terms,FOB origin
+This quotation is not an invoice or purchase order.

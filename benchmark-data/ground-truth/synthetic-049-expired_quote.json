@@ -1,0 +1,27 @@
+{
+  "supplier_name": "Cedar Components Ltd",
+  "quote_number": "EVAL-049-Q",
+  "rfq_number": "REQ-8148",
+  "currency": "CAD",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-09-02",
+  "shipping_cost": "60",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "MT-168.1",
+      "description": "Stepper motor",
+      "quantity": "836",
+      "uom": "EA",
+      "unit_price": "19.97",
+      "moq": "5",
+      "lead_time_days": 27,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "16694.92"
+    }
+  ],
+  "stated_subtotal": "16694.92",
+  "stated_total": "16754.92",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

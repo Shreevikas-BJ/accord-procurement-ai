@@ -1,0 +1,40 @@
+{
+  "supplier_name": "Harbor Fasteners",
+  "quote_number": "EVAL-002-Q",
+  "rfq_number": "REQ-8101",
+  "currency": "EUR",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "13",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "VB-121.1",
+      "description": "Brass valve",
+      "quantity": "37",
+      "uom": "EA",
+      "unit_price": "1.64",
+      "moq": "5",
+      "lead_time_days": 8,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "60.68",
+      "manufacturer_part_number": "OEM/VB/1"
+    },
+    {
+      "supplier_sku": "BR-121.2",
+      "description": "Ball bearing",
+      "quantity": "157",
+      "uom": "EA",
+      "unit_price": "2.95",
+      "moq": "10",
+      "lead_time_days": 11,
+      "delivery_date": "2026-10-13",
+      "stated_line_total": "463.15",
+      "manufacturer_part_number": "OEM/BR/2"
+    }
+  ],
+  "stated_subtotal": "523.83",
+  "stated_total": "536.83",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

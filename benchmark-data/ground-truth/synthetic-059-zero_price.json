@@ -1,0 +1,49 @@
+{
+  "supplier_name": "Aspen Fluid Systems",
+  "quote_number": "EVAL-059-Q",
+  "rfq_number": "REQ-8158",
+  "currency": "CAD",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "70",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "MT-178.1",
+      "description": "Stepper motor",
+      "quantity": "1006",
+      "uom": "EA",
+      "unit_price": "0",
+      "moq": "5",
+      "lead_time_days": 9,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "0"
+    },
+    {
+      "supplier_sku": "PK-178.2",
+      "description": "Packing sleeve",
+      "quantity": "1126",
+      "uom": "EA",
+      "unit_price": "0",
+      "moq": "10",
+      "lead_time_days": 12,
+      "delivery_date": "2026-10-13",
+      "stated_line_total": "0"
+    },
+    {
+      "supplier_sku": "CT-178.3",
+      "description": "Copper terminal",
+      "quantity": "1246",
+      "uom": "EA",
+      "unit_price": "0",
+      "moq": "15",
+      "lead_time_days": 15,
+      "delivery_date": "2026-10-16",
+      "stated_line_total": "0"
+    }
+  ],
+  "stated_subtotal": "0",
+  "stated_total": "70",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

@@ -1,0 +1,27 @@
+{
+  "supplier_name": "Beacon Precision Works",
+  "quote_number": "BP/70/26",
+  "rfq_number": "REQ-8270",
+  "currency": "EUR",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "12",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "BP/70-X.02",
+      "description": "Ceramic terminal block",
+      "quantity": "100",
+      "uom": "EA",
+      "unit_price": "7",
+      "moq": "10",
+      "lead_time_days": 28,
+      "delivery_date": "2026-10-15",
+      "stated_line_total": "700"
+    }
+  ],
+  "stated_subtotal": null,
+  "stated_total": null,
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

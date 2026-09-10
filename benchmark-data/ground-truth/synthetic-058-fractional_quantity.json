@@ -1,0 +1,38 @@
+{
+  "supplier_name": "Summit Tooling",
+  "quote_number": "EVAL-058-Q",
+  "rfq_number": "REQ-8157",
+  "currency": "GBP",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "69",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "GA-177.1",
+      "description": "Pressure gauge",
+      "quantity": "123.625",
+      "uom": "KG",
+      "unit_price": "23.48",
+      "moq": "5",
+      "lead_time_days": 8,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "2902.71500"
+    },
+    {
+      "supplier_sku": "MT-177.2",
+      "description": "Stepper motor",
+      "quantity": "138.625",
+      "uom": "KG",
+      "unit_price": "24.79",
+      "moq": "10",
+      "lead_time_days": 11,
+      "delivery_date": "2026-10-13",
+      "stated_line_total": "3436.51375"
+    }
+  ],
+  "stated_subtotal": "6339.22875",
+  "stated_total": "6408.22875",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

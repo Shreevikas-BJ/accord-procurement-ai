@@ -1,0 +1,22 @@
+From: quotes@fictional.example
+Subject: Supplier offer
+
+SUPPLIER QUOTATION - FICTIONAL EVALUATION DOCUMENT
+Supplier | Orion Valve Works
+Quote number | EVAL-028-Q
+RFQ | REQ-8127
+Currency | GBP
+Quote date | 2026-09-01
+Valid until | 2026-11-30
+SKU | Description | Qty | UOM | Unit price | Line total | MOQ | Lead time | Delivery
+GA-147.1 | Pressure gauge | 59.875 | KG | 11.78 | 705.32750 | 5 | 34 days | 2026-10-10
+MT-147.2 | Stepper motor | 74.875 | KG | 13.09 | 980.11375 | 10 | 37 days | 2026-10-13
+PK-147.3 | Packing sleeve | 89.875 | KG | 14.4 | 1294.2000 | 15 | 40 days | 2026-10-16
+CT-147.4 | Copper terminal | 104.875 | KG | 15.71 | 1647.58625 | 20 | 43 days | 2026-10-19
+Subtotal | 4627.22750
+Shipping | 39
+Tax | 0
+Grand total | 4666.22750
+Payment terms | Net 30
+Shipping terms | FOB origin
+This quotation is not an invoice or purchase order.

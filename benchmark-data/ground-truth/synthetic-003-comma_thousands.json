@@ -1,0 +1,49 @@
+{
+  "supplier_name": "Juniper Motion Systems",
+  "quote_number": "EVAL-003-Q",
+  "rfq_number": "REQ-8102",
+  "currency": "GBP",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "14",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "BR-122.1",
+      "description": "Ball bearing",
+      "quantity": "1220",
+      "uom": "EA",
+      "unit_price": "2.03",
+      "moq": "5",
+      "lead_time_days": 9,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "2476.60"
+    },
+    {
+      "supplier_sku": "SE-122.2",
+      "description": "Optical sensor",
+      "quantity": "1320",
+      "uom": "EA",
+      "unit_price": "3.34",
+      "moq": "10",
+      "lead_time_days": 12,
+      "delivery_date": "2026-10-13",
+      "stated_line_total": "4408.80"
+    },
+    {
+      "supplier_sku": "CB-122.3",
+      "description": "Shielded cable",
+      "quantity": "1420",
+      "uom": "EA",
+      "unit_price": "4.65",
+      "moq": "15",
+      "lead_time_days": 15,
+      "delivery_date": "2026-10-16",
+      "stated_line_total": "6603.00"
+    }
+  ],
+  "stated_subtotal": "13488.40",
+  "stated_total": "13502.40",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

@@ -1,0 +1,20 @@
+SUPPLIER QUOTATION - FICTIONAL EVALUATION DOCUMENT
+Supplier,Quartz Sensor Works
+Quote number,EVAL-048-Q
+RFQ,REQ-8147
+Currency,GBP
+Quote date,2026-09-01
+Valid until,2026-11-30
+SKU,Description,Qty,UOM,Unit price,Line total,MOQ,Lead time,Delivery
+GA-167.1,Pressure gauge,819,PCS,19.58,16036.02,5,26 days,2026-10-10
+MT-167.2,Stepper motor,939,PCS,20.89,19615.71,10,29 days,2026-10-13
+PK-167.3,Packing sleeve,1059,PCS,22.2,23509.8,15,32 days,2026-10-16
+CT-167.4,Copper terminal,1179,PCS,23.51,27718.29,20,35 days,2026-10-19
+GA-167.1,Pressure gauge,819,PCS,19.58,16036.02,5,26 days,2026-10-10
+Subtotal,102915.84
+Shipping,59
+Tax,0
+Grand total,102974.84
+Payment terms,Net 30
+Shipping terms,FOB origin
+This quotation is not an invoice or purchase order.

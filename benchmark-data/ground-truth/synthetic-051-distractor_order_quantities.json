@@ -1,0 +1,49 @@
+{
+  "supplier_name": "Juniper Motion Systems",
+  "quote_number": "EVAL-051-Q",
+  "rfq_number": "REQ-8150",
+  "currency": "USD",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "62",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "CT-170.1",
+      "description": "Copper terminal",
+      "quantity": "870",
+      "uom": "EA",
+      "unit_price": "20.75",
+      "moq": "5",
+      "lead_time_days": 29,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "18052.50"
+    },
+    {
+      "supplier_sku": "VB-170.2",
+      "description": "Brass valve",
+      "quantity": "990",
+      "uom": "EA",
+      "unit_price": "22.06",
+      "moq": "10",
+      "lead_time_days": 32,
+      "delivery_date": "2026-10-13",
+      "stated_line_total": "21839.40"
+    },
+    {
+      "supplier_sku": "BR-170.3",
+      "description": "Ball bearing",
+      "quantity": "1110",
+      "uom": "EA",
+      "unit_price": "23.37",
+      "moq": "15",
+      "lead_time_days": 35,
+      "delivery_date": "2026-10-16",
+      "stated_line_total": "25940.70"
+    }
+  ],
+  "stated_subtotal": "65832.60",
+  "stated_total": "65894.60",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

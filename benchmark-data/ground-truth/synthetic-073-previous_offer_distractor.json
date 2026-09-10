@@ -1,0 +1,27 @@
+{
+  "supplier_name": "Mesa Mechanical",
+  "quote_number": "BP/73/26",
+  "rfq_number": "REQ-8273",
+  "currency": "EUR",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "12",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "BP/73-X.02",
+      "description": "Ceramic terminal block",
+      "quantity": "103",
+      "uom": "EA",
+      "unit_price": "7.3",
+      "moq": "10",
+      "lead_time_days": 28,
+      "delivery_date": "2026-10-15",
+      "stated_line_total": "751.9"
+    }
+  ],
+  "stated_subtotal": "751.9",
+  "stated_total": "763.9",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

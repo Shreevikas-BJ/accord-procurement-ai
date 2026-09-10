@@ -1,0 +1,60 @@
+{
+  "supplier_name": "Quartz Sensor Works",
+  "quote_number": "EVAL-024-Q",
+  "rfq_number": "REQ-8123",
+  "currency": "CAD",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "35",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "SE-143.1",
+      "description": "Optical sensor",
+      "quantity": "411",
+      "uom": "EA",
+      "unit_price": "10.22",
+      "moq": "5",
+      "lead_time_days": 30,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "4200.42"
+    },
+    {
+      "supplier_sku": "CB-143.2",
+      "description": "Shielded cable",
+      "quantity": "531",
+      "uom": "EA",
+      "unit_price": "11.53",
+      "moq": "10",
+      "lead_time_days": 33,
+      "delivery_date": "2026-10-13",
+      "stated_line_total": "6122.43"
+    },
+    {
+      "supplier_sku": "FT-143.3",
+      "description": "Steel fitting",
+      "quantity": "651",
+      "uom": "EA",
+      "unit_price": "12.84",
+      "moq": "15",
+      "lead_time_days": 36,
+      "delivery_date": "2026-10-16",
+      "stated_line_total": "8358.84"
+    },
+    {
+      "supplier_sku": "SW-143.4",
+      "description": "Limit switch",
+      "quantity": "771",
+      "uom": "EA",
+      "unit_price": "14.15",
+      "moq": "20",
+      "lead_time_days": 39,
+      "delivery_date": "2026-10-19",
+      "stated_line_total": "10909.65"
+    }
+  ],
+  "stated_subtotal": "29591.34",
+  "stated_total": "29626.34",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

@@ -1,0 +1,39 @@
+From: quotes@fictional.example
+Subject: Supplier offer
+
+SUPPLIER QUOTATION - FICTIONAL EVALUATION DOCUMENT
+Bill to (buyer) | Accord Evaluation Lab
+Ship to | Receiving Dock 9
+Supplier | Harbor Fasteners
+Quote number | EVAL-014-Q
+RFQ | REQ-8113
+Currency | CAD
+Quote date | 2026-09-01
+Valid until | 2026-11-30
+Quoted item 1
+SKU | SE-133.1
+Description | Optical sensor
+Qty | 241
+UOM | PCS
+Unit price | 6.32
+Line total | 1523.12
+MOQ | 5
+Lead time | 20 days
+Delivery | 2026-10-10
+Quoted item 2
+SKU | CB-133.2
+Description | Shielded cable
+Qty | 361
+UOM | PCS
+Unit price | 7.63
+Line total | 2754.43
+MOQ | 10
+Lead time | 23 days
+Delivery | 2026-10-13
+Subtotal | 4277.55
+Shipping | 25
+Tax | 0
+Grand total | 4302.55
+Payment terms | Net 30
+Shipping terms | FOB origin
+This quotation is not an invoice or purchase order.

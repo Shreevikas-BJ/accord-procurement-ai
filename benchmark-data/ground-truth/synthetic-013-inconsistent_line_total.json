@@ -1,0 +1,27 @@
+{
+  "supplier_name": "Cedar Components Ltd",
+  "quote_number": "EVAL-013-Q",
+  "rfq_number": "REQ-8112",
+  "currency": "GBP",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "24",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "BR-132.1",
+      "description": "Ball bearing",
+      "quantity": "224",
+      "uom": "EA",
+      "unit_price": "5.93",
+      "moq": "5",
+      "lead_time_days": 19,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "13283.20"
+    }
+  ],
+  "stated_subtotal": "13283.20",
+  "stated_total": "13307.20",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

@@ -1,0 +1,39 @@
+{
+  "supplier_name": "Meadow Cable Supply",
+  "quote_number": "EVAL-041-Q",
+  "rfq_number": "REQ-8140",
+  "currency": "USD",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "52",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "CT-160.1",
+      "description": "Copper terminal",
+      "quantity": "700",
+      "uom": "EA",
+      "unit_price": "16.85",
+      "moq": "5",
+      "lead_time_days": 19,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "11795.00",
+      "price_tiers": [
+        {
+          "minimum": "1",
+          "maximum": "99",
+          "unit_price": "17.85"
+        },
+        {
+          "minimum": "100",
+          "maximum": null,
+          "unit_price": "16.85"
+        }
+      ]
+    }
+  ],
+  "stated_subtotal": "11795.00",
+  "stated_total": "11847.00",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

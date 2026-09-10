@@ -1,0 +1,27 @@
+{
+  "supplier_name": "Riverbend Hydraulics",
+  "quote_number": "BP/71/26",
+  "rfq_number": "REQ-8271",
+  "currency": "GBP",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "12",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "BP/71-X.02",
+      "description": "Ceramic terminal block, rated for elevated temperature",
+      "quantity": "101",
+      "uom": "EA",
+      "unit_price": "7.1",
+      "moq": "10",
+      "lead_time_days": 28,
+      "delivery_date": "2026-10-15",
+      "stated_line_total": "717.1"
+    }
+  ],
+  "stated_subtotal": "717.1",
+  "stated_total": "729.1",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

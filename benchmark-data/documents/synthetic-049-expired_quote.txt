@@ -1,0 +1,19 @@
+From: quotes@fictional.example
+Subject: Supplier offer
+
+SUPPLIER QUOTATION - FICTIONAL EVALUATION DOCUMENT
+Supplier | Cedar Components Ltd
+Quote number | EVAL-049-Q
+RFQ | REQ-8148
+Currency | CAD
+Quote date | 2026-09-01
+Valid until | 2026-09-02
+SKU | Description | Qty | UOM | Unit price | Line total | MOQ | Lead time | Delivery
+MT-168.1 | Stepper motor | 836 | Each | 19.97 | 16694.92 | 5 | 27 days | 2026-10-10
+Subtotal | 16694.92
+Shipping | 60
+Tax | 0
+Grand total | 16754.92
+Payment terms | Net 30
+Shipping terms | FOB origin
+This quotation is not an invoice or purchase order.

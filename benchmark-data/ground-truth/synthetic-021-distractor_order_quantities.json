@@ -1,0 +1,27 @@
+{
+  "supplier_name": "Blue Canyon Optics",
+  "quote_number": "EVAL-021-Q",
+  "rfq_number": "REQ-8120",
+  "currency": "USD",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "32",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "CT-140.1",
+      "description": "Copper terminal",
+      "quantity": "360",
+      "uom": "EA",
+      "unit_price": "9.05",
+      "moq": "5",
+      "lead_time_days": 27,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "3258.00"
+    }
+  ],
+  "stated_subtotal": "3258.00",
+  "stated_total": "3290.00",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

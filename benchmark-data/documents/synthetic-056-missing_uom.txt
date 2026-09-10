@@ -1,0 +1,53 @@
+From: quotes@fictional.example
+Subject: Supplier offer
+
+SUPPLIER QUOTATION - FICTIONAL EVALUATION DOCUMENT
+Supplier | Willow Packaging
+Quote number | EVAL-056-Q
+RFQ | REQ-8155
+Currency | USD
+Quote date | 2026-09-01
+Valid until | 2026-11-30
+Quoted item 1
+SKU | FT-175.1
+Description | Steel fitting
+Qty | 955
+Unit price | 22.7
+Line total | 21678.5
+MOQ | 5
+Lead time | 34 days
+Delivery | 2026-10-10
+Quoted item 2
+SKU | SW-175.2
+Description | Limit switch
+Qty | 1075
+Unit price | 24.01
+Line total | 25810.75
+MOQ | 10
+Lead time | 37 days
+Delivery | 2026-10-13
+Quoted item 3
+SKU | GA-175.3
+Description | Pressure gauge
+Qty | 1195
+Unit price | 25.32
+Line total | 30257.40
+MOQ | 15
+Lead time | 40 days
+Delivery | 2026-10-16
+Quoted item 4
+SKU | MT-175.4
+Description | Stepper motor
+Qty | 1315
+Unit price | 26.63
+Line total | 35018.45
+MOQ | 20
+Lead time | 43 days
+Delivery | 2026-10-19
+Subtotal | 112765.10
+Shipping | 67
+Tax | 0
+Grand total | 112832.10
+Payment terms | Net 30
+Shipping terms | FOB origin
+This quotation is not an invoice or purchase order.

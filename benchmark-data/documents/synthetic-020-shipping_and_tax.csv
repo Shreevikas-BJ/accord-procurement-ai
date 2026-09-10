@@ -1,0 +1,54 @@
+SUPPLIER QUOTATION - FICTIONAL EVALUATION DOCUMENT
+Supplier,Willow Packaging
+Quote number,EVAL-020-Q
+RFQ,REQ-8119
+Currency,AUD
+Quote date,2026-09-01
+Valid until,2026-11-30
+Quoted item 1
+SKU,PK-139.1
+Description,Packing sleeve
+Qty,343
+UOM,PCS
+Unit price,8.66
+Line total,2970.38
+MOQ,5
+Lead time,26 days
+Delivery,2026-10-10
+Quoted item 2
+SKU,CT-139.2
+Description,Copper terminal
+Qty,463
+UOM,PCS
+Unit price,9.97
+Line total,4616.11
+MOQ,10
+Lead time,29 days
+Delivery,2026-10-13
+Quoted item 3
+SKU,VB-139.3
+Description,Brass valve
+Qty,583
+UOM,PCS
+Unit price,11.28
+Line total,6576.24
+MOQ,15
+Lead time,32 days
+Delivery,2026-10-16
+Quoted item 4
+SKU,BR-139.4
+Description,Ball bearing
+Qty,703
+UOM,PCS
+Unit price,12.59
+Line total,8850.77
+MOQ,20
+Lead time,35 days
+Delivery,2026-10-19
+Subtotal,23013.50
+Shipping,31
+Tax,37.28
+Grand total,23081.78
+Payment terms,Net 30
+Shipping terms,FOB origin
+This quotation is not an invoice or purchase order.

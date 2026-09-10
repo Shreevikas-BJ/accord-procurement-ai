@@ -1,0 +1,38 @@
+{
+  "supplier_name": "Harbor Fasteners",
+  "quote_number": "EVAL-050-Q",
+  "rfq_number": "REQ-8149",
+  "currency": "AUD",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "61",
+  "tax": "37.28",
+  "line_items": [
+    {
+      "supplier_sku": "PK-169.1",
+      "description": "Packing sleeve",
+      "quantity": "853",
+      "uom": "EA",
+      "unit_price": "20.36",
+      "moq": "5",
+      "lead_time_days": 28,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "17367.08"
+    },
+    {
+      "supplier_sku": "CT-169.2",
+      "description": "Copper terminal",
+      "quantity": "973",
+      "uom": "EA",
+      "unit_price": "21.67",
+      "moq": "10",
+      "lead_time_days": 31,
+      "delivery_date": "2026-10-13",
+      "stated_line_total": "21084.91"
+    }
+  ],
+  "stated_subtotal": "38451.99",
+  "stated_total": "38550.27",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

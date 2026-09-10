@@ -1,0 +1,27 @@
+{
+  "supplier_name": "Elm Circuit Supply",
+  "quote_number": "BP/69/26",
+  "rfq_number": "REQ-8269",
+  "currency": "USD",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "12",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "BP/69-X.02",
+      "description": "Ceramic terminal block",
+      "quantity": "10000",
+      "uom": "EA",
+      "unit_price": "0.000042",
+      "moq": "10",
+      "lead_time_days": 28,
+      "delivery_date": "2026-10-15",
+      "stated_line_total": "0.420000"
+    }
+  ],
+  "stated_subtotal": "0.420000",
+  "stated_total": "12.420000",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

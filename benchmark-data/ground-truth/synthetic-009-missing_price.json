@@ -1,0 +1,27 @@
+{
+  "supplier_name": "Blue Canyon Optics",
+  "quote_number": "EVAL-009-Q",
+  "rfq_number": "REQ-8108",
+  "currency": "CAD",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "20",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "MT-128.1",
+      "description": "Stepper motor",
+      "quantity": "156",
+      "uom": "EA",
+      "unit_price": null,
+      "moq": "5",
+      "lead_time_days": 15,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": null
+    }
+  ],
+  "stated_subtotal": null,
+  "stated_total": null,
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

@@ -1,0 +1,27 @@
+{
+  "supplier_name": "Meadow Cable Supply",
+  "quote_number": "EVAL-017-Q",
+  "rfq_number": "REQ-8116",
+  "currency": "EUR",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "28",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "SW-136.1",
+      "description": "Limit switch",
+      "quantity": "292",
+      "uom": "EA",
+      "unit_price": "7.49",
+      "moq": "5",
+      "lead_time_days": null,
+      "delivery_date": null,
+      "stated_line_total": "2187.08"
+    }
+  ],
+  "stated_subtotal": "2187.08",
+  "stated_total": "2215.08",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

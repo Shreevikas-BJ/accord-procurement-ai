@@ -6,5 +6,6 @@
 .runtime
 data
 .env
+benchmark-data
 **/test-results
 **/playwright-report

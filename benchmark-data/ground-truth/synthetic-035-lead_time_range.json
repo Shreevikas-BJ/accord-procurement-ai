@@ -1,0 +1,52 @@
+{
+  "supplier_name": "Aspen Fluid Systems",
+  "quote_number": "EVAL-035-Q",
+  "rfq_number": "REQ-8134",
+  "currency": "AUD",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "46",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "CB-154.1",
+      "description": "Shielded cable",
+      "quantity": "598",
+      "uom": "EA",
+      "unit_price": "14.51",
+      "moq": "5",
+      "lead_time_days": 21,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "8676.98",
+      "lead_time_min": 14
+    },
+    {
+      "supplier_sku": "FT-154.2",
+      "description": "Steel fitting",
+      "quantity": "718",
+      "uom": "EA",
+      "unit_price": "15.82",
+      "moq": "10",
+      "lead_time_days": 22,
+      "delivery_date": "2026-10-13",
+      "stated_line_total": "11358.76",
+      "lead_time_min": 15
+    },
+    {
+      "supplier_sku": "SW-154.3",
+      "description": "Limit switch",
+      "quantity": "838",
+      "uom": "EA",
+      "unit_price": "17.13",
+      "moq": "15",
+      "lead_time_days": 23,
+      "delivery_date": "2026-10-16",
+      "stated_line_total": "14354.94",
+      "lead_time_min": 16
+    }
+  ],
+  "stated_subtotal": "34390.68",
+  "stated_total": "34436.68",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

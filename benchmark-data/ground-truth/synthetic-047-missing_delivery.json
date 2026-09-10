@@ -1,0 +1,49 @@
+{
+  "supplier_name": "Aspen Fluid Systems",
+  "quote_number": "EVAL-047-Q",
+  "rfq_number": "REQ-8146",
+  "currency": "EUR",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "58",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "SW-166.1",
+      "description": "Limit switch",
+      "quantity": "802",
+      "uom": "EA",
+      "unit_price": "19.19",
+      "moq": "5",
+      "lead_time_days": null,
+      "delivery_date": null,
+      "stated_line_total": "15390.38"
+    },
+    {
+      "supplier_sku": "GA-166.2",
+      "description": "Pressure gauge",
+      "quantity": "922",
+      "uom": "EA",
+      "unit_price": "20.5",
+      "moq": "10",
+      "lead_time_days": null,
+      "delivery_date": null,
+      "stated_line_total": "18901.0"
+    },
+    {
+      "supplier_sku": "MT-166.3",
+      "description": "Stepper motor",
+      "quantity": "1042",
+      "uom": "EA",
+      "unit_price": "21.81",
+      "moq": "15",
+      "lead_time_days": null,
+      "delivery_date": null,
+      "stated_line_total": "22726.02"
+    }
+  ],
+  "stated_subtotal": "57017.40",
+  "stated_total": "57075.40",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

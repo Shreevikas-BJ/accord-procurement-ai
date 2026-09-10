@@ -1,0 +1,27 @@
+{
+  "supplier_name": "Cedar Components Ltd",
+  "quote_number": "EVAL-025-Q",
+  "rfq_number": "REQ-8124",
+  "currency": "AUD",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "36",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "CB-144.1",
+      "description": "Shielded cable",
+      "quantity": "428",
+      "uom": "EA",
+      "unit_price": "10.61",
+      "moq": "5",
+      "lead_time_days": 31,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "4541.08"
+    }
+  ],
+  "stated_subtotal": "4541.08",
+  "stated_total": "4577.08",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

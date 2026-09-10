@@ -1,0 +1,38 @@
+{
+  "supplier_name": "Northstar Bearings",
+  "quote_number": "EVAL-054-Q",
+  "rfq_number": "REQ-8153",
+  "currency": "CAD",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "65",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "SE-173.1",
+      "description": "Optical sensor",
+      "quantity": "921",
+      "uom": "EA",
+      "unit_price": "21.92",
+      "moq": "5",
+      "lead_time_days": 32,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "20188.32"
+    },
+    {
+      "supplier_sku": "CB-173.2",
+      "description": "Shielded cable",
+      "quantity": "1041",
+      "uom": "EA",
+      "unit_price": "23.23",
+      "moq": "10",
+      "lead_time_days": 35,
+      "delivery_date": "2026-10-13",
+      "stated_line_total": "24182.43"
+    }
+  ],
+  "stated_subtotal": "44370.75",
+  "stated_total": "44435.75",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

@@ -1,0 +1,27 @@
+{
+  "supplier_name": "Blue Canyon Optics",
+  "quote_number": "EVAL-033-Q",
+  "rfq_number": "REQ-8132",
+  "currency": "GBP",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "44",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "BR-152.1",
+      "description": "Ball bearing",
+      "quantity": "1520",
+      "uom": "EA",
+      "unit_price": "13.73",
+      "moq": "5",
+      "lead_time_days": 11,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "20869.60"
+    }
+  ],
+  "stated_subtotal": "20869.60",
+  "stated_total": "20913.60",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

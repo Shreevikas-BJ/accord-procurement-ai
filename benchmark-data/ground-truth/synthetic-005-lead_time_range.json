@@ -1,0 +1,28 @@
+{
+  "supplier_name": "Meadow Cable Supply",
+  "quote_number": "EVAL-005-Q",
+  "rfq_number": "REQ-8104",
+  "currency": "AUD",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "16",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "CB-124.1",
+      "description": "Shielded cable",
+      "quantity": "88",
+      "uom": "EA",
+      "unit_price": "2.81",
+      "moq": "5",
+      "lead_time_days": 21,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "247.28",
+      "lead_time_min": 14
+    }
+  ],
+  "stated_subtotal": "247.28",
+  "stated_total": "263.28",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

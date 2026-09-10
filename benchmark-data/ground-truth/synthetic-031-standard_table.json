@@ -1,0 +1,49 @@
+{
+  "supplier_name": "Copper Ridge Controls",
+  "quote_number": "EVAL-031-Q",
+  "rfq_number": "REQ-8130",
+  "currency": "USD",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "42",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "CT-150.1",
+      "description": "Copper terminal",
+      "quantity": "530",
+      "uom": "EA",
+      "unit_price": "12.95",
+      "moq": "5",
+      "lead_time_days": 9,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "6863.50"
+    },
+    {
+      "supplier_sku": "VB-150.2",
+      "description": "Brass valve",
+      "quantity": "650",
+      "uom": "EA",
+      "unit_price": "14.26",
+      "moq": "10",
+      "lead_time_days": 12,
+      "delivery_date": "2026-10-13",
+      "stated_line_total": "9269.00"
+    },
+    {
+      "supplier_sku": "BR-150.3",
+      "description": "Ball bearing",
+      "quantity": "770",
+      "uom": "EA",
+      "unit_price": "15.57",
+      "moq": "15",
+      "lead_time_days": 15,
+      "delivery_date": "2026-10-16",
+      "stated_line_total": "11988.90"
+    }
+  ],
+  "stated_subtotal": "28121.40",
+  "stated_total": "28163.40",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

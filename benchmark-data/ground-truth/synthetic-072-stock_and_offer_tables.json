@@ -1,0 +1,27 @@
+{
+  "supplier_name": "Clearwater Cable Co",
+  "quote_number": "BP/72/26",
+  "rfq_number": "REQ-8272",
+  "currency": "USD",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "12",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "BP/72-X.02",
+      "description": "Ceramic terminal block",
+      "quantity": "102",
+      "uom": "EA",
+      "unit_price": "7.2",
+      "moq": "10",
+      "lead_time_days": 28,
+      "delivery_date": "2026-10-15",
+      "stated_line_total": "734.4"
+    }
+  ],
+  "stated_subtotal": "734.4",
+  "stated_total": "746.4",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

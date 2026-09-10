@@ -1,0 +1,71 @@
+{
+  "supplier_name": "Quartz Sensor Works",
+  "quote_number": "EVAL-048-Q",
+  "rfq_number": "REQ-8147",
+  "currency": "GBP",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "59",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "GA-167.1",
+      "description": "Pressure gauge",
+      "quantity": "819",
+      "uom": "EA",
+      "unit_price": "19.58",
+      "moq": "5",
+      "lead_time_days": 26,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "16036.02"
+    },
+    {
+      "supplier_sku": "MT-167.2",
+      "description": "Stepper motor",
+      "quantity": "939",
+      "uom": "EA",
+      "unit_price": "20.89",
+      "moq": "10",
+      "lead_time_days": 29,
+      "delivery_date": "2026-10-13",
+      "stated_line_total": "19615.71"
+    },
+    {
+      "supplier_sku": "PK-167.3",
+      "description": "Packing sleeve",
+      "quantity": "1059",
+      "uom": "EA",
+      "unit_price": "22.2",
+      "moq": "15",
+      "lead_time_days": 32,
+      "delivery_date": "2026-10-16",
+      "stated_line_total": "23509.8"
+    },
+    {
+      "supplier_sku": "CT-167.4",
+      "description": "Copper terminal",
+      "quantity": "1179",
+      "uom": "EA",
+      "unit_price": "23.51",
+      "moq": "20",
+      "lead_time_days": 35,
+      "delivery_date": "2026-10-19",
+      "stated_line_total": "27718.29"
+    },
+    {
+      "supplier_sku": "GA-167.1",
+      "description": "Pressure gauge",
+      "quantity": "819",
+      "uom": "EA",
+      "unit_price": "19.58",
+      "moq": "5",
+      "lead_time_days": 26,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "16036.02"
+    }
+  ],
+  "stated_subtotal": "102915.84",
+  "stated_total": "102974.84",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

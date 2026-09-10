@@ -1,0 +1,64 @@
+{
+  "supplier_name": "Willow Packaging",
+  "quote_number": "EVAL-032-Q",
+  "rfq_number": "REQ-8131",
+  "currency": "EUR",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "43",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "VB-151.1",
+      "description": "Brass valve",
+      "quantity": "547",
+      "uom": "EA",
+      "unit_price": "13.34",
+      "moq": "5",
+      "lead_time_days": 10,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "7296.98",
+      "manufacturer_part_number": "OEM/VB/31"
+    },
+    {
+      "supplier_sku": "BR-151.2",
+      "description": "Ball bearing",
+      "quantity": "667",
+      "uom": "EA",
+      "unit_price": "14.65",
+      "moq": "10",
+      "lead_time_days": 13,
+      "delivery_date": "2026-10-13",
+      "stated_line_total": "9771.55",
+      "manufacturer_part_number": "OEM/BR/32"
+    },
+    {
+      "supplier_sku": "SE-151.3",
+      "description": "Optical sensor",
+      "quantity": "787",
+      "uom": "EA",
+      "unit_price": "15.96",
+      "moq": "15",
+      "lead_time_days": 16,
+      "delivery_date": "2026-10-16",
+      "stated_line_total": "12560.52",
+      "manufacturer_part_number": "OEM/SE/33"
+    },
+    {
+      "supplier_sku": "CB-151.4",
+      "description": "Shielded cable",
+      "quantity": "907",
+      "uom": "EA",
+      "unit_price": "17.27",
+      "moq": "20",
+      "lead_time_days": 19,
+      "delivery_date": "2026-10-19",
+      "stated_line_total": "15663.89",
+      "manufacturer_part_number": "OEM/CB/34"
+    }
+  ],
+  "stated_subtotal": "45292.94",
+  "stated_total": "45335.94",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

@@ -1,0 +1,49 @@
+{
+  "supplier_name": "Aspen Fluid Systems",
+  "quote_number": null,
+  "rfq_number": "REQ-8122",
+  "currency": "GBP",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "34",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "BR-142.1",
+      "description": "Ball bearing",
+      "quantity": "394",
+      "uom": "EA",
+      "unit_price": "9.83",
+      "moq": "5",
+      "lead_time_days": 29,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "3873.02"
+    },
+    {
+      "supplier_sku": "SE-142.2",
+      "description": "Optical sensor",
+      "quantity": "514",
+      "uom": "EA",
+      "unit_price": "11.14",
+      "moq": "10",
+      "lead_time_days": 32,
+      "delivery_date": "2026-10-13",
+      "stated_line_total": "5725.96"
+    },
+    {
+      "supplier_sku": "CB-142.3",
+      "description": "Shielded cable",
+      "quantity": "634",
+      "uom": "EA",
+      "unit_price": "12.45",
+      "moq": "15",
+      "lead_time_days": 35,
+      "delivery_date": "2026-10-16",
+      "stated_line_total": "7893.30"
+    }
+  ],
+  "stated_subtotal": "17492.28",
+  "stated_total": "17526.28",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

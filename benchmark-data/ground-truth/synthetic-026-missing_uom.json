@@ -1,0 +1,38 @@
+{
+  "supplier_name": "Harbor Fasteners",
+  "quote_number": "EVAL-026-Q",
+  "rfq_number": "REQ-8125",
+  "currency": "USD",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "37",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "FT-145.1",
+      "description": "Steel fitting",
+      "quantity": "445",
+      "uom": null,
+      "unit_price": "11",
+      "moq": "5",
+      "lead_time_days": 32,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "4895"
+    },
+    {
+      "supplier_sku": "SW-145.2",
+      "description": "Limit switch",
+      "quantity": "565",
+      "uom": null,
+      "unit_price": "12.31",
+      "moq": "10",
+      "lead_time_days": 35,
+      "delivery_date": "2026-10-13",
+      "stated_line_total": "6955.15"
+    }
+  ],
+  "stated_subtotal": "11850.15",
+  "stated_total": "11887.15",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

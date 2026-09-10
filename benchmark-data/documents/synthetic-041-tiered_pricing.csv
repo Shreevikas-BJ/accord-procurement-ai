@@ -1,0 +1,25 @@
+SUPPLIER QUOTATION - FICTIONAL EVALUATION DOCUMENT
+Supplier,Meadow Cable Supply
+Quote number,EVAL-041-Q
+RFQ,REQ-8140
+Currency,USD
+Quote date,2026-09-01
+Valid until,2026-11-30
+Quoted item 1
+SKU,CT-160.1
+Description,Copper terminal
+Qty,700
+UOM,PCS
+Unit price,16.85
+Line total,11795.00
+MOQ,5
+Lead time,19 days
+Delivery,2026-10-10
+Quantity tiers for CT-160.1,1-99: 17.85,100+: 16.85
+Subtotal,11795.00
+Shipping,52
+Tax,0
+Grand total,11847.00
+Payment terms,Net 30
+Shipping terms,FOB origin
+This quotation is not an invoice or purchase order.

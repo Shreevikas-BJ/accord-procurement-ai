@@ -1,0 +1,27 @@
+{
+  "supplier_name": "Cedar Components Ltd",
+  "quote_number": "EVAL-037-Q",
+  "rfq_number": "REQ-8136",
+  "currency": "EUR",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "48",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "SW-156.1",
+      "description": "Limit switch",
+      "quantity": "632",
+      "uom": "EA",
+      "unit_price": "15.29",
+      "moq": null,
+      "lead_time_days": 15,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "9663.28"
+    }
+  ],
+  "stated_subtotal": "9663.28",
+  "stated_total": "9711.28",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

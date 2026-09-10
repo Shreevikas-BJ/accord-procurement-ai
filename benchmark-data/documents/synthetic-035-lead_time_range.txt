@@ -1,0 +1,47 @@
+From: quotes@fictional.example
+Subject: Supplier offer
+
+SUPPLIER QUOTATION - FICTIONAL EVALUATION DOCUMENT
+Supplier | Aspen Fluid Systems
+Quote number | EVAL-035-Q
+RFQ | REQ-8134
+Currency | AUD
+Quote date | 2026-09-01
+Valid until | 2026-11-30
+Quoted item 1
+SKU | CB-154.1
+Description | Shielded cable
+Qty | 598
+UOM | PCS
+Unit price | 14.51
+Line total | 8676.98
+MOQ | 5
+Lead time | 14-21 days
+Delivery | 2026-10-10
+Quoted item 2
+SKU | FT-154.2
+Description | Steel fitting
+Qty | 718
+UOM | PCS
+Unit price | 15.82
+Line total | 11358.76
+MOQ | 10
+Lead time | 15-22 days
+Delivery | 2026-10-13
+Quoted item 3
+SKU | SW-154.3
+Description | Limit switch
+Qty | 838
+UOM | PCS
+Unit price | 17.13
+Line total | 14354.94
+MOQ | 15
+Lead time | 16-23 days
+Delivery | 2026-10-16
+Subtotal | 34390.68
+Shipping | 46
+Tax | 0
+Grand total | 34436.68
+Payment terms | Net 30
+Shipping terms | FOB origin
+This quotation is not an invoice or purchase order.

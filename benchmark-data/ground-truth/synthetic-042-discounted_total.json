@@ -1,0 +1,38 @@
+{
+  "supplier_name": "Northstar Bearings",
+  "quote_number": "EVAL-042-Q",
+  "rfq_number": "REQ-8141",
+  "currency": "EUR",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "53",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "VB-161.1",
+      "description": "Brass valve",
+      "quantity": "717",
+      "uom": "EA",
+      "unit_price": "17.24",
+      "moq": "5",
+      "lead_time_days": 20,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "12361.08"
+    },
+    {
+      "supplier_sku": "BR-161.2",
+      "description": "Ball bearing",
+      "quantity": "837",
+      "uom": "EA",
+      "unit_price": "18.55",
+      "moq": "10",
+      "lead_time_days": 23,
+      "delivery_date": "2026-10-13",
+      "stated_line_total": "15526.35"
+    }
+  ],
+  "stated_subtotal": "27887.43",
+  "stated_total": "27925.43",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

@@ -1,0 +1,27 @@
+{
+  "supplier_name": "Meadow Cable Supply",
+  "quote_number": null,
+  "rfq_number": "REQ-8152",
+  "currency": "GBP",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "64",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "BR-172.1",
+      "description": "Ball bearing",
+      "quantity": "904",
+      "uom": "EA",
+      "unit_price": "21.53",
+      "moq": "5",
+      "lead_time_days": 31,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "19463.12"
+    }
+  ],
+  "stated_subtotal": "19463.12",
+  "stated_total": "19527.12",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

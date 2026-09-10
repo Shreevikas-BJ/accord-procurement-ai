@@ -1,0 +1,27 @@
+{
+  "supplier_name": "Cedar Components Ltd",
+  "quote_number": "EVAL-001-Q",
+  "rfq_number": "REQ-8100",
+  "currency": "USD",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "12",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "CT-120.1",
+      "description": "Copper terminal",
+      "quantity": "20",
+      "uom": "EA",
+      "unit_price": "1.25",
+      "moq": "5",
+      "lead_time_days": 7,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "25.00"
+    }
+  ],
+  "stated_subtotal": "25.00",
+  "stated_total": "37.00",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

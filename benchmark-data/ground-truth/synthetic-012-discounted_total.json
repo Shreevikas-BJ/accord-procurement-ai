@@ -1,0 +1,60 @@
+{
+  "supplier_name": "Quartz Sensor Works",
+  "quote_number": "EVAL-012-Q",
+  "rfq_number": "REQ-8111",
+  "currency": "EUR",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "23",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "VB-131.1",
+      "description": "Brass valve",
+      "quantity": "207",
+      "uom": "EA",
+      "unit_price": "5.54",
+      "moq": "5",
+      "lead_time_days": 18,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "1146.78"
+    },
+    {
+      "supplier_sku": "BR-131.2",
+      "description": "Ball bearing",
+      "quantity": "327",
+      "uom": "EA",
+      "unit_price": "6.85",
+      "moq": "10",
+      "lead_time_days": 21,
+      "delivery_date": "2026-10-13",
+      "stated_line_total": "2239.95"
+    },
+    {
+      "supplier_sku": "SE-131.3",
+      "description": "Optical sensor",
+      "quantity": "447",
+      "uom": "EA",
+      "unit_price": "8.16",
+      "moq": "15",
+      "lead_time_days": 24,
+      "delivery_date": "2026-10-16",
+      "stated_line_total": "3647.52"
+    },
+    {
+      "supplier_sku": "CB-131.4",
+      "description": "Shielded cable",
+      "quantity": "567",
+      "uom": "EA",
+      "unit_price": "9.47",
+      "moq": "20",
+      "lead_time_days": 27,
+      "delivery_date": "2026-10-19",
+      "stated_line_total": "5369.49"
+    }
+  ],
+  "stated_subtotal": "12403.74",
+  "stated_total": "12411.74",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

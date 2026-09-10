@@ -1,0 +1,49 @@
+{
+  "supplier_name": "Copper Ridge Controls",
+  "quote_number": "EVAL-055-Q",
+  "rfq_number": "REQ-8154",
+  "currency": "AUD",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "66",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "CB-174.1",
+      "description": "Shielded cable",
+      "quantity": "938",
+      "uom": "EA",
+      "unit_price": "22.31",
+      "moq": "5",
+      "lead_time_days": 33,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "20926.78"
+    },
+    {
+      "supplier_sku": "FT-174.2",
+      "description": "Steel fitting",
+      "quantity": "1058",
+      "uom": "EA",
+      "unit_price": "23.62",
+      "moq": "10",
+      "lead_time_days": 36,
+      "delivery_date": "2026-10-13",
+      "stated_line_total": "24989.96"
+    },
+    {
+      "supplier_sku": "SW-174.3",
+      "description": "Limit switch",
+      "quantity": "1178",
+      "uom": "EA",
+      "unit_price": "24.93",
+      "moq": "15",
+      "lead_time_days": 39,
+      "delivery_date": "2026-10-16",
+      "stated_line_total": "29367.54"
+    }
+  ],
+  "stated_subtotal": "75284.28",
+  "stated_total": "75350.28",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

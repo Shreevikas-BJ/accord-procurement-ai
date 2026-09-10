@@ -1,0 +1,60 @@
+{
+  "supplier_name": "Orion Valve Works",
+  "quote_number": "EVAL-016-Q",
+  "rfq_number": "REQ-8115",
+  "currency": "USD",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "27",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "FT-135.1",
+      "description": "Steel fitting",
+      "quantity": "275",
+      "uom": "EA",
+      "unit_price": "7.1",
+      "moq": "5",
+      "lead_time_days": 22,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "1952.5"
+    },
+    {
+      "supplier_sku": "SW-135.2",
+      "description": "Limit switch",
+      "quantity": "395",
+      "uom": "EA",
+      "unit_price": "8.41",
+      "moq": "10",
+      "lead_time_days": 25,
+      "delivery_date": "2026-10-13",
+      "stated_line_total": "3321.95"
+    },
+    {
+      "supplier_sku": "GA-135.3",
+      "description": "Pressure gauge",
+      "quantity": "515",
+      "uom": "EA",
+      "unit_price": "9.72",
+      "moq": "15",
+      "lead_time_days": 28,
+      "delivery_date": "2026-10-16",
+      "stated_line_total": "5005.80"
+    },
+    {
+      "supplier_sku": "MT-135.4",
+      "description": "Stepper motor",
+      "quantity": "635",
+      "uom": "EA",
+      "unit_price": "11.03",
+      "moq": "20",
+      "lead_time_days": 31,
+      "delivery_date": "2026-10-19",
+      "stated_line_total": "7004.05"
+    }
+  ],
+  "stated_subtotal": "17284.30",
+  "stated_total": "17311.30",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

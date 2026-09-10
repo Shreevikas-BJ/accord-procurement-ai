@@ -1,0 +1,38 @@
+{
+  "supplier_name": null,
+  "quote_number": "EVAL-022-Q",
+  "rfq_number": "REQ-8121",
+  "currency": "EUR",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "33",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "VB-141.1",
+      "description": "Brass valve",
+      "quantity": "377",
+      "uom": "EA",
+      "unit_price": "9.44",
+      "moq": "5",
+      "lead_time_days": 28,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "3558.88"
+    },
+    {
+      "supplier_sku": "BR-141.2",
+      "description": "Ball bearing",
+      "quantity": "497",
+      "uom": "EA",
+      "unit_price": "10.75",
+      "moq": "10",
+      "lead_time_days": 31,
+      "delivery_date": "2026-10-13",
+      "stated_line_total": "5342.75"
+    }
+  ],
+  "stated_subtotal": "8901.63",
+  "stated_total": "8934.63",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

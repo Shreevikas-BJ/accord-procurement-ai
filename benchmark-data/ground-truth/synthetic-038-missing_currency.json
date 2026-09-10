@@ -1,0 +1,38 @@
+{
+  "supplier_name": "Harbor Fasteners",
+  "quote_number": "EVAL-038-Q",
+  "rfq_number": "REQ-8137",
+  "currency": null,
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "49",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "GA-157.1",
+      "description": "Pressure gauge",
+      "quantity": "649",
+      "uom": "EA",
+      "unit_price": "15.68",
+      "moq": "5",
+      "lead_time_days": 16,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "10176.32"
+    },
+    {
+      "supplier_sku": "MT-157.2",
+      "description": "Stepper motor",
+      "quantity": "769",
+      "uom": "EA",
+      "unit_price": "16.99",
+      "moq": "10",
+      "lead_time_days": 19,
+      "delivery_date": "2026-10-13",
+      "stated_line_total": "13065.31"
+    }
+  ],
+  "stated_subtotal": "23241.63",
+  "stated_total": "23290.63",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

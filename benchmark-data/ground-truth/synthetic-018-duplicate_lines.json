@@ -1,0 +1,49 @@
+{
+  "supplier_name": "Northstar Bearings",
+  "quote_number": "EVAL-018-Q",
+  "rfq_number": "REQ-8117",
+  "currency": "GBP",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "29",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "GA-137.1",
+      "description": "Pressure gauge",
+      "quantity": "309",
+      "uom": "EA",
+      "unit_price": "7.88",
+      "moq": "5",
+      "lead_time_days": 24,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "2434.92"
+    },
+    {
+      "supplier_sku": "MT-137.2",
+      "description": "Stepper motor",
+      "quantity": "429",
+      "uom": "EA",
+      "unit_price": "9.19",
+      "moq": "10",
+      "lead_time_days": 27,
+      "delivery_date": "2026-10-13",
+      "stated_line_total": "3942.51"
+    },
+    {
+      "supplier_sku": "GA-137.1",
+      "description": "Pressure gauge",
+      "quantity": "309",
+      "uom": "EA",
+      "unit_price": "7.88",
+      "moq": "5",
+      "lead_time_days": 24,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "2434.92"
+    }
+  ],
+  "stated_subtotal": "8812.35",
+  "stated_total": "8841.35",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

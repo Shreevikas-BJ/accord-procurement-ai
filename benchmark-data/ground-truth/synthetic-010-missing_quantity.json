@@ -1,0 +1,38 @@
+{
+  "supplier_name": "Summit Tooling",
+  "quote_number": "EVAL-010-Q",
+  "rfq_number": "REQ-8109",
+  "currency": "AUD",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "21",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "PK-129.1",
+      "description": "Packing sleeve",
+      "quantity": null,
+      "uom": "EA",
+      "unit_price": "4.76",
+      "moq": "5",
+      "lead_time_days": 16,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": null
+    },
+    {
+      "supplier_sku": "CT-129.2",
+      "description": "Copper terminal",
+      "quantity": null,
+      "uom": "EA",
+      "unit_price": "6.07",
+      "moq": "10",
+      "lead_time_days": 19,
+      "delivery_date": "2026-10-13",
+      "stated_line_total": null
+    }
+  ],
+  "stated_subtotal": null,
+  "stated_total": null,
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

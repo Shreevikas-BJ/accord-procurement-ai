@@ -1,0 +1,49 @@
+{
+  "supplier_name": "Copper Ridge Controls",
+  "quote_number": "EVAL-007-Q",
+  "rfq_number": "REQ-8106",
+  "currency": "EUR",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "18",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "SW-126.1",
+      "description": "Limit switch",
+      "quantity": "122",
+      "uom": "EA",
+      "unit_price": "3.59",
+      "moq": null,
+      "lead_time_days": 13,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "437.98"
+    },
+    {
+      "supplier_sku": "GA-126.2",
+      "description": "Pressure gauge",
+      "quantity": "242",
+      "uom": "EA",
+      "unit_price": "4.9",
+      "moq": null,
+      "lead_time_days": 16,
+      "delivery_date": "2026-10-13",
+      "stated_line_total": "1185.8"
+    },
+    {
+      "supplier_sku": "MT-126.3",
+      "description": "Stepper motor",
+      "quantity": "362",
+      "uom": "EA",
+      "unit_price": "6.21",
+      "moq": null,
+      "lead_time_days": 19,
+      "delivery_date": "2026-10-16",
+      "stated_line_total": "2248.02"
+    }
+  ],
+  "stated_subtotal": "3871.80",
+  "stated_total": "3889.80",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

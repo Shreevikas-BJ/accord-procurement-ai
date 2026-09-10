@@ -1,0 +1,38 @@
+{
+  "supplier_name": "Summit Tooling",
+  "quote_number": "EVAL-034-Q",
+  "rfq_number": "REQ-8133",
+  "currency": "CAD",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "45",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "SE-153.1",
+      "description": "Optical sensor",
+      "quantity": "581",
+      "uom": "EA",
+      "unit_price": "14.12",
+      "moq": "5",
+      "lead_time_days": 12,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "8203.72"
+    },
+    {
+      "supplier_sku": "CB-153.2",
+      "description": "Shielded cable",
+      "quantity": "701",
+      "uom": "EA",
+      "unit_price": "15.43",
+      "moq": "10",
+      "lead_time_days": 15,
+      "delivery_date": "2026-10-13",
+      "stated_line_total": "10816.43"
+    }
+  ],
+  "stated_subtotal": "19020.15",
+  "stated_total": "19065.15",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

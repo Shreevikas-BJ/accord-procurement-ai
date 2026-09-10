@@ -1,0 +1,85 @@
+{
+  "supplier_name": "Aspen Fluid Systems",
+  "quote_number": "EVAL-011-Q",
+  "rfq_number": "REQ-8110",
+  "currency": "USD",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "22",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "CT-130.1",
+      "description": "Copper terminal",
+      "quantity": "190",
+      "uom": "EA",
+      "unit_price": "5.15",
+      "moq": "5",
+      "lead_time_days": 17,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "978.50",
+      "price_tiers": [
+        {
+          "minimum": "1",
+          "maximum": "99",
+          "unit_price": "6.15"
+        },
+        {
+          "minimum": "100",
+          "maximum": null,
+          "unit_price": "5.15"
+        }
+      ]
+    },
+    {
+      "supplier_sku": "VB-130.2",
+      "description": "Brass valve",
+      "quantity": "310",
+      "uom": "EA",
+      "unit_price": "6.46",
+      "moq": "10",
+      "lead_time_days": 20,
+      "delivery_date": "2026-10-13",
+      "stated_line_total": "2002.60",
+      "price_tiers": [
+        {
+          "minimum": "1",
+          "maximum": "99",
+          "unit_price": "7.46"
+        },
+        {
+          "minimum": "100",
+          "maximum": null,
+          "unit_price": "6.46"
+        }
+      ]
+    },
+    {
+      "supplier_sku": "BR-130.3",
+      "description": "Ball bearing",
+      "quantity": "430",
+      "uom": "EA",
+      "unit_price": "7.77",
+      "moq": "15",
+      "lead_time_days": 23,
+      "delivery_date": "2026-10-16",
+      "stated_line_total": "3341.10",
+      "price_tiers": [
+        {
+          "minimum": "1",
+          "maximum": "99",
+          "unit_price": "8.77"
+        },
+        {
+          "minimum": "100",
+          "maximum": null,
+          "unit_price": "7.77"
+        }
+      ]
+    }
+  ],
+  "stated_subtotal": "6322.20",
+  "stated_total": "6344.20",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

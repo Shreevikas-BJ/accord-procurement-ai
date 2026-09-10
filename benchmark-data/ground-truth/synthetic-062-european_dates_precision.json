@@ -1,0 +1,27 @@
+{
+  "supplier_name": "Clearwater Cable Co",
+  "quote_number": "BP/62/26",
+  "rfq_number": "REQ-8262",
+  "currency": "GBP",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "12",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "BP/62-X.02",
+      "description": "Ceramic terminal block",
+      "quantity": "12.375",
+      "uom": "KG",
+      "unit_price": "0.0042",
+      "moq": "10",
+      "lead_time_days": 28,
+      "delivery_date": "2026-10-15",
+      "stated_line_total": "0.0519750"
+    }
+  ],
+  "stated_subtotal": "0.0519750",
+  "stated_total": "12.0519750",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

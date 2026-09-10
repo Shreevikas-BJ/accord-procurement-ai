@@ -1,0 +1,20 @@
+From: quotations@fictional.example
+To: buyer@evaluation.example
+Subject: Current commercial quotation
+
+SUPPLIER QUOTATION - FICTIONAL EVALUATION DOCUMENT
+Supplier | Riverbend Hydraulics
+Quote number | BP/61/26
+RFQ | REQ-8261
+Currency | EUR
+Quote date | September 1, 2026
+Valid until | November 30, 2026
+SKU | Description | Qty | UOM | Unit price | Line total | MOQ | Lead time | Delivery
+BP/61-X.02 | Ceramic terminal block | 91 | PCS | 6.1 | 555.1 | 10 | 28 days | October 15, 2026
+Subtotal | 555.1
+Shipping | 12
+Tax | 0
+Grand total | 567.1
+Payment terms | Net 30
+Shipping terms | FOB origin
+This quotation is not an invoice or purchase order.

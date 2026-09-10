@@ -1,0 +1,16 @@
+SUPPLIER QUOTATION - FICTIONAL EVALUATION DOCUMENT
+Supplier,Mesa Mechanical
+Quote number,BP/63/26
+RFQ,REQ-8263
+Currency,USD
+Quote date,2026-09-01
+Valid until,2026-11-30
+Vendor part no.,Description,Order quantity,UOM,Price per unit,Line total,Minimum order quantity,Lead time,Delivery
+BP/63-X.02,Ceramic terminal block,93,PCS,6.3,585.9,10,28 days,2026-10-15
+Subtotal,585.9
+Shipping,12
+Tax,0
+Grand total,597.9
+Payment terms,Net 30
+Shipping terms,FOB origin
+This quotation is not an invoice or purchase order.

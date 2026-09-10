@@ -1,0 +1,21 @@
+From: quotes@fictional.example
+Subject: Supplier offer
+
+SUPPLIER QUOTATION - FICTIONAL EVALUATION DOCUMENT
+Supplier | Copper Ridge Controls
+Quote number | EVAL-007-Q
+RFQ | REQ-8106
+Currency | EUR
+Quote date | 2026-09-01
+Valid until | 2026-11-30
+SKU | Description | Qty | UOM | Unit price | Line total | MOQ | Lead time | Delivery
+SW-126.1 | Limit switch | 122 | Each | 3.59 | 437.98 |  | 13 days | 2026-10-10
+GA-126.2 | Pressure gauge | 242 | Each | 4.9 | 1185.8 |  | 16 days | 2026-10-13
+MT-126.3 | Stepper motor | 362 | Each | 6.21 | 2248.02 |  | 19 days | 2026-10-16
+Subtotal | 3871.80
+Shipping | 18
+Tax | 0
+Grand total | 3889.80
+Payment terms | Net 30
+Shipping terms | FOB origin
+This quotation is not an invoice or purchase order.

@@ -1,0 +1,49 @@
+{
+  "supplier_name": "Copper Ridge Controls",
+  "quote_number": "EVAL-019-Q",
+  "rfq_number": "REQ-8118",
+  "currency": "CAD",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-09-02",
+  "shipping_cost": "30",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "MT-138.1",
+      "description": "Stepper motor",
+      "quantity": "326",
+      "uom": "EA",
+      "unit_price": "8.27",
+      "moq": "5",
+      "lead_time_days": 25,
+      "delivery_date": "2026-10-10",
+      "stated_line_total": "2696.02"
+    },
+    {
+      "supplier_sku": "PK-138.2",
+      "description": "Packing sleeve",
+      "quantity": "446",
+      "uom": "EA",
+      "unit_price": "9.58",
+      "moq": "10",
+      "lead_time_days": 28,
+      "delivery_date": "2026-10-13",
+      "stated_line_total": "4272.68"
+    },
+    {
+      "supplier_sku": "CT-138.3",
+      "description": "Copper terminal",
+      "quantity": "566",
+      "uom": "EA",
+      "unit_price": "10.89",
+      "moq": "15",
+      "lead_time_days": 31,
+      "delivery_date": "2026-10-16",
+      "stated_line_total": "6163.74"
+    }
+  ],
+  "stated_subtotal": "13132.44",
+  "stated_total": "13162.44",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}
