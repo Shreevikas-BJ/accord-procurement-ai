@@ -344,6 +344,17 @@ def test_purchase_history_import_atomicity(clients):
     assert response_json(admin.get("/purchase-history"))["total"] == before + 1
 
 
+def test_quote_revisions_do_not_inflate_supplier_responses(clients):
+    buyer = clients["buyer"]
+    comparison = response_json(buyer.get(f"/rfqs/{RFQ}/comparison"))
+    assert len(comparison["quotes"]) >= 7
+    dashboard = response_json(buyer.get("/dashboard"))
+    assert next(row for row in dashboard["rfqs"] if row["id"] == RFQ)["response_count"] == 4
+    assert dashboard["metrics"]["awaiting_response"] == 4
+    listed = response_json(buyer.get("/rfqs"))
+    assert next(row for row in listed["items"] if row["id"] == RFQ)["response_count"] == 4
+
+
 def test_audit_events_and_no_processing_left(clients):
     for action in [
         "QUOTE_UPLOADED",

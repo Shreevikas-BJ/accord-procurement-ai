@@ -94,7 +94,9 @@ def list_records(kind, db, org, search="", status="", page=1, limit=25, sort="cr
     if kind == "rfqs":
         counts = dict(
             db.execute(
-                select(Quote.rfq_id, func.count()).where(Quote.organization_id == org).group_by(Quote.rfq_id)
+                select(Quote.rfq_id, func.count(func.distinct(Quote.supplier_id)))
+                .where(Quote.organization_id == org)
+                .group_by(Quote.rfq_id)
             ).all()
         )
         for r in result:
@@ -122,6 +124,9 @@ def dashboard(user=Depends(current_user), db: Session = Depends(get_db)):
     org = user.organization_id
     rfqs = db.scalars(select(RFQ).where(RFQ.organization_id == org)).all()
     comparisons = [comparison(db, org, r) for r in rfqs]
+    response_counts = {
+        c["rfq"]["id"]: len({q["supplier_id"] for q in c["quotes"] if q["supplier_id"]}) for c in comparisons
+    }
     quotes = [q for c in comparisons for q in c["quotes"]]
     alerts = [{**a, "supplier_name": q["supplier_name"], "quote_id": q["id"]} for q in quotes for a in q["alerts"]]
     docs = db.scalars(select(Document).where(Document.organization_id == org, Document.processed_at.is_not(None))).all()
@@ -132,7 +137,9 @@ def dashboard(user=Depends(current_user), db: Session = Depends(get_db)):
             "open_rfqs": sum(r.status not in ("Closed", "Awarded") for r in rfqs),
             "quotes_received": len(quotes),
             "needs_review": sum(q["review_status"] != "Reviewed" for q in quotes),
-            "awaiting_response": sum(max(0, c["rfq"]["supplier_count"] - len(c["quotes"])) for c in comparisons),
+            "awaiting_response": sum(
+                max(0, c["rfq"]["supplier_count"] - response_counts[c["rfq"]["id"]]) for c in comparisons
+            ),
             "potential_savings": str(
                 sum(
                     (Decimal(c["potential_savings"]) for c in comparisons if c["rfq"]["currency"] == primary_currency),
@@ -143,7 +150,7 @@ def dashboard(user=Depends(current_user), db: Session = Depends(get_db)):
             "currency": primary_currency,
         },
         "rfqs": [
-            {**c["rfq"], "response_count": len(c["quotes"]), "potential_savings": c["potential_savings"]}
+            {**c["rfq"], "response_count": response_counts[c["rfq"]["id"]], "potential_savings": c["potential_savings"]}
             for c in comparisons
         ],
         "alerts": alerts[:12],

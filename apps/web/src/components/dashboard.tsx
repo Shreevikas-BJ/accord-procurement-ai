@@ -95,7 +95,7 @@ export function Dashboard() {
             <div className="eyebrow">READY TO COMPARE · {showcase.number}</div>
             <h2>One RFQ. Four perspectives. A clearer decision.</h2>
             <p>
-              {showcase.title} · {showcase.response_count} supplier quotes ·
+              {showcase.title} · {showcase.response_count} supplier responses ·
               Delivery {dateLabel(showcase.required_delivery)}
             </p>
           </div>
