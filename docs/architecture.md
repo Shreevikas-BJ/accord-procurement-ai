@@ -59,7 +59,7 @@ A provider cannot alter application controls. It receives a JSON schema and untr
 
 ## Operational limitations
 
-- PostgreSQL concurrency, pgvector creation, native container file ownership, Redis/RQ integration and OCR require full verification on a working Docker host. SQLite tests do not prove PostgreSQL lock behavior.
+- PostgreSQL migrations/pgvector, simultaneous quote-edit conflict handling, non-root API/worker file access, Redis/RQ integration and image/scanned-PDF OCR have passed live Docker checks. This covers the tested local workflows, not production-scale concurrency or load. See verification.md.
 - No production SSO/MFA, password reset, user deactivation UI, database RLS, malware scanning, secrets manager or production deployment is included.
 - Login throttling uses Redis when reachable and currently fails open when Redis is unavailable; use a strict gateway policy before public exposure.
 - CSV import is all-or-nothing for application validation and conflicts, with a 10,000-row cap. Large imports are synchronous; move to a background job before scaling.

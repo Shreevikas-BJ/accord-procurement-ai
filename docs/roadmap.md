@@ -1,6 +1,6 @@
 # Next milestones
 
-1. Complete the outstanding Linux Docker/PostgreSQL/Redis/Tesseract smoke and concurrency checks. Add automated CI on a clean runner.
+1. Add automated Linux CI for the now-verified Docker/PostgreSQL/Redis/Tesseract stack, including the opt-in integration suite and browser workflows.
 2. Pilot the quote-review workflow with three to five procurement teams using anonymized real quotes. Measure corrections and time to a reviewed decision.
 3. Benchmark optional local extraction models against the checked-in ground truth and real pilot fixtures; measure field accuracy, latency and review burden.
 4. Add RFQ creation/invitation management and supplier onboarding, richer manual entry, extraction bounding-box highlights, background imports and reliable queue reconciliation.

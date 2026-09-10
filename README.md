@@ -4,7 +4,7 @@
 
 Accord is a local B2B procurement application for comparing supplier quotations, finding price and delivery risks, reviewing source evidence, and recording a human decision. It includes a real Next.js frontend, FastAPI backend, relational database, document pipeline, and deterministic procurement engine.
 
-**Verification status:** the application’s browser decision workflow, backend tests, frontend lint/typecheck/build, and clean SQLite migration/seed checks have been exercised. Full Docker/PostgreSQL/Redis/OCR verification is pending because this development machine’s Docker Desktop crashes before its Linux engine starts. See [verification details](docs/verification.md). Do not interpret the local SQLite verification as a successful Docker test.
+**Verification status:** the full Docker stack is verified on Windows with Linux containers: Next.js, FastAPI, PostgreSQL/pgvector, Redis/RQ, private bind-mounted files, PDF/XLSX/CSV parsing and Tesseract OCR. Final results: 52 fast backend tests, 15 live Docker integration tests, two Playwright workflows, lint/typecheck/build, fresh PostgreSQL migration/idempotent seed and persistence after a full Compose restart. See [concrete evidence and limitations](docs/verification.md). GPU and local/hosted model inference remain optional and unverified.
 
 ## Quick start
 
@@ -27,6 +27,8 @@ docker compose up --build
 Open [http://localhost:3000](http://localhost:3000). API documentation is at [http://localhost:8000/docs](http://localhost:8000/docs).
 
 The API waits for PostgreSQL and Redis, runs Alembic migrations, and seeds the demo before becoming healthy. The frontend and worker wait for the API. Initial image downloads/builds can take several minutes.
+
+For detached startup with readiness confirmation, use `docker compose up -d --build --wait --wait-timeout 90`, then `docker compose ps`. All five services have health checks. Stop native Accord processes on ports 3000/8000 before starting Compose.
 
 | Demo role | Email | Password |
 |---|---|---|
@@ -147,6 +149,8 @@ Copying `.env.example` supplies all required defaults. No secret/API key is requ
 | `COOKIE_SECURE` | `false` for loopback HTTP; set true when using HTTPS |
 | `APP_ENV` | Development label; does not replace security configuration |
 
+Compose sets `REQUIRE_POSTGRES=true` for API/worker and `REQUIRE_REDIS=true` for API readiness. A SQLite `DATABASE_URL` causes Docker startup to fail explicitly. Native development can still use SQLite when that guard is absent.
+
 Server-side Next.js `API_URL` defaults to `http://127.0.0.1:8000` for native development. The Docker build sets it to `http://api:8000`. No API keys are exposed to the browser.
 
 ## Demo extraction
@@ -226,6 +230,22 @@ Seeding is idempotent. The dataset includes one populated organization, one empt
 
 PostgreSQL and Redis persist in named volumes. Uploaded files persist in the project data directory. `docker compose down` stops the stack while preserving data. Removing volumes or uploaded files is a separate destructive operation and is not part of normal startup.
 
+Normal restart, preserving records and source files:
+
+```powershell
+docker compose down
+docker compose up -d --wait --wait-timeout 90
+```
+
+**Database reset for disposable demo data only:** this deletes this Compose project's PostgreSQL and Redis volumes, including all decisions, sessions and queued jobs. It leaves the upload bind directory intact. Back up any records you need first.
+
+```powershell
+docker compose down --volumes
+docker compose up -d --build --wait --wait-timeout 90
+```
+
+With `SEED_DEMO=true`, fresh startup recreates the schema and original demo records. Old unreferenced files may remain in `data/uploads`; they are not exposed by the API. To verify a fresh database without resetting the working demo, use `docker compose exec api python -m tools.verify_postgres_lifecycle`. That utility creates and drops only its uniquely named verification database and temporary source directory.
+
 New schema changes should use `alembic revision --autogenerate -m "description"`, review the migration, then apply it. The initial migration is frozen; do not regenerate it against an existing deployment.
 
 ## Native development / host diagnostic fallback
@@ -262,6 +282,16 @@ docker compose exec api pytest -q
 docker compose exec api ruff check .
 ```
 
+The fast tests isolate SQLite databases and storage. To keep their login attempts out of the live Redis rate-limit counters, run:
+
+```powershell
+docker compose exec -T -e REQUIRE_REDIS=false -e REDIS_URL=redis://127.0.0.1:1/0 api pytest -q
+docker compose exec -T -e RUN_DOCKER_INTEGRATION=true api pytest integration -q
+docker compose exec -T api python -m tools.verify_postgres_lifecycle
+```
+
+The opt-in integration suite uses actual HTTP through the web proxy, PostgreSQL, Redis and the worker. Run it only against a demo/test stack: it creates synthetic documents, history imports, drafts, decisions and audit entries. A one-second timeout probe intentionally creates a failed RQ job, verifies the callback, and then retries the document. Expected failure-test logs are explained in [verification.md](docs/verification.md).
+
 Frontend from `apps/web`:
 
 ```bash
@@ -282,7 +312,7 @@ npm.cmd run test:e2e
 
 Or on Linux/macOS: `E2E_UPLOADS=true npm run test:e2e`.
 
-The upload test is designed for a freshly seeded database. Repeated uploads correctly trigger duplicate detection. Backend tests use isolated temporary SQLite databases and uploads, not your workspace’s operational records.
+On a freshly seeded database, the upload test verifies three newly enqueued jobs. On subsequent runs it asserts HTTP 409 duplicate rejection and verifies the existing persisted results. The comparison test accommodates revised quotes from those uploads. Fast backend tests use isolated temporary SQLite databases and uploads; the opt-in Docker integration suite intentionally uses the live demo stack.
 
 Extraction evaluation from `apps/api`:
 
@@ -307,6 +337,6 @@ This is a local MVP, not a production security certification. Before external de
 
 ## Known limitations and next milestone
 
-The current host cannot run Docker Desktop because of a Windows AF_UNIX socket failure; full-stack verification must be completed on a working Docker engine. Optional local/hosted inference and GPU acceleration have adapters/configuration but have not been benchmarked on this laptop. Fuzzy item matches are suggestions; semantic matching is a future extension. Manual entry uses a structured JSON form. Email drafts are templates. No exchange rates, UOM conversions, split awards, real email sending, purchase orders, ERP integrations, or payments are implemented.
+The standard Docker/PostgreSQL/Redis/OCR stack has passed verification on this host. Optional local/hosted inference and GPU acceleration have adapters/configuration but have not been benchmarked on this laptop. Fuzzy item matches are suggestions; semantic matching is a future extension. Manual entry uses a structured JSON form. Email drafts are templates. No exchange rates, UOM conversions, split awards, real email sending, purchase orders, ERP integrations, or payments are implemented.
 
-The next milestone is a procurement-user pilot with anonymized real quotations, after completing Linux Compose/PostgreSQL/Redis/OCR verification. See [roadmap and user-validation questions](docs/roadmap.md).
+The next milestone is a procurement-user pilot with anonymized real quotations and automated Linux CI for the verified stack. See [roadmap and user-validation questions](docs/roadmap.md).
