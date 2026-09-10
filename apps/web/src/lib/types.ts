@@ -99,6 +99,7 @@ export interface Quote {
     fallback?: boolean;
     model?: string;
     confidence_band?: string;
+    needs_review?: boolean;
     findings?: { code: string; field: string; message: string }[];
   };
   document: {

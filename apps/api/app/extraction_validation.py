@@ -146,7 +146,11 @@ def validate_extraction(quote, document):
     if document.metadata.get("parser_quality") == "low":
         flag("OCR_QUALITY", "document", "Little readable text; verify against original page images.")
     if re.search(r"ignore (all|previous)|system prompt|approve (this|the) quote", document.text, re.I):
-        flag("UNTRUSTED_INSTRUCTION", "document", "Instruction-like source text ignored; verify extracted values.")
+        flag(
+            "UNTRUSTED_INSTRUCTION",
+            "document",
+            "Instruction-like source text detected; verify every extracted value against the source.",
+        )
     critical_codes = {
         "MISSING_FIELD",
         "LINE_TOTAL_MISMATCH",
