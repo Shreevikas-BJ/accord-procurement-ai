@@ -8,7 +8,7 @@ import json
 import re
 from dataclasses import dataclass, field
 from datetime import datetime
-from decimal import Decimal
+from decimal import Decimal, InvalidOperation
 
 from .schemas import Evidence
 from .source_evidence import number
@@ -285,7 +285,13 @@ def equivalent(key, actual, wanted):
     if actual is None or wanted is None:
         return actual is wanted
     if key in NUMBERS:
-        return Decimal(str(actual)) == wanted
+        try:
+            parsed = Decimal(str(actual))
+            return parsed.is_finite() and parsed == wanted
+        except InvalidOperation:
+            return False
+    if key == "uom":
+        return value_for(key, actual) == value_for(key, wanted)
     return str(actual).strip().casefold() == str(wanted).strip().casefold()
 
 

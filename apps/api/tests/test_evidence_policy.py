@@ -62,6 +62,27 @@ def test_moq_cannot_support_quantity_even_if_number_matches():
     assert any(f["code"] == "QUANTITY_MOQ_AMBIGUITY" for f in result["safety_findings"])
 
 
+def test_equivalent_uom_preserves_source_and_original_model_value():
+    q = extraction()
+    q.line_items[0].uom = "Each"
+    result = harden_quote(q, document(UOM="EA"))
+    assert q.line_items[0].uom == "EA"
+    assert q.line_items[0].source_references["uom"].evidence_strength == "strong"
+    assert result["original_ai_payload"]["line_items"][0]["uom"] == "Each"
+
+
+@pytest.mark.parametrize("value", ["1,32", "not shown", "NaN", "Infinity"])
+def test_malformed_focused_numeric_answer_withholds_only_disputed_field(value):
+    q = extraction()
+    q.line_items[0].unit_price = Decimal("47.2")
+    d = document()
+    d.metadata["field_verification"] = {"line_items.0.unit_price": {"value": value, "source_text": "Unit price: 4.72"}}
+    result = harden_quote(q, d)
+    assert q.line_items[0].unit_price is None
+    assert q.line_items[0].quantity == Decimal("100")
+    assert any(f["code"] == "SECOND_PASS_DISAGREEMENT" for f in result["safety_findings"])
+
+
 @pytest.mark.parametrize("field,label", [("tax", "Tax"), ("shipping_cost", "Shipping")])
 def test_missing_cost_is_never_zero(field, label):
     q = extraction(**{field: "0"})

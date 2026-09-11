@@ -15,7 +15,7 @@ from pathlib import Path
 from PIL import Image
 from pypdf import PdfReader
 
-PIPELINE_VERSION = "local-2.5.1"
+PIPELINE_VERSION = "local-2.5.2"
 
 
 def layout_ocr(path):
