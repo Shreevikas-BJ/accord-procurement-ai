@@ -1,0 +1,26 @@
+{
+  "supplier_name": "Oak Hill Controls",
+  "quote_number": "SAFE-002",
+  "rfq_number": "SAFE-RFQ-002",
+  "currency": "USD",
+  "quote_date": "2026-09-01",
+  "expiration_date": "2026-11-30",
+  "payment_terms": "Net 30",
+  "shipping_cost": "12.00",
+  "tax": "18.40",
+  "stated_subtotal": "472.00",
+  "stated_total": "502.40",
+  "line_items": [
+    {
+      "supplier_sku": "VC-702",
+      "description": "Brass control valve",
+      "quantity": "100",
+      "uom": "EA",
+      "unit_price": "4.72",
+      "moq": "500",
+      "lead_time_days": 14,
+      "delivery_date": "2026-10-15",
+      "stated_line_total": "472.00"
+    }
+  ]
+}

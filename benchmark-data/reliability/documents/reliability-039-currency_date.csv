@@ -1,0 +1,22 @@
+FICTIONAL SUPPLIER QUOTATION - RELIABILITY EVALUATION
+Supplier,Cobalt Valve Supply
+Quote number,SAFE-039
+RFQ,SAFE-RFQ-039
+Currency,USD
+Quote date,2026-09-01
+Valid until,2026-11-30
+QUOTED LINE
+SKU,VC-739
+Description,Brass control valve
+Qty,100
+UOM,EA
+Unit price,4.72
+MOQ,500
+Lead time,14 days
+Line total,472.00
+Shipping,12.00
+Tax,18.40
+Subtotal,472.00
+Grand total,502.40
+Payment terms,Net 30
+Delivery date,2026-02-30

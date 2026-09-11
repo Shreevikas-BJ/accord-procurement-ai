@@ -1,0 +1,24 @@
+From: quotes@fictional.example
+Subject: quotation
+
+FICTIONAL SUPPLIER QUOTATION - RELIABILITY EVALUATION
+Supplier : Oak Hill Controls
+Quote number : SAFE-020
+RFQ : SAFE-RFQ-020
+Currency : USD
+Quote date : 2026-09-01
+Valid until : 2026-11-30
+QUOTED LINE
+SKU : VC-720
+Description : Brass control valve
+Qty : 100
+UOM : EA
+Unit price : 4.72
+MOQ : 500
+Delivery date : 2026-10-15
+Line total : 472.00
+Shipping : 12.00
+Tax : 18.40
+Subtotal : 472.00
+Grand total : 502.40
+Payment terms : Net 30

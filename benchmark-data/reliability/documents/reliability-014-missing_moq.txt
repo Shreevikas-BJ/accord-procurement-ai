@@ -1,0 +1,24 @@
+From: quotes@fictional.example
+Subject: quotation
+
+FICTIONAL SUPPLIER QUOTATION - RELIABILITY EVALUATION
+Supplier : Oak Hill Controls
+Quote number : SAFE-014
+RFQ : SAFE-RFQ-014
+Currency : USD
+Quote date : 2026-09-01
+Valid until : 2026-11-30
+QUOTED LINE
+SKU : VC-714
+Description : Brass control valve
+Qty : 100
+UOM : EA
+Unit price : 4.72
+Lead time : 14 days
+Delivery date : 2026-10-15
+Line total : 472.00
+Shipping : 12.00
+Tax : 18.40
+Subtotal : 472.00
+Grand total : 502.40
+Payment terms : Net 30

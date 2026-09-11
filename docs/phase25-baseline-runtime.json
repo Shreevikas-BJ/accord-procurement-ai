@@ -1,0 +1,12 @@
+{
+  "prompt_version": "quote-v2",
+  "standard_documents": 100,
+  "ollama_version": "0.30.11",
+  "supplement_documents": 44,
+  "model": "qwen2.5vl:7b",
+  "starting_commit": "769ec6514ff241fc2c1879f8c52523729257fa8a",
+  "supplement_manifest_sha256": "0fcb8ec4079bf61a7ab29d91a173e641a9b433eaf91760097b0c6aa9918bb70a",
+  "worker_image": "sha256:4207c541dbda2676baf65869758d8f3335272738544c42dd3fe790e6afcfc20a",
+  "standard_manifest_sha256": "19825dda550e58081a863b8c6272226dde21f932768ce4b141337bc8bb17dd19",
+  "pipeline_version": "local-2.1"
+}
