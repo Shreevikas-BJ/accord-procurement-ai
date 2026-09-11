@@ -4,4 +4,4 @@
 *.pdf binary
 *.xlsx binary
 # Frozen benchmark hashes refer to exact bytes, including line endings.
-benchmark-data/** -text
+benchmark-data/** -text whitespace=cr-at-eol

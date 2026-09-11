@@ -19,6 +19,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--corpus", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--manifest", default="manifest.json", help="Frozen manifest filename inside the corpus root")
     parser.add_argument("--limit", type=int)
     parser.add_argument("--resume", action="store_true")
     parser.add_argument(
@@ -52,7 +53,11 @@ def main():
             destination.write_text("".join(json.dumps(r) + "\n" for r in rows), encoding="utf-8")
             print(f"Archived {len(interrupted)} unavailable-service attempts for explicit retry", flush=True)
     done = {r["id"] for r in rows}
-    entries = json.loads((args.corpus / "manifest.json").read_text())
+    manifest = (args.corpus / args.manifest).resolve()
+    if not manifest.is_relative_to(args.corpus.resolve()):
+        raise SystemExit("Manifest must be inside the corpus root")
+    manifest_hash = hashlib.sha256(manifest.read_bytes()).hexdigest()
+    entries = json.loads(manifest.read_text())
     current_hashes = {entry["id"]: entry["sha256"] for entry in entries}
     if any(current_hashes.get(row["id"]) != row["sha256"] for row in rows):
         raise SystemExit("Cannot resume with changed or removed corpus documents.")
@@ -69,7 +74,11 @@ def main():
             raise SystemExit("Corpus document hash/path mismatch")
         started = time.monotonic()
         provider = OllamaProvider()
-        metadata = {"prompt_version": PROMPT_VERSION, "pipeline_version": PIPELINE_VERSION}
+        metadata = {
+            "prompt_version": PROMPT_VERSION,
+            "pipeline_version": PIPELINE_VERSION,
+            "corpus_manifest_sha256": manifest_hash,
+        }
         extracted = None
         error_type = None
         try:
@@ -82,6 +91,7 @@ def main():
         except Exception as error:
             metadata.update(provider.metadata)
             error_type = str(error).split(":", 1)[0] if isinstance(error, ValueError) else type(error).__name__
+            extracted = None  # Validation may fail after the provider returned a model object.
         metadata["total_seconds"] = round(time.monotonic() - started, 4)
         # Ground truth is opened only AFTER inference; never sent to the provider.
         expected = json.loads((args.corpus / entry["truth"]).read_text())
