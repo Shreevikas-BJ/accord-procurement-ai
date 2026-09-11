@@ -8,6 +8,11 @@ export interface User {
   organization_id: string;
 }
 export interface Evidence {
+  evidence_strength?: "strong" | "weak" | "unsupported";
+  source_status?: "PRESENT" | "NOT_FOUND" | "AMBIGUOUS" | "EXTRACTION_FAILED";
+  sheet?: string | null;
+  row?: number | null;
+  cell?: string | null;
   evidence_type?: "text" | "ocr" | "visual" | "missing";
   page?: number;
   source_text: string;

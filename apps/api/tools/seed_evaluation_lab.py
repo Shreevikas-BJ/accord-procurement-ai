@@ -20,10 +20,11 @@ CASES = [
 ]
 
 
-def main():
+def main(cases=None, namespace="evaluation", name="Accord Evaluation Lab", email="buyer@evaluation.example"):
+    cases = cases or CASES
     corpus = Path("/app/benchmark-data")
-    org_id = sid("evaluation-lab")
-    user_id = sid("evaluation-buyer")
+    org_id = sid(namespace + "-lab")
+    user_id = sid(namespace + "-buyer")
     with SessionLocal() as db:
         apex_before = {
             "documents": db.scalar(
@@ -34,13 +35,13 @@ def main():
             ),
         }
         if not db.get(Organization, org_id):
-            db.add(Organization(id=org_id, name="Accord Evaluation Lab", currency="USD"))
+            db.add(Organization(id=org_id, name=name, currency="USD"))
             db.flush()
             db.add(
                 User(
                     id=user_id,
                     organization_id=org_id,
-                    email="buyer@evaluation.example",
+                    email=email,
                     name="Evaluation Buyer",
                     password_hash=hash_password("Demo2026!accord"),
                     role="Buyer",
@@ -48,9 +49,10 @@ def main():
             )
             db.add(ScoringSettings(organization_id=org_id))
             db.flush()
-        for case in CASES:
-            q = json.loads((corpus / "ground-truth" / f"{case}.json").read_text())
-            supplier_id = sid("evaluation-supplier-" + q["supplier_name"])
+        for case in cases:
+            case_root = corpus / "reliability" if case.startswith("reliability-") else corpus
+            q = json.loads((case_root / "ground-truth" / f"{case}.json").read_text())
+            supplier_id = sid(namespace + "-supplier-" + q["supplier_name"])
             if not db.get(Supplier, supplier_id):
                 db.add(
                     Supplier(
@@ -63,7 +65,7 @@ def main():
                     )
                 )
                 db.flush()
-            rfq_id = sid("evaluation-rfq-" + q["rfq_number"])
+            rfq_id = sid(namespace + "-rfq-" + q["rfq_number"])
             if db.get(RFQ, rfq_id):
                 continue
             db.add(
@@ -80,7 +82,7 @@ def main():
             )
             db.flush()
             for line in q["line_items"]:
-                item_id = sid("evaluation-item-" + line["supplier_sku"])
+                item_id = sid(namespace + "-item-" + line["supplier_sku"])
                 db.add(
                     Item(
                         id=item_id,
@@ -94,15 +96,21 @@ def main():
                 )
                 db.flush()
                 db.add(
-                    RFQItem(organization_id=org_id, rfq_id=rfq_id, item_id=item_id, quantity=Decimal(line["quantity"]))
+                    # This is the buyer's RFQ demand, never extraction evidence.
+                    RFQItem(
+                        organization_id=org_id,
+                        rfq_id=rfq_id,
+                        item_id=item_id,
+                        quantity=Decimal(line["quantity"] or "100"),
+                    )
                 )
         db.commit()
         print(
             json.dumps(
                 {
-                    "organization": "Accord Evaluation Lab",
+                    "organization": name,
                     "organization_id": org_id,
-                    "cases": CASES,
+                    "cases": cases,
                     "apex_before": apex_before,
                     "evaluation_purchase_history": db.scalar(
                         select(func.count())

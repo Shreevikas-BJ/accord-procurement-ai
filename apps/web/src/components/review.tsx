@@ -122,6 +122,25 @@ function ReviewEditor({
     items = useResource<ListData>("/items?limit=250"),
     rfqs = useResource<ListData>("/rfqs?limit=250");
   const canEdit = useUser()?.role !== "Viewer";
+  const priorityFields = [
+    ...new Set(
+      (quote.extraction_diagnostics?.findings ?? [])
+        .map((finding) => finding.field)
+        .filter((field) =>
+          /(?:^|\.)(supplier_name|supplier_sku|quantity|uom|unit_price|currency)$/.test(
+            field,
+          ),
+        ),
+    ),
+  ];
+  function reviewLabel(field: string) {
+    const parts = field.split(".");
+    const label =
+      fieldLabels[parts[parts.length - 1]] ?? field.replaceAll("_", " ");
+    return parts[0] === "line_items"
+      ? `Line ${Number(parts[1]) + 1} · ${label}`
+      : label;
+  }
   function updateLine(index: number, key: keyof Line, value: unknown) {
     setQuote({
       ...quote,
@@ -218,13 +237,17 @@ function ReviewEditor({
       {!!quote.extraction_diagnostics?.findings?.length && (
         <details className="review-trust">
           <summary>
-            Extraction review findings (
-            {quote.extraction_diagnostics.findings.length})
+            {priorityFields.length
+              ? `${priorityFields.length} critical fields need inspection`
+              : "Extraction review findings"}
           </summary>
+          {!!priorityFields.length && (
+            <p>{priorityFields.map(reviewLabel).join("; ")}</p>
+          )}
           <ul>
             {quote.extraction_diagnostics.findings.map((finding, index) => (
               <li key={`${finding.code}-${index}`}>
-                {finding.field}: {finding.message}
+                {reviewLabel(finding.field)}: {finding.message}
               </li>
             ))}
           </ul>
@@ -276,7 +299,11 @@ function ReviewEditor({
           {evidence && (
             <div className="evidence-box">
               <div className="eyebrow">
-                SOURCE EVIDENCE · PAGE {evidence.page || "UNKNOWN"}
+                SOURCE EVIDENCE ·{" "}
+                {evidence.cell ??
+                  (evidence.sheet
+                    ? `${evidence.sheet}, row ${evidence.row}`
+                    : `PAGE ${evidence.page || "UNKNOWN"}`)}
               </div>
               {evidence.evidence_type === "visual" ? (
                 <p>
@@ -285,16 +312,19 @@ function ReviewEditor({
                 </p>
               ) : evidence.evidence_type === "missing" ? (
                 <p>
-                  Source evidence is missing. Verify this value in the original
-                  document.
+                  {evidence.source_status === "AMBIGUOUS"
+                    ? "Conflicting or ambiguous source values. Inspect the original document."
+                    : "No field-specific support was found in the selected source. Inspect the original document."}
                 </p>
               ) : (
                 <blockquote>“{evidence.source_text}”</blockquote>
               )}
               <small>
-                Original confidence:{" "}
-                {(Number(evidence.confidence) * 100).toFixed(0)}%. Evidence is
-                preserved when values are corrected.
+                {evidence.evidence_strength === "strong"
+                  ? "Supported by source."
+                  : "Needs verification."}{" "}
+                Original evidence is preserved when values are corrected; it
+                does not verify a later edit.
               </small>
             </div>
           )}

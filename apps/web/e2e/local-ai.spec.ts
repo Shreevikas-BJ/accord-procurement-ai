@@ -159,7 +159,7 @@ test("local Qwen extracts five unknown formats through Inbox and preserves corre
         exact: true,
       })
       .click();
-    await expect(page.getByText(/SOURCE EVIDENCE · PAGE/)).toBeVisible();
+    await expect(page.getByText(/SOURCE EVIDENCE ·/)).toBeVisible();
     await page.screenshot({
       path: `test-results/local-review-${index + 1}.png`,
       fullPage: true,
