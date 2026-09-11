@@ -152,7 +152,8 @@ def test_local_endpoint_never_routes_to_external_hosts(monkeypatch, url):
 def test_decimal_math_keeps_reported_and_derived_separate():
     q = quote(stated_subtotal="425", stated_total="430")
     q.line_items[0].stated_line_total = Decimal("425")
-    result = validate_extraction(q, DocumentInput("Source document"))
+    source = "Supplier: Cedar Components\nQuote: Q-124\nCurrency: USD\nShipping: 5\nTax: 0\nSubtotal: 425\nGrand total: 430\nSKU: C-12\nQty: 10\nUOM: EA\nUnit price: 4.25\nMOQ: 5\nLead time: 14 days\nLine total: 425"
+    result = validate_extraction(q, DocumentInput(source))
     assert {"LINE_TOTAL_MISMATCH", "SUBTOTAL_MISMATCH", "GRAND_TOTAL_MISMATCH"} <= {
         f["code"] for f in result["findings"]
     }
@@ -177,10 +178,11 @@ def test_visual_evidence_cannot_fabricate_quotations():
         }
     )
     result = validate_extraction(q, DocumentInput("[Page 2]", image_pages=[2], images=["image"], pages={2: ""}))
-    assert q.source_references["supplier_name"].evidence_type == "visual"
+    assert q.source_references["supplier_name"].evidence_type == "missing"
     assert q.source_references["supplier_name"].source_text == ""
     assert q.source_references["currency"].evidence_type == "missing"
-    assert any(f["code"] == "SOURCE_EVIDENCE_ERROR" for f in result["findings"])
+    assert q.supplier_name is None and q.currency is None
+    assert any(f["code"] == "UNSUPPORTED_EXTRACTED_VALUE" for f in result["findings"])
 
 
 def test_uom_aliases_do_not_convert_packages():
@@ -253,7 +255,8 @@ def test_evidence_follows_sku_blocks_not_neighboring_prices():
     result = validate_extraction(q, DocumentInput(source, pages={1: source}))
     ref = q.line_items[0].source_references["unit_price"]
     assert ref.source_text == "unit_price: 4.25" and ref.page == 1
-    assert result["confidence_band"] == "HIGH"
+    assert result["confidence_band"] == "LOW"  # The model omitted a second source SKU.
+    assert "SOURCE_LINE_COUNT_MISMATCH" in {f["code"] for f in result["findings"]}
     q.line_items[0].unit_price = Decimal("42.50")
     validate_extraction(q, DocumentInput(source, pages={1: source}))
     assert q.line_items[0].source_references["unit_price"].evidence_type == "missing"
@@ -308,7 +311,8 @@ def test_instruction_contaminated_prices_are_flagged_even_without_reported_total
     assert result["needs_review"] and result["human_approval_required"]
     finding = next(f for f in result["findings"] if f["code"] == "UNTRUSTED_INSTRUCTION")
     assert "detected" in finding["message"]
-    assert q.line_items[0].unit_price == Decimal("0.01")  # Never silently invent a repair.
+    assert q.line_items[0].unit_price is None  # Withhold unsupported price; never invent a repair.
+    assert result["original_ai_payload"]["line_items"][0]["unit_price"] == "0.01"
 
 
 def test_generation_schema_omits_model_confidence_and_dynamic_evidence():
@@ -318,3 +322,44 @@ def test_generation_schema_omits_model_confidence_and_dynamic_evidence():
     assert "confidence" not in schema["properties"]
     assert "source_references" not in schema["$defs"]["LineItemExtraction"]["properties"]
     assert "unit_price" in schema["$defs"]["LineItemExtraction"]["properties"]
+
+
+def test_schema_projection_preserves_known_values_and_raw_original(ollama):
+    payload = quote().model_dump(mode="json")
+    payload["line_items"][0]["shipping_cost"] = "999"
+    payload["line_items"][0]["sub_total"] = "9999"
+    calls = ollama([response(json.dumps(payload))])
+    provider = OllamaProvider()
+    result = provider.extract("Untrusted source")
+    assert result.shipping_cost == 5 and result.line_items[0].unit_price == Decimal("4.25")
+    assert len(calls) == 1
+    assert "9999" in provider.metadata["first_model_response"]
+    assert "line.sub_total" in provider.metadata["schema_discarded_fields"]
+
+
+def test_repair_does_not_resend_source_or_images(ollama):
+    calls = ollama([response('{"line_items": []}'), response(quote().model_dump_json())])
+    OllamaProvider().extract(
+        "PRIVATE SOURCE MARKER",
+        document_input=DocumentInput("PRIVATE SOURCE MARKER", images=["privateimage"], image_pages=[1]),
+    )
+    repair = json.dumps(calls[1]["messages"])
+    assert "PRIVATE SOURCE MARKER" not in repair and "privateimage" not in repair
+    assert len(calls) == 2
+
+
+def test_real_provider_focused_pass_is_bounded_and_evidence_checked(ollama):
+    from app.extraction_validation import validate_extraction
+
+    q = quote()
+    q.line_items[0].unit_price = Decimal("42.5")
+    focused = {"fields": [{"field": "line_items.0.unit_price", "value": "4.25", "source_text": "Unit price: 4.25"}]}
+    calls = ollama([response(q.model_dump_json()), response(json.dumps(focused))])
+    d = DocumentInput("SKU: C-12\nQty: 10\nUnit price: 4.25\nMOQ: 5\nUOM: EA")
+    provider = OllamaProvider()
+    result = provider.extract(d.text, document_input=d)
+    diagnostics = validate_extraction(result, d)
+    assert len(calls) == 2 and provider.metadata["second_pass_calls"] == 1
+    assert result.line_items[0].unit_price == Decimal("4.25")
+    assert diagnostics["original_ai_payload"]["line_items"][0]["unit_price"] == "42.5"
+    assert not any("images" in message for message in calls[1]["messages"])

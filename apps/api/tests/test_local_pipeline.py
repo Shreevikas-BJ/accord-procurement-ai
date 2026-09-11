@@ -71,7 +71,7 @@ def test_local_correction_lineage_and_decimal_recalculation(buyer, db_factory, m
         return local_payload()
 
     monkeypatch.setattr("app.local_ai.OllamaProvider.extract", extract)
-    source = b"New quotation for regression test, AX-100,10,EA,4.25,USD"
+    source = b"Supplier,Atlas Industrial Supply\nQuote number,REAL-TEST-742\nRFQ,RFQ-1003\nCurrency,USD\nShipping,5\nTax,0\nSKU,AX-100\nQty,10\nUOM,EA\nUnit price,4.25\nMOQ,1\nLead time,14 days"
     result = buyer.post(
         "/quotes/upload", files={"file": ("new.csv", source, "text/csv")}, data={"rfq_id": sid("rfq-3")}
     )

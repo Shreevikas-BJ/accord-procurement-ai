@@ -25,11 +25,20 @@ def normalize_uom(value):
 
 
 def validate_extraction(quote, document):
-    from .source_evidence import derive_references, supports
+    from .evidence_policy import harden_quote
 
     started = time.monotonic()
-    findings = []
-    derive_references(quote, document)
+    safety = harden_quote(quote, document)
+    findings = safety.pop("safety_findings")
+    for change in document.metadata.get("date_normalizations", []):
+        if change["normalized"] is None:
+            findings.append(
+                {
+                    "code": "DATE_REVIEW_REQUIRED",
+                    "field": change["field"],
+                    "message": "An invalid or ambiguous date was withheld; inspect the original source.",
+                }
+            )
 
     def flag(code, field, message):
         findings.append({"code": code, "field": field, "message": message})
@@ -41,12 +50,7 @@ def validate_extraction(quote, document):
                 continue
             ref = value.source_references.get(key)
             page_text = document.pages.get(ref.page, "") if ref and document.pages else document.text
-            if (
-                ref
-                and ref.source_text
-                and ref.source_text in page_text
-                and supports(key, getattr(value, key), ref.source_text)
-            ):
+            if ref and ref.source_text and ref.source_text in page_text and ref.evidence_strength == "strong":
                 ref.evidence_type = "ocr" if ref.page in document.image_pages else "text"
                 ref.confidence = Decimal("0.8")
             elif ref and ref.page in document.image_pages:
@@ -79,6 +83,11 @@ def validate_extraction(quote, document):
         identity = (line.supplier_sku, line.quantity, line.uom, line.unit_price)
         if identity in seen:
             flag("DUPLICATE_LINE", prefix + "supplier_sku", "Repeated line retained; confirm it is intentional.")
+            flag(
+                "POSSIBLE_DUPLICATE_LINE",
+                prefix + "supplier_sku",
+                "Repeated SKU, quantity and price need lot/delivery confirmation; both rows retained.",
+            )
         seen.add(identity)
         amount = line.quantity * line.unit_price if line.quantity is not None and line.unit_price is not None else None
         derived.append(amount)
@@ -92,6 +101,22 @@ def validate_extraction(quote, document):
                 prefix + "stated_line_total",
                 "Quantity times unit price differs from reported line total; check decimal placement or discounts.",
             )
+            if line.stated_line_total > 0 and amount / line.stated_line_total in {
+                Decimal(".01"),
+                Decimal(".1"),
+                Decimal("10"),
+                Decimal("100"),
+            }:
+                flag(
+                    "UNIT_PRICE_SUSPECTED_DECIMAL_ERROR",
+                    prefix + "unit_price",
+                    "The extension differs by a power of ten; verify the exact source unit price.",
+                )
+                flag(
+                    "DECIMAL_PLACEMENT_SUSPECT",
+                    prefix + "unit_price",
+                    "Possible decimal placement error; no automatic rescaling was applied.",
+                )
         if line.unit_price == 0:
             flag("ZERO_PRICE", prefix + "unit_price", "Confirm the supplier explicitly offered a zero price.")
         if line.moq is None:
@@ -159,6 +184,14 @@ def validate_extraction(quote, document):
         "DUPLICATE_LINE",
         "OCR_QUALITY",
         "UNTRUSTED_INSTRUCTION",
+        "UNSUPPORTED_EXTRACTED_VALUE",
+        "SOURCE_VALUE_CONFLICT",
+        "SOURCE_LINE_COUNT_MISMATCH",
+        "DOCUMENT_INSTRUCTION_TEXT_DETECTED",
+        "SECOND_PASS_DISAGREEMENT",
+        "CURRENCY_REVIEW_REQUIRED",
+        "QUANTITY_MOQ_AMBIGUITY",
+        "DATE_REVIEW_REQUIRED",
     }
     band = (
         "LOW"
@@ -169,6 +202,7 @@ def validate_extraction(quote, document):
     )
     quote.confidence = {"LOW": Decimal("0.4"), "MEDIUM": Decimal("0.7"), "HIGH": Decimal("0.9")}[band]
     return {
+        **safety,
         "confidence_band": band,
         "needs_review": band != "HIGH",
         "human_approval_required": True,

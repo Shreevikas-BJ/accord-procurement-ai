@@ -3,3 +3,5 @@
 *.png binary
 *.pdf binary
 *.xlsx binary
+# Frozen benchmark hashes refer to exact bytes, including line endings.
+benchmark-data/** -text

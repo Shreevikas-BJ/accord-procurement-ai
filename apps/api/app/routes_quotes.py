@@ -329,9 +329,11 @@ def review(id: str, payload: Review, user=Depends(buyer), db: Session = Depends(
                         corrected_by=user.id,
                         provenance={
                             **provenance,
-                            "original_ai_value": extraction.payload.get("line_items", [])[
-                                extraction.diagnostics["line_ids"][line.id]
-                            ].get(key)
+                            "original_ai_value": (
+                                extraction.diagnostics.get("original_ai_payload") or extraction.payload
+                            )
+                            .get("line_items", [])[extraction.diagnostics["line_ids"][line.id]]
+                            .get(key)
                             if extraction and line.id in (extraction.diagnostics or {}).get("line_ids", {})
                             else None,
                         },
@@ -364,7 +366,14 @@ def review(id: str, payload: Review, user=Depends(buyer), db: Session = Depends(
                     original_value={"value": value},
                     corrected_value={"value": current},
                     corrected_by=user.id,
-                    provenance={**provenance, "original_ai_value": extraction.payload.get(key) if extraction else None},
+                    provenance={
+                        **provenance,
+                        "original_ai_value": (
+                            extraction.diagnostics.get("original_ai_payload") or extraction.payload
+                        ).get(key)
+                        if extraction
+                        else None,
+                    },
                 )
             )
     audit(

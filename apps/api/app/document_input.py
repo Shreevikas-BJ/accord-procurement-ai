@@ -15,7 +15,17 @@ from pathlib import Path
 from PIL import Image
 from pypdf import PdfReader
 
-PIPELINE_VERSION = "local-2.1"
+PIPELINE_VERSION = "local-2.5.1"
+
+
+def layout_ocr(path):
+    """Keep table rows/columns together; the original OCR words remain evidence."""
+    import pytesseract
+
+    with Image.open(path) as image:
+        if image.width * image.height > 40_000_000:
+            raise ValueError("Image exceeds 40 megapixels.")
+        return pytesseract.image_to_string(image, config="--psm 6 -c preserve_interword_spaces=1", timeout=45)
 
 
 @dataclass
@@ -114,7 +124,7 @@ def prepare_document(path: Path) -> DocumentInput:
                     )
                     image_path = prefix.with_suffix(".png")
                     t = time.monotonic()
-                    content = TesseractOCRProvider().extract(image_path)
+                    content = layout_ocr(image_path)
                     ocr_seconds += time.monotonic() - t
                     result.images.append(image_data(image_path))
                     result.image_pages.append(number)
@@ -125,7 +135,7 @@ def prepare_document(path: Path) -> DocumentInput:
         result.image_pages = [1]
         t = time.monotonic()
         try:
-            content = TesseractOCRProvider().extract(path)
+            content = layout_ocr(path)
         except (RuntimeError, subprocess.TimeoutExpired):
             content = ""
         ocr_seconds = time.monotonic() - t

@@ -21,6 +21,11 @@ class Evidence(Strict):
     confidence: Confidence = Decimal("1")
     bounding_box: list[float] | None = None
     evidence_type: Literal["text", "ocr", "visual", "missing"] = "text"
+    evidence_strength: Literal["strong", "weak", "unsupported"] = "weak"
+    source_status: Literal["PRESENT", "NOT_FOUND", "AMBIGUOUS", "EXTRACTION_FAILED"] = "PRESENT"
+    sheet: str | None = None
+    row: int | None = None
+    cell: str | None = None
 
 
 class PriceTier(Strict):
