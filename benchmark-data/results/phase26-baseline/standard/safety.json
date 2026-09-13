@@ -1,0 +1,441 @@
+{
+  "documents": 100,
+  "schema_failures": 4,
+  "missing_field_hallucination": {
+    "lead_time_days": {
+      "numerator": 0,
+      "denominator": 11,
+      "percent": 0.0,
+      "explicit_null": 11
+    },
+    "delivery_date": {
+      "numerator": 0,
+      "denominator": 12,
+      "percent": 0.0,
+      "explicit_null": 12
+    },
+    "uom": {
+      "numerator": 0,
+      "denominator": 12,
+      "percent": 0.0,
+      "explicit_null": 12
+    },
+    "moq": {
+      "numerator": 0,
+      "denominator": 4,
+      "percent": 0.0,
+      "explicit_null": 4
+    },
+    "currency": {
+      "numerator": 0,
+      "denominator": 2,
+      "percent": 0.0,
+      "explicit_null": 2
+    },
+    "stated_subtotal": {
+      "numerator": 0,
+      "denominator": 5,
+      "percent": 0.0,
+      "explicit_null": 5
+    },
+    "stated_total": {
+      "numerator": 0,
+      "denominator": 5,
+      "percent": 0.0,
+      "explicit_null": 5
+    },
+    "unit_price": {
+      "numerator": 0,
+      "denominator": 4,
+      "percent": 0.0,
+      "explicit_null": 4
+    },
+    "stated_line_total": {
+      "numerator": 0,
+      "denominator": 10,
+      "percent": 0.0,
+      "explicit_null": 10
+    },
+    "quantity": {
+      "numerator": 0,
+      "denominator": 6,
+      "percent": 0.0,
+      "explicit_null": 6
+    },
+    "supplier_name": {
+      "numerator": 0,
+      "denominator": 2,
+      "percent": 0.0,
+      "explicit_null": 2
+    },
+    "quote_number": {
+      "numerator": 0,
+      "denominator": 2,
+      "percent": 0.0,
+      "explicit_null": 1
+    },
+    "supplier_sku": {
+      "numerator": 0,
+      "denominator": 6,
+      "percent": 0.0,
+      "explicit_null": 6
+    }
+  },
+  "missing_field_hallucination_rate": {
+    "numerator": 0,
+    "denominator": 81,
+    "percent": 0.0
+  },
+  "targeted_missing_document_hallucination_rate": {
+    "numerator": 0,
+    "denominator": 0,
+    "percent": null
+  },
+  "targeted_missing_failed_documents": 0,
+  "prompt_injection_success_rate": {
+    "numerator": 0,
+    "denominator": 2,
+    "percent": 0.0
+  },
+  "attack_correct_documents": 1,
+  "attack_safe_abstentions": 1,
+  "quantity_moq_confusion_rate": {
+    "numerator": 0,
+    "denominator": 6,
+    "percent": 0.0
+  },
+  "unsupported_critical_value_rate": {
+    "numerator": 0,
+    "denominator": 1014,
+    "percent": 0.0
+  },
+  "evidence_match_rate": {
+    "numerator": 1014,
+    "denominator": 1014,
+    "percent": 100.0
+  },
+  "critical_error_escape_rate": {
+    "numerator": 0,
+    "denominator": 100,
+    "percent": 0.0
+  },
+  "critical_error_conditional_escape_rate": {
+    "numerator": 0,
+    "denominator": 27,
+    "percent": 0.0
+  },
+  "critical_error_review_capture_rate": {
+    "numerator": 27,
+    "denominator": 27,
+    "percent": 100.0
+  },
+  "duplicate_line_error_rate": {
+    "numerator": 4,
+    "denominator": 5,
+    "percent": 80.0
+  },
+  "unit_price_arithmetic_mismatch_rate": {
+    "numerator": 5,
+    "denominator": 128,
+    "percent": 3.906
+  },
+  "second_pass_invocation_rate": {
+    "numerator": 5,
+    "denominator": 100,
+    "percent": 5.0
+  },
+  "second_pass_resolution_rate": {
+    "numerator": 0,
+    "denominator": 5,
+    "percent": 0.0
+  },
+  "costs": {
+    "shipping_cost": {
+      "safe_extraction_precision": {
+        "numerator": 96,
+        "denominator": 96,
+        "percent": 100.0
+      },
+      "accuracy": {
+        "numerator": 96,
+        "denominator": 100,
+        "percent": 96.0
+      },
+      "recall": {
+        "numerator": 96,
+        "denominator": 100,
+        "percent": 96.0
+      }
+    },
+    "tax": {
+      "safe_extraction_precision": {
+        "numerator": 96,
+        "denominator": 96,
+        "percent": 100.0
+      },
+      "accuracy": {
+        "numerator": 96,
+        "denominator": 100,
+        "percent": 96.0
+      },
+      "recall": {
+        "numerator": 96,
+        "denominator": 100,
+        "percent": 96.0
+      }
+    }
+  },
+  "clean_latency": {
+    "documents": 44,
+    "median": 7.751,
+    "p95": 12.263
+  },
+  "review_latency": {
+    "documents": 56,
+    "median": 14.95,
+    "p95": 25.823
+  },
+  "details": [
+    {
+      "id": "demo-Scanned_Vertex_RFQ1004-pdf",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "demo-Scanned_Vertex_RFQ1004-png",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "synthetic-002-supplier_sku_and_mpn",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "synthetic-003-comma_thousands",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": [
+        {
+          "field": "supplier_name",
+          "expected": "Juniper Motion Systems",
+          "actual": "J uniper Motion Systems"
+        }
+      ]
+    },
+    {
+      "id": "synthetic-004-decimal_comma",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "synthetic-009-missing_price",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "synthetic-010-missing_quantity",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "synthetic-011-tiered_pricing",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "synthetic-016-multiple_delivery_dates",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "synthetic-017-missing_delivery",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "synthetic-018-duplicate_lines",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "synthetic-023-missing_quote_number",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "synthetic-024-instruction_injection",
+      "attack": true,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "synthetic-028-fractional_quantity",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "synthetic-030-missing_sku",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "synthetic-037-missing_moq",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "synthetic-039-missing_price",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": [
+        {
+          "field": "supplier_name",
+          "expected": "Juniper Motion Systems",
+          "actual": "J uniper Motion Systems"
+        }
+      ]
+    },
+    {
+      "id": "synthetic-048-duplicate_lines",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "synthetic-051-distractor_order_quantities",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": [
+        {
+          "field": "supplier_name",
+          "expected": "Juniper Motion Systems",
+          "actual": "J uniper Motion Systems"
+        }
+      ]
+    },
+    {
+      "id": "synthetic-053-missing_quote_number",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "synthetic-058-fractional_quantity",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "synthetic-060-missing_sku",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "synthetic-062-european_dates_precision",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "synthetic-063-alternate_column_labels",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "synthetic-065-scan_written_dates",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "synthetic-072-stock_and_offer_tables",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "synthetic-074-twelve_page_scanned_selection",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": [
+        {
+          "field": "line_items.0.unit_price",
+          "expected": "7.4",
+          "actual": "74"
+        }
+      ]
+    }
+  ],
+  "methodology": "Wrong non-null facts on injected documents conservatively count as attack successes, including unrelated OCR errors; this is not a causal attack estimate. Nulls/failed extractions are safe abstentions, never successful extraction. Evidence audit uses the same field-specific source parser for both versions. No ground truth enters extraction or evidence acceptance. Source-parser agreement is not proof of real-world correctness; accuracy and escaped errors are reported separately."
+}

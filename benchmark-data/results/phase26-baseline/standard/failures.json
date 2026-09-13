@@ -1,0 +1,1964 @@
+[
+  {
+    "document_id": "demo-Scanned_Vertex_RFQ1004-pdf",
+    "field": "rfq_number",
+    "expected": "RFQ-1004",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Scanned_Vertex_RFQ1004-pdf",
+    "field": "line_items.0.supplier_sku",
+    "expected": "AX-100",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Scanned_Vertex_RFQ1004-pdf",
+    "field": "line_items.0.quantity",
+    "expected": "5000",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Scanned_Vertex_RFQ1004-pdf",
+    "field": "line_items.0.unit_price",
+    "expected": "4.49",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Scanned_Vertex_RFQ1004-pdf",
+    "field": "line_items.0.moq",
+    "expected": "10000",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Scanned_Vertex_RFQ1004-pdf",
+    "field": "line_items.1.supplier_sku",
+    "expected": "BX-220",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Scanned_Vertex_RFQ1004-pdf",
+    "field": "line_items.1.quantity",
+    "expected": "1000",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Scanned_Vertex_RFQ1004-pdf",
+    "field": "line_items.1.unit_price",
+    "expected": "47.40",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Scanned_Vertex_RFQ1004-pdf",
+    "field": "line_items.1.moq",
+    "expected": "500",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Scanned_Vertex_RFQ1004-pdf",
+    "field": "line_items.2.supplier_sku",
+    "expected": "CX-300",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Scanned_Vertex_RFQ1004-pdf",
+    "field": "line_items.2.quantity",
+    "expected": "2500",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Scanned_Vertex_RFQ1004-pdf",
+    "field": "line_items.2.unit_price",
+    "expected": "19.80",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Scanned_Vertex_RFQ1004-pdf",
+    "field": "line_items.2.moq",
+    "expected": "500",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Scanned_Vertex_RFQ1004-png",
+    "field": "rfq_number",
+    "expected": "RFQ-1004",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Scanned_Vertex_RFQ1004-png",
+    "field": "line_items.0.supplier_sku",
+    "expected": "AX-100",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Scanned_Vertex_RFQ1004-png",
+    "field": "line_items.0.quantity",
+    "expected": "5000",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Scanned_Vertex_RFQ1004-png",
+    "field": "line_items.0.unit_price",
+    "expected": "4.49",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Scanned_Vertex_RFQ1004-png",
+    "field": "line_items.0.moq",
+    "expected": "10000",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Scanned_Vertex_RFQ1004-png",
+    "field": "line_items.1.supplier_sku",
+    "expected": "BX-220",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Scanned_Vertex_RFQ1004-png",
+    "field": "line_items.1.quantity",
+    "expected": "1000",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Scanned_Vertex_RFQ1004-png",
+    "field": "line_items.1.unit_price",
+    "expected": "47.40",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Scanned_Vertex_RFQ1004-png",
+    "field": "line_items.1.moq",
+    "expected": "500",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Scanned_Vertex_RFQ1004-png",
+    "field": "line_items.2.supplier_sku",
+    "expected": "CX-300",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Scanned_Vertex_RFQ1004-png",
+    "field": "line_items.2.quantity",
+    "expected": "2500",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Scanned_Vertex_RFQ1004-png",
+    "field": "line_items.2.unit_price",
+    "expected": "19.80",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Scanned_Vertex_RFQ1004-png",
+    "field": "line_items.2.moq",
+    "expected": "500",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-002-supplier_sku_and_mpn",
+    "field": "line_items.1.unit_price",
+    "expected": "2.95",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-003-comma_thousands",
+    "field": "supplier_name",
+    "expected": "Juniper Motion Systems",
+    "extracted": "J uniper Motion Systems",
+    "error_type": "WRONG_SUPPLIER",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-004-decimal_comma",
+    "field": "line_items.1.unit_price",
+    "expected": "3.73",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-005-lead_time_range",
+    "field": "line_items.0.lead_time_days",
+    "expected": 21,
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-009-missing_price",
+    "field": "line_items.0.supplier_sku",
+    "expected": "MT-128.1",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-009-missing_price",
+    "field": "line_items.0.quantity",
+    "expected": "156",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-009-missing_price",
+    "field": "line_items.0.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-009-missing_price",
+    "field": "line_items.0.moq",
+    "expected": "5",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-009-missing_price",
+    "field": "line_items.0.lead_time_days",
+    "expected": 15,
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-009-missing_price",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-10-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-010-missing_quantity",
+    "field": "line_items.0.supplier_sku",
+    "expected": "PK-129.1",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-010-missing_quantity",
+    "field": "line_items.0.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-010-missing_quantity",
+    "field": "line_items.0.unit_price",
+    "expected": "4.76",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-010-missing_quantity",
+    "field": "line_items.0.moq",
+    "expected": "5",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-010-missing_quantity",
+    "field": "line_items.0.lead_time_days",
+    "expected": 16,
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-010-missing_quantity",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-10-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-010-missing_quantity",
+    "field": "line_items.1.supplier_sku",
+    "expected": "CT-129.2",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-010-missing_quantity",
+    "field": "line_items.1.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-010-missing_quantity",
+    "field": "line_items.1.unit_price",
+    "expected": "6.07",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-010-missing_quantity",
+    "field": "line_items.1.moq",
+    "expected": "10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-010-missing_quantity",
+    "field": "line_items.1.lead_time_days",
+    "expected": 19,
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-010-missing_quantity",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-10-13",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-011-tiered_pricing",
+    "field": "line_items.2.unit_price",
+    "expected": "7.77",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-016-multiple_delivery_dates",
+    "field": "line_items.0.unit_price",
+    "expected": "7.1",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-017-missing_delivery",
+    "field": "line_items.0.supplier_sku",
+    "expected": "SW-136.1",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-017-missing_delivery",
+    "field": "line_items.0.quantity",
+    "expected": "292",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-017-missing_delivery",
+    "field": "line_items.0.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-017-missing_delivery",
+    "field": "line_items.0.unit_price",
+    "expected": "7.49",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-017-missing_delivery",
+    "field": "line_items.0.moq",
+    "expected": "5",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-018-duplicate_lines",
+    "field": "line_items.1.unit_price",
+    "expected": "9.19",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-023-missing_quote_number",
+    "field": "line_items.0.moq",
+    "expected": "5",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-023-missing_quote_number",
+    "field": "line_items.1.unit_price",
+    "expected": "11.14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-024-instruction_injection",
+    "field": "line_items.0.unit_price",
+    "expected": "10.22",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-024-instruction_injection",
+    "field": "line_items.1.unit_price",
+    "expected": "11.53",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-024-instruction_injection",
+    "field": "line_items.2.unit_price",
+    "expected": "12.84",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-024-instruction_injection",
+    "field": "line_items.3.quantity",
+    "expected": "771",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-024-instruction_injection",
+    "field": "line_items.3.unit_price",
+    "expected": "14.15",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-028-fractional_quantity",
+    "field": "supplier_name",
+    "expected": "Orion Valve Works",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-028-fractional_quantity",
+    "field": "quote_number",
+    "expected": "EVAL-028-Q",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-028-fractional_quantity",
+    "field": "rfq_number",
+    "expected": "REQ-8127",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-028-fractional_quantity",
+    "field": "currency",
+    "expected": "GBP",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-028-fractional_quantity",
+    "field": "line_items.0.supplier_sku",
+    "expected": "GA-147.1",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-028-fractional_quantity",
+    "field": "line_items.0.quantity",
+    "expected": "59.875",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-028-fractional_quantity",
+    "field": "line_items.0.uom",
+    "expected": "KG",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-028-fractional_quantity",
+    "field": "line_items.0.unit_price",
+    "expected": "11.78",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-028-fractional_quantity",
+    "field": "line_items.0.moq",
+    "expected": "5",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-028-fractional_quantity",
+    "field": "line_items.0.lead_time_days",
+    "expected": 34,
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-028-fractional_quantity",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-10-10",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-028-fractional_quantity",
+    "field": "line_items.1.supplier_sku",
+    "expected": "MT-147.2",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-028-fractional_quantity",
+    "field": "line_items.1.quantity",
+    "expected": "74.875",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-028-fractional_quantity",
+    "field": "line_items.1.uom",
+    "expected": "KG",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-028-fractional_quantity",
+    "field": "line_items.1.unit_price",
+    "expected": "13.09",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-028-fractional_quantity",
+    "field": "line_items.1.moq",
+    "expected": "10",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-028-fractional_quantity",
+    "field": "line_items.1.lead_time_days",
+    "expected": 37,
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-028-fractional_quantity",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-10-13",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-028-fractional_quantity",
+    "field": "line_items.2.supplier_sku",
+    "expected": "PK-147.3",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-028-fractional_quantity",
+    "field": "line_items.2.quantity",
+    "expected": "89.875",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-028-fractional_quantity",
+    "field": "line_items.2.uom",
+    "expected": "KG",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-028-fractional_quantity",
+    "field": "line_items.2.unit_price",
+    "expected": "14.4",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-028-fractional_quantity",
+    "field": "line_items.2.moq",
+    "expected": "15",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-028-fractional_quantity",
+    "field": "line_items.2.lead_time_days",
+    "expected": 40,
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-028-fractional_quantity",
+    "field": "line_items.2.delivery_date",
+    "expected": "2026-10-16",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-028-fractional_quantity",
+    "field": "line_items.3.supplier_sku",
+    "expected": "CT-147.4",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-028-fractional_quantity",
+    "field": "line_items.3.quantity",
+    "expected": "104.875",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-028-fractional_quantity",
+    "field": "line_items.3.uom",
+    "expected": "KG",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-028-fractional_quantity",
+    "field": "line_items.3.unit_price",
+    "expected": "15.71",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-028-fractional_quantity",
+    "field": "line_items.3.moq",
+    "expected": "20",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-028-fractional_quantity",
+    "field": "line_items.3.lead_time_days",
+    "expected": 43,
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-028-fractional_quantity",
+    "field": "line_items.3.delivery_date",
+    "expected": "2026-10-19",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-030-missing_sku",
+    "field": "line_items.0.quantity",
+    "expected": "513",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-030-missing_sku",
+    "field": "line_items.0.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-030-missing_sku",
+    "field": "line_items.0.unit_price",
+    "expected": "12.56",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-030-missing_sku",
+    "field": "line_items.0.moq",
+    "expected": "5",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-030-missing_sku",
+    "field": "line_items.0.lead_time_days",
+    "expected": 8,
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-030-missing_sku",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-10-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-030-missing_sku",
+    "field": "line_items.1.quantity",
+    "expected": "633",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-030-missing_sku",
+    "field": "line_items.1.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-030-missing_sku",
+    "field": "line_items.1.unit_price",
+    "expected": "13.87",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-030-missing_sku",
+    "field": "line_items.1.moq",
+    "expected": "10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-030-missing_sku",
+    "field": "line_items.1.lead_time_days",
+    "expected": 11,
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-030-missing_sku",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-10-13",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-035-lead_time_range",
+    "field": "line_items.0.lead_time_days",
+    "expected": 21,
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-037-missing_moq",
+    "field": "line_items.0.supplier_sku",
+    "expected": "SW-156.1",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-037-missing_moq",
+    "field": "line_items.0.quantity",
+    "expected": "632",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-037-missing_moq",
+    "field": "line_items.0.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-037-missing_moq",
+    "field": "line_items.0.unit_price",
+    "expected": "15.29",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-037-missing_moq",
+    "field": "line_items.0.lead_time_days",
+    "expected": 15,
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-037-missing_moq",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-10-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-039-missing_price",
+    "field": "supplier_name",
+    "expected": "Juniper Motion Systems",
+    "extracted": "J uniper Motion Systems",
+    "error_type": "WRONG_SUPPLIER",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-039-missing_price",
+    "field": "line_items.0.supplier_sku",
+    "expected": "MT-158.1",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-039-missing_price",
+    "field": "line_items.0.quantity",
+    "expected": "666",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-039-missing_price",
+    "field": "line_items.0.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-039-missing_price",
+    "field": "line_items.0.moq",
+    "expected": "5",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-039-missing_price",
+    "field": "line_items.0.lead_time_days",
+    "expected": 17,
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-039-missing_price",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-10-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-039-missing_price",
+    "field": "line_items.1.supplier_sku",
+    "expected": "PK-158.2",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-039-missing_price",
+    "field": "line_items.1.quantity",
+    "expected": "786",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-039-missing_price",
+    "field": "line_items.1.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-039-missing_price",
+    "field": "line_items.1.moq",
+    "expected": "10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-039-missing_price",
+    "field": "line_items.1.lead_time_days",
+    "expected": 20,
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-039-missing_price",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-10-13",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-039-missing_price",
+    "field": "line_items.2.supplier_sku",
+    "expected": "CT-158.3",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-039-missing_price",
+    "field": "line_items.2.quantity",
+    "expected": "906",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-039-missing_price",
+    "field": "line_items.2.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-039-missing_price",
+    "field": "line_items.2.moq",
+    "expected": "15",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-039-missing_price",
+    "field": "line_items.2.lead_time_days",
+    "expected": 23,
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-039-missing_price",
+    "field": "line_items.2.delivery_date",
+    "expected": "2026-10-16",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-048-duplicate_lines",
+    "field": "line_items.4.supplier_sku",
+    "expected": "GA-167.1",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-048-duplicate_lines",
+    "field": "line_items.4.quantity",
+    "expected": "819",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-048-duplicate_lines",
+    "field": "line_items.4.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-048-duplicate_lines",
+    "field": "line_items.4.unit_price",
+    "expected": "19.58",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-048-duplicate_lines",
+    "field": "line_items.4.moq",
+    "expected": "5",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-048-duplicate_lines",
+    "field": "line_items.4.lead_time_days",
+    "expected": 26,
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-048-duplicate_lines",
+    "field": "line_items.4.delivery_date",
+    "expected": "2026-10-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-051-distractor_order_quantities",
+    "field": "supplier_name",
+    "expected": "Juniper Motion Systems",
+    "extracted": "J uniper Motion Systems",
+    "error_type": "WRONG_SUPPLIER",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-051-distractor_order_quantities",
+    "field": "line_items.0.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-051-distractor_order_quantities",
+    "field": "line_items.1.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-051-distractor_order_quantities",
+    "field": "line_items.2.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-053-missing_quote_number",
+    "field": "supplier_name",
+    "expected": "Meadow Cable Supply",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-053-missing_quote_number",
+    "field": "quote_number",
+    "expected": null,
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-053-missing_quote_number",
+    "field": "rfq_number",
+    "expected": "REQ-8152",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-053-missing_quote_number",
+    "field": "currency",
+    "expected": "GBP",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-053-missing_quote_number",
+    "field": "line_items.0.supplier_sku",
+    "expected": "BR-172.1",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-053-missing_quote_number",
+    "field": "line_items.0.quantity",
+    "expected": "904",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-053-missing_quote_number",
+    "field": "line_items.0.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-053-missing_quote_number",
+    "field": "line_items.0.unit_price",
+    "expected": "21.53",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-053-missing_quote_number",
+    "field": "line_items.0.moq",
+    "expected": "5",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-053-missing_quote_number",
+    "field": "line_items.0.lead_time_days",
+    "expected": 31,
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-053-missing_quote_number",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-10-10",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-058-fractional_quantity",
+    "field": "supplier_name",
+    "expected": "Summit Tooling",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-058-fractional_quantity",
+    "field": "quote_number",
+    "expected": "EVAL-058-Q",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-058-fractional_quantity",
+    "field": "rfq_number",
+    "expected": "REQ-8157",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-058-fractional_quantity",
+    "field": "currency",
+    "expected": "GBP",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-058-fractional_quantity",
+    "field": "line_items.0.supplier_sku",
+    "expected": "GA-177.1",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-058-fractional_quantity",
+    "field": "line_items.0.quantity",
+    "expected": "123.625",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-058-fractional_quantity",
+    "field": "line_items.0.uom",
+    "expected": "KG",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-058-fractional_quantity",
+    "field": "line_items.0.unit_price",
+    "expected": "23.48",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-058-fractional_quantity",
+    "field": "line_items.0.moq",
+    "expected": "5",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-058-fractional_quantity",
+    "field": "line_items.0.lead_time_days",
+    "expected": 8,
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-058-fractional_quantity",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-10-10",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-058-fractional_quantity",
+    "field": "line_items.1.supplier_sku",
+    "expected": "MT-177.2",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-058-fractional_quantity",
+    "field": "line_items.1.quantity",
+    "expected": "138.625",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-058-fractional_quantity",
+    "field": "line_items.1.uom",
+    "expected": "KG",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-058-fractional_quantity",
+    "field": "line_items.1.unit_price",
+    "expected": "24.79",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-058-fractional_quantity",
+    "field": "line_items.1.moq",
+    "expected": "10",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-058-fractional_quantity",
+    "field": "line_items.1.lead_time_days",
+    "expected": 11,
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-058-fractional_quantity",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-10-13",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-060-missing_sku",
+    "field": "line_items.0.quantity",
+    "expected": "1023",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-060-missing_sku",
+    "field": "line_items.0.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-060-missing_sku",
+    "field": "line_items.0.unit_price",
+    "expected": "24.26",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-060-missing_sku",
+    "field": "line_items.0.moq",
+    "expected": "5",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-060-missing_sku",
+    "field": "line_items.0.lead_time_days",
+    "expected": 10,
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-060-missing_sku",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-10-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-060-missing_sku",
+    "field": "line_items.1.quantity",
+    "expected": "1143",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-060-missing_sku",
+    "field": "line_items.1.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-060-missing_sku",
+    "field": "line_items.1.unit_price",
+    "expected": "25.57",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-060-missing_sku",
+    "field": "line_items.1.moq",
+    "expected": "10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-060-missing_sku",
+    "field": "line_items.1.lead_time_days",
+    "expected": 13,
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-060-missing_sku",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-10-13",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-060-missing_sku",
+    "field": "line_items.2.quantity",
+    "expected": "1263",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-060-missing_sku",
+    "field": "line_items.2.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-060-missing_sku",
+    "field": "line_items.2.unit_price",
+    "expected": "26.88",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-060-missing_sku",
+    "field": "line_items.2.moq",
+    "expected": "15",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-060-missing_sku",
+    "field": "line_items.2.lead_time_days",
+    "expected": 16,
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-060-missing_sku",
+    "field": "line_items.2.delivery_date",
+    "expected": "2026-10-16",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-060-missing_sku",
+    "field": "line_items.3.quantity",
+    "expected": "1383",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-060-missing_sku",
+    "field": "line_items.3.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-060-missing_sku",
+    "field": "line_items.3.unit_price",
+    "expected": "28.19",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-060-missing_sku",
+    "field": "line_items.3.moq",
+    "expected": "20",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-060-missing_sku",
+    "field": "line_items.3.lead_time_days",
+    "expected": 19,
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-060-missing_sku",
+    "field": "line_items.3.delivery_date",
+    "expected": "2026-10-19",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-062-european_dates_precision",
+    "field": "supplier_name",
+    "expected": "Clearwater Cable Co",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-062-european_dates_precision",
+    "field": "quote_number",
+    "expected": "BP/62/26",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-062-european_dates_precision",
+    "field": "rfq_number",
+    "expected": "REQ-8262",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-062-european_dates_precision",
+    "field": "currency",
+    "expected": "GBP",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-062-european_dates_precision",
+    "field": "line_items.0.supplier_sku",
+    "expected": "BP/62-X.02",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-062-european_dates_precision",
+    "field": "line_items.0.quantity",
+    "expected": "12.375",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-062-european_dates_precision",
+    "field": "line_items.0.uom",
+    "expected": "KG",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-062-european_dates_precision",
+    "field": "line_items.0.unit_price",
+    "expected": "0.0042",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-062-european_dates_precision",
+    "field": "line_items.0.moq",
+    "expected": "10",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-062-european_dates_precision",
+    "field": "line_items.0.lead_time_days",
+    "expected": 28,
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-062-european_dates_precision",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-10-15",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-063-alternate_column_labels",
+    "field": "line_items.0.supplier_sku",
+    "expected": "BP/63-X.02",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-063-alternate_column_labels",
+    "field": "line_items.0.quantity",
+    "expected": "93",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-063-alternate_column_labels",
+    "field": "line_items.0.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-063-alternate_column_labels",
+    "field": "line_items.0.unit_price",
+    "expected": "6.3",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-063-alternate_column_labels",
+    "field": "line_items.0.moq",
+    "expected": "10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-063-alternate_column_labels",
+    "field": "line_items.0.lead_time_days",
+    "expected": 28,
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-063-alternate_column_labels",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-10-15",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-065-scan_written_dates",
+    "field": "line_items.0.unit_price",
+    "expected": "6.5",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-072-stock_and_offer_tables",
+    "field": "line_items.0.unit_price",
+    "expected": "7.2",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "synthetic-074-twelve_page_scanned_selection",
+    "field": "line_items.0.unit_price",
+    "expected": "7.4",
+    "extracted": "74",
+    "error_type": "DECIMAL_ERROR",
+    "source_page": 9,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  }
+]
