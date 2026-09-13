@@ -1,0 +1,12 @@
+field,accuracy,exact_accuracy,present_accuracy,null_accuracy,correct,total
+supplier_name,0.0,0.0,0.0,,0,3
+quote_number,0.0,0.0,0.0,,0,3
+rfq_number,0.0,0.0,0.0,,0,3
+currency,0.0,0.0,0.0,,0,3
+supplier_sku,0.0,0.0,0.0,,0,9
+quantity,0.0,0.0,0.0,,0,9
+uom,0.0,0.0,0.0,,0,9
+unit_price,0.0,0.0,0.0,,0,9
+moq,0.0,0.0,0.0,,0,9
+lead_time_days,0.0,0.0,0.0,,0,9
+delivery_date,0.0,0.0,0.0,,0,9

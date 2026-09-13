@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "rfq": "RFQ-1003",
+  "recommended_quote_id": "402be9b5-ba5c-46d8-ba44-3fa862bf2c6b",
+  "explanation": "Meridian Components ranks first at 94.00/100 with an evaluated total of USD 118,980.00. It covers all required items, meets the delivery target, and has no MOQ conflicts.",
+  "quotes": [
+    {
+      "id": "a48d20f1-4d99-426c-a1e9-3a145f444e1d",
+      "supplier_name": "Atlas Industrial Supply",
+      "total": "127400.00",
+      "eligible": true,
+      "lowest_cost": false,
+      "fastest": false
+    },
+    {
+      "id": "402be9b5-ba5c-46d8-ba44-3fa862bf2c6b",
+      "supplier_name": "Meridian Components",
+      "total": "118980.00",
+      "eligible": true,
+      "lowest_cost": true,
+      "fastest": false
+    },
+    {
+      "id": "a4dd6f08-7e10-45b1-9ad8-88a15a14f986",
+      "supplier_name": "Nova Supply Group",
+      "total": "120200.00",
+      "eligible": true,
+      "lowest_cost": false,
+      "fastest": true
+    },
+    {
+      "id": "19b49a99-1a74-4a76-bcf1-fa3717c8fc6a",
+      "supplier_name": "Vertex Industrial",
+      "total": "119850.00",
+      "eligible": false,
+      "lowest_cost": false,
+      "fastest": false
+    },
+    {
+      "id": "4392e446-2e11-49a3-9797-daf378f94664",
+      "supplier_name": "Atlas Industrial Supply",
+      "total": "127400.00",
+      "eligible": true,
+      "lowest_cost": false,
+      "fastest": false
+    },
+    {
+      "id": "b63cb7b7-e0b3-425e-a706-a96340642d8e",
+      "supplier_name": "Meridian Components",
+      "total": "118980.00",
+      "eligible": true,
+      "lowest_cost": true,
+      "fastest": false
+    },
+    {
+      "id": "f2a1cdff-ad9a-47e4-837e-c4827c9aa435",
+      "supplier_name": "Nova Supply Group",
+      "total": "120200.00",
+      "eligible": true,
+      "lowest_cost": false,
+      "fastest": true
+    }
+  ]
+}

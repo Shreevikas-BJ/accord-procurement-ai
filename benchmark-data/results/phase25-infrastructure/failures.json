@@ -1,0 +1,677 @@
+[
+  {
+    "document_id": "demo-Atlas_RFQ1001-pdf",
+    "field": "supplier_name",
+    "expected": "Atlas Industrial Supply",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1001-pdf",
+    "field": "quote_number",
+    "expected": "ATL-1001-26",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1001-pdf",
+    "field": "rfq_number",
+    "expected": "RFQ-1001",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1001-pdf",
+    "field": "currency",
+    "expected": "USD",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1001-pdf",
+    "field": "line_items.0.supplier_sku",
+    "expected": "AX-100",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1001-pdf",
+    "field": "line_items.0.quantity",
+    "expected": "5000",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1001-pdf",
+    "field": "line_items.0.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1001-pdf",
+    "field": "line_items.0.unit_price",
+    "expected": "5.12",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1001-pdf",
+    "field": "line_items.0.moq",
+    "expected": "500",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1001-pdf",
+    "field": "line_items.0.lead_time_days",
+    "expected": 36,
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1001-pdf",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-10-15",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1001-pdf",
+    "field": "line_items.1.supplier_sku",
+    "expected": "BX-220",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1001-pdf",
+    "field": "line_items.1.quantity",
+    "expected": "1000",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1001-pdf",
+    "field": "line_items.1.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1001-pdf",
+    "field": "line_items.1.unit_price",
+    "expected": "50.80",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1001-pdf",
+    "field": "line_items.1.moq",
+    "expected": "500",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1001-pdf",
+    "field": "line_items.1.lead_time_days",
+    "expected": 36,
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1001-pdf",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-10-15",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1001-pdf",
+    "field": "line_items.2.supplier_sku",
+    "expected": "CX-300",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1001-pdf",
+    "field": "line_items.2.quantity",
+    "expected": "2500",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1001-pdf",
+    "field": "line_items.2.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1001-pdf",
+    "field": "line_items.2.unit_price",
+    "expected": "20.20",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1001-pdf",
+    "field": "line_items.2.moq",
+    "expected": "500",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1001-pdf",
+    "field": "line_items.2.lead_time_days",
+    "expected": 36,
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1001-pdf",
+    "field": "line_items.2.delivery_date",
+    "expected": "2026-10-15",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1002-pdf",
+    "field": "supplier_name",
+    "expected": "Atlas Industrial Supply",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1002-pdf",
+    "field": "quote_number",
+    "expected": "ATL-1002-26",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1002-pdf",
+    "field": "rfq_number",
+    "expected": "RFQ-1002",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1002-pdf",
+    "field": "currency",
+    "expected": "USD",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1002-pdf",
+    "field": "line_items.0.supplier_sku",
+    "expected": "AX-100",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1002-pdf",
+    "field": "line_items.0.quantity",
+    "expected": "5000",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1002-pdf",
+    "field": "line_items.0.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1002-pdf",
+    "field": "line_items.0.unit_price",
+    "expected": "5.12",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1002-pdf",
+    "field": "line_items.0.moq",
+    "expected": "500",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1002-pdf",
+    "field": "line_items.0.lead_time_days",
+    "expected": 36,
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1002-pdf",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-10-15",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1002-pdf",
+    "field": "line_items.1.supplier_sku",
+    "expected": "BX-220",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1002-pdf",
+    "field": "line_items.1.quantity",
+    "expected": "1000",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1002-pdf",
+    "field": "line_items.1.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1002-pdf",
+    "field": "line_items.1.unit_price",
+    "expected": "50.80",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1002-pdf",
+    "field": "line_items.1.moq",
+    "expected": "500",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1002-pdf",
+    "field": "line_items.1.lead_time_days",
+    "expected": 36,
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1002-pdf",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-10-15",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1002-pdf",
+    "field": "line_items.2.supplier_sku",
+    "expected": "CX-300",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1002-pdf",
+    "field": "line_items.2.quantity",
+    "expected": "2500",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1002-pdf",
+    "field": "line_items.2.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1002-pdf",
+    "field": "line_items.2.unit_price",
+    "expected": "20.20",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1002-pdf",
+    "field": "line_items.2.moq",
+    "expected": "500",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1002-pdf",
+    "field": "line_items.2.lead_time_days",
+    "expected": 36,
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1002-pdf",
+    "field": "line_items.2.delivery_date",
+    "expected": "2026-10-15",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1003-pdf",
+    "field": "supplier_name",
+    "expected": "Atlas Industrial Supply",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1003-pdf",
+    "field": "quote_number",
+    "expected": "ATL-1003-26",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1003-pdf",
+    "field": "rfq_number",
+    "expected": "RFQ-1003",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1003-pdf",
+    "field": "currency",
+    "expected": "USD",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1003-pdf",
+    "field": "line_items.0.supplier_sku",
+    "expected": "AX-100",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1003-pdf",
+    "field": "line_items.0.quantity",
+    "expected": "5000",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1003-pdf",
+    "field": "line_items.0.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1003-pdf",
+    "field": "line_items.0.unit_price",
+    "expected": "5.12",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1003-pdf",
+    "field": "line_items.0.moq",
+    "expected": "500",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1003-pdf",
+    "field": "line_items.0.lead_time_days",
+    "expected": 36,
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1003-pdf",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-10-15",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1003-pdf",
+    "field": "line_items.1.supplier_sku",
+    "expected": "BX-220",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1003-pdf",
+    "field": "line_items.1.quantity",
+    "expected": "1000",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1003-pdf",
+    "field": "line_items.1.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1003-pdf",
+    "field": "line_items.1.unit_price",
+    "expected": "50.80",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1003-pdf",
+    "field": "line_items.1.moq",
+    "expected": "500",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1003-pdf",
+    "field": "line_items.1.lead_time_days",
+    "expected": 36,
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1003-pdf",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-10-15",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1003-pdf",
+    "field": "line_items.2.supplier_sku",
+    "expected": "CX-300",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1003-pdf",
+    "field": "line_items.2.quantity",
+    "expected": "2500",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1003-pdf",
+    "field": "line_items.2.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1003-pdf",
+    "field": "line_items.2.unit_price",
+    "expected": "20.20",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1003-pdf",
+    "field": "line_items.2.moq",
+    "expected": "500",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1003-pdf",
+    "field": "line_items.2.lead_time_days",
+    "expected": 36,
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Atlas_RFQ1003-pdf",
+    "field": "line_items.2.delivery_date",
+    "expected": "2026-10-15",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  }
+]

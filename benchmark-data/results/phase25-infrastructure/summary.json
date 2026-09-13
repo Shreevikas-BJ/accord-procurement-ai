@@ -1,0 +1,204 @@
+{
+  "documents": 3,
+  "model": "qwen2.5vl:7b",
+  "prompt_version": "quote-v3",
+  "pipeline_version": "local-2.5.2",
+  "formats": {
+    "pdf": 3
+  },
+  "schema_validity": 0.0,
+  "document_critical_success": 0.0,
+  "critical_field_accuracy": 0.0,
+  "line_association_accuracy": 0.0,
+  "needs_review_rate": 100.0,
+  "failure_rate": 100.0,
+  "human_corrections_per_document": null,
+  "human_corrections_note": "Evaluation-only extraction does not simulate buyer corrections; measured separately in the UI workflow.",
+  "fields": {
+    "supplier_name": {
+      "correct": 0,
+      "exact": 0,
+      "total": 3,
+      "present_correct": 0,
+      "present_total": 3,
+      "null_correct": 0,
+      "null_total": 0,
+      "accuracy": 0.0,
+      "exact_accuracy": 0.0,
+      "present_accuracy": 0.0,
+      "null_accuracy": null
+    },
+    "quote_number": {
+      "correct": 0,
+      "exact": 0,
+      "total": 3,
+      "present_correct": 0,
+      "present_total": 3,
+      "null_correct": 0,
+      "null_total": 0,
+      "accuracy": 0.0,
+      "exact_accuracy": 0.0,
+      "present_accuracy": 0.0,
+      "null_accuracy": null
+    },
+    "rfq_number": {
+      "correct": 0,
+      "exact": 0,
+      "total": 3,
+      "present_correct": 0,
+      "present_total": 3,
+      "null_correct": 0,
+      "null_total": 0,
+      "accuracy": 0.0,
+      "exact_accuracy": 0.0,
+      "present_accuracy": 0.0,
+      "null_accuracy": null
+    },
+    "currency": {
+      "correct": 0,
+      "exact": 0,
+      "total": 3,
+      "present_correct": 0,
+      "present_total": 3,
+      "null_correct": 0,
+      "null_total": 0,
+      "accuracy": 0.0,
+      "exact_accuracy": 0.0,
+      "present_accuracy": 0.0,
+      "null_accuracy": null
+    },
+    "supplier_sku": {
+      "correct": 0,
+      "exact": 0,
+      "total": 9,
+      "present_correct": 0,
+      "present_total": 9,
+      "null_correct": 0,
+      "null_total": 0,
+      "accuracy": 0.0,
+      "exact_accuracy": 0.0,
+      "present_accuracy": 0.0,
+      "null_accuracy": null
+    },
+    "quantity": {
+      "correct": 0,
+      "exact": 0,
+      "total": 9,
+      "present_correct": 0,
+      "present_total": 9,
+      "null_correct": 0,
+      "null_total": 0,
+      "accuracy": 0.0,
+      "exact_accuracy": 0.0,
+      "present_accuracy": 0.0,
+      "null_accuracy": null
+    },
+    "uom": {
+      "correct": 0,
+      "exact": 0,
+      "total": 9,
+      "present_correct": 0,
+      "present_total": 9,
+      "null_correct": 0,
+      "null_total": 0,
+      "accuracy": 0.0,
+      "exact_accuracy": 0.0,
+      "present_accuracy": 0.0,
+      "null_accuracy": null
+    },
+    "unit_price": {
+      "correct": 0,
+      "exact": 0,
+      "total": 9,
+      "present_correct": 0,
+      "present_total": 9,
+      "null_correct": 0,
+      "null_total": 0,
+      "accuracy": 0.0,
+      "exact_accuracy": 0.0,
+      "present_accuracy": 0.0,
+      "null_accuracy": null
+    },
+    "moq": {
+      "correct": 0,
+      "exact": 0,
+      "total": 9,
+      "present_correct": 0,
+      "present_total": 9,
+      "null_correct": 0,
+      "null_total": 0,
+      "accuracy": 0.0,
+      "exact_accuracy": 0.0,
+      "present_accuracy": 0.0,
+      "null_accuracy": null
+    },
+    "lead_time_days": {
+      "correct": 0,
+      "exact": 0,
+      "total": 9,
+      "present_correct": 0,
+      "present_total": 9,
+      "null_correct": 0,
+      "null_total": 0,
+      "accuracy": 0.0,
+      "exact_accuracy": 0.0,
+      "present_accuracy": 0.0,
+      "null_accuracy": null
+    },
+    "delivery_date": {
+      "correct": 0,
+      "exact": 0,
+      "total": 9,
+      "present_correct": 0,
+      "present_total": 9,
+      "null_correct": 0,
+      "null_total": 0,
+      "accuracy": 0.0,
+      "exact_accuracy": 0.0,
+      "present_accuracy": 0.0,
+      "null_accuracy": null
+    }
+  },
+  "timings": {
+    "parsing_seconds": {
+      "median": 0.005,
+      "mean": 0.005,
+      "p95": 0.006
+    },
+    "ocr_seconds": {
+      "median": 0.0,
+      "mean": 0.0,
+      "p95": 0.0
+    },
+    "model_seconds": {
+      "median": 0,
+      "mean": 0,
+      "p95": 0
+    },
+    "validation_seconds": {
+      "median": 0,
+      "mean": 0,
+      "p95": 0
+    },
+    "total_seconds": {
+      "median": 29.973,
+      "mean": 30.018,
+      "p95": 30.113
+    }
+  },
+  "error_taxonomy": {
+    "SCHEMA_ERROR": 75
+  },
+  "document_error_taxonomy": {
+    "MODEL_BUSY": 3
+  },
+  "review_finding_taxonomy": {},
+  "by_origin": {
+    "existing-demo": {
+      "documents": 3,
+      "schema_validity": 0.0,
+      "critical_accuracy": 0.0
+    }
+  },
+  "fixture_fallbacks": 0
+}

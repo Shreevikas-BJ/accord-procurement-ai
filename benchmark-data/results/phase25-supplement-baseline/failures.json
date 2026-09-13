@@ -1,0 +1,128 @@
+[
+  {
+    "document_id": "reliability-013-missing_quantity",
+    "field": "line_items.0.quantity",
+    "expected": null,
+    "extracted": "1",
+    "error_type": "HALLUCINATED_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-015-missing_unit_price",
+    "field": "supplier_name",
+    "expected": "Cobalt Valve Supply",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-015-missing_unit_price",
+    "field": "quote_number",
+    "expected": "SAFE-015",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-015-missing_unit_price",
+    "field": "rfq_number",
+    "expected": "SAFE-RFQ-015",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-015-missing_unit_price",
+    "field": "currency",
+    "expected": "USD",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-015-missing_unit_price",
+    "field": "line_items.0.supplier_sku",
+    "expected": "VC-715",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-015-missing_unit_price",
+    "field": "line_items.0.quantity",
+    "expected": "100",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-015-missing_unit_price",
+    "field": "line_items.0.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-015-missing_unit_price",
+    "field": "line_items.0.unit_price",
+    "expected": null,
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-015-missing_unit_price",
+    "field": "line_items.0.moq",
+    "expected": "500",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-015-missing_unit_price",
+    "field": "line_items.0.lead_time_days",
+    "expected": 14,
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-015-missing_unit_price",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-10-15",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-016-missing_quantity",
+    "field": "line_items.0.quantity",
+    "expected": null,
+    "extracted": "1",
+    "error_type": "HALLUCINATED_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-031-duplicate",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-10-22",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  }
+]

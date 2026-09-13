@@ -1,0 +1,10 @@
+{
+  "reason": "Local Docker stack and host Ollama stopped; all services were found exited on continuation. Cause not established.",
+  "benchmark_exit_code": 137,
+  "docker_finished_at": "2026-09-11T18:11:44.872833404Z",
+  "saved_results": 102,
+  "last_saved_id": "reliability-002-injection",
+  "next_unsaved_document": "reliability-003-injection",
+  "resume_policy": "Preserve every recorded result; resume same model/prompt/pipeline after services restart. An unrecorded in-flight inference may run again. No best-response selection.",
+  "pipeline_version": "local-2.5.2"
+}

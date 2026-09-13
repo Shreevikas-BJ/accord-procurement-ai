@@ -1,0 +1,66 @@
+{
+  "captured_at": "2026-09-11T11:02:55.0586009-07:00",
+  "source_commit": "22c9301ac6afb7f287b82d99ee4a1180d9ed92a0",
+  "model": "qwen2.5vl:7b",
+  "prompt_version": "quote-v3",
+  "pipeline_version": "local-2.5.2",
+  "ai_mode": "local",
+  "ollama_version": "0.30.11",
+  "installed_model": [
+    {
+      "name": "qwen2.5vl:7b",
+      "model": "qwen2.5vl:7b",
+      "modified_at": "2026-09-09T18:54:23.2358846-07:00",
+      "size": 5969245856,
+      "digest": "5ced39dfa4bac325dc183dd1e4febaa1c46b3ea28bce48896c8e69c1e79611cc",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen25vl",
+        "families": [
+          "qwen25vl"
+        ],
+        "parameter_size": "8.3B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 128000,
+        "embedding_length": 3584
+      },
+      "capabilities": [
+        "vision",
+        "completion"
+      ]
+    }
+  ],
+  "loaded_model": [
+    {
+      "name": "qwen2.5vl:7b",
+      "model": "qwen2.5vl:7b",
+      "size": 5726168677,
+      "digest": "5ced39dfa4bac325dc183dd1e4febaa1c46b3ea28bce48896c8e69c1e79611cc",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen25vl",
+        "families": [
+          "qwen25vl"
+        ],
+        "parameter_size": "8.3B",
+        "quantization_level": "Q4_K_M"
+      },
+      "expires_at": "2026-09-11T11:12:57.8946208-07:00",
+      "size_vram": 5726168677,
+      "context_length": 8192
+    }
+  ],
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 100 %, 7796 MiB",
+  "worker_image": "sha256:0f6d3ef0ca57a51024ce63688e55455e1658d867c090050c078e69e8b0deeb2a",
+  "combined_manifest_sha256": "f195e7112e5e1387bc6305a6b93e845276b14c707909ed52cf8a811fedd52696",
+  "generation": {
+    "num_predict": 3500,
+    "max_pages": 3,
+    "timeout_seconds": 120,
+    "temperature": 0,
+    "num_ctx": 8192,
+    "verification_num_predict": 700
+  }
+}

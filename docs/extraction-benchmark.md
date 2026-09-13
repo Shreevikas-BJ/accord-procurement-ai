@@ -1,5 +1,7 @@
 # Phase 2 extraction benchmark
 
+The historical Phase 2 runs below are retained unchanged. [Phase 2.5 reliability results](phase2.5-reliability.md) provide a freshly reproduced baseline, the 144-document expanded corpus, field-specific safety metrics and the current readiness decision. Compare the same original 100 cases before/after; the 44 new development cases are also reported separately. The current pipeline is `quote-v3` / `local-2.5.2`.
+
 This is a development benchmark using actual local Qwen inference. It is not a blinded evaluation or a claim of production accuracy.
 
 **Final result:** 100 documents, 97% schema validity, 96.075% critical-field accuracy, 88% entire-document critical success and 90% review triggers. Median total latency was 9.053 seconds; p95 was 26.921 seconds. All 12 documents with critical errors failed or triggered review. Significant cost omissions and instruction contamination remain: Accord is **not yet ready for a buyer pilot** on this evidence.

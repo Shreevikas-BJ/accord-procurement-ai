@@ -1,5 +1,7 @@
 # Phase 2 verification evidence
 
+The original Phase 2 evidence below remains historical. [Phase 2.5 reliability verification](phase2.5-reliability.md) records the current evidence gate, expanded real-model benchmark, additional regression tests and fresh seven-case browser workflow. Successful workflow tests do not establish extraction accuracy or buyer-pilot readiness.
+
 The acceptance flow is browser upload → same-origin API → private source storage → Redis/RQ → parsing/OCR → actual local Qwen → validation → PostgreSQL → buyer review. Automated benchmark runs use no application database.
 
 The implementation and verification work below is delivered, but not every Phase 2 acceptance condition is satisfied. In particular, the real model still invents some absent values and follows some embedded extraction instructions. Review flags contain the observed cases; they do not establish reliable null behavior or instruction resistance. The benchmark report records these remaining accuracy failures, and this is not a claim of full Phase 2 or buyer-pilot readiness.

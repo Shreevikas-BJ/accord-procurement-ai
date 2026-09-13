@@ -6,6 +6,8 @@ Accord is a local B2B procurement application for comparing supplier quotations,
 
 **Verification status:** the Docker stack and actual local `qwen2.5vl:7b` inference are verified on Windows with Linux containers. Phase 2 checks include 85 fast backend tests, 15 live Docker integration tests, two demo Playwright workflows, two real-model checks and a five-format local buyer workflow. See [Phase 2 verification](docs/phase2-verification.md), [the 100-document benchmark and measured limitations](docs/extraction-benchmark.md), and [original Docker evidence](docs/verification.md). Hosted API mode remains optional and was not exercised with external supplier data.
 
+**Phase 2.5:** field-specific evidence acceptance, safe nulls, bounded repair, selective verification and 44 new adversarial/reliability documents are added. The verification suite now has 125 fast backend tests, 15 live integration tests and nine opt-in real-model tests. The unchanged 100-document comparison exposes an accuracy regression: critical fields 96.075% → 88.908%, unit price 95.473% → 83.951%. **Not ready for a 3–5 buyer pilot.** Read [the complete reliability findings, safety metrics and limitations](docs/phase2.5-reliability.md) before interpreting review flags or source support as correctness.
+
 ## Quick start
 
 Prerequisites: Docker Engine/Desktop with Linux containers and Docker Compose v2. Allow roughly 4 GB of free memory for the application stack. Internet is required once to download public packages and images. Running demo mode requires no cloud credentials, paid services, GPU, or AI server.

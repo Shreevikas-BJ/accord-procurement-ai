@@ -1,0 +1,21 @@
+{
+  "partial_pipeline": "local-2.5.1",
+  "initial_runner_crash_after_records": 28,
+  "unrecorded_document_retried_on_resume": "synthetic-004-decimal_comma",
+  "runner_fix": "Post-validation exceptions clear the in-memory extraction and record failure in the denominator.",
+  "preserved_partial_records": 49,
+  "stopped_for_fixes": [
+    "Malformed numeric focused verification could raise InvalidOperation",
+    "Equivalent UOM aliases incorrectly withheld"
+  ],
+  "infrastructure_attempts": 3,
+  "infrastructure_errors": [
+    "MODEL_BUSY",
+    "MODEL_BUSY",
+    "MODEL_BUSY"
+  ],
+  "model_responses_in_infrastructure_attempts": 0,
+  "stale_lease_cleanup": "Confirmed all one-off inference containers stopped, RQ queued=0 and started=0; removed only accord:local-inference with 384 seconds remaining TTL.",
+  "final_run": "phase25-confirmation; fresh full 144 on local-2.5.2",
+  "selective_model_result_retries": false
+}
