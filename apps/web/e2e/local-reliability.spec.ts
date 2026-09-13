@@ -97,6 +97,9 @@ test("evidence-gated local extraction, missing fields, unusual instructions and 
       expect(line.quantity).toBeNull();
       expect(Number(line.moq)).toBe(500);
       expect(quote.total).toBeNull();
+      await expect(
+        page.getByText("Calculated subtotal", { exact: true }).locator(".."),
+      ).toHaveText("Calculated subtotal—");
       expect(quote.extraction_diagnostics?.needs_review).toBe(true);
     } else {
       expect(quote.extraction_diagnostics?.needs_review).toBe(true);
@@ -150,7 +153,9 @@ test("evidence-gated local extraction, missing fields, unusual instructions and 
     }
     if (index >= 5) {
       await page
-        .getByText(/critical fields need inspection|Extraction review findings/)
+        .getByText(
+          /critical fields? needs? inspection|Extraction review findings/,
+        )
         .click();
       await page.screenshot({
         path: `test-results/phase25-safety-${index}.png`,

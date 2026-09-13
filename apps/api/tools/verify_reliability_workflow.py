@@ -6,7 +6,8 @@ from decimal import Decimal
 from sqlalchemy import select, func
 
 from app.db import SessionLocal
-from app.models import Document, DocumentExtraction, Quote, FieldCorrection, Approval, PurchaseHistory
+from app.models import Document, DocumentExtraction, Quote, QuoteItem, FieldCorrection, Approval, PurchaseHistory
+from app.engine import financials
 from app.providers import LocalStorageProvider
 from app.seed import sid
 
@@ -37,6 +38,8 @@ def main():
             assert ex.diagnostics["model"] == "qwen2.5vl:7b" and ex.diagnostics["fallback"] is False
             assert ex.diagnostics["pipeline_version"] == "local-2.5.2"
             original = ex.diagnostics["original_ai_payload"]
+            lines = list(db.scalars(select(QuoteItem).where(QuoteItem.quote_id == q.id)))
+            _, subtotal, total = financials(lines, q.shipping_cost, q.tax)
             corrections = list(db.scalars(select(FieldCorrection).where(FieldCorrection.quote_id == q.id)))
             for c in corrections:
                 assert c.provenance["document_id"] == doc.id and c.created_at and c.corrected_by
@@ -67,6 +70,11 @@ def main():
                     "document_id": doc.id,
                     "quote_id": q.id,
                     "sha256": doc.sha256,
+                    "supplier_matched": bool(q.supplier_id),
+                    "rfq_matched": bool(q.rfq_id),
+                    "matched_items": sum(bool(line.item_id) for line in lines),
+                    "current_subtotal": str(subtotal) if subtotal is not None else None,
+                    "current_total": str(total) if total is not None else None,
                     "diagnostics": ex.diagnostics,
                     "accepted_extraction": ex.payload,
                     "corrections": [
@@ -76,6 +84,7 @@ def main():
                             "corrected": c.corrected_value,
                             "provenance": c.provenance,
                             "timestamp": c.created_at.isoformat(),
+                            "actor": c.corrected_by,
                         }
                         for c in corrections
                     ],
@@ -83,7 +92,20 @@ def main():
             )
         print(
             json.dumps(
-                {"status": "PASS", "documents": rows, "evaluation_approvals": 0, "evaluation_purchase_history": 0},
+                {
+                    "status": "PASS",
+                    "documents": rows,
+                    "evaluation_approvals": 0,
+                    "evaluation_purchase_history": 0,
+                    "apex_documents": db.scalar(
+                        select(func.count()).select_from(Document).where(Document.organization_id == sid("org"))
+                    ),
+                    "apex_history": db.scalar(
+                        select(func.count())
+                        .select_from(PurchaseHistory)
+                        .where(PurchaseHistory.organization_id == sid("org"))
+                    ),
+                },
                 default=str,
             )
         )

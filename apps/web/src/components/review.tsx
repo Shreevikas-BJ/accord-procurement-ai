@@ -238,7 +238,7 @@ function ReviewEditor({
         <details className="review-trust">
           <summary>
             {priorityFields.length
-              ? `${priorityFields.length} critical fields need inspection`
+              ? `${priorityFields.length} critical ${priorityFields.length === 1 ? "field needs" : "fields need"} inspection`
               : "Extraction review findings"}
           </summary>
           {!!priorityFields.length && (
@@ -546,7 +546,16 @@ function ReviewEditor({
           <div className="review-totals">
             <div>
               <span>Calculated subtotal</span>
-              <strong>{currency(quote.subtotal, quote.currency)}</strong>
+              <strong>
+                {currency(
+                  quote.line_items.some(
+                    (line) => line.quantity == null || line.unit_price == null,
+                  )
+                    ? null
+                    : quote.subtotal,
+                  quote.currency,
+                )}
+              </strong>
             </div>
             <div>
               <span>Evaluated total</span>

@@ -25,9 +25,9 @@ def financials(lines, shipping, tax):
     totals = [
         money(x.quantity * x.unit_price) if x.quantity is not None and x.unit_price is not None else None for x in lines
     ]
-    subtotal = sum((x for x in totals if x is not None), D(0))
-    complete = all(x is not None for x in totals) and shipping is not None and tax is not None
-    return totals, money(subtotal), money(subtotal + (shipping or D(0)) + (tax or D(0))) if complete else None
+    subtotal = money(sum(totals, D(0))) if all(x is not None for x in totals) else None
+    complete = subtotal is not None and shipping is not None and tax is not None
+    return totals, subtotal, money(subtotal + shipping + tax) if complete else None
 
 
 def history_analysis(rows, current, as_of, currency, uom, supplier_id=None):
@@ -203,7 +203,7 @@ def comparison(db, org, rfq, today=None):
         for req in requirements:
             if sum(x.item_id == req.item_id for x in lines) != 1:
                 flag("INCOMPLETE_SCOPE", f"{items[req.item_id].sku}: require exactly one quoted line.", "blocking")
-        if quote.stated_subtotal is not None and money(quote.stated_subtotal) != subtotal:
+        if quote.stated_subtotal is not None and subtotal is not None and money(quote.stated_subtotal) != subtotal:
             flag("TOTAL_MISMATCH", "Stated subtotal differs from calculated subtotal.", "blocking")
         if quote.stated_total is not None and total is not None and money(quote.stated_total) != total:
             flag("TOTAL_MISMATCH", "Stated total differs from calculated total.", "blocking")
@@ -221,7 +221,7 @@ def comparison(db, org, rfq, today=None):
                 if quote.supplier_id in suppliers
                 else quote.supplier_name,
                 "lines": line_results,
-                "subtotal": str(subtotal),
+                "subtotal": str(subtotal) if subtotal is not None else None,
                 "total": str(total) if total is not None else None,
                 "lead_time_days": max(leads) if leads else None,
                 "delivery_date": str(latest) if latest else None,

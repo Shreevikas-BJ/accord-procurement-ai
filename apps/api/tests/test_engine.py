@@ -18,7 +18,8 @@ def test_decimal_line_rounding_and_total():
 
 
 def test_missing_financials_are_not_zero():
-    assert financials([NS(quantity=D(1), unit_price=None)], D(0), D(0))[2] is None
+    _, subtotal, total = financials([NS(quantity=D(1), unit_price=None)], D(0), D(0))
+    assert subtotal is None and total is None
     assert financials([NS(quantity=D(1), unit_price=D(1))], None, D(0))[2] is None
 
 

@@ -212,7 +212,7 @@ def quote_detail(id: str, user=Depends(current_user), db: Session = Depends(get_
     return {
         **serialize(q),
         "line_items": items,
-        "subtotal": str(subtotal),
+        "subtotal": str(subtotal) if subtotal is not None else None,
         "total": str(total) if total is not None else None,
         "document": document(q.document_id, user, db),
         "extraction_provider": extraction.provider if extraction else "unknown",

@@ -86,7 +86,7 @@ export interface Quote {
   source_references: Record<string, Evidence>;
   review_status: string;
   version: number;
-  subtotal: string;
+  subtotal: string | null;
   total: string | null;
   line_items: Line[];
   lines: Line[];
