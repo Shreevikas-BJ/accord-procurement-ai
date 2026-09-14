@@ -1,0 +1,8 @@
+From: quotes@vendor.local
+Subject: Offer P27-050-Q for RFQ-27-050
+Vendor / Aster Motion Works
+Currency / USD
+Qty | Supplier Part Number | Description | Unit Cost | Unit | Line Total
+1150 | AX-750/B | Industrial relay with mounting bracket | 4.94 | EA | 5681.00
+75 | NC/H50-1 | Shielded control harness, low smoke | 6.10 | PCS | 457.50
+Freight 18.50 | Tax 0 | Total 6157.00 | Net 30

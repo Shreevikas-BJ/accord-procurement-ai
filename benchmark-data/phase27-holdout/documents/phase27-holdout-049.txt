@@ -1,0 +1,8 @@
+From: quotes@vendor.local
+Subject: Offer P27-049-Q for RFQ-27-049
+Vendor / Evergreen Controls
+Currency / USD
+Product Description | Stock No | UOM | Quoted Quantity | Amount | Net Ea
+Industrial relay with mounting bracket | AX-749/B | EA | 1147 | 5540.01 | 4.83
+Shielded control harness, low smoke | NC/H49-1 | PCS | 74 | 472.12 | 6.38
+Freight 18.50 | Tax 0 | Total 6030.63 | Net 30

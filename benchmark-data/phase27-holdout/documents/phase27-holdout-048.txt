@@ -1,0 +1,8 @@
+From: quotes@vendor.local
+Subject: Offer P27-048-Q for RFQ-27-048
+Vendor / Desert Signal Partners
+Currency / CAD
+Vendor Part No | Item Narrative | Order Quantity | Unit of Measure | Price Each | Extension
+AX-748/B | Industrial relay with mounting bracket | 1144 | EA | 4.72 | 5399.68
+NC/H48-1 | Shielded control harness, low smoke | 73 | PCS | 6.31 | 460.63
+Freight 18.50 | Tax 0 | Total 5878.81 | Net 30

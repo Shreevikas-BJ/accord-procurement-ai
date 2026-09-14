@@ -1,0 +1,702 @@
+[
+  {
+    "id": "phase27-holdout-001",
+    "path": "documents/phase27-holdout-001.pdf",
+    "truth": "ground-truth/phase27-holdout-001.json",
+    "format": "pdf",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "9bbd099a2521e724a2aa15b09c9c9ffa35877268c33189198f3065127fd09aeb"
+  },
+  {
+    "id": "phase27-holdout-002",
+    "path": "documents/phase27-holdout-002.pdf",
+    "truth": "ground-truth/phase27-holdout-002.json",
+    "format": "pdf",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "68e4632b2fcba5ee3264197316074f42d6c1a5d1930c832420681d0356500f87"
+  },
+  {
+    "id": "phase27-holdout-003",
+    "path": "documents/phase27-holdout-003.pdf",
+    "truth": "ground-truth/phase27-holdout-003.json",
+    "format": "pdf",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "7215fbb5ee3cb19e20459594679e807aae0d4a0123b2a8fd2d7aa22cb48248e3"
+  },
+  {
+    "id": "phase27-holdout-004",
+    "path": "documents/phase27-holdout-004.pdf",
+    "truth": "ground-truth/phase27-holdout-004.json",
+    "format": "pdf",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "multiline"
+    ],
+    "attack": false,
+    "sha256": "07d417592aa5ca6b3e94dcbb5ca104c6bc0ecd1dae24164555cd23e3dd7a1353"
+  },
+  {
+    "id": "phase27-holdout-005",
+    "path": "documents/phase27-holdout-005.pdf",
+    "truth": "ground-truth/phase27-holdout-005.json",
+    "format": "pdf",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "bcfa83e3f73c3509d3b8c2fffb37bdeb28116dec82cc9a52021f81c69d160d6f"
+  },
+  {
+    "id": "phase27-holdout-006",
+    "path": "documents/phase27-holdout-006.pdf",
+    "truth": "ground-truth/phase27-holdout-006.json",
+    "format": "pdf",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "74ea8f1199631d7a1797881689beafb91829cdebe09a4d1ea355d7b0235d4847"
+  },
+  {
+    "id": "phase27-holdout-007",
+    "path": "documents/phase27-holdout-007.pdf",
+    "truth": "ground-truth/phase27-holdout-007.json",
+    "format": "pdf",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "011f1cc5a0d62ce720cb78215d500619254ab2d3799ce8d219865e6ca5f7f596"
+  },
+  {
+    "id": "phase27-holdout-008",
+    "path": "documents/phase27-holdout-008.pdf",
+    "truth": "ground-truth/phase27-holdout-008.json",
+    "format": "pdf",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "multiline"
+    ],
+    "attack": false,
+    "sha256": "44113f9c541ad0ae65bd4df8389336a9fcfb5596fa246182c1265ff522fa2b01"
+  },
+  {
+    "id": "phase27-holdout-009",
+    "path": "documents/phase27-holdout-009.pdf",
+    "truth": "ground-truth/phase27-holdout-009.json",
+    "format": "pdf",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "506d80c0209e645193ffd222667ef2c6e9ce9b2623c855c19b9b4fac7ff453cb"
+  },
+  {
+    "id": "phase27-holdout-010",
+    "path": "documents/phase27-holdout-010.pdf",
+    "truth": "ground-truth/phase27-holdout-010.json",
+    "format": "pdf",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "192eb8d0127d76ebe67184c445353c321bb6e0c9f216a427aed1aefd4ba62816"
+  },
+  {
+    "id": "phase27-holdout-011",
+    "path": "documents/phase27-holdout-011.pdf",
+    "truth": "ground-truth/phase27-holdout-011.json",
+    "format": "pdf",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "b0ae865c911daa9dd2a69c9c6be0d156a9e81e2612751203f82919f39e00b768"
+  },
+  {
+    "id": "phase27-holdout-012",
+    "path": "documents/phase27-holdout-012.pdf",
+    "truth": "ground-truth/phase27-holdout-012.json",
+    "format": "pdf",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "multiline"
+    ],
+    "attack": false,
+    "sha256": "5606a5bc3a2e8bddfd15c7016e16f62a166bc12fd99c244260945ca17f9a5676"
+  },
+  {
+    "id": "phase27-holdout-013",
+    "path": "documents/phase27-holdout-013.pdf",
+    "truth": "ground-truth/phase27-holdout-013.json",
+    "format": "pdf",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "ca0710233427518ed5fd57e349ca951ffa52a75454b253d651ad78b9210be28b"
+  },
+  {
+    "id": "phase27-holdout-014",
+    "path": "documents/phase27-holdout-014.pdf",
+    "truth": "ground-truth/phase27-holdout-014.json",
+    "format": "pdf",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "0c62f5d7c186c8053fe9eacb3961b42a9a446825124573a3d2e8c7853d630908"
+  },
+  {
+    "id": "phase27-holdout-015",
+    "path": "documents/phase27-holdout-015.pdf",
+    "truth": "ground-truth/phase27-holdout-015.json",
+    "format": "pdf",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "e5a6fbe07ce683540cb723ab65762952ebf1aa21d27e0add9465306e832cd5c2"
+  },
+  {
+    "id": "phase27-holdout-016",
+    "path": "documents/phase27-holdout-016.scan.pdf",
+    "truth": "ground-truth/phase27-holdout-016.json",
+    "format": "scan.pdf",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "multiline"
+    ],
+    "attack": false,
+    "sha256": "eccb1ea8e29978bb522dc7acf213aef929588d6e64cd479a6baf2e717847322f"
+  },
+  {
+    "id": "phase27-holdout-017",
+    "path": "documents/phase27-holdout-017.scan.pdf",
+    "truth": "ground-truth/phase27-holdout-017.json",
+    "format": "scan.pdf",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "906cbe49c302df989580584ad18101cdb370172c82f664b3612cdfdbbe1e5031"
+  },
+  {
+    "id": "phase27-holdout-018",
+    "path": "documents/phase27-holdout-018.scan.pdf",
+    "truth": "ground-truth/phase27-holdout-018.json",
+    "format": "scan.pdf",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "17ecfdf11370d8a21dcaeec9d2dcc4f5e7d1edcc94894cdb159354f5d45a9451"
+  },
+  {
+    "id": "phase27-holdout-019",
+    "path": "documents/phase27-holdout-019.scan.pdf",
+    "truth": "ground-truth/phase27-holdout-019.json",
+    "format": "scan.pdf",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "2385ec631021ef7b229ae5e458f9db18ceae0217e7b9b58336663ba28f02c842"
+  },
+  {
+    "id": "phase27-holdout-020",
+    "path": "documents/phase27-holdout-020.scan.pdf",
+    "truth": "ground-truth/phase27-holdout-020.json",
+    "format": "scan.pdf",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "multiline"
+    ],
+    "attack": false,
+    "sha256": "7c60ab228dd8d43fcb656d623e709d8f72fa36085dce1fc988b518703a4bc387"
+  },
+  {
+    "id": "phase27-holdout-021",
+    "path": "documents/phase27-holdout-021.scan.pdf",
+    "truth": "ground-truth/phase27-holdout-021.json",
+    "format": "scan.pdf",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "911a808b8b700680172d8d748a70b2a50fe9562bfe7d3d865d0c888af7b34885"
+  },
+  {
+    "id": "phase27-holdout-022",
+    "path": "documents/phase27-holdout-022.scan.pdf",
+    "truth": "ground-truth/phase27-holdout-022.json",
+    "format": "scan.pdf",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "32a02036b0f3e54871b35ceed222cb2d51e5e4a22c98939fb522dfb41ae6a047"
+  },
+  {
+    "id": "phase27-holdout-023",
+    "path": "documents/phase27-holdout-023.scan.pdf",
+    "truth": "ground-truth/phase27-holdout-023.json",
+    "format": "scan.pdf",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "c6fe57c091f32797b39da1e67f6272f3372f3e58e5e832694888bc49e7503984"
+  },
+  {
+    "id": "phase27-holdout-024",
+    "path": "documents/phase27-holdout-024.scan.pdf",
+    "truth": "ground-truth/phase27-holdout-024.json",
+    "format": "scan.pdf",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "multiline"
+    ],
+    "attack": false,
+    "sha256": "bf14bf79916fc7b069c1381dc6db6693e79fd1e7e58b13e1c9cf5f6349480f62"
+  },
+  {
+    "id": "phase27-holdout-025",
+    "path": "documents/phase27-holdout-025.scan.pdf",
+    "truth": "ground-truth/phase27-holdout-025.json",
+    "format": "scan.pdf",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "a1aa61d5830ec7186d6749dba23804d8be86cdc42b21736793e2a89f3f99db8c"
+  },
+  {
+    "id": "phase27-holdout-026",
+    "path": "documents/phase27-holdout-026.jpg",
+    "truth": "ground-truth/phase27-holdout-026.json",
+    "format": "jpg",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "11feb3c6dfd9cf3e3e5ac8e9b4023efd29928e4f183465378b34fe30f218bf20"
+  },
+  {
+    "id": "phase27-holdout-027",
+    "path": "documents/phase27-holdout-027.jpg",
+    "truth": "ground-truth/phase27-holdout-027.json",
+    "format": "jpg",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "86c585de5253f96222b37daaacc65e405aaf4312f0a7fc896a843cdb53152441"
+  },
+  {
+    "id": "phase27-holdout-028",
+    "path": "documents/phase27-holdout-028.jpg",
+    "truth": "ground-truth/phase27-holdout-028.json",
+    "format": "jpg",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "multiline"
+    ],
+    "attack": false,
+    "sha256": "342334f86219aa46f996a6a70e0bdb6455208f5c1f87f57be06a6246b947aaec"
+  },
+  {
+    "id": "phase27-holdout-029",
+    "path": "documents/phase27-holdout-029.jpg",
+    "truth": "ground-truth/phase27-holdout-029.json",
+    "format": "jpg",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "e938c6c03eed63b9fc8f2afd10f7561899e22ec813ef3ff4b8f1831303bee2db"
+  },
+  {
+    "id": "phase27-holdout-030",
+    "path": "documents/phase27-holdout-030.jpg",
+    "truth": "ground-truth/phase27-holdout-030.json",
+    "format": "jpg",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "6912eae00eff71238953ed232e42da865811ad2a68a4508975923c8510ec1078"
+  },
+  {
+    "id": "phase27-holdout-031",
+    "path": "documents/phase27-holdout-031.png",
+    "truth": "ground-truth/phase27-holdout-031.json",
+    "format": "png",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "d928cf7867ad871168164484ad682c53710e976d7fbfb9b514481986709e5106"
+  },
+  {
+    "id": "phase27-holdout-032",
+    "path": "documents/phase27-holdout-032.png",
+    "truth": "ground-truth/phase27-holdout-032.json",
+    "format": "png",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "multiline"
+    ],
+    "attack": false,
+    "sha256": "cf241713e9139f32f347dd31e45d51032d7493c267b64328b37b15302f007df0"
+  },
+  {
+    "id": "phase27-holdout-033",
+    "path": "documents/phase27-holdout-033.png",
+    "truth": "ground-truth/phase27-holdout-033.json",
+    "format": "png",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "770e88f7d5099c89fcba430bfbf5895a31c7fe0b8a4b9fd4b9aa8c3e35696b3f"
+  },
+  {
+    "id": "phase27-holdout-034",
+    "path": "documents/phase27-holdout-034.png",
+    "truth": "ground-truth/phase27-holdout-034.json",
+    "format": "png",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "b83011f8cebe19f278a0547889b812e20b51fe1649627130b5299a5c98d50349"
+  },
+  {
+    "id": "phase27-holdout-035",
+    "path": "documents/phase27-holdout-035.png",
+    "truth": "ground-truth/phase27-holdout-035.json",
+    "format": "png",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "f2c62934134c1699e5d70cab4952ca3201b555cb9dbcec2abc008f2a667a49f6"
+  },
+  {
+    "id": "phase27-holdout-036",
+    "path": "documents/phase27-holdout-036.xlsx",
+    "truth": "ground-truth/phase27-holdout-036.json",
+    "format": "xlsx",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "multiline"
+    ],
+    "attack": false,
+    "sha256": "e75859bacc7a4fabe67923e7770b923b992a57143bbba819af6c1ec16ab52150"
+  },
+  {
+    "id": "phase27-holdout-037",
+    "path": "documents/phase27-holdout-037.xlsx",
+    "truth": "ground-truth/phase27-holdout-037.json",
+    "format": "xlsx",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "ae3af89ea96e7c8db322daf05aa7c6da2e0b4c7cfaafebc52957f03ae5c70290"
+  },
+  {
+    "id": "phase27-holdout-038",
+    "path": "documents/phase27-holdout-038.xlsx",
+    "truth": "ground-truth/phase27-holdout-038.json",
+    "format": "xlsx",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "34c580ab5a3b84dce337809d2b8e891138607234aa8d7b2bfa8b2ef1f3c5f990"
+  },
+  {
+    "id": "phase27-holdout-039",
+    "path": "documents/phase27-holdout-039.xlsx",
+    "truth": "ground-truth/phase27-holdout-039.json",
+    "format": "xlsx",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "d1e952a5bc24e27c6bb2c544cbd553f4b255b2d61734953614e4bb0c74d70e16"
+  },
+  {
+    "id": "phase27-holdout-040",
+    "path": "documents/phase27-holdout-040.xlsx",
+    "truth": "ground-truth/phase27-holdout-040.json",
+    "format": "xlsx",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "multiline"
+    ],
+    "attack": false,
+    "sha256": "b9adffa5725176a72e9ab5f88523fbff9159e025cbd49ab2ffc5bd752da9af63"
+  },
+  {
+    "id": "phase27-holdout-041",
+    "path": "documents/phase27-holdout-041.csv",
+    "truth": "ground-truth/phase27-holdout-041.json",
+    "format": "csv",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "d6589c81fd3adadb9065ad4d1b891e30c6ec35a2082d674952a6af77128cbf84"
+  },
+  {
+    "id": "phase27-holdout-042",
+    "path": "documents/phase27-holdout-042.csv",
+    "truth": "ground-truth/phase27-holdout-042.json",
+    "format": "csv",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "8c9b55345339c4cb05458a306033836127ee973b51d903436dc0910dd770007b"
+  },
+  {
+    "id": "phase27-holdout-043",
+    "path": "documents/phase27-holdout-043.csv",
+    "truth": "ground-truth/phase27-holdout-043.json",
+    "format": "csv",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "489bf7ab8990e99464cc606fec2d186ba73875b727d93c8221d34dca8eea43e2"
+  },
+  {
+    "id": "phase27-holdout-044",
+    "path": "documents/phase27-holdout-044.csv",
+    "truth": "ground-truth/phase27-holdout-044.json",
+    "format": "csv",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "multiline"
+    ],
+    "attack": false,
+    "sha256": "07b02a6910483396cb7c550e9d8d60a78a5b81eaea2c6d1a07720b47dff777a2"
+  },
+  {
+    "id": "phase27-holdout-045",
+    "path": "documents/phase27-holdout-045.csv",
+    "truth": "ground-truth/phase27-holdout-045.json",
+    "format": "csv",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "3631a663110725ee172e2ba07f40e26b3678d98866d9d5fd5fdc54be41fd3ba6"
+  },
+  {
+    "id": "phase27-holdout-046",
+    "path": "documents/phase27-holdout-046.txt",
+    "truth": "ground-truth/phase27-holdout-046.json",
+    "format": "txt",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "72c9e31be58d95cb73642cf2e85f6d146918ae788799dc19cd8bcc7201f05bc3"
+  },
+  {
+    "id": "phase27-holdout-047",
+    "path": "documents/phase27-holdout-047.txt",
+    "truth": "ground-truth/phase27-holdout-047.json",
+    "format": "txt",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "7987306bca28220c9ba2e99528532a988a4b3b2f628208e5d54a6a26e721e186"
+  },
+  {
+    "id": "phase27-holdout-048",
+    "path": "documents/phase27-holdout-048.txt",
+    "truth": "ground-truth/phase27-holdout-048.json",
+    "format": "txt",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "multiline"
+    ],
+    "attack": false,
+    "sha256": "f5153f6a79d2dec1eaad87f3cae5e99882c226780249b144a0f2b3b68cbb74d7"
+  },
+  {
+    "id": "phase27-holdout-049",
+    "path": "documents/phase27-holdout-049.txt",
+    "truth": "ground-truth/phase27-holdout-049.json",
+    "format": "txt",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "b26885afebe3b9a4cf8884f7a3064b6c7d4a6935074cd868b646b0fa70f4d7e1"
+  },
+  {
+    "id": "phase27-holdout-050",
+    "path": "documents/phase27-holdout-050.txt",
+    "truth": "ground-truth/phase27-holdout-050.json",
+    "format": "txt",
+    "origin": "phase27-independent-holdout",
+    "scenarios": [
+      "unseen_layout",
+      "reordered_columns",
+      "compact"
+    ],
+    "attack": false,
+    "sha256": "305e9f97ec1814eeeda4cf52e1ad6e3428692bf1e676be1d0e015623598b6f83"
+  }
+]

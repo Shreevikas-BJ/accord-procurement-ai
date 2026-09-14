@@ -1,0 +1,38 @@
+{
+  "supplier_name": "Blue Mesa Components",
+  "quote_number": "P27-026-Q",
+  "rfq_number": "RFQ-27-026",
+  "currency": "EUR",
+  "quote_date": "2026-09-13",
+  "expiration_date": "2026-11-30",
+  "shipping_cost": "18.50",
+  "tax": "0",
+  "line_items": [
+    {
+      "supplier_sku": "AX-726/B",
+      "description": "Industrial relay with mounting bracket",
+      "quantity": "1078",
+      "uom": "EA",
+      "unit_price": "4.94",
+      "moq": "500",
+      "lead_time_days": 14,
+      "delivery_date": "2026-10-20",
+      "stated_line_total": "5325.32"
+    },
+    {
+      "supplier_sku": "NC/H26-1",
+      "description": "Shielded control harness, low smoke",
+      "quantity": "51",
+      "uom": "PCS",
+      "unit_price": "6.17",
+      "moq": "10",
+      "lead_time_days": 21,
+      "delivery_date": "2026-10-27",
+      "stated_line_total": "314.67"
+    }
+  ],
+  "stated_subtotal": "5639.99",
+  "stated_total": "5658.49",
+  "payment_terms": "Net 30",
+  "shipping_terms": "FOB origin"
+}

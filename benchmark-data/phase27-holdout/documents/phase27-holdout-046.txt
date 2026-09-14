@@ -1,0 +1,8 @@
+From: quotes@vendor.local
+Subject: Offer P27-046-Q for RFQ-27-046
+Vendor / Blue Mesa Components
+Currency / EUR
+Product Description | Stock No | UOM | Quoted Quantity | Amount | Net Ea
+Industrial relay with mounting bracket | AX-746/B | EA | 1138 | 5621.72 | 4.94
+Shielded control harness, low smoke | NC/H46-1 | PCS | 71 | 438.07 | 6.17
+Freight 18.50 | Tax 0 | Total 6078.29 | Net 30

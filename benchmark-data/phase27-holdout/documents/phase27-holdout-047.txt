@@ -1,0 +1,8 @@
+From: quotes@vendor.local
+Subject: Offer P27-047-Q for RFQ-27-047
+Vendor / Copper Ridge Supply
+Currency / GBP
+Qty | Supplier Part Number | Description | Unit Cost | Unit | Line Total
+1141 | AX-747/B | Industrial relay with mounting bracket | 5.05 | EA | 5762.05
+72 | NC/H47-1 | Shielded control harness, low smoke | 6.24 | PCS | 449.28
+Freight 18.50 | Tax 0 | Total 6229.83 | Net 30
