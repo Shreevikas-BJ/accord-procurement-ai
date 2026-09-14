@@ -1,6 +1,8 @@
 # Phase 2 extraction benchmark
 
-The historical Phase 2 runs below are retained unchanged. [Phase 2.5 reliability results](phase2.5-reliability.md) record the prior evidence gate. [Phase 2.6 results](phase2.6-pilot-exit.md) add structured row/cell candidates, a freshly reproduced 144-document baseline/development comparison, and a once-run independent 50-document holdout. The current pipeline is `quote-v4` / `local-2.6.1`; its holdout result is **not ready for a buyer pilot**.
+The historical Phase 2 runs below are retained unchanged. [Phase 2.5 reliability results](phase2.5-reliability.md) record the prior evidence gate. [Phase 2.6 results](phase2.6-pilot-exit.md) add structured row/cell candidates and an independent holdout. [Phase 2.7 results](phase2.7-document-generalization.md) add a canonical document boundary, isolated Docling and PaddleOCR structure benchmarks, a 144-document development confirmation, and a new sealed 50-document holdout. The current pipeline is `quote-v4` / `local-2.7.0`; its holdout result is **not ready for a buyer pilot**.
+
+Phase 2.7 kept the current production routes after candidate evaluation. On the fixed parser subset, current structure recovered 84.615% of expected lines and associated 79.487%; Docling recovered and associated 0% on eight PDFs. PP-StructureV3 achieved 100% on one image but took 107.641 seconds, did not improve final extraction, and reached the 10 GiB batch ceiling. The final 144-document development result stayed at 99.588% critical accuracy and 99.658% line association. The sealed holdout reached 49.600% and 49.000%, with 0 unsupported accepted critical values, 100% evidence match, and 0 critical escapes. Use the Phase 2.7 report for per-format, resource, license, and interruption details.
 
 This is a development benchmark using actual local Qwen inference. It is not a blinded evaluation or a claim of production accuracy.
 
@@ -23,6 +25,8 @@ Start Docker/Redis and the installed Ollama service. Use the current worker imag
 ```powershell
 docker compose run --rm --no-deps -e AI_MODEL=qwen2.5vl:7b -e AI_BASE_URL=http://host.docker.internal:11434 -e AI_TIMEOUT=120 -v C:/Projects/procurement_ai/benchmark-data:/evaluation worker python -m app.evaluation.benchmark --corpus /evaluation --output /evaluation/results/new-run
 ```
+
+When testing unbuilt source through a mounted repository, set the container working directory to that source directory as well as `PYTHONPATH`; otherwise the image package can take precedence. Start Redis before inference because benchmark and worker processes share the same single-concurrency lease. The Phase 2.7 holdout is sealed and must not be rerun or used for tuning.
 
 `--limit 10` is a smoke run, not the complete benchmark. `--resume` skips already recorded IDs and rejects mixed model/prompt/pipeline versions or changed source hashes. Use a new output directory after changing extraction code. The connection preflight stops an unavailable-service batch. If the service goes down during a run, `--resume --retry-unavailable` explicitly preserves those infrastructure attempts in a separate archive before retrying; do not use this to remove model/schema failures.
 

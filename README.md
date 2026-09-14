@@ -4,11 +4,13 @@
 
 Accord is a local B2B procurement application for comparing supplier quotations, finding price and delivery risks, reviewing source evidence, and recording a human decision. It includes a real Next.js frontend, FastAPI backend, relational database, document pipeline, and deterministic procurement engine.
 
-**Verification status:** the Docker stack and actual local `qwen2.5vl:7b` inference are verified on Windows with Linux containers. Current Phase 2.6 checks include 141 fast backend tests, 15 live Docker integration tests, nine opt-in real-model checks, the demo buyer flow, a five-format local buyer flow, and a seven-document safety/provenance flow. See [Phase 2.6 pilot-exit evidence](docs/phase2.6-pilot-exit.md), [the benchmark history](docs/extraction-benchmark.md), and [original Docker evidence](docs/verification.md). Hosted API mode remains optional and was not exercised with external supplier data.
+**Verification status:** the Docker stack and actual local `qwen2.5vl:7b` inference are verified on Windows with Linux containers. Current Phase 2.7 checks include 149 fast backend tests, 15 live Docker integration tests, nine opt-in real-model checks, all four Playwright workflows, and a direct visual/console browser check. See [Phase 2.7 document-generalization evidence](docs/phase2.7-document-generalization.md), [the benchmark history](docs/extraction-benchmark.md), and [original Docker evidence](docs/verification.md). No hosted service was exercised with supplier data.
 
 **Phase 2.5:** field-specific evidence acceptance, safe nulls, bounded repair, selective verification and 44 new adversarial/reliability documents are added. The verification suite now has 125 fast backend tests, 15 live integration tests and nine opt-in real-model tests. The unchanged 100-document comparison exposes an accuracy regression: critical fields 96.075% → 88.908%, unit price 95.473% → 83.951%. **Not ready for a 3–5 buyer pilot.** Read [the complete reliability findings, safety metrics and limitations](docs/phase2.5-reliability.md) before interpreting review flags or source support as correctness.
 
 **Phase 2.6:** row/cell candidates and explicit Accepted, Needs verification, Rejected, and Not found evidence states recover the 144-document development set to 99.588% critical accuracy with 99.306% processing success. The once-run independent 50-document holdout reached only 51.815% critical accuracy despite retaining zero unsupported accepted critical values and 100% critical-error review capture. **Accord remains not ready for a 3–5 buyer pilot.** See [the Phase 2.6 exit report](docs/phase2.6-pilot-exit.md) for holdout methodology, per-format results, review burden, and exact blockers.
+
+**Phase 2.7:** a provider-neutral canonical document schema now covers pages, blocks, tables, rows, cells, provenance, parser metadata, and deterministic structure quality. Isolated CPU benchmarks rejected Docling 2.126.0 and PaddleOCR 3.7.0/PP-StructureV3 as defaults; current pdfplumber, Tesseract, openpyxl, and CSV routes remain. The 144-document development metrics stayed at 99.588% critical accuracy, while the new sealed 50-document holdout reached only 49.600% critical accuracy and 49.000% line association. Safety remained 0 unsupported accepted critical values, 100% evidence match, and 0 critical escapes. **Accord is not ready for a supervised buyer pilot.** See [the complete Phase 2.7 report](docs/phase2.7-document-generalization.md).
 
 ## Quick start
 
@@ -89,7 +91,8 @@ flowchart LR
     API --> Redis[(Redis / RQ)]
     Redis --> Worker[Python worker]
     Worker --> Parsers[PDF / XLSX / CSV / Text / Tesseract]
-    Parsers --> Provider[Demo / native Ollama / hosted API extraction]
+    Parsers --> Structure[Canonical pages / tables / rows / cells]
+    Structure --> Provider[Demo / native Ollama / hosted API extraction]
     Provider --> Validation[Pydantic validation]
     Validation --> Matching[Supplier and item matching]
     Matching --> Engine[Decimal procurement engine]
