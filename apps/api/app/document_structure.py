@@ -324,3 +324,21 @@ def choose_structure(primary: CanonicalDocument | None, fallback: CanonicalDocum
         return primary, primary.parser_name
     suffix = "_fallback" if primary is not None else ""
     return fallback, f"{fallback.parser_name}{suffix}"
+
+
+def parse_with_fallback(
+    path: Path,
+    fallback: DocumentStructureProvider,
+    primary: DocumentStructureProvider | None = None,
+    *,
+    pages: list[int] | None = None,
+) -> tuple[CanonicalDocument, str]:
+    """Contain optional parser failures and always preserve a local fallback."""
+    primary_document = None
+    if primary:
+        try:
+            primary_document = primary.parse(path, pages=pages)
+        except (ImportError, OSError, RuntimeError, TimeoutError, ValueError):
+            primary_document = None
+    fallback_document = fallback.parse(path, pages=pages)
+    return choose_structure(primary_document, fallback_document)

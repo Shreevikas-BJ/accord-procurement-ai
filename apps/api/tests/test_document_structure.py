@@ -7,6 +7,7 @@ from app.document_structure import (
     canonical_from_rows,
     choose_structure,
     normalize_ocr_token,
+    parse_with_fallback,
 )
 
 
@@ -79,3 +80,11 @@ def test_paddle_table_and_image_output_converts_to_same_schema():
     row = document.tables[0].rows[1]
     assert row.cells[0].value == "NC/H01-1" and row.cells[3].value == "6.10"
     assert row.bbox == [1, 2, 3, 4]
+
+
+def test_optional_provider_failure_falls_back_without_losing_document():
+    current = DoclingStructureProvider(lambda _: {"tables": [{"rows": [["SKU", "Qty", "UOM", "Unit Price"], ["AX-100", "1", "EA", "4.72"]]}]}, version="current")
+    failed = PaddleStructureProvider(lambda _: (_ for _ in ()).throw(RuntimeError("local parser failed")))
+    document, route = parse_with_fallback(Path("quote.png"), current, failed)
+    assert document.tables[0].rows[1].cells[0].value == "AX-100"
+    assert route == "docling"

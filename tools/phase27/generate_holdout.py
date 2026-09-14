@@ -72,7 +72,8 @@ def draw_pdf(path, truth, index):
         x = 55 if offset < 3 else 340
         y = 720 - (offset if offset < 3 else offset - 3) * 18
         c.drawString(x, y, f"{label}  /  {value}")
-    widths = [85, 175, 75, 70, 80, 85]
+    width_by_field = {"supplier_sku": 90, "description": 150, "quantity": 55, "uom": 45, "unit_price": 70, "stated_line_total": 75}
+    widths = [width_by_field[field] for field, _ in order]
     x_positions = [35]
     for width in widths[:-1]:
         x_positions.append(x_positions[-1] + width)
@@ -99,7 +100,8 @@ def draw_pdf(path, truth, index):
 def render_image(pdf_path, image_path, index):
     with tempfile.TemporaryDirectory() as temp:
         prefix = Path(temp) / "page"
-        subprocess.run(["pdftoppm", "-f", "1", "-l", "1", "-singlefile", "-png", "-r", "135", str(pdf_path), str(prefix)], check=True)
+        page = "2" if index % 5 == 0 else "1"
+        subprocess.run(["pdftoppm", "-f", page, "-l", page, "-singlefile", "-png", "-r", "135", str(pdf_path), str(prefix)], check=True)
         with Image.open(prefix.with_suffix(".png")) as source:
             image = source.convert("RGB")
             if index % 3 == 0:

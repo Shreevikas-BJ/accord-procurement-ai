@@ -138,12 +138,13 @@ def prepare_document(path: Path) -> DocumentInput:
         result.text = "\n".join(f"[Page {n}]\n{p}" for n, p in result.pages.items())
         from .document_structure import canonical_from_rows
 
+        scanned_pdf = any(len(p.strip()) < 80 for p in pages.values())
         result.canonical_document = canonical_from_rows(
             path,
             result.structured_rows,
-            parser_name="pdfplumber",
-            parser_version="0.11.10",
-            source_format="scan.pdf" if any(len(p.strip()) < 80 for p in pages.values()) else "pdf",
+            parser_name="tesseract_ocr" if scanned_pdf else "pdfplumber",
+            parser_version="5.x" if scanned_pdf else "0.11.10",
+            source_format="scan.pdf" if scanned_pdf else "pdf",
             page_text=result.pages,
         )
     elif suffix in (".png", ".jpg", ".jpeg"):
