@@ -103,7 +103,7 @@ def persist_extraction(db, document, extraction: QuoteExtraction, provider, diag
     document.rfq_id = quote.rfq_id
     document.classification = "Supplier Quotation"
     document.status = "Needs Review"
-    document.stage = "Complete"
+    document.stage = "Review Required" if not supplier or not rfq else "Complete"
     document.error = None if rfq else "RFQ not identified. Select the RFQ during review."
     document.processed_at = datetime.now(timezone.utc)
     audit(

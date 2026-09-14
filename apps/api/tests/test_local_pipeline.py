@@ -3,9 +3,9 @@ from decimal import Decimal
 
 from sqlalchemy import select
 
-from app.models import DocumentExtraction, FieldCorrection, Quote
+from app.models import DocumentExtraction, FieldCorrection, Quote, QuoteItem
 from app.pipeline import process_document
-from app.schemas import QuoteExtraction
+from app.schemas import LineItemExtraction, QuoteExtraction
 from app.seed import sid
 
 
@@ -100,3 +100,70 @@ def test_local_correction_lineage_and_decimal_recalculation(buyer, db_factory, m
         assert correction.provenance["document_id"] == identifier
         assert correction.created_at and correction.corrected_by
         assert hashlib.sha256(source).hexdigest() == doc["sha256"]
+
+
+def test_buyer_can_confirm_review_candidate_with_provenance(buyer, db_factory):
+    with db_factory() as db:
+        quote = db.scalar(select(Quote))
+        quote_id = quote.id
+        line = db.scalar(select(QuoteItem).where(QuoteItem.quote_id == quote_id))
+        extraction = db.scalar(
+            select(DocumentExtraction).where(DocumentExtraction.document_id == quote.document_id)
+        )
+        line.unit_price = None
+        references = dict(line.source_references)
+        references["unit_price"] = {
+            **references["unit_price"],
+            "decision_status": "REVIEW_REQUIRED",
+            "reason": "OCR decimal spacing needs buyer verification.",
+            "raw_candidate": "4.48",
+            "accepted_value": None,
+            "evidence_strength": "weak",
+            "source_status": "AMBIGUOUS",
+        }
+        line.source_references = references
+        diagnostics = dict(extraction.diagnostics or {})
+        diagnostics.update(model="qwen2.5vl:7b", prompt_version="quote-v4", pipeline_version="local-2.6")
+        extraction.diagnostics = diagnostics
+        line_id = line.id
+        db.commit()
+
+    detail = buyer.get(f"/quotes/{quote_id}").json()
+    target_index = next(index for index, item in enumerate(detail["line_items"]) if item["id"] == line_id)
+    payload = {
+        key: detail.get(key)
+        for key in QuoteExtraction.model_fields
+        if key != "line_items"
+    }
+    payload.update(
+        version=detail["version"],
+        supplier_id=detail["supplier_id"],
+        rfq_id=detail["rfq_id"],
+        confirm_review=False,
+        confirmed_fields=[f"line_items.{target_index}.unit_price"],
+    )
+    payload["line_items"] = [
+        {
+            key: item.get(key)
+            for key in LineItemExtraction.model_fields
+        }
+        | {"id": item["id"], "item_id": item["item_id"]}
+        for item in detail["line_items"]
+    ]
+    payload["line_items"][target_index]["unit_price"] = "4.48"
+    saved = buyer.put(f"/quotes/{quote_id}/review", json=payload)
+    assert saved.status_code == 200, saved.text
+    assert saved.json()["line_items"][target_index]["unit_price"] == "4.48"
+    confirmation = saved.json()["extraction_diagnostics"]["field_confirmations"][
+        f"line_items.{target_index}.unit_price"
+    ]
+    assert confirmation["candidate"] == "4.48" and confirmation["confirmed_by"]
+    with db_factory() as db:
+        correction = db.scalar(
+            select(FieldCorrection).where(
+                FieldCorrection.quote_id == quote_id,
+                FieldCorrection.field == f"line.{line_id}.unit_price",
+            )
+        )
+        assert correction.provenance["confirmation"] is True
+        assert correction.provenance["candidate"] == "4.48"

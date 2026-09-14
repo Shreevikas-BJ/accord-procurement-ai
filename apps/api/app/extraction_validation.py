@@ -50,7 +50,18 @@ def validate_extraction(quote, document):
                 continue
             ref = value.source_references.get(key)
             page_text = document.pages.get(ref.page, "") if ref and document.pages else document.text
-            if ref and ref.source_text and ref.source_text in page_text and ref.evidence_strength == "strong":
+            normalized_source = re.sub(r"\s+", " ", ref.source_text).strip() if ref else ""
+            normalized_page = re.sub(r"\s+", " ", page_text).strip()
+            located = bool(
+                ref
+                and ref.source_text
+                and (
+                    normalized_source in normalized_page
+                    or (ref.sheet and ref.cell)
+                    or (ref.page and ref.bounding_box)
+                )
+            )
+            if ref and located and ref.evidence_strength == "strong" and ref.decision_status == "ACCEPTED":
                 ref.evidence_type = "ocr" if ref.page in document.image_pages else "text"
                 ref.confidence = Decimal("0.8")
             elif ref and ref.page in document.image_pages:
@@ -59,7 +70,17 @@ def validate_extraction(quote, document):
                 ref.evidence_type = "visual"
                 ref.confidence = Decimal("0.5")
             else:
-                value.source_references[key] = Evidence(source_text="", confidence=0, evidence_type="missing")
+                value.source_references[key] = Evidence(
+                    source_text="",
+                    confidence=0,
+                    evidence_type="missing",
+                    evidence_strength="unsupported",
+                    source_status="NOT_FOUND",
+                    decision_status="REJECTED",
+                    reason="No verifiable source location supports the accepted value.",
+                    raw_candidate=str(getattr(value, key)),
+                )
+                setattr(value, key, None)
                 flag(
                     "SOURCE_EVIDENCE_ERROR", prefix + key, "No verified source text or page image supports this field."
                 )

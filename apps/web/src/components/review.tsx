@@ -116,6 +116,7 @@ function ReviewEditor({
     [busy, setBusy] = useState(false),
     [error, setError] = useState(""),
     [notice, setNotice] = useState("");
+  const [confirmedFields, setConfirmedFields] = useState<string[]>([]);
   const [evidence, setEvidence] = useState<Evidence | null>(null),
     [sourceTab, setSourceTab] = useState("original");
   const suppliers = useResource<ListData>("/suppliers?limit=250"),
@@ -149,6 +150,13 @@ function ReviewEditor({
       ),
     });
   }
+  function changed(path: string) {
+    setConfirmedFields((fields) => fields.filter((field) => field !== path));
+  }
+  function confirmCandidate(path: string, candidate: string, apply: (value: string) => void) {
+    apply(candidate);
+    setConfirmedFields((fields) => [...new Set([...fields, path])]);
+  }
   async function save(confirm: boolean) {
     setBusy(true);
     setError("");
@@ -159,6 +167,7 @@ function ReviewEditor({
       rfq_id: quote.rfq_id,
       source_references: quote.source_references,
       confirm_review: confirm,
+      confirmed_fields: confirmedFields,
       line_items: quote.line_items.map((l) => ({
         ...Object.fromEntries(lineFields.map((k) => [k, l[k]])),
         id: l.id,
@@ -305,6 +314,20 @@ function ReviewEditor({
                     ? `${evidence.sheet}, row ${evidence.row}`
                     : `PAGE ${evidence.page || "UNKNOWN"}`)}
               </div>
+              <p>
+                <strong>
+                  {evidence.decision_status === "REVIEW_REQUIRED"
+                    ? "Needs verification"
+                    : evidence.decision_status === "NOT_FOUND"
+                      ? "Not found"
+                      : evidence.decision_status === "REJECTED"
+                        ? "Rejected"
+                        : "Accepted"}
+                </strong>
+                {evidence.raw_candidate
+                  ? ` · Candidate: ${evidence.raw_candidate}`
+                  : ""}
+              </p>
               {evidence.evidence_type === "visual" ? (
                 <p>
                   Visual page evidence. Verify this value against the original
@@ -326,6 +349,7 @@ function ReviewEditor({
                 Original evidence is preserved when values are corrected; it
                 does not verify a later edit.
               </small>
+              {evidence.reason && <p>{evidence.reason}</p>}
             </div>
           )}
         </section>
@@ -397,8 +421,16 @@ function ReviewEditor({
                 value={quote[key]}
                 disabled={!canEdit}
                 evidence={quote.source_references[key]}
+                fieldPath={key}
+                confirmed={Boolean(quote.extraction_diagnostics?.field_confirmations?.[key])}
                 showEvidence={setEvidence}
-                onChange={(v) => setQuote({ ...quote, [key]: v })}
+                onChange={(v) => {
+                  changed(key);
+                  setQuote({ ...quote, [key]: v });
+                }}
+                onConfirm={(candidate) =>
+                  confirmCandidate(key, candidate, (value) => setQuote({ ...quote, [key]: value }))
+                }
               />
             ))}
           </div>
@@ -483,8 +515,15 @@ function ReviewEditor({
                       value={line[key]}
                       disabled={!canEdit}
                       evidence={line.source_references[key]}
+                      fieldPath={`line_items.${index}.${key}`}
+                      confirmed={Boolean(
+                        quote.extraction_diagnostics?.field_confirmations?.[
+                          `line_items.${index}.${key}`
+                        ],
+                      )}
                       showEvidence={setEvidence}
-                      onChange={(v) =>
+                      onChange={(v) => {
+                        changed(`line_items.${index}.${key}`);
                         updateLine(
                           index,
                           key,
@@ -493,6 +532,13 @@ function ReviewEditor({
                               ? null
                               : Number(v)
                             : v,
+                        );
+                      }}
+                      onConfirm={(candidate) =>
+                        confirmCandidate(
+                          `line_items.${index}.${key}`,
+                          candidate,
+                          (value) => updateLine(index, key, value),
                         )
                       }
                     />
@@ -574,6 +620,9 @@ function Editable({
   evidence,
   showEvidence,
   disabled,
+  fieldPath,
+  confirmed,
+  onConfirm,
 }: {
   label: string;
   value: unknown;
@@ -581,7 +630,21 @@ function Editable({
   evidence?: Evidence;
   showEvidence: (e: Evidence) => void;
   disabled: boolean;
+  fieldPath: string;
+  confirmed: boolean;
+  onConfirm: (candidate: string) => void;
 }) {
+  const status = confirmed ? "ACCEPTED" : evidence?.decision_status;
+  const statusLabel =
+    status === "ACCEPTED"
+      ? confirmed
+        ? "Accepted by buyer"
+        : "Accepted"
+      : status === "REVIEW_REQUIRED"
+        ? "Needs verification"
+        : status === "REJECTED"
+          ? "Rejected"
+          : "Not found";
   return (
     <div
       className={`field ${evidence && Number(evidence.confidence) < 0.8 ? "low-confidence" : ""}`}
@@ -610,6 +673,24 @@ function Editable({
           </button>
         )}
       </div>
+      {evidence && (
+        <div className="field-decision" data-field={fieldPath}>
+          <small className={status === "ACCEPTED" ? "confidence-good" : "inline-warning"}>
+            {statusLabel}
+          </small>
+          {status === "REVIEW_REQUIRED" && evidence.raw_candidate && !disabled && (
+            <Button
+              type="button"
+              variant="outline"
+              size="sm"
+              onClick={() => onConfirm(evidence.raw_candidate as string)}
+            >
+              Confirm {evidence.raw_candidate}
+            </Button>
+          )}
+          {evidence.reason && <small className="muted">{evidence.reason}</small>}
+        </div>
+      )}
     </div>
   );
 }

@@ -73,7 +73,7 @@ test("evidence-gated local extraction, missing fields, unusual instructions and 
     expect(
       (quote.extraction_diagnostics as { pipeline_version?: string })
         ?.pipeline_version,
-    ).toBe("local-2.5.2");
+    ).toBe("local-2.6.1");
     await page.goto(`/quotes/${quote.id}`);
     await expect(
       page.getByRole("button", { name: "Save corrections", exact: true }),

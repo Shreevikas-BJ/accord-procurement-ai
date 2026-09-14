@@ -21,7 +21,7 @@ from redis import Redis
 from reportlab.pdfgen.canvas import Canvas
 from rq import Queue, Worker
 from rq.job import Job, Callback
-from sqlalchemy import select, text, func, inspect
+from sqlalchemy import delete, select, text, func, inspect
 from sqlalchemy.exc import IntegrityError
 
 from app.config import DEMO_PATH, REDIS_URL
@@ -212,7 +212,7 @@ def test_tesseract_image_and_scanned_pdf(clients, name, mime):
 def test_unknown_pdf_no_fabrication_retry_and_filename(clients):
     doc = upload(clients["buyer"], "../../unknown-" + uuid.uuid4().hex + ".pdf", synthetic_pdf(), "application/pdf")
     assert doc["status"] == "Needs Review" and doc["stage"] == "Review Required"
-    assert not doc["quote_id"] and "no extraction fixture" in doc["error"]
+    assert not doc["quote_id"] and doc["error"]
     assert "Synthetic unknown" in doc["raw_text"]
     assert "/" not in doc["filename"] and "\\" not in doc["filename"]
     response_json(clients["buyer"].post(f"/documents/{doc['id']}/retry"), 202)
@@ -230,6 +230,11 @@ def test_rq_timeout_callback_and_recovery(clients):
     with SessionLocal() as db:
         row = db.get(Document, doc["id"])
         org = row.organization_id
+        # The local extractor now persists even sparse unknown documents for
+        # buyer review. Remove that completed test result so this case starts
+        # from a real pre-processing document and can exercise timeout retry.
+        db.execute(delete(Quote).where(Quote.document_id == row.id))
+        db.execute(delete(DocumentExtraction).where(DocumentExtraction.document_id == row.id))
         row.status, row.stage = "New", "Queued"
         db.commit()
     queue = Queue("documents", connection=Redis.from_url(REDIS_URL))

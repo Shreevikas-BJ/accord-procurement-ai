@@ -1,4 +1,5 @@
 import hashlib
+from datetime import datetime, timezone
 from pathlib import Path
 from fastapi import APIRouter, Depends, HTTPException, UploadFile, Form
 from fastapi.responses import FileResponse
@@ -253,7 +254,40 @@ def review(id: str, payload: Review, user=Depends(buyer), db: Session = Depends(
             for k in ("model", "prompt_version", "pipeline_version")
         },
     }
-    fields = payload.model_dump(exclude={"line_items", "version", "confirm_review", "source_references"})
+    stored_lines = {
+        item.id: item
+        for item in db.scalars(
+            select(QuoteItem).where(QuoteItem.organization_id == user.organization_id, QuoteItem.quote_id == id)
+        )
+    }
+    confirmed_fields = set(payload.confirmed_fields)
+    confirmations = {}
+    allowed_confirmations = {}
+    for key, evidence in (q.source_references or {}).items():
+        allowed_confirmations[key] = (evidence, getattr(payload, key, None), key)
+    for index, line in enumerate(payload.line_items):
+        stored = stored_lines.get(line.id)
+        for key, evidence in ((stored.source_references or {}) if stored else {}).items():
+            allowed_confirmations[f"line_items.{index}.{key}"] = (evidence, getattr(line, key, None), key)
+    for path in confirmed_fields:
+        if path not in allowed_confirmations:
+            raise HTTPException(422, f"Unknown confirmation field: {path}")
+        evidence, submitted, key = allowed_confirmations[path]
+        candidate = evidence.get("raw_candidate") if isinstance(evidence, dict) else None
+        status = evidence.get("decision_status") if isinstance(evidence, dict) else None
+        from .evidence_policy import equivalent, value_for
+
+        if status != "REVIEW_REQUIRED" or candidate is None or not equivalent(key, submitted, value_for(key, candidate)):
+            raise HTTPException(422, f"Confirmed value must exactly match the review candidate for {path}.")
+        confirmations[path] = {
+            "candidate": str(candidate),
+            "confirmed_by": user.id,
+            "confirmed_at": datetime.now(timezone.utc).isoformat(),
+            **provenance,
+        }
+    fields = payload.model_dump(
+        exclude={"line_items", "version", "confirm_review", "confirmed_fields", "source_references"}
+    )
     for k, v in fields.items():
         setattr(q, k, v)
     # Source references stay immutable even when a human corrects the extracted value.
@@ -268,15 +302,9 @@ def review(id: str, payload: Review, user=Depends(buyer), db: Session = Depends(
             old={"supplier_id": old["supplier_id"]},
             new={"supplier_id": q.supplier_id},
         )
-    stored_lines = {
-        x.id: x
-        for x in db.scalars(
-            select(QuoteItem).where(QuoteItem.organization_id == user.organization_id, QuoteItem.quote_id == id)
-        )
-    }
     if set(stored_lines) != {x.id for x in payload.line_items} or len(payload.line_items) != len(stored_lines):
         raise HTTPException(422, "Review must contain each existing quote line exactly once.")
-    for line in payload.line_items:
+    for line_index, line in enumerate(payload.line_items):
         record = stored_lines[line.id]
         before = serialize(record)
         if line.item_id:
@@ -329,6 +357,14 @@ def review(id: str, payload: Review, user=Depends(buyer), db: Session = Depends(
                         corrected_by=user.id,
                         provenance={
                             **provenance,
+                            **(
+                                {
+                                    "confirmation": True,
+                                    **confirmations[f"line_items.{line_index}.{key}"],
+                                }
+                                if f"line_items.{line_index}.{key}" in confirmations
+                                else {}
+                            ),
                             "original_ai_value": (
                                 extraction.diagnostics.get("original_ai_payload") or extraction.payload
                             )
@@ -368,6 +404,11 @@ def review(id: str, payload: Review, user=Depends(buyer), db: Session = Depends(
                     corrected_by=user.id,
                     provenance={
                         **provenance,
+                        **(
+                            {"confirmation": True, **confirmations[key]}
+                            if key in confirmations
+                            else {}
+                        ),
                         "original_ai_value": (
                             extraction.diagnostics.get("original_ai_payload") or extraction.payload
                         ).get(key)
@@ -376,6 +417,13 @@ def review(id: str, payload: Review, user=Depends(buyer), db: Session = Depends(
                     },
                 )
             )
+    if extraction and confirmations:
+        diagnostics = dict(extraction.diagnostics or {})
+        diagnostics["field_confirmations"] = {
+            **diagnostics.get("field_confirmations", {}),
+            **confirmations,
+        }
+        extraction.diagnostics = diagnostics
     audit(
         db,
         user.organization_id,

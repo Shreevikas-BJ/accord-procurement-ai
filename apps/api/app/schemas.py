@@ -26,6 +26,11 @@ class Evidence(Strict):
     sheet: str | None = None
     row: int | None = None
     cell: str | None = None
+    table: int | None = None
+    decision_status: Literal["ACCEPTED", "REVIEW_REQUIRED", "REJECTED", "NOT_FOUND"] = "ACCEPTED"
+    reason: str | None = Field(default=None, max_length=1000)
+    raw_candidate: str | None = Field(default=None, max_length=4000)
+    accepted_value: str | None = Field(default=None, max_length=4000)
 
 
 class PriceTier(Strict):
@@ -98,6 +103,7 @@ class Review(QuoteExtraction):
     rfq_id: str | None = None
     line_items: list[ReviewLine] = Field(min_length=1, max_length=500)
     confirm_review: bool = False
+    confirmed_fields: list[str] = Field(default_factory=list, max_length=1000)
 
 
 class Login(Strict):

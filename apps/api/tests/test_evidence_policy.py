@@ -72,15 +72,15 @@ def test_equivalent_uom_preserves_source_and_original_model_value():
 
 
 @pytest.mark.parametrize("value", ["1,32", "not shown", "NaN", "Infinity"])
-def test_malformed_focused_numeric_answer_withholds_only_disputed_field(value):
+def test_disabled_focused_metadata_cannot_override_structured_source(value):
     q = extraction()
     q.line_items[0].unit_price = Decimal("47.2")
     d = document()
     d.metadata["field_verification"] = {"line_items.0.unit_price": {"value": value, "source_text": "Unit price: 4.72"}}
     result = harden_quote(q, d)
-    assert q.line_items[0].unit_price is None
+    assert q.line_items[0].unit_price == Decimal("4.72")
     assert q.line_items[0].quantity == Decimal("100")
-    assert any(f["code"] == "SECOND_PASS_DISAGREEMENT" for f in result["safety_findings"])
+    assert result["source_adjustments"][0]["reason"] == "deterministic_source_override"
 
 
 @pytest.mark.parametrize("field,label", [("tax", "Tax"), ("shipping_cost", "Shipping")])
@@ -149,7 +149,7 @@ def test_instructions_never_supply_price_evidence():
     q = extraction()
     q.line_items[0].unit_price = Decimal(".01")
     result = harden_quote(q, d)
-    assert q.line_items[0].unit_price is None
+    assert q.line_items[0].unit_price == Decimal("4.72")
     assert any(f["code"] == "DOCUMENT_INSTRUCTION_TEXT_DETECTED" for f in result["safety_findings"])
     assert result["original_ai_payload"]["line_items"][0]["unit_price"] == "0.01"
 
@@ -166,7 +166,7 @@ def test_table_columns_do_not_share_numeric_evidence():
     q = extraction()
     q.line_items[0].quantity = Decimal("500")
     harden_quote(q, DocumentInput(text))
-    assert q.line_items[0].quantity is None
+    assert q.line_items[0].quantity == Decimal("100")
     assert q.line_items[0].moq == 500 and q.line_items[0].unit_price == Decimal("4.72")
 
 
@@ -211,7 +211,7 @@ def test_focused_verification_requires_both_source_and_value():
     d.metadata["field_verification"] = {"line_items.0.unit_price": {"value": "4.72", "source_text": "Unit price: 4.72"}}
     result = harden_quote(q, d)
     assert q.line_items[0].unit_price == Decimal("4.72")
-    assert result["source_adjustments"][0]["reason"] == "focused_verification_with_source"
+    assert result["source_adjustments"][0]["reason"] == "deterministic_source_override"
 
 
 def test_second_pass_disagreement_never_promotes_an_unsupported_value():
@@ -220,8 +220,8 @@ def test_second_pass_disagreement_never_promotes_an_unsupported_value():
     d = document()
     d.metadata["field_verification"] = {"line_items.0.unit_price": {"value": "47.2", "source_text": "Unit price: 4.72"}}
     result = harden_quote(q, d)
-    assert q.line_items[0].unit_price is None
-    assert any(f["code"] == "SECOND_PASS_DISAGREEMENT" for f in result["safety_findings"])
+    assert q.line_items[0].unit_price == Decimal("4.72")
+    assert not any(f["code"] == "SECOND_PASS_DISAGREEMENT" for f in result["safety_findings"])
 
 
 def test_identical_separate_lots_retained_and_reviewed():
@@ -233,6 +233,140 @@ def test_identical_separate_lots_retained_and_reviewed():
     result = validate_extraction(q, d)
     assert len(q.line_items) == 2
     assert "POSSIBLE_DUPLICATE_LINE" in {f["code"] for f in result["findings"]}
+
+
+def test_weak_source_candidate_remains_visible_for_review():
+    q = extraction()
+    q.line_items[0].unit_price = Decimal("4.72")
+    row = {
+        "source_type": "ocr_layout",
+        "page": 1,
+        "row": 8,
+        "layout_confidence": "weak",
+        "raw_text": "AX-100 100 EA 4.72",
+        "field_cells": {
+            "supplier_sku": {"value": "AX-100"},
+            "quantity": {"value": "100"},
+            "uom": {"value": "EA"},
+            "unit_price": {"value": "4.72"},
+        },
+    }
+    harden_quote(q, DocumentInput(row["raw_text"], pages={1: row["raw_text"]}, structured_rows=[row]))
+    evidence = q.line_items[0].source_references["unit_price"]
+    assert q.line_items[0].unit_price is None
+    assert evidence.decision_status == "REVIEW_REQUIRED"
+    assert evidence.raw_candidate == "4.72" and evidence.accepted_value is None
+
+
+def test_unsupported_model_candidate_is_rejected_not_hidden():
+    q = extraction()
+    q.line_items[0].unit_price = Decimal("99")
+    harden_quote(q, document(**{"Unit price": None}))
+    evidence = q.line_items[0].source_references["unit_price"]
+    assert q.line_items[0].unit_price is None
+    assert evidence.decision_status == "REJECTED" and evidence.raw_candidate == "99"
+
+
+def test_repeated_physical_rows_omitted_by_model_are_recovered():
+    q = extraction()
+    text = "\n".join(
+        [
+            "Supplier: Cedar Components",
+            "Currency: USD",
+            "AX-100 Qty 100 UOM EA Unit price 5.00 MOQ 10",
+            "AX-100 Qty 500 UOM EA Unit price 4.50 MOQ 10",
+        ]
+    )
+    result = harden_quote(q, DocumentInput(text, pages={1: text}))
+    assert len(q.line_items) == 2
+    assert [line.quantity for line in q.line_items] == [Decimal("100"), Decimal("500")]
+    assert [line.unit_price for line in q.line_items] == [Decimal("5.00"), Decimal("4.50")]
+    assert result["recovered_source_rows"] == [1]
+
+
+def test_explicit_applicable_tier_repairs_ocr_decimal_with_arithmetic():
+    q = extraction()
+    q.line_items[0].quantity = Decimal("430")
+    q.line_items[0].unit_price = Decimal("777")
+    q.line_items[0].stated_line_total = Decimal("3341.10")
+    text = "\n".join(
+        [
+            "SKU | Qty | UOM | Unit price | Line total | MOQ",
+            "AX-100 | 430 | EA | 777 | 3341.10 | 15",
+            "Quantity tiers for AX-100: 1-99: 8.77 : 100+: 7.77",
+        ]
+    )
+    harden_quote(q, DocumentInput(text, pages={1: text}))
+    assert q.line_items[0].unit_price == Decimal("7.77")
+    assert len(q.line_items[0].price_tiers) == 2
+    assert q.line_items[0].source_references["price_tiers"].decision_status == "ACCEPTED"
+
+
+def test_named_tier_rows_stay_with_their_own_repeated_table_line():
+    q = extraction()
+    q.line_items.extend([q.line_items[0].model_copy(deep=True) for _ in range(2)])
+    text = "\n".join(
+        [
+            "SKU | Qty | UOM | Unit price | Line total | MOQ",
+            "AA-1 | 190 | EA | 5.15 | 978.50 | 5",
+            "BB-2 | 310 | EA | 6.46 | 2002.60 | 10",
+            "CC-3 | 430 | EA | 777 | 3341.10 | 15",
+            "Quantity tiers for AA-1: 1-99: 6.15 : 100+: 5.15",
+            "Quantity tiers for BB-2: 1-99: 7.46 : 100+: 6.46",
+            "Quantity tiers for CC-3: 1-99: 8.77 : 100+: 7.77",
+        ]
+    )
+    harden_quote(q, DocumentInput(text, pages={1: text}))
+    assert [line.unit_price for line in q.line_items] == [Decimal("5.15"), Decimal("6.46"), Decimal("7.77")]
+    assert [len(line.price_tiers) for line in q.line_items] == [2, 2, 2]
+
+
+def test_line_extension_repairs_dropped_ocr_decimal():
+    q = extraction()
+    q.line_items[0].quantity = Decimal("191")
+    q.line_items[0].unit_price = Decimal("393")
+    q.line_items[0].stated_line_total = Decimal("712.43")
+    text = "SKU | Qty | UOM | Unit price | Line total\nCB-123.2 | 191 | EA | 393 | 712.43"
+    harden_quote(q, DocumentInput(text, pages={1: text}, image_pages=[1]))
+    assert q.line_items[0].unit_price == Decimal("3.73")
+    assert q.line_items[0].source_references["unit_price"].source_text.endswith("393 | 712.43")
+
+
+def test_common_ocr_qty_and_supplier_split_are_normalized_in_scanned_source():
+    q = extraction()
+    text = "Supplier: J uniper Motion Systems\nAX-100 Oty 5000 UOM EA Unit price 4.49"
+    harden_quote(q, DocumentInput(text, pages={1: text}, image_pages=[1]))
+    assert q.supplier_name == "Juniper Motion Systems"
+    assert q.line_items[0].quantity == Decimal("5000")
+
+
+def test_ocr_label_delimiters_and_uom_variants_are_field_aware():
+    q = extraction()
+    text = "\n".join(["SKU: AX-100", "Qty: 100", "YOM .EA", "Unit price ; 4.72"])
+    harden_quote(q, DocumentInput(text, pages={1: text}, image_pages=[1]))
+    assert q.line_items[0].uom == "EA"
+    assert q.line_items[0].unit_price == Decimal("4.72")
+
+
+def test_integer_quantity_can_be_recovered_from_price_and_extension():
+    q = extraction()
+    text = "SKU | Qty | UOM | Unit price | Line total\nSW-143.4 | m7 | EA | 14.15 | 10909.65"
+    harden_quote(q, DocumentInput(text, pages={1: text}, image_pages=[1]))
+    assert q.line_items[0].quantity == Decimal("771")
+
+
+def test_withdrawn_previous_offer_is_not_a_current_line():
+    q = extraction()
+    text = "\n".join(
+        [
+            "Withdrawn previous offer, not current | OLD-1, quantity 250, unit price 99.00",
+            "SKU | Qty | UOM | Unit price",
+            "NEW-1 | 100 | EA | 4.72",
+        ]
+    )
+    harden_quote(q, DocumentInput(text, pages={1: text}))
+    assert len(q.line_items) == 1
+    assert q.line_items[0].supplier_sku == "NEW-1"
 
 
 def test_decimal_error_is_flagged_without_rescaling():

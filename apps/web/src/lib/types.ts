@@ -18,6 +18,11 @@ export interface Evidence {
   source_text: string;
   confidence: string | number;
   document_id?: string;
+  table?: number | null;
+  decision_status?: "ACCEPTED" | "REVIEW_REQUIRED" | "REJECTED" | "NOT_FOUND";
+  reason?: string | null;
+  raw_candidate?: string | null;
+  accepted_value?: string | null;
 }
 export interface Finding {
   code: string;
@@ -106,6 +111,19 @@ export interface Quote {
     confidence_band?: string;
     needs_review?: boolean;
     findings?: { code: string; field: string; message: string }[];
+    field_decisions?: Record<
+      string,
+      {
+        decision_status: Evidence["decision_status"];
+        reason?: string;
+        raw_candidate?: string | null;
+        accepted_value?: string | null;
+      }
+    >;
+    field_confirmations?: Record<
+      string,
+      { candidate: string; confirmed_by: string; confirmed_at: string }
+    >;
   };
   document: {
     id: string;

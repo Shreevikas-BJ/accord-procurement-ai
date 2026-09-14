@@ -79,6 +79,22 @@ def test_real_provider_contract_and_images(ollama):
     assert not any(k in calls[0] for k in ("tools", "tool_choice"))
 
 
+def test_good_ocr_uses_structured_text_without_resending_full_page_image(ollama):
+    calls = ollama([response(quote().model_dump_json())])
+    provider = OllamaProvider()
+    provider.extract(
+        "Supplier: Cedar Components\nSKU: AX-100",
+        document_input=DocumentInput(
+            "Supplier: Cedar Components\nSKU: AX-100",
+            images=["base64"],
+            image_pages=[1],
+            metadata={"parser_quality": "normal"},
+        ),
+    )
+    assert "images" not in calls[0]["messages"][1]
+    assert provider.metadata["vision_images_sent"] == 0
+
+
 def test_schema_repair_bounded_and_successful(ollama):
     calls = ollama([response('{"line_items": []}'), response(quote().model_dump_json())])
     assert OllamaProvider().extract("source").currency == "USD"
@@ -98,26 +114,48 @@ def test_storage_precision_does_not_ask_model_to_round_source(ollama):
     payload["line_items"][0]["stated_line_total"] = "0.051975"
     calls = ollama([response(json.dumps(payload))])
     provider = OllamaProvider()
-    with pytest.raises(ValueError, match="PRECISION_UNSUPPORTED"):
-        provider.extract("Stated total: 0.051975")
+    result = provider.extract("Stated total: 0.051975")
+    assert result.line_items[0].stated_line_total is None
+    assert provider.metadata["schema_review_candidates"][0]["raw_candidate"] == "0.051975"
     assert len(calls) == 1
     assert "0.051975" in provider.raw_response
-    assert provider.metadata["success"] is False
+    assert provider.metadata["success"] is True
 
 
 @pytest.mark.parametrize(
-    "status,body,code",
+    "status,body,code,expected_calls",
     [
-        (404, {}, "MODEL_MISSING"),
-        (500, {"error": "CUDA out of memory"}, "MODEL_OOM"),
-        (500, {"error": "vision decode failed"}, "MODEL_HTTP_ERROR"),
+        (404, {}, "MODEL_MISSING", 1),
+        (500, {"error": "CUDA out of memory"}, "MODEL_OOM", 1),
+        (500, {"error": "vision decode failed"}, "MODEL_HTTP_ERROR", 2),
     ],
 )
-def test_actionable_http_errors(ollama, status, body, code):
+def test_actionable_http_errors(ollama, status, body, code, expected_calls):
     calls = ollama([httpx.Response(status, json=body)])
     with pytest.raises(ValueError, match=code):
         OllamaProvider().extract("source")
-    assert len(calls) == 1
+    assert len(calls) == expected_calls
+
+
+def test_common_business_key_aliases_are_projected_before_schema_repair():
+    provider = OllamaProvider()
+    result = provider.parse_response(
+        json.dumps(
+            {
+                "supplier": "Cedar Components",
+                "valid_until": "2026-11-30",
+                "items": [{"sku": "AX-100", "quantity": 100, "uom": "EA", "unit_price": 4.72}],
+                "subtotal": 472,
+                "shipping": 12,
+                "grand_total": 484,
+            }
+        ),
+        DocumentInput(""),
+    )
+    assert result.supplier_name == "Cedar Components"
+    assert result.expiration_date.isoformat() == "2026-11-30"
+    assert result.line_items[0].supplier_sku == "AX-100"
+    assert result.shipping_cost == Decimal("12")
 
 
 def test_timeout_is_not_retried(ollama):
@@ -259,15 +297,17 @@ def test_evidence_follows_sku_blocks_not_neighboring_prices():
     assert "SOURCE_LINE_COUNT_MISMATCH" in {f["code"] for f in result["findings"]}
     q.line_items[0].unit_price = Decimal("42.50")
     validate_extraction(q, DocumentInput(source, pages={1: source}))
-    assert q.line_items[0].source_references["unit_price"].evidence_type == "missing"
+    assert q.line_items[0].unit_price == Decimal("4.25")
+    assert q.line_items[0].source_references["unit_price"].decision_status == "ACCEPTED"
 
 
 def test_csv_commas_remain_inside_cells(tmp_path):
     path = tmp_path / "quote.csv"
     path.write_text('Supplier,Cedar Components\nSKU,Qty,Unit price,MOQ\nC-12,"1,200","2,50",5\n', encoding="utf-8")
     document = prepare_document(path)
-    assert '"Qty": "1,200"' in document.text
-    assert '"Unit price": "2,50"' in document.text
+    row = document.structured_rows[2]
+    assert row["field_cells"]["quantity"]["value"] == "1,200"
+    assert row["field_cells"]["unit_price"]["value"] == "2,50"
 
 
 def test_spreadsheet_vertical_blocks_keep_exact_cell_evidence():
@@ -290,7 +330,8 @@ def test_spreadsheet_vertical_blocks_keep_exact_cell_evidence():
     assert not supports("unit_price", Decimal("4"), ref.source_text)
     q.line_items[0].unit_price = Decimal("99")
     validate_extraction(q, DocumentInput(text))
-    assert q.line_items[0].source_references["unit_price"].evidence_type == "missing"
+    assert q.line_items[0].unit_price == Decimal("4.25")
+    assert q.line_items[0].source_references["unit_price"].decision_status == "ACCEPTED"
 
 
 def test_untrusted_model_confidence_does_not_override_missing_evidence():
@@ -348,7 +389,7 @@ def test_repair_does_not_resend_source_or_images(ollama):
     assert len(calls) == 2
 
 
-def test_real_provider_focused_pass_is_bounded_and_evidence_checked(ollama):
+def test_real_provider_uses_one_pass_and_deterministic_evidence(ollama):
     from app.extraction_validation import validate_extraction
 
     q = quote()
@@ -359,7 +400,7 @@ def test_real_provider_focused_pass_is_bounded_and_evidence_checked(ollama):
     provider = OllamaProvider()
     result = provider.extract(d.text, document_input=d)
     diagnostics = validate_extraction(result, d)
-    assert len(calls) == 2 and provider.metadata["second_pass_calls"] == 1
+    assert len(calls) == 1 and provider.metadata["second_pass_calls"] == 0
+    assert provider.metadata["second_pass_mode"] == "disabled_structured_evidence"
     assert result.line_items[0].unit_price == Decimal("4.25")
     assert diagnostics["original_ai_payload"]["line_items"][0]["unit_price"] == "42.5"
-    assert not any("images" in message for message in calls[1]["messages"])
