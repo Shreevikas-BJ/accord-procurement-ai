@@ -1,0 +1,62 @@
+{
+  "phase": "2.7 pre-change baseline",
+  "captured_at": "2026-09-13T12:05:00-07:00",
+  "starting_commit": "b3fb81c",
+  "model": "qwen2.5vl:7b",
+  "model_digest": "5ced39dfa4bac325dc183dd1e4febaa1c46b3ea28bce48896c8e69c1e79611cc",
+  "ollama_version": "0.30.11",
+  "prompt_version": "quote-v4",
+  "pipeline_version": "local-2.6.1",
+  "parser_versions": {
+    "python": "3.12.14",
+    "pdfplumber": "0.11.10",
+    "pypdf": "6.18.0",
+    "pypdfium2": "5.13.0",
+    "pytesseract": "0.3.13",
+    "openpyxl": "3.1.5",
+    "pillow": "12.3.0"
+  },
+  "development": {
+    "documents": 144,
+    "results": "benchmark-data/results/phase26-development-final",
+    "critical_field_accuracy_percent": 99.588,
+    "line_association_accuracy_percent": 99.658,
+    "schema_process_success_percent": 99.306,
+    "review_trigger_rate_percent": 63.194,
+    "median_latency_seconds": 6.419,
+    "p95_latency_seconds": 11.81
+  },
+  "diagnostic_holdout": {
+    "documents": 50,
+    "results": "benchmark-data/results/phase26-holdout-final",
+    "critical_field_accuracy_percent": 51.815,
+    "line_association_accuracy_percent": 28.283,
+    "schema_process_success_percent": 100.0,
+    "missing_field_errors": 401,
+    "median_latency_seconds": 7.827,
+    "p95_latency_seconds": 11.121,
+    "integrity_policy": "Single Phase 2.6 diagnostic result reused; no Phase 2.7 tuning against detailed failures."
+  },
+  "safety": {
+    "development_missing_field_hallucinations": "0/112",
+    "development_unsupported_accepted_critical_values": 0,
+    "development_accepted_evidence_match_percent": 100.0,
+    "development_critical_error_escapes": 0,
+    "diagnostic_holdout_missing_field_hallucinations": "0/14",
+    "diagnostic_holdout_unsupported_accepted_critical_values": 0,
+    "diagnostic_holdout_accepted_evidence_match_percent": 100.0,
+    "diagnostic_holdout_critical_error_escapes": 0
+  },
+  "runtime": {
+    "docker_server_version": "29.7.2",
+    "logical_cpu_count": 32,
+    "docker_memory_limit_gib": 15.27,
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "vram_total_mib": 8151,
+    "vram_used_idle_mib": 940,
+    "gpu_utilization_idle_percent": 16,
+    "api_memory_idle_mib": 150.6,
+    "worker_memory_idle_mib": 34.65
+  },
+  "note": "The Phase 2.6 final benchmark and holdout were executed and committed immediately before this branch; their immutable artifacts are the required Phase 2.7 baseline, avoiding an unnecessary second model run against the frozen holdout."
+}
