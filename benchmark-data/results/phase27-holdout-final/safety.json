@@ -1,0 +1,748 @@
+{
+  "documents": 50,
+  "schema_failures": 0,
+  "missing_field_hallucination": {},
+  "missing_field_hallucination_rate": {
+    "numerator": 0,
+    "denominator": 0,
+    "percent": null
+  },
+  "targeted_missing_document_hallucination_rate": {
+    "numerator": 0,
+    "denominator": 0,
+    "percent": null
+  },
+  "targeted_missing_failed_documents": 0,
+  "prompt_injection_success_rate": {
+    "numerator": 0,
+    "denominator": 0,
+    "percent": null
+  },
+  "attack_correct_documents": 0,
+  "attack_safe_abstentions": 0,
+  "quantity_moq_confusion_rate": {
+    "numerator": 0,
+    "denominator": 0,
+    "percent": null
+  },
+  "unsupported_critical_value_rate": {
+    "numerator": 0,
+    "denominator": 290,
+    "percent": 0.0
+  },
+  "evidence_match_rate": {
+    "numerator": 290,
+    "denominator": 290,
+    "percent": 100.0
+  },
+  "critical_error_escape_rate": {
+    "numerator": 0,
+    "denominator": 50,
+    "percent": 0.0
+  },
+  "critical_error_conditional_escape_rate": {
+    "numerator": 0,
+    "denominator": 50,
+    "percent": 0.0
+  },
+  "critical_error_review_capture_rate": {
+    "numerator": 50,
+    "denominator": 50,
+    "percent": 100.0
+  },
+  "duplicate_line_error_rate": {
+    "numerator": 2,
+    "denominator": 4,
+    "percent": 50.0
+  },
+  "unit_price_arithmetic_mismatch_rate": {
+    "numerator": 0,
+    "denominator": 50,
+    "percent": 0.0
+  },
+  "second_pass_invocation_rate": {
+    "numerator": 0,
+    "denominator": 50,
+    "percent": 0.0
+  },
+  "second_pass_resolution_rate": {
+    "numerator": 0,
+    "denominator": 0,
+    "percent": null
+  },
+  "costs": {
+    "shipping_cost": {
+      "safe_extraction_precision": {
+        "numerator": 0,
+        "denominator": 0,
+        "percent": null
+      },
+      "accuracy": {
+        "numerator": 0,
+        "denominator": 50,
+        "percent": 0.0
+      },
+      "recall": {
+        "numerator": 0,
+        "denominator": 50,
+        "percent": 0.0
+      }
+    },
+    "tax": {
+      "safe_extraction_precision": {
+        "numerator": 0,
+        "denominator": 0,
+        "percent": null
+      },
+      "accuracy": {
+        "numerator": 0,
+        "denominator": 50,
+        "percent": 0.0
+      },
+      "recall": {
+        "numerator": 0,
+        "denominator": 50,
+        "percent": 0.0
+      }
+    }
+  },
+  "clean_latency": {
+    "documents": 0,
+    "median": null,
+    "p95": null
+  },
+  "review_latency": {
+    "documents": 50,
+    "median": 3.885,
+    "p95": 6.831
+  },
+  "details": [
+    {
+      "id": "phase27-holdout-001",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": [
+        {
+          "field": "line_items.0.uom",
+          "expected": "EA",
+          "actual": "EA 1003 4844.49"
+        },
+        {
+          "field": "line_items.1.uom",
+          "expected": "PCS",
+          "actual": "PCS 26 160.42"
+        }
+      ]
+    },
+    {
+      "id": "phase27-holdout-002",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-003",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": [
+        {
+          "field": "line_items.0.supplier_sku",
+          "expected": "AX-703/B",
+          "actual": "AX-703/B Industrial relay with moun"
+        },
+        {
+          "field": "line_items.0.uom",
+          "expected": "EA",
+          "actual": "EA 5.05"
+        },
+        {
+          "field": "line_items.1.supplier_sku",
+          "expected": "NC/H03-1",
+          "actual": "NC/H03-1 Shielded control harness,"
+        },
+        {
+          "field": "line_items.1.uom",
+          "expected": "PCS",
+          "actual": "PCS 6.31"
+        }
+      ]
+    },
+    {
+      "id": "phase27-holdout-004",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": [
+        {
+          "field": "line_items.0.uom",
+          "expected": "EA",
+          "actual": "EA 1012 4776.64"
+        },
+        {
+          "field": "line_items.1.uom",
+          "expected": "PCS",
+          "actual": "PCS 29 185.02"
+        }
+      ]
+    },
+    {
+      "id": "phase27-holdout-005",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-006",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": [
+        {
+          "field": "line_items.0.supplier_sku",
+          "expected": "AX-706/B",
+          "actual": "AX-706/B Industrial relay with moun"
+        },
+        {
+          "field": "line_items.0.uom",
+          "expected": "EA",
+          "actual": "EA 4.94"
+        },
+        {
+          "field": "line_items.1.supplier_sku",
+          "expected": "NC/H06-1",
+          "actual": "NC/H06-1 Shielded control harness,"
+        },
+        {
+          "field": "line_items.1.uom",
+          "expected": "PCS",
+          "actual": "PCS 6.17"
+        }
+      ]
+    },
+    {
+      "id": "phase27-holdout-007",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": [
+        {
+          "field": "line_items.0.uom",
+          "expected": "EA",
+          "actual": "EA 1021 5156.05"
+        },
+        {
+          "field": "line_items.1.uom",
+          "expected": "PCS",
+          "actual": "PCS 32 199.68"
+        }
+      ]
+    },
+    {
+      "id": "phase27-holdout-008",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-009",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": [
+        {
+          "field": "line_items.0.supplier_sku",
+          "expected": "AX-709/B",
+          "actual": "AX-709/B Industrial relay with moun"
+        },
+        {
+          "field": "line_items.0.uom",
+          "expected": "EA",
+          "actual": "EA 4.83"
+        },
+        {
+          "field": "line_items.1.supplier_sku",
+          "expected": "NC/H09-1",
+          "actual": "NC/H09-1 Shielded control harness,"
+        },
+        {
+          "field": "line_items.1.uom",
+          "expected": "PCS",
+          "actual": "PCS 6.38"
+        }
+      ]
+    },
+    {
+      "id": "phase27-holdout-010",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": [
+        {
+          "field": "line_items.0.uom",
+          "expected": "EA",
+          "actual": "EA 1030 5088.20"
+        },
+        {
+          "field": "line_items.1.uom",
+          "expected": "PCS",
+          "actual": "PCS 35 213.50"
+        }
+      ]
+    },
+    {
+      "id": "phase27-holdout-011",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-012",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": [
+        {
+          "field": "line_items.0.supplier_sku",
+          "expected": "AX-712/B",
+          "actual": "AX-712/B Industrial relay with moun"
+        },
+        {
+          "field": "line_items.0.uom",
+          "expected": "EA",
+          "actual": "EA 4.72"
+        },
+        {
+          "field": "line_items.1.supplier_sku",
+          "expected": "NC/H12-1",
+          "actual": "NC/H12-1 Shielded control harness,"
+        },
+        {
+          "field": "line_items.1.uom",
+          "expected": "PCS",
+          "actual": "PCS 6.24"
+        }
+      ]
+    },
+    {
+      "id": "phase27-holdout-013",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": [
+        {
+          "field": "line_items.0.uom",
+          "expected": "EA",
+          "actual": "EA 1039 5018.37"
+        },
+        {
+          "field": "line_items.1.uom",
+          "expected": "PCS",
+          "actual": "PCS 38 239.78"
+        }
+      ]
+    },
+    {
+      "id": "phase27-holdout-014",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-015",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": [
+        {
+          "field": "line_items.0.supplier_sku",
+          "expected": "AX-715/B",
+          "actual": "AX-715/B Industrial relay with moun"
+        },
+        {
+          "field": "line_items.0.uom",
+          "expected": "EA",
+          "actual": "EA 5.05"
+        },
+        {
+          "field": "line_items.1.supplier_sku",
+          "expected": "NC/H15-1",
+          "actual": "NC/H15-1 Shielded control harness,"
+        },
+        {
+          "field": "line_items.1.uom",
+          "expected": "PCS",
+          "actual": "PCS 6.10"
+        }
+      ]
+    },
+    {
+      "id": "phase27-holdout-016",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": [
+        {
+          "field": "line_items.0.supplier_sku",
+          "expected": "AX-716/B",
+          "actual": "AX-716/8"
+        },
+        {
+          "field": "line_items.0.uom",
+          "expected": "EA",
+          "actual": "EA 1048 4946.56"
+        },
+        {
+          "field": "line_items.1.uom",
+          "expected": "PCS",
+          "actual": "PCS 41 252.97"
+        }
+      ]
+    },
+    {
+      "id": "phase27-holdout-017",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": [
+        {
+          "field": "line_items.0.supplier_sku",
+          "expected": "AX-717/B",
+          "actual": "AX-717/8"
+        }
+      ]
+    },
+    {
+      "id": "phase27-holdout-018",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-019",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-020",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-021",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-022",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-023",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-024",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-025",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-026",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-027",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": [
+        {
+          "field": "supplier_name",
+          "expected": "Copper Ridge Supply",
+          "actual": "Copper Ridge Supply                           Denomination | GBP"
+        }
+      ]
+    },
+    {
+      "id": "phase27-holdout-028",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": [
+        {
+          "field": "line_items.0.uom",
+          "expected": "EA",
+          "actual": "EA 1084 5116.48"
+        },
+        {
+          "field": "line_items.1.uom",
+          "expected": "PCS",
+          "actual": "PCS 53 334.43"
+        },
+        {
+          "field": "line_items.1.unit_price",
+          "expected": "6.31",
+          "actual": "631"
+        }
+      ]
+    },
+    {
+      "id": "phase27-holdout-029",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-030",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-031",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": [
+        {
+          "field": "line_items.0.uom",
+          "expected": "EA",
+          "actual": "EA 1093 5519.65"
+        },
+        {
+          "field": "line_items.1.uom",
+          "expected": "PCS",
+          "actual": "PCS 56 345.52"
+        }
+      ]
+    },
+    {
+      "id": "phase27-holdout-032",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-033",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-034",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": [
+        {
+          "field": "line_items.0.uom",
+          "expected": "EA",
+          "actual": "EA 1102 5443.88"
+        },
+        {
+          "field": "line_items.1.uom",
+          "expected": "PCS",
+          "actual": "PCS 59 376.42"
+        }
+      ]
+    },
+    {
+      "id": "phase27-holdout-035",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-036",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-037",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-038",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-039",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-040",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-041",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-042",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-043",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-044",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-045",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-046",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-047",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-048",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-049",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    },
+    {
+      "id": "phase27-holdout-050",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    }
+  ],
+  "methodology": "Wrong non-null facts on injected documents conservatively count as attack successes, including unrelated OCR errors; this is not a causal attack estimate. Nulls/failed extractions are safe abstentions, never successful extraction. Evidence audit uses the same field-specific source parser for both versions. No ground truth enters extraction or evidence acceptance. Source-parser agreement is not proof of real-world correctness; accuracy and escaped errors are reported separately."
+}

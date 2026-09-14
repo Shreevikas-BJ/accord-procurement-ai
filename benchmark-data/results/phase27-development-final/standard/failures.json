@@ -1,0 +1,20 @@
+[
+  {
+    "document_id": "demo-Scanned_Vertex_RFQ1004-pdf",
+    "field": "rfq_number",
+    "expected": "RFQ-1004",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "demo-Scanned_Vertex_RFQ1004-png",
+    "field": "rfq_number",
+    "expected": "RFQ-1004",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  }
+]
