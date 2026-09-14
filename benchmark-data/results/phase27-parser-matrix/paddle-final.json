@@ -1,0 +1,924 @@
+{
+  "provider": "paddle_ppstructure_v3",
+  "documents": 1,
+  "critical_accuracy_percent": 92.857,
+  "line_association_accuracy_percent": 100.0,
+  "processing_success_percent": 100.0,
+  "median_model_validation_seconds": 9.032,
+  "results": [
+    {
+      "id": "synthetic-003-comma_thousands",
+      "format": "png",
+      "success": true,
+      "seconds": 9.032,
+      "metrics": {
+        "fields": {
+          "supplier_name": {
+            "correct": 0,
+            "exact": 0,
+            "total": 1,
+            "present_correct": 0,
+            "present_total": 1,
+            "null_correct": 0,
+            "null_total": 0
+          },
+          "quote_number": {
+            "correct": 1,
+            "exact": 1,
+            "total": 1,
+            "present_correct": 1,
+            "present_total": 1,
+            "null_correct": 0,
+            "null_total": 0
+          },
+          "rfq_number": {
+            "correct": 1,
+            "exact": 1,
+            "total": 1,
+            "present_correct": 1,
+            "present_total": 1,
+            "null_correct": 0,
+            "null_total": 0
+          },
+          "currency": {
+            "correct": 1,
+            "exact": 1,
+            "total": 1,
+            "present_correct": 1,
+            "present_total": 1,
+            "null_correct": 0,
+            "null_total": 0
+          },
+          "supplier_sku": {
+            "correct": 3,
+            "exact": 3,
+            "total": 3,
+            "present_correct": 3,
+            "present_total": 3,
+            "null_correct": 0,
+            "null_total": 0
+          },
+          "quantity": {
+            "correct": 3,
+            "exact": 0,
+            "total": 3,
+            "present_correct": 3,
+            "present_total": 3,
+            "null_correct": 0,
+            "null_total": 0
+          },
+          "uom": {
+            "correct": 3,
+            "exact": 3,
+            "total": 3,
+            "present_correct": 3,
+            "present_total": 3,
+            "null_correct": 0,
+            "null_total": 0
+          },
+          "unit_price": {
+            "correct": 3,
+            "exact": 3,
+            "total": 3,
+            "present_correct": 3,
+            "present_total": 3,
+            "null_correct": 0,
+            "null_total": 0
+          },
+          "moq": {
+            "correct": 3,
+            "exact": 0,
+            "total": 3,
+            "present_correct": 3,
+            "present_total": 3,
+            "null_correct": 0,
+            "null_total": 0
+          },
+          "lead_time_days": {
+            "correct": 3,
+            "exact": 3,
+            "total": 3,
+            "present_correct": 3,
+            "present_total": 3,
+            "null_correct": 0,
+            "null_total": 0
+          },
+          "delivery_date": {
+            "correct": 3,
+            "exact": 3,
+            "total": 3,
+            "present_correct": 3,
+            "present_total": 3,
+            "null_correct": 0,
+            "null_total": 0
+          }
+        },
+        "critical_correct": 13,
+        "critical_total": 14,
+        "association_correct": 3,
+        "association_total": 3,
+        "errors": [
+          {
+            "document_id": "synthetic-003-comma_thousands",
+            "field": "supplier_name",
+            "expected": "Juniper Motion Systems",
+            "extracted": "J uniper Motion Systems",
+            "error_type": "WRONG_SUPPLIER",
+            "source_page": 1,
+            "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+          }
+        ]
+      },
+      "diagnostics": {
+        "original_ai_payload": {
+          "supplier_name": "Juniper Motion Systems",
+          "supplier_email": null,
+          "quote_number": "EVAL-003-Q",
+          "rfq_number": "REQ-8102",
+          "quote_date": null,
+          "expiration_date": null,
+          "currency": "GBP",
+          "payment_terms": "Net 30",
+          "shipping_terms": "FOB origin",
+          "shipping_cost": null,
+          "tax": null,
+          "stated_subtotal": null,
+          "stated_total": null,
+          "notes": null,
+          "confidence": "0.5",
+          "source_references": {},
+          "line_items": [
+            {
+              "supplier_sku": "BR-122.1",
+              "manufacturer_part_number": null,
+              "description": "Ball bearing",
+              "quantity": "1220",
+              "uom": "PCS",
+              "unit_price": "2.03",
+              "moq": "5",
+              "lead_time_days": 9,
+              "lead_time_min": null,
+              "delivery_date": "2026-10-10",
+              "stated_line_total": "2476.6",
+              "confidence": "0.5",
+              "source_references": {},
+              "price_tiers": []
+            },
+            {
+              "supplier_sku": "SE-122.2",
+              "manufacturer_part_number": null,
+              "description": "Optical sensor",
+              "quantity": "1320",
+              "uom": "PCS",
+              "unit_price": "3.34",
+              "moq": "10",
+              "lead_time_days": 12,
+              "lead_time_min": null,
+              "delivery_date": "2026-10-13",
+              "stated_line_total": "4408.8",
+              "confidence": "0.5",
+              "source_references": {},
+              "price_tiers": []
+            },
+            {
+              "supplier_sku": "CB-122.3",
+              "manufacturer_part_number": null,
+              "description": "Shielded cable",
+              "quantity": "1420",
+              "uom": "PCS",
+              "unit_price": "4.65",
+              "moq": "15",
+              "lead_time_days": 15,
+              "lead_time_min": null,
+              "delivery_date": "2026-10-16",
+              "stated_line_total": "6603.0",
+              "confidence": "0.5",
+              "source_references": {},
+              "price_tiers": []
+            }
+          ]
+        },
+        "evidence_assessments": {
+          "supplier_name": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "Juniper Motion Systems",
+            "accepted_value": "J uniper Motion Systems",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "currency": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "GBP",
+            "accepted_value": "GBP",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "quote_number": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "EVAL-003-Q",
+            "accepted_value": "EVAL-003-Q",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "rfq_number": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "REQ-8102",
+            "accepted_value": "REQ-8102",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "shipping_cost": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": null,
+            "accepted_value": "14.00",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "tax": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": null,
+            "accepted_value": "0.00",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "stated_subtotal": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": null,
+            "accepted_value": "13488.40",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "stated_total": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": null,
+            "accepted_value": "13502.40",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "quote_date": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": null,
+            "accepted_value": "2026-09-01",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "expiration_date": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": null,
+            "accepted_value": "2026-11-30",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "payment_terms": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "Net 30",
+            "accepted_value": "Net 30",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.0.supplier_sku": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "BR-122.1",
+            "accepted_value": "BR-122.1",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.0.quantity": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "1220",
+            "accepted_value": "1220.00",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.0.uom": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "PCS",
+            "accepted_value": "EA",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.0.unit_price": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "2.03",
+            "accepted_value": "2.03",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.0.description": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "Ball bearing",
+            "accepted_value": "Ball bearing",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.0.moq": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "5",
+            "accepted_value": "5.00",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.0.lead_time_days": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "9",
+            "accepted_value": "9",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.0.lead_time_min": {
+            "status": "NOT_FOUND",
+            "decision_status": "NOT_FOUND",
+            "strength": "unsupported",
+            "accepted": false,
+            "raw_candidate": null,
+            "accepted_value": null,
+            "reason": "No field-specific value was found in the selected source."
+          },
+          "line_items.0.delivery_date": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "2026-10-10",
+            "accepted_value": "2026-10-10",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.0.stated_line_total": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "2476.6",
+            "accepted_value": "2476.60",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.1.supplier_sku": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "SE-122.2",
+            "accepted_value": "SE-122.2",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.1.quantity": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "1320",
+            "accepted_value": "1320.00",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.1.uom": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "PCS",
+            "accepted_value": "EA",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.1.unit_price": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "3.34",
+            "accepted_value": "3.34",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.1.description": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "Optical sensor",
+            "accepted_value": "Optical sensor",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.1.moq": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "10",
+            "accepted_value": "10.00",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.1.lead_time_days": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "12",
+            "accepted_value": "12",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.1.lead_time_min": {
+            "status": "NOT_FOUND",
+            "decision_status": "NOT_FOUND",
+            "strength": "unsupported",
+            "accepted": false,
+            "raw_candidate": null,
+            "accepted_value": null,
+            "reason": "No field-specific value was found in the selected source."
+          },
+          "line_items.1.delivery_date": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "2026-10-13",
+            "accepted_value": "2026-10-13",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.1.stated_line_total": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "4408.8",
+            "accepted_value": "4408.80",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.2.supplier_sku": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "CB-122.3",
+            "accepted_value": "CB-122.3",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.2.quantity": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "1420",
+            "accepted_value": "1420.00",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.2.uom": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "PCS",
+            "accepted_value": "EA",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.2.unit_price": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "4.65",
+            "accepted_value": "4.65",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.2.description": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "Shielded cable",
+            "accepted_value": "Shielded cable",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.2.moq": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "15",
+            "accepted_value": "15.00",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.2.lead_time_days": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "15",
+            "accepted_value": "15",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.2.lead_time_min": {
+            "status": "NOT_FOUND",
+            "decision_status": "NOT_FOUND",
+            "strength": "unsupported",
+            "accepted": false,
+            "raw_candidate": null,
+            "accepted_value": null,
+            "reason": "No field-specific value was found in the selected source."
+          },
+          "line_items.2.delivery_date": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "2026-10-16",
+            "accepted_value": "2026-10-16",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.2.stated_line_total": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "6603.0",
+            "accepted_value": "6603.00",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          }
+        },
+        "field_decisions": {
+          "supplier_name": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "Juniper Motion Systems",
+            "accepted_value": "J uniper Motion Systems",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "currency": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "GBP",
+            "accepted_value": "GBP",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "quote_number": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "EVAL-003-Q",
+            "accepted_value": "EVAL-003-Q",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "rfq_number": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "REQ-8102",
+            "accepted_value": "REQ-8102",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "shipping_cost": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": null,
+            "accepted_value": "14.00",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "tax": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": null,
+            "accepted_value": "0.00",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "stated_subtotal": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": null,
+            "accepted_value": "13488.40",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "stated_total": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": null,
+            "accepted_value": "13502.40",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "quote_date": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": null,
+            "accepted_value": "2026-09-01",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "expiration_date": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": null,
+            "accepted_value": "2026-11-30",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "payment_terms": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "Net 30",
+            "accepted_value": "Net 30",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.0.supplier_sku": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "BR-122.1",
+            "accepted_value": "BR-122.1",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.0.quantity": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "1220",
+            "accepted_value": "1220.00",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.0.uom": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "PCS",
+            "accepted_value": "EA",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.0.unit_price": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "2.03",
+            "accepted_value": "2.03",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.0.description": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "Ball bearing",
+            "accepted_value": "Ball bearing",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.0.moq": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "5",
+            "accepted_value": "5.00",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.0.lead_time_days": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "9",
+            "accepted_value": "9",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.0.lead_time_min": {
+            "status": "NOT_FOUND",
+            "decision_status": "NOT_FOUND",
+            "strength": "unsupported",
+            "accepted": false,
+            "raw_candidate": null,
+            "accepted_value": null,
+            "reason": "No field-specific value was found in the selected source."
+          },
+          "line_items.0.delivery_date": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "2026-10-10",
+            "accepted_value": "2026-10-10",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.0.stated_line_total": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "2476.6",
+            "accepted_value": "2476.60",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.1.supplier_sku": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "SE-122.2",
+            "accepted_value": "SE-122.2",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.1.quantity": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "1320",
+            "accepted_value": "1320.00",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.1.uom": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "PCS",
+            "accepted_value": "EA",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.1.unit_price": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "3.34",
+            "accepted_value": "3.34",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.1.description": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "Optical sensor",
+            "accepted_value": "Optical sensor",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.1.moq": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "10",
+            "accepted_value": "10.00",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.1.lead_time_days": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "12",
+            "accepted_value": "12",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.1.lead_time_min": {
+            "status": "NOT_FOUND",
+            "decision_status": "NOT_FOUND",
+            "strength": "unsupported",
+            "accepted": false,
+            "raw_candidate": null,
+            "accepted_value": null,
+            "reason": "No field-specific value was found in the selected source."
+          },
+          "line_items.1.delivery_date": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "2026-10-13",
+            "accepted_value": "2026-10-13",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.1.stated_line_total": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "4408.8",
+            "accepted_value": "4408.80",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.2.supplier_sku": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "CB-122.3",
+            "accepted_value": "CB-122.3",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.2.quantity": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "1420",
+            "accepted_value": "1420.00",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.2.uom": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "PCS",
+            "accepted_value": "EA",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.2.unit_price": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "4.65",
+            "accepted_value": "4.65",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.2.description": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "Shielded cable",
+            "accepted_value": "Shielded cable",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.2.moq": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "15",
+            "accepted_value": "15.00",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.2.lead_time_days": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "15",
+            "accepted_value": "15",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.2.lead_time_min": {
+            "status": "NOT_FOUND",
+            "decision_status": "NOT_FOUND",
+            "strength": "unsupported",
+            "accepted": false,
+            "raw_candidate": null,
+            "accepted_value": null,
+            "reason": "No field-specific value was found in the selected source."
+          },
+          "line_items.2.delivery_date": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "2026-10-16",
+            "accepted_value": "2026-10-16",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          },
+          "line_items.2.stated_line_total": {
+            "status": "PRESENT",
+            "decision_status": "ACCEPTED",
+            "strength": "strong",
+            "raw_candidate": "6603.0",
+            "accepted_value": "6603.00",
+            "reason": "Explicit field-specific source evidence passed deterministic checks."
+          }
+        },
+        "source_adjustments": [
+          {
+            "field": "supplier_name",
+            "original": "Juniper Motion Systems",
+            "accepted": "J uniper Motion Systems",
+            "reason": "deterministic_source_override"
+          },
+          {
+            "field": "shipping_cost",
+            "original": null,
+            "accepted": "14.00",
+            "reason": "explicit_source"
+          },
+          {
+            "field": "tax",
+            "original": null,
+            "accepted": "0.00",
+            "reason": "explicit_source"
+          },
+          {
+            "field": "stated_subtotal",
+            "original": null,
+            "accepted": "13488.40",
+            "reason": "explicit_source"
+          },
+          {
+            "field": "stated_total",
+            "original": null,
+            "accepted": "13502.40",
+            "reason": "explicit_source"
+          },
+          {
+            "field": "quote_date",
+            "original": null,
+            "accepted": "2026-09-01",
+            "reason": "explicit_source"
+          },
+          {
+            "field": "expiration_date",
+            "original": null,
+            "accepted": "2026-11-30",
+            "reason": "explicit_source"
+          }
+        ],
+        "instruction_signal_count": 0,
+        "source_row_count": 3,
+        "recovered_source_rows": [],
+        "confidence_band": "HIGH",
+        "needs_review": false,
+        "human_approval_required": true,
+        "findings": [],
+        "derived_subtotal": "13488.4000",
+        "derived_total": "13502.4000",
+        "validation_seconds": 0.0053
+      }
+    }
+  ]
+}

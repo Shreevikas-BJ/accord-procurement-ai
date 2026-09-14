@@ -1,0 +1,51 @@
+{
+  "phase": "2.7 parser adoption decision",
+  "development_subset_documents": 16,
+  "digital_pdf_documents": 8,
+  "scan_image_documents_planned": 8,
+  "docling": {
+    "version": "2.126.0",
+    "cpu_only_image_bytes": 1166495618,
+    "structure_line_recovery_percent": 0.0,
+    "structure_row_association_percent": 0.0,
+    "token_preservation_percent": 100.0,
+    "final_critical_accuracy_percent": 2.273,
+    "final_line_association_percent": 0.0,
+    "final_processing_success_percent": 87.5,
+    "current_same_documents_critical_accuracy_percent": 100.0,
+    "current_same_documents_line_association_percent": 100.0,
+    "decision": "REJECT_AS_DEFAULT",
+    "reason": "The candidate preserved text but flattened procurement rows on seven of eight PDFs and selected unrelated tables in the 20-page case."
+  },
+  "paddle_ppstructure_v3": {
+    "paddleocr_version": "3.7.0",
+    "paddlepaddle_version": "3.3.1",
+    "device": "cpu",
+    "cpu_only_image_bytes": 2163006934,
+    "successful_documents": 1,
+    "single_page_structure_line_recovery_percent": 100.0,
+    "single_page_structure_row_association_percent": 100.0,
+    "single_page_final_critical_accuracy_percent": 92.857,
+    "single_page_final_line_association_percent": 100.0,
+    "current_same_document_structure_line_recovery_percent": 100.0,
+    "current_same_document_structure_row_association_percent": 100.0,
+    "current_same_document_final_critical_accuracy_percent": 100.0,
+    "current_same_document_final_line_association_percent": 100.0,
+    "candidate_structure_latency_seconds": 107.641,
+    "current_structure_latency_seconds": 0.662,
+    "batch_attempted_documents": 4,
+    "batch_completed_documents": 0,
+    "batch_peak_memory_gib": 10.0,
+    "batch_peak_cpu_percent": 522.12,
+    "batch_exit_code_after_safety_stop": 143,
+    "decision": "REJECT_AS_DEFAULT",
+    "reason": "One page was structured accurately but did not improve final extraction, was 163x slower, and sustained batching reached the 10 GiB memory ceiling."
+  },
+  "routing": {
+    "digital_pdf_default": "pdfplumber/current structured parser",
+    "scan_image_default": "Tesseract/current geometry",
+    "spreadsheet_default": "openpyxl/python csv",
+    "vision_fallback": "Qwen selected page/region behavior retained",
+    "optional_candidate_policy": "Canonical adapters and tested failure fallback remain available; neither heavy candidate is installed in the API or worker."
+  }
+}

@@ -1,0 +1,18 @@
+[
+  {"id":"synthetic-001-standard_table","path":"documents/synthetic-001-standard_table.pdf","truth":"ground-truth/synthetic-001-standard_table.json","format":"pdf"},
+  {"id":"synthetic-008-missing_currency","path":"documents/synthetic-008-missing_currency.pdf","truth":"ground-truth/synthetic-008-missing_currency.json","format":"pdf"},
+  {"id":"synthetic-015-reordered_columns","path":"documents/synthetic-015-reordered_columns.pdf","truth":"ground-truth/synthetic-015-reordered_columns.json","format":"pdf"},
+  {"id":"synthetic-036-weeks","path":"documents/synthetic-036-weeks.pdf","truth":"ground-truth/synthetic-036-weeks.json","format":"pdf"},
+  {"id":"synthetic-043-inconsistent_line_total","path":"documents/synthetic-043-inconsistent_line_total.pdf","truth":"ground-truth/synthetic-043-inconsistent_line_total.json","format":"pdf"},
+  {"id":"synthetic-057-box_uom","path":"documents/synthetic-057-box_uom.pdf","truth":"ground-truth/synthetic-057-box_uom.json","format":"pdf"},
+  {"id":"synthetic-067-twenty_page_commercial_selection","path":"documents/synthetic-067-twenty_page_commercial_selection.pdf","truth":"ground-truth/synthetic-067-twenty_page_commercial_selection.json","format":"pdf"},
+  {"id":"synthetic-071-wrapped_description","path":"documents/synthetic-071-wrapped_description.pdf","truth":"ground-truth/synthetic-071-wrapped_description.json","format":"pdf"},
+  {"id":"synthetic-002-supplier_sku_and_mpn","path":"documents/synthetic-002-supplier_sku_and_mpn.scan.pdf","truth":"ground-truth/synthetic-002-supplier_sku_and_mpn.json","format":"scan.pdf"},
+  {"id":"synthetic-003-comma_thousands","path":"documents/synthetic-003-comma_thousands.png","truth":"ground-truth/synthetic-003-comma_thousands.json","format":"png"},
+  {"id":"synthetic-004-decimal_comma","path":"documents/synthetic-004-decimal_comma.jpg","truth":"ground-truth/synthetic-004-decimal_comma.json","format":"jpg"},
+  {"id":"synthetic-016-multiple_delivery_dates","path":"documents/synthetic-016-multiple_delivery_dates.scan.pdf","truth":"ground-truth/synthetic-016-multiple_delivery_dates.json","format":"scan.pdf"},
+  {"id":"synthetic-018-duplicate_lines","path":"documents/synthetic-018-duplicate_lines.jpg","truth":"ground-truth/synthetic-018-duplicate_lines.json","format":"jpg"},
+  {"id":"synthetic-031-standard_table","path":"documents/synthetic-031-standard_table.png","truth":"ground-truth/synthetic-031-standard_table.json","format":"png"},
+  {"id":"synthetic-066-low_contrast_box_quote","path":"documents/synthetic-066-low_contrast_box_quote.jpg","truth":"ground-truth/synthetic-066-low_contrast_box_quote.json","format":"jpg"},
+  {"id":"synthetic-072-stock_and_offer_tables","path":"documents/synthetic-072-stock_and_offer_tables.png","truth":"ground-truth/synthetic-072-stock_and_offer_tables.json","format":"png"}
+]
