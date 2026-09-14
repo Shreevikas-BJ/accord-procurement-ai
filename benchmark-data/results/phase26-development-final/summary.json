@@ -1,0 +1,723 @@
+{
+  "documents": 144,
+  "model": "qwen2.5vl:7b",
+  "prompt_version": "quote-v4",
+  "pipeline_version": "local-2.6.1",
+  "formats": {
+    "pdf": 30,
+    "xlsx": 23,
+    "csv": 22,
+    "scan.pdf": 19,
+    "png": 19,
+    "jpg": 12,
+    "txt": 19
+  },
+  "schema_validity": 99.306,
+  "document_critical_success": 99.306,
+  "critical_field_accuracy": 99.588,
+  "line_association_accuracy": 99.658,
+  "needs_review_rate": 63.194,
+  "failure_rate": 0.694,
+  "human_corrections_per_document": null,
+  "human_corrections_note": "Evaluation-only extraction does not simulate buyer corrections; measured separately in the UI workflow.",
+  "fields": {
+    "supplier_name": {
+      "correct": 143,
+      "exact": 143,
+      "total": 144,
+      "present_correct": 141,
+      "present_total": 142,
+      "null_correct": 2,
+      "null_total": 2,
+      "accuracy": 99.306,
+      "exact_accuracy": 99.306,
+      "present_accuracy": 99.296,
+      "null_accuracy": 100.0
+    },
+    "quote_number": {
+      "correct": 143,
+      "exact": 143,
+      "total": 144,
+      "present_correct": 140,
+      "present_total": 141,
+      "null_correct": 3,
+      "null_total": 3,
+      "accuracy": 99.306,
+      "exact_accuracy": 99.306,
+      "present_accuracy": 99.291,
+      "null_accuracy": 100.0
+    },
+    "rfq_number": {
+      "correct": 141,
+      "exact": 141,
+      "total": 144,
+      "present_correct": 141,
+      "present_total": 144,
+      "null_correct": 0,
+      "null_total": 0,
+      "accuracy": 97.917,
+      "exact_accuracy": 97.917,
+      "present_accuracy": 97.917,
+      "null_accuracy": null
+    },
+    "currency": {
+      "correct": 143,
+      "exact": 143,
+      "total": 144,
+      "present_correct": 140,
+      "present_total": 140,
+      "null_correct": 3,
+      "null_total": 4,
+      "accuracy": 99.306,
+      "exact_accuracy": 99.306,
+      "present_accuracy": 100.0,
+      "null_accuracy": 75.0
+    },
+    "supplier_sku": {
+      "correct": 291,
+      "exact": 291,
+      "total": 292,
+      "present_correct": 285,
+      "present_total": 286,
+      "null_correct": 6,
+      "null_total": 6,
+      "accuracy": 99.658,
+      "exact_accuracy": 99.658,
+      "present_accuracy": 99.65,
+      "null_accuracy": 100.0
+    },
+    "quantity": {
+      "correct": 291,
+      "exact": 281,
+      "total": 292,
+      "present_correct": 283,
+      "present_total": 284,
+      "null_correct": 8,
+      "null_total": 8,
+      "accuracy": 99.658,
+      "exact_accuracy": 96.233,
+      "present_accuracy": 99.648,
+      "null_accuracy": 100.0
+    },
+    "uom": {
+      "correct": 291,
+      "exact": 291,
+      "total": 292,
+      "present_correct": 278,
+      "present_total": 279,
+      "null_correct": 13,
+      "null_total": 13,
+      "accuracy": 99.658,
+      "exact_accuracy": 99.658,
+      "present_accuracy": 99.642,
+      "null_accuracy": 100.0
+    },
+    "unit_price": {
+      "correct": 291,
+      "exact": 291,
+      "total": 292,
+      "present_correct": 286,
+      "present_total": 287,
+      "null_correct": 5,
+      "null_total": 5,
+      "accuracy": 99.658,
+      "exact_accuracy": 99.658,
+      "present_accuracy": 99.652,
+      "null_accuracy": 100.0
+    },
+    "moq": {
+      "correct": 291,
+      "exact": 281,
+      "total": 292,
+      "present_correct": 286,
+      "present_total": 287,
+      "null_correct": 5,
+      "null_total": 5,
+      "accuracy": 99.658,
+      "exact_accuracy": 96.233,
+      "present_accuracy": 99.652,
+      "null_accuracy": 100.0
+    },
+    "lead_time_days": {
+      "correct": 291,
+      "exact": 291,
+      "total": 292,
+      "present_correct": 279,
+      "present_total": 280,
+      "null_correct": 12,
+      "null_total": 12,
+      "accuracy": 99.658,
+      "exact_accuracy": 99.658,
+      "present_accuracy": 99.643,
+      "null_accuracy": 100.0
+    },
+    "delivery_date": {
+      "correct": 279,
+      "exact": 279,
+      "total": 292,
+      "present_correct": 265,
+      "present_total": 278,
+      "null_correct": 14,
+      "null_total": 14,
+      "accuracy": 95.548,
+      "exact_accuracy": 95.548,
+      "present_accuracy": 95.324,
+      "null_accuracy": 100.0
+    }
+  },
+  "timings": {
+    "parsing_seconds": {
+      "median": 0.028,
+      "mean": 0.126,
+      "p95": 0.624
+    },
+    "ocr_seconds": {
+      "median": 0.0,
+      "mean": 0.222,
+      "p95": 0.68
+    },
+    "model_seconds": {
+      "median": 6.074,
+      "mean": 6.645,
+      "p95": 10.944
+    },
+    "validation_seconds": {
+      "median": 0.003,
+      "mean": 0.004,
+      "p95": 0.012
+    },
+    "total_seconds": {
+      "median": 6.419,
+      "mean": 7.007,
+      "p95": 11.81
+    }
+  },
+  "error_taxonomy": {
+    "MISSING_FIELD": 14,
+    "SCHEMA_ERROR": 11
+  },
+  "document_error_taxonomy": {
+    "SCHEMA_ERROR": 1
+  },
+  "review_finding_taxonomy": {
+    "SUSPICIOUS_DATE": 1,
+    "SOURCE_VALUE_CONFLICT": 54,
+    "DATE_REVIEW_REQUIRED": 5,
+    "MISSING_DELIVERY": 11,
+    "UNSUPPORTED_EXTRACTED_VALUE": 19,
+    "MISSING_FIELD": 40,
+    "MISSING_MOQ": 5,
+    "CURRENCY_REVIEW_REQUIRED": 3,
+    "GRAND_TOTAL_MISMATCH": 4,
+    "LINE_TOTAL_MISMATCH": 4,
+    "UNIT_PRICE_SUSPECTED_DECIMAL_ERROR": 4,
+    "DECIMAL_PLACEMENT_SUSPECT": 4,
+    "SUBTOTAL_MISMATCH": 2,
+    "DUPLICATE_LINE": 4,
+    "POSSIBLE_DUPLICATE_LINE": 4,
+    "DOCUMENT_INSTRUCTION_TEXT_DETECTED": 14,
+    "UNTRUSTED_INSTRUCTION": 4,
+    "ZERO_PRICE": 4,
+    "SOURCE_ROWS_RECOVERED": 1,
+    "PAGES_OMITTED": 2,
+    "TOTAL_COST_INCOMPLETE": 6,
+    "MISSING_COST": 8
+  },
+  "by_origin": {
+    "existing-demo": {
+      "documents": 25,
+      "schema_validity": 100.0,
+      "critical_accuracy": 100.0
+    },
+    "fictional-generated": {
+      "documents": 75,
+      "schema_validity": 100.0,
+      "critical_accuracy": 100.0
+    },
+    "reliability-synthetic": {
+      "documents": 44,
+      "schema_validity": 97.727,
+      "critical_accuracy": 97.887
+    }
+  },
+  "by_format": {
+    "csv": {
+      "documents": 22,
+      "schema_process_success": 100.0,
+      "critical_field_accuracy": 100.0,
+      "line_association_accuracy": 100.0,
+      "review_trigger_rate": 36.364,
+      "median_latency_seconds": 7.332,
+      "p95_latency_seconds": 10.486,
+      "fields": {
+        "supplier_name": {
+          "correct": 22,
+          "total": 22,
+          "accuracy": 100.0
+        },
+        "quote_number": {
+          "correct": 22,
+          "total": 22,
+          "accuracy": 100.0
+        },
+        "rfq_number": {
+          "correct": 22,
+          "total": 22,
+          "accuracy": 100.0
+        },
+        "currency": {
+          "correct": 22,
+          "total": 22,
+          "accuracy": 100.0
+        },
+        "supplier_sku": {
+          "correct": 48,
+          "total": 48,
+          "accuracy": 100.0
+        },
+        "quantity": {
+          "correct": 48,
+          "total": 48,
+          "accuracy": 100.0
+        },
+        "uom": {
+          "correct": 48,
+          "total": 48,
+          "accuracy": 100.0
+        },
+        "unit_price": {
+          "correct": 48,
+          "total": 48,
+          "accuracy": 100.0
+        },
+        "moq": {
+          "correct": 48,
+          "total": 48,
+          "accuracy": 100.0
+        },
+        "lead_time_days": {
+          "correct": 48,
+          "total": 48,
+          "accuracy": 100.0
+        },
+        "delivery_date": {
+          "correct": 46,
+          "total": 48,
+          "accuracy": 95.833
+        }
+      }
+    },
+    "jpg": {
+      "documents": 12,
+      "schema_process_success": 100.0,
+      "critical_field_accuracy": 100.0,
+      "line_association_accuracy": 100.0,
+      "review_trigger_rate": 100.0,
+      "median_latency_seconds": 8.044,
+      "p95_latency_seconds": 18.372,
+      "fields": {
+        "supplier_name": {
+          "correct": 12,
+          "total": 12,
+          "accuracy": 100.0
+        },
+        "quote_number": {
+          "correct": 12,
+          "total": 12,
+          "accuracy": 100.0
+        },
+        "rfq_number": {
+          "correct": 12,
+          "total": 12,
+          "accuracy": 100.0
+        },
+        "currency": {
+          "correct": 12,
+          "total": 12,
+          "accuracy": 100.0
+        },
+        "supplier_sku": {
+          "correct": 28,
+          "total": 28,
+          "accuracy": 100.0
+        },
+        "quantity": {
+          "correct": 28,
+          "total": 28,
+          "accuracy": 100.0
+        },
+        "uom": {
+          "correct": 28,
+          "total": 28,
+          "accuracy": 100.0
+        },
+        "unit_price": {
+          "correct": 28,
+          "total": 28,
+          "accuracy": 100.0
+        },
+        "moq": {
+          "correct": 28,
+          "total": 28,
+          "accuracy": 100.0
+        },
+        "lead_time_days": {
+          "correct": 28,
+          "total": 28,
+          "accuracy": 100.0
+        },
+        "delivery_date": {
+          "correct": 28,
+          "total": 28,
+          "accuracy": 100.0
+        }
+      }
+    },
+    "pdf": {
+      "documents": 30,
+      "schema_process_success": 100.0,
+      "critical_field_accuracy": 100.0,
+      "line_association_accuracy": 100.0,
+      "review_trigger_rate": 43.333,
+      "median_latency_seconds": 7.091,
+      "p95_latency_seconds": 10.476,
+      "fields": {
+        "supplier_name": {
+          "correct": 30,
+          "total": 30,
+          "accuracy": 100.0
+        },
+        "quote_number": {
+          "correct": 30,
+          "total": 30,
+          "accuracy": 100.0
+        },
+        "rfq_number": {
+          "correct": 30,
+          "total": 30,
+          "accuracy": 100.0
+        },
+        "currency": {
+          "correct": 30,
+          "total": 30,
+          "accuracy": 100.0
+        },
+        "supplier_sku": {
+          "correct": 65,
+          "total": 65,
+          "accuracy": 100.0
+        },
+        "quantity": {
+          "correct": 65,
+          "total": 65,
+          "accuracy": 100.0
+        },
+        "uom": {
+          "correct": 65,
+          "total": 65,
+          "accuracy": 100.0
+        },
+        "unit_price": {
+          "correct": 65,
+          "total": 65,
+          "accuracy": 100.0
+        },
+        "moq": {
+          "correct": 65,
+          "total": 65,
+          "accuracy": 100.0
+        },
+        "lead_time_days": {
+          "correct": 65,
+          "total": 65,
+          "accuracy": 100.0
+        },
+        "delivery_date": {
+          "correct": 62,
+          "total": 65,
+          "accuracy": 95.385
+        }
+      }
+    },
+    "png": {
+      "documents": 19,
+      "schema_process_success": 100.0,
+      "critical_field_accuracy": 100.0,
+      "line_association_accuracy": 100.0,
+      "review_trigger_rate": 100.0,
+      "median_latency_seconds": 5.893,
+      "p95_latency_seconds": 22.741,
+      "fields": {
+        "supplier_name": {
+          "correct": 19,
+          "total": 19,
+          "accuracy": 100.0
+        },
+        "quote_number": {
+          "correct": 19,
+          "total": 19,
+          "accuracy": 100.0
+        },
+        "rfq_number": {
+          "correct": 18,
+          "total": 19,
+          "accuracy": 94.737
+        },
+        "currency": {
+          "correct": 19,
+          "total": 19,
+          "accuracy": 100.0
+        },
+        "supplier_sku": {
+          "correct": 36,
+          "total": 36,
+          "accuracy": 100.0
+        },
+        "quantity": {
+          "correct": 36,
+          "total": 36,
+          "accuracy": 100.0
+        },
+        "uom": {
+          "correct": 36,
+          "total": 36,
+          "accuracy": 100.0
+        },
+        "unit_price": {
+          "correct": 36,
+          "total": 36,
+          "accuracy": 100.0
+        },
+        "moq": {
+          "correct": 36,
+          "total": 36,
+          "accuracy": 100.0
+        },
+        "lead_time_days": {
+          "correct": 36,
+          "total": 36,
+          "accuracy": 100.0
+        },
+        "delivery_date": {
+          "correct": 34,
+          "total": 36,
+          "accuracy": 94.444
+        }
+      }
+    },
+    "scan.pdf": {
+      "documents": 19,
+      "schema_process_success": 94.737,
+      "critical_field_accuracy": 96.552,
+      "line_association_accuracy": 97.059,
+      "review_trigger_rate": 100.0,
+      "median_latency_seconds": 7.491,
+      "p95_latency_seconds": 13.271,
+      "fields": {
+        "supplier_name": {
+          "correct": 18,
+          "total": 19,
+          "accuracy": 94.737
+        },
+        "quote_number": {
+          "correct": 18,
+          "total": 19,
+          "accuracy": 94.737
+        },
+        "rfq_number": {
+          "correct": 17,
+          "total": 19,
+          "accuracy": 89.474
+        },
+        "currency": {
+          "correct": 18,
+          "total": 19,
+          "accuracy": 94.737
+        },
+        "supplier_sku": {
+          "correct": 33,
+          "total": 34,
+          "accuracy": 97.059
+        },
+        "quantity": {
+          "correct": 33,
+          "total": 34,
+          "accuracy": 97.059
+        },
+        "uom": {
+          "correct": 33,
+          "total": 34,
+          "accuracy": 97.059
+        },
+        "unit_price": {
+          "correct": 33,
+          "total": 34,
+          "accuracy": 97.059
+        },
+        "moq": {
+          "correct": 33,
+          "total": 34,
+          "accuracy": 97.059
+        },
+        "lead_time_days": {
+          "correct": 33,
+          "total": 34,
+          "accuracy": 97.059
+        },
+        "delivery_date": {
+          "correct": 33,
+          "total": 34,
+          "accuracy": 97.059
+        }
+      }
+    },
+    "txt": {
+      "documents": 19,
+      "schema_process_success": 100.0,
+      "critical_field_accuracy": 100.0,
+      "line_association_accuracy": 100.0,
+      "review_trigger_rate": 52.632,
+      "median_latency_seconds": 4.54,
+      "p95_latency_seconds": 9.946,
+      "fields": {
+        "supplier_name": {
+          "correct": 19,
+          "total": 19,
+          "accuracy": 100.0
+        },
+        "quote_number": {
+          "correct": 19,
+          "total": 19,
+          "accuracy": 100.0
+        },
+        "rfq_number": {
+          "correct": 19,
+          "total": 19,
+          "accuracy": 100.0
+        },
+        "currency": {
+          "correct": 19,
+          "total": 19,
+          "accuracy": 100.0
+        },
+        "supplier_sku": {
+          "correct": 33,
+          "total": 33,
+          "accuracy": 100.0
+        },
+        "quantity": {
+          "correct": 33,
+          "total": 33,
+          "accuracy": 100.0
+        },
+        "uom": {
+          "correct": 33,
+          "total": 33,
+          "accuracy": 100.0
+        },
+        "unit_price": {
+          "correct": 33,
+          "total": 33,
+          "accuracy": 100.0
+        },
+        "moq": {
+          "correct": 33,
+          "total": 33,
+          "accuracy": 100.0
+        },
+        "lead_time_days": {
+          "correct": 33,
+          "total": 33,
+          "accuracy": 100.0
+        },
+        "delivery_date": {
+          "correct": 30,
+          "total": 33,
+          "accuracy": 90.909
+        }
+      }
+    },
+    "xlsx": {
+      "documents": 23,
+      "schema_process_success": 100.0,
+      "critical_field_accuracy": 100.0,
+      "line_association_accuracy": 100.0,
+      "review_trigger_rate": 43.478,
+      "median_latency_seconds": 7.007,
+      "p95_latency_seconds": 9.539,
+      "fields": {
+        "supplier_name": {
+          "correct": 23,
+          "total": 23,
+          "accuracy": 100.0
+        },
+        "quote_number": {
+          "correct": 23,
+          "total": 23,
+          "accuracy": 100.0
+        },
+        "rfq_number": {
+          "correct": 23,
+          "total": 23,
+          "accuracy": 100.0
+        },
+        "currency": {
+          "correct": 23,
+          "total": 23,
+          "accuracy": 100.0
+        },
+        "supplier_sku": {
+          "correct": 48,
+          "total": 48,
+          "accuracy": 100.0
+        },
+        "quantity": {
+          "correct": 48,
+          "total": 48,
+          "accuracy": 100.0
+        },
+        "uom": {
+          "correct": 48,
+          "total": 48,
+          "accuracy": 100.0
+        },
+        "unit_price": {
+          "correct": 48,
+          "total": 48,
+          "accuracy": 100.0
+        },
+        "moq": {
+          "correct": 48,
+          "total": 48,
+          "accuracy": 100.0
+        },
+        "lead_time_days": {
+          "correct": 48,
+          "total": 48,
+          "accuracy": 100.0
+        },
+        "delivery_date": {
+          "correct": 46,
+          "total": 48,
+          "accuracy": 95.833
+        }
+      }
+    }
+  },
+  "repeated_line_correctness": {
+    "correct": 7,
+    "documents": 7,
+    "percent": 100.0
+  },
+  "tiered_pricing_correctness": {
+    "correct": 2,
+    "documents": 2,
+    "percent": 100.0
+  },
+  "review_burden": {
+    "median_critical_fields_per_document": 0.0,
+    "median_total_fields_per_document": 0.0,
+    "documents_with_review_candidates": 4
+  },
+  "fixture_fallbacks": 0
+}

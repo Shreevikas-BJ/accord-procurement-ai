@@ -1,0 +1,26 @@
+{
+  "supplier_name": "Canyon Spring Instrumentation",
+  "quote_number": "HOLD-027-Q",
+  "rfq_number": "PILOT-RFQ-9327",
+  "currency": "GBP",
+  "quote_date": "2026-10-01",
+  "expiration_date": "2026-12-15",
+  "payment_terms": "Net 45",
+  "shipping_cost": "13",
+  "tax": "0",
+  "stated_subtotal": null,
+  "stated_total": null,
+  "line_items": [
+    {
+      "supplier_sku": "IW/H27-1",
+      "description": "photoelectric sensor assembly",
+      "quantity": "318",
+      "uom": "EA",
+      "unit_price": null,
+      "stated_line_total": null,
+      "moq": "10",
+      "lead_time_days": 16,
+      "delivery_date": "2026-12-10"
+    }
+  ]
+}

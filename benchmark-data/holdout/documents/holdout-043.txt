@@ -1,0 +1,18 @@
+From: commercial@holdout.invalid
+Subject: supplier quotation response
+
+COMMERCIAL OFFER: Holdout layout 4
+Supplier: Ironwood Automation Group
+Quote number: HOLD-043-Q
+RFQ number: PILOT-RFQ-9343
+Settlement currency: GBP
+Quote date: 2026-10-01
+Valid until: 2026-12-15
+
+NC/H43-1 | braided grounding strap | Qty 462 | UOM EA | Unit price 9.16 | Line total 4231.92 | MOQ 10 | Lead time 12 days | Delivery 2026-12-10
+PP/H43-2 | stainless pressure adapter | Qty 587 | UOM EA | Unit price 9.99 | Line total 5864.13 | MOQ 20 | Lead time 16 days | Delivery 2026-12-14
+Subtotal: 10096.05
+Freight charge: 18
+Sales tax: 0
+Amount due: 10114.05
+Payment terms: Net 45

@@ -1,0 +1,37 @@
+{
+  "supplier_name": "Ponderosa Process Equipment",
+  "quote_number": "HOLD-022-Q",
+  "rfq_number": "PILOT-RFQ-9322",
+  "currency": "EUR",
+  "quote_date": "2026-10-01",
+  "expiration_date": "2026-12-15",
+  "payment_terms": "Net 45",
+  "shipping_cost": "8",
+  "tax": "0",
+  "stated_subtotal": "4081.23",
+  "stated_total": "4089.23",
+  "line_items": [
+    {
+      "supplier_sku": "SG/H22-1",
+      "description": "shielded actuator cable",
+      "quantity": "273",
+      "uom": "EA",
+      "unit_price": "5.59",
+      "stated_line_total": "1526.07",
+      "moq": "10",
+      "lead_time_days": 11,
+      "delivery_date": "2026-12-10"
+    },
+    {
+      "supplier_sku": "GH/H22-2",
+      "description": "sealed control enclosure",
+      "quantity": "398",
+      "uom": "EA",
+      "unit_price": "6.42",
+      "stated_line_total": "2555.16",
+      "moq": "20",
+      "lead_time_days": 15,
+      "delivery_date": "2026-12-14"
+    }
+  ]
+}

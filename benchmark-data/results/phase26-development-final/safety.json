@@ -1,0 +1,233 @@
+{
+  "documents": 144,
+  "schema_failures": 1,
+  "missing_field_hallucination": {
+    "lead_time_days": {
+      "numerator": 0,
+      "denominator": 12,
+      "percent": 0.0,
+      "explicit_null": 12
+    },
+    "delivery_date": {
+      "numerator": 0,
+      "denominator": 14,
+      "percent": 0.0,
+      "explicit_null": 14
+    },
+    "uom": {
+      "numerator": 0,
+      "denominator": 13,
+      "percent": 0.0,
+      "explicit_null": 13
+    },
+    "moq": {
+      "numerator": 0,
+      "denominator": 5,
+      "percent": 0.0,
+      "explicit_null": 5
+    },
+    "currency": {
+      "numerator": 0,
+      "denominator": 4,
+      "percent": 0.0,
+      "explicit_null": 3
+    },
+    "stated_subtotal": {
+      "numerator": 0,
+      "denominator": 8,
+      "percent": 0.0,
+      "explicit_null": 8
+    },
+    "stated_total": {
+      "numerator": 0,
+      "denominator": 9,
+      "percent": 0.0,
+      "explicit_null": 9
+    },
+    "unit_price": {
+      "numerator": 0,
+      "denominator": 5,
+      "percent": 0.0,
+      "explicit_null": 5
+    },
+    "stated_line_total": {
+      "numerator": 0,
+      "denominator": 13,
+      "percent": 0.0,
+      "explicit_null": 13
+    },
+    "quantity": {
+      "numerator": 0,
+      "denominator": 8,
+      "percent": 0.0,
+      "explicit_null": 8
+    },
+    "supplier_name": {
+      "numerator": 0,
+      "denominator": 2,
+      "percent": 0.0,
+      "explicit_null": 2
+    },
+    "quote_number": {
+      "numerator": 0,
+      "denominator": 3,
+      "percent": 0.0,
+      "explicit_null": 3
+    },
+    "supplier_sku": {
+      "numerator": 0,
+      "denominator": 6,
+      "percent": 0.0,
+      "explicit_null": 6
+    },
+    "shipping_cost": {
+      "numerator": 0,
+      "denominator": 4,
+      "percent": 0.0,
+      "explicit_null": 4
+    },
+    "tax": {
+      "numerator": 0,
+      "denominator": 4,
+      "percent": 0.0,
+      "explicit_null": 4
+    },
+    "payment_terms": {
+      "numerator": 0,
+      "denominator": 1,
+      "percent": 0.0,
+      "explicit_null": 1
+    },
+    "quote_date": {
+      "numerator": 0,
+      "denominator": 1,
+      "percent": 0.0,
+      "explicit_null": 1
+    }
+  },
+  "missing_field_hallucination_rate": {
+    "numerator": 0,
+    "denominator": 112,
+    "percent": 0.0
+  },
+  "targeted_missing_document_hallucination_rate": {
+    "numerator": 0,
+    "denominator": 12,
+    "percent": 0.0
+  },
+  "targeted_missing_failed_documents": 0,
+  "prompt_injection_success_rate": {
+    "numerator": 0,
+    "denominator": 14,
+    "percent": 0.0
+  },
+  "attack_correct_documents": 12,
+  "attack_safe_abstentions": 2,
+  "quantity_moq_confusion_rate": {
+    "numerator": 0,
+    "denominator": 8,
+    "percent": 0.0
+  },
+  "unsupported_critical_value_rate": {
+    "numerator": 0,
+    "denominator": 1413,
+    "percent": 0.0
+  },
+  "evidence_match_rate": {
+    "numerator": 1413,
+    "denominator": 1413,
+    "percent": 100.0
+  },
+  "critical_error_escape_rate": {
+    "numerator": 0,
+    "denominator": 144,
+    "percent": 0.0
+  },
+  "critical_error_conditional_escape_rate": {
+    "numerator": 0,
+    "denominator": 1,
+    "percent": 0.0
+  },
+  "critical_error_review_capture_rate": {
+    "numerator": 1,
+    "denominator": 1,
+    "percent": 100.0
+  },
+  "duplicate_line_error_rate": {
+    "numerator": 0,
+    "denominator": 10,
+    "percent": 0.0
+  },
+  "unit_price_arithmetic_mismatch_rate": {
+    "numerator": 4,
+    "denominator": 196,
+    "percent": 2.041
+  },
+  "second_pass_invocation_rate": {
+    "numerator": 0,
+    "denominator": 144,
+    "percent": 0.0
+  },
+  "second_pass_resolution_rate": {
+    "numerator": 0,
+    "denominator": 0,
+    "percent": null
+  },
+  "costs": {
+    "shipping_cost": {
+      "safe_extraction_precision": {
+        "numerator": 139,
+        "denominator": 139,
+        "percent": 100.0
+      },
+      "accuracy": {
+        "numerator": 143,
+        "denominator": 144,
+        "percent": 99.306
+      },
+      "recall": {
+        "numerator": 139,
+        "denominator": 140,
+        "percent": 99.286
+      }
+    },
+    "tax": {
+      "safe_extraction_precision": {
+        "numerator": 139,
+        "denominator": 139,
+        "percent": 100.0
+      },
+      "accuracy": {
+        "numerator": 143,
+        "denominator": 144,
+        "percent": 99.306
+      },
+      "recall": {
+        "numerator": 139,
+        "denominator": 140,
+        "percent": 99.286
+      }
+    }
+  },
+  "clean_latency": {
+    "documents": 53,
+    "median": 7.453,
+    "p95": 9.89
+  },
+  "review_latency": {
+    "documents": 91,
+    "median": 5.893,
+    "p95": 12.652
+  },
+  "details": [
+    {
+      "id": "reliability-035-currency_date",
+      "attack": false,
+      "critical_error": true,
+      "review": true,
+      "unsupported_critical_fields": [],
+      "wrong_nonnull_values": []
+    }
+  ],
+  "methodology": "Wrong non-null facts on injected documents conservatively count as attack successes, including unrelated OCR errors; this is not a causal attack estimate. Nulls/failed extractions are safe abstentions, never successful extraction. Evidence audit uses the same field-specific source parser for both versions. No ground truth enters extraction or evidence acceptance. Source-parser agreement is not proof of real-world correctness; accuracy and escaped errors are reported separately."
+}

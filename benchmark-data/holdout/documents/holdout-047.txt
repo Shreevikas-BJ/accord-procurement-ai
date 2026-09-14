@@ -1,0 +1,18 @@
+From: commercial@holdout.invalid
+Subject: supplier quotation response
+
+COMMERCIAL OFFER: Holdout layout 3
+Supplier: Canyon Spring Instrumentation
+Quote number: HOLD-047-Q
+RFQ number: PILOT-RFQ-9347
+Settlement currency: GBP
+Quote date: 2026-10-01
+Valid until: 2026-12-15
+
+GH/H47-1 | sealed control enclosure | Qty 525 | UOM EA | Unit price 4.10 | Line total 2152.50 | MOQ 10 | Lead time 16 days | Delivery 2026-12-10
+Quantity tiers for GH/H47-1: 1-99: 5.25 : 100-499: 4.60 : 500+: 4.10
+Subtotal: 2152.50
+Freight charge: 11
+Sales tax: 0
+Amount due: 2163.50
+Payment terms: Net 45

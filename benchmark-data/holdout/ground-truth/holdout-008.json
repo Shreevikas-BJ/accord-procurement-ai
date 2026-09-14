@@ -1,0 +1,48 @@
+{
+  "supplier_name": "Rainier Assembly Partners",
+  "quote_number": "HOLD-008-Q",
+  "rfq_number": "PILOT-RFQ-9308",
+  "currency": null,
+  "quote_date": "2026-10-01",
+  "expiration_date": "2026-12-15",
+  "payment_terms": "Net 45",
+  "shipping_cost": "16",
+  "tax": "18.25",
+  "stated_subtotal": "3504.14",
+  "stated_total": "3538.39",
+  "line_items": [
+    {
+      "supplier_sku": "PP/H08-1",
+      "description": "stainless pressure adapter",
+      "quantity": "147",
+      "uom": "EA",
+      "unit_price": "3.21",
+      "stated_line_total": "471.87",
+      "moq": "10",
+      "lead_time_days": 17,
+      "delivery_date": "2026-12-10"
+    },
+    {
+      "supplier_sku": "IW/H08-2",
+      "description": "photoelectric sensor assembly",
+      "quantity": "272",
+      "uom": "EA",
+      "unit_price": "4.04",
+      "stated_line_total": "1098.88",
+      "moq": "20",
+      "lead_time_days": 21,
+      "delivery_date": "2026-12-14"
+    },
+    {
+      "supplier_sku": "SG/H08-3",
+      "description": "shielded actuator cable",
+      "quantity": "397",
+      "uom": "EA",
+      "unit_price": "4.87",
+      "stated_line_total": "1933.39",
+      "moq": "30",
+      "lead_time_days": 25,
+      "delivery_date": "2026-12-18"
+    }
+  ]
+}

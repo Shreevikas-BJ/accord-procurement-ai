@@ -1,0 +1,17 @@
+COMMERCIAL OFFER,Holdout layout 3
+Supplier,Canyon Spring Instrumentation
+Quote number,HOLD-037-Q
+RFQ number,PILOT-RFQ-9337
+Settlement currency,CAD
+Quote date,2026-10-01
+Valid until,2026-12-15
+
+Description,Stock No,Unit Cost,Quoted Quantity,Unit of Measure,Extension,MOQ,Lead
+braided grounding strap,NC/H37-1,8.14,408,EA,3321.12,10,26 days
+stainless pressure adapter,PP/H37-2,8.97,533,EA,4781.01,20,30 days
+
+Subtotal,8102.13
+Freight charge,12
+Sales tax,0
+Amount due,8114.13
+Payment terms,Net 45

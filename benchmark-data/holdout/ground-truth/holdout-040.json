@@ -1,0 +1,37 @@
+{
+  "supplier_name": "Red Mesa Electromechanical",
+  "quote_number": "HOLD-040-Q",
+  "rfq_number": "PILOT-RFQ-9340",
+  "currency": "USD",
+  "quote_date": "2026-10-01",
+  "expiration_date": "2026-12-15",
+  "payment_terms": "Net 45",
+  "shipping_cost": "15",
+  "tax": "18.25",
+  "stated_subtotal": "9071.55",
+  "stated_total": "9104.80",
+  "line_items": [
+    {
+      "supplier_sku": "SG/H40-1",
+      "description": "shielded actuator cable",
+      "quantity": "435",
+      "uom": "EA",
+      "unit_price": "8.65",
+      "stated_line_total": "3762.75",
+      "moq": "10",
+      "lead_time_days": 9,
+      "delivery_date": "2026-12-10"
+    },
+    {
+      "supplier_sku": "GH/H40-2",
+      "description": "sealed control enclosure",
+      "quantity": "560",
+      "uom": "EA",
+      "unit_price": "9.48",
+      "stated_line_total": "5308.80",
+      "moq": "20",
+      "lead_time_days": 13,
+      "delivery_date": "2026-12-14"
+    }
+  ]
+}

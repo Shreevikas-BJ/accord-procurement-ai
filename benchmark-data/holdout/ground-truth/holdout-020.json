@@ -1,0 +1,48 @@
+{
+  "supplier_name": "Red Mesa Electromechanical",
+  "quote_number": "HOLD-020-Q",
+  "rfq_number": "PILOT-RFQ-9320",
+  "currency": "USD",
+  "quote_date": "2026-10-01",
+  "expiration_date": "2026-12-15",
+  "payment_terms": "Net 45",
+  "shipping_cost": "17",
+  "tax": "18.25",
+  "stated_subtotal": "7138.70",
+  "stated_total": "7173.95",
+  "line_items": [
+    {
+      "supplier_sku": "PP/H20-1",
+      "description": "stainless pressure adapter",
+      "quantity": "255",
+      "uom": "EA",
+      "unit_price": "5.25",
+      "stated_line_total": "1338.75",
+      "moq": "10",
+      "lead_time_days": 9,
+      "delivery_date": "2026-12-10"
+    },
+    {
+      "supplier_sku": "IW/H20-2",
+      "description": "photoelectric sensor assembly",
+      "quantity": "380",
+      "uom": "EA",
+      "unit_price": "6.08",
+      "stated_line_total": "2310.40",
+      "moq": "20",
+      "lead_time_days": 13,
+      "delivery_date": "2026-12-14"
+    },
+    {
+      "supplier_sku": "SG/H20-3",
+      "description": "shielded actuator cable",
+      "quantity": "505",
+      "uom": "EA",
+      "unit_price": "6.91",
+      "stated_line_total": "3489.55",
+      "moq": "30",
+      "lead_time_days": 17,
+      "delivery_date": "2026-12-18"
+    }
+  ]
+}

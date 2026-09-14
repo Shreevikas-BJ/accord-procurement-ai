@@ -1,0 +1,18 @@
+COMMERCIAL OFFER,Holdout layout 4
+Supplier,Rainier Assembly Partners
+Quote number,HOLD-038-Q
+RFQ number,PILOT-RFQ-9338
+Settlement currency,EUR
+Quote date,2026-10-01
+Valid until,2026-12-15
+
+Item Code,Product Description,Qty,Unit,Price Each,Amount,Min Qty,Lead Time Days
+PP/H38-1,stainless pressure adapter,417,EA,8.31,3465.27,10,27 days
+IW/H38-2,photoelectric sensor assembly,542,EA,9.14,4953.88,20,31 days
+SG/H38-3,shielded actuator cable,667,EA,9.97,6649.99,30,35 days
+
+Subtotal,15069.14
+Freight charge,13
+Sales tax,0
+Amount due,15082.14
+Payment terms,Net 45

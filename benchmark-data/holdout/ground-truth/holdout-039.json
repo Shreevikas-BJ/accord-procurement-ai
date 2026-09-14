@@ -1,0 +1,26 @@
+{
+  "supplier_name": "Copper Basin Materials",
+  "quote_number": "HOLD-039-Q",
+  "rfq_number": "PILOT-RFQ-9339",
+  "currency": "GBP",
+  "quote_date": "2026-10-01",
+  "expiration_date": "2026-12-15",
+  "payment_terms": "Net 45",
+  "shipping_cost": "14",
+  "tax": "0",
+  "stated_subtotal": "3612.48",
+  "stated_total": "3626.48",
+  "line_items": [
+    {
+      "supplier_sku": "IW/H39-1",
+      "description": "photoelectric sensor assembly",
+      "quantity": "426",
+      "uom": "EA",
+      "unit_price": "8.48",
+      "stated_line_total": "3612.48",
+      "moq": "10",
+      "lead_time_days": 28,
+      "delivery_date": "2026-12-10"
+    }
+  ]
+}

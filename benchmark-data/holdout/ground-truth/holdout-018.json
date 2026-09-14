@@ -1,0 +1,26 @@
+{
+  "supplier_name": "Rainier Assembly Partners",
+  "quote_number": "HOLD-018-Q",
+  "rfq_number": "PILOT-RFQ-9318",
+  "currency": "EUR",
+  "quote_date": "2026-10-01",
+  "expiration_date": "2026-12-15",
+  "payment_terms": "Net 45",
+  "shipping_cost": "15",
+  "tax": "0",
+  "stated_subtotal": null,
+  "stated_total": null,
+  "line_items": [
+    {
+      "supplier_sku": "RM/H18-1",
+      "description": "DIN rail interface relay",
+      "quantity": null,
+      "uom": "EA",
+      "unit_price": "4.91",
+      "stated_line_total": null,
+      "moq": "10",
+      "lead_time_days": 27,
+      "delivery_date": "2026-12-10"
+    }
+  ]
+}

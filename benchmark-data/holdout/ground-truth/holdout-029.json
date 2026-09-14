@@ -1,0 +1,48 @@
+{
+  "supplier_name": "Copper Basin Materials",
+  "quote_number": "HOLD-029-Q",
+  "rfq_number": "PILOT-RFQ-9329",
+  "currency": "CAD",
+  "quote_date": "2026-10-01",
+  "expiration_date": "2026-12-15",
+  "payment_terms": "Net 45",
+  "shipping_cost": "15",
+  "tax": "0",
+  "stated_subtotal": "10732.13",
+  "stated_total": "10747.13",
+  "line_items": [
+    {
+      "supplier_sku": "GH/H29-1",
+      "description": "sealed control enclosure",
+      "quantity": "336",
+      "uom": "EA",
+      "unit_price": "6.78",
+      "stated_line_total": "2278.08",
+      "moq": "10",
+      "lead_time_days": 18,
+      "delivery_date": "2026-12-10"
+    },
+    {
+      "supplier_sku": "RM/H29-2",
+      "description": "DIN rail interface relay",
+      "quantity": "461",
+      "uom": "EA",
+      "unit_price": "7.61",
+      "stated_line_total": "3508.21",
+      "moq": "20",
+      "lead_time_days": 22,
+      "delivery_date": "2026-12-14"
+    },
+    {
+      "supplier_sku": "NC/H29-3",
+      "description": "braided grounding strap",
+      "quantity": "586",
+      "uom": "EA",
+      "unit_price": "8.44",
+      "stated_line_total": "4945.84",
+      "moq": "30",
+      "lead_time_days": 26,
+      "delivery_date": "2026-12-18"
+    }
+  ]
+}

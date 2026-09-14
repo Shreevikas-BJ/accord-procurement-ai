@@ -1,0 +1,43 @@
+{
+  "supplier_name": "Canyon Spring Instrumentation",
+  "quote_number": "HOLD-047-Q",
+  "rfq_number": "PILOT-RFQ-9347",
+  "currency": "GBP",
+  "quote_date": "2026-10-01",
+  "expiration_date": "2026-12-15",
+  "payment_terms": "Net 45",
+  "shipping_cost": "11",
+  "tax": "0",
+  "stated_subtotal": "2152.50",
+  "stated_total": "2163.50",
+  "line_items": [
+    {
+      "supplier_sku": "GH/H47-1",
+      "description": "sealed control enclosure",
+      "quantity": "525",
+      "uom": "EA",
+      "unit_price": "4.10",
+      "stated_line_total": "2152.50",
+      "moq": "10",
+      "lead_time_days": 16,
+      "delivery_date": "2026-12-10",
+      "price_tiers": [
+        {
+          "minimum": "1",
+          "maximum": "99",
+          "unit_price": "5.25"
+        },
+        {
+          "minimum": "100",
+          "maximum": "499",
+          "unit_price": "4.60"
+        },
+        {
+          "minimum": "500",
+          "maximum": null,
+          "unit_price": "4.10"
+        }
+      ]
+    }
+  ]
+}

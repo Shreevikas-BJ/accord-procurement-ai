@@ -1,0 +1,26 @@
+{
+  "supplier_name": "Ironwood Automation Group",
+  "quote_number": "HOLD-033-Q",
+  "rfq_number": "PILOT-RFQ-9333",
+  "currency": "CAD",
+  "quote_date": "2026-10-01",
+  "expiration_date": "2026-12-15",
+  "payment_terms": "Net 45",
+  "shipping_cost": "8",
+  "tax": "0",
+  "stated_subtotal": "2775.12",
+  "stated_total": "2783.12",
+  "line_items": [
+    {
+      "supplier_sku": "IW/H33-1",
+      "description": "photoelectric sensor assembly",
+      "quantity": "372",
+      "uom": "EA",
+      "unit_price": "7.46",
+      "stated_line_total": "2775.12",
+      "moq": "10",
+      "lead_time_days": 22,
+      "delivery_date": "2026-12-10"
+    }
+  ]
+}

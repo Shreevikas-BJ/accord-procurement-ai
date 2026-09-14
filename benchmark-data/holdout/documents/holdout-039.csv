@@ -1,0 +1,16 @@
+COMMERCIAL OFFER,Holdout layout 5
+Supplier,Copper Basin Materials
+Quote number,HOLD-039-Q
+RFQ number,PILOT-RFQ-9339
+Settlement currency,GBP
+Quote date,2026-10-01
+Valid until,2026-12-15
+
+Vendor Part No.,Item Description,Order Qty,UOM,Net Ea.,Extended Price,Minimum Qty,Availability
+IW/H39-1,photoelectric sensor assembly,426,EA,8.48,3612.48,10,28 days
+
+Subtotal,3612.48
+Freight charge,14
+Sales tax,0
+Amount due,3626.48
+Payment terms,Net 45

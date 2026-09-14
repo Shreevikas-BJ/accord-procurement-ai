@@ -1,0 +1,16 @@
+From: commercial@holdout.invalid
+Subject: supplier quotation response
+
+COMMERCIAL OFFER: Holdout layout 3
+Supplier: Ponderosa Process Equipment
+Quote number: HOLD-042-Q
+RFQ number: PILOT-RFQ-9342
+Settlement currency: EUR
+Quote date: 2026-10-01
+Valid until: 2026-12-15
+
+RM/H42-1 | DIN rail interface relay | Qty 453 | UOM EA | Unit price 8.99 | Line total 4072.47 | MOQ 10 | Lead time 11 days | Delivery 2026-12-10
+Subtotal: 4072.47
+Sales tax: 0
+Amount due: 4089.47
+Payment terms: Net 45

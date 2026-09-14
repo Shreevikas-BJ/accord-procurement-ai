@@ -1,0 +1,48 @@
+{
+  "supplier_name": "Ponderosa Process Equipment",
+  "quote_number": "HOLD-002-Q",
+  "rfq_number": "PILOT-RFQ-9302",
+  "currency": "EUR",
+  "quote_date": "2026-10-01",
+  "expiration_date": "2026-12-15",
+  "payment_terms": "Net 45",
+  "shipping_cost": "10",
+  "tax": "0",
+  "stated_subtotal": "2182.58",
+  "stated_total": "2192.58",
+  "line_items": [
+    {
+      "supplier_sku": "PP/H02-1",
+      "description": "stainless pressure adapter",
+      "quantity": "93",
+      "uom": "EA",
+      "unit_price": "2.19",
+      "stated_line_total": "203.67",
+      "moq": "10",
+      "lead_time_days": 11,
+      "delivery_date": "2026-12-10"
+    },
+    {
+      "supplier_sku": "IW/H02-2",
+      "description": "photoelectric sensor assembly",
+      "quantity": "218",
+      "uom": "EA",
+      "unit_price": "3.02",
+      "stated_line_total": "658.36",
+      "moq": "20",
+      "lead_time_days": 15,
+      "delivery_date": "2026-12-14"
+    },
+    {
+      "supplier_sku": "SG/H02-3",
+      "description": "shielded actuator cable",
+      "quantity": "343",
+      "uom": "EA",
+      "unit_price": "3.85",
+      "stated_line_total": "1320.55",
+      "moq": "30",
+      "lead_time_days": 19,
+      "delivery_date": "2026-12-18"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+From: commercial@holdout.invalid
+Subject: supplier quotation response
+
+COMMERCIAL OFFER: Holdout layout 1
+Supplier: Granite Harbor Components
+Quote number: HOLD-045-Q
+RFQ number: PILOT-RFQ-9345
+Settlement currency: CAD
+Quote date: 2026-10-01
+Valid until: 2026-12-15
+
+IW/H45-1 | photoelectric sensor assembly | Qty 480 | UOM EA | Unit price 9.5 | Line total 4560.0 | MOQ 10 | Lead time 14 days | Delivery 2026-12-10
+Subtotal: 4560.0
+Freight charge: 9
+Sales tax: 0
+Amount due: 4569.0
+Payment terms: Net 45

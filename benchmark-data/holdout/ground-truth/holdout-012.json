@@ -1,0 +1,26 @@
+{
+  "supplier_name": "Ponderosa Process Equipment",
+  "quote_number": "HOLD-012-Q",
+  "rfq_number": "PILOT-RFQ-9312",
+  "currency": "USD",
+  "quote_date": "2026-10-01",
+  "expiration_date": "2026-12-15",
+  "payment_terms": "Net 45",
+  "shipping_cost": "9",
+  "tax": "18.25",
+  "stated_subtotal": "711.87",
+  "stated_total": "739.12",
+  "line_items": [
+    {
+      "supplier_sku": "RM/H12-1",
+      "description": "DIN rail interface relay",
+      "quantity": "183",
+      "uom": "EA",
+      "unit_price": "3.89",
+      "stated_line_total": "711.87",
+      "moq": "10",
+      "lead_time_days": 21,
+      "delivery_date": "2026-12-10"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "supplier_name": "North Cove Industrial Supply",
+  "quote_number": "HOLD-041-Q",
+  "rfq_number": "PILOT-RFQ-9341",
+  "currency": "CAD",
+  "quote_date": "2026-10-01",
+  "expiration_date": "2026-12-15",
+  "payment_terms": "Net 45",
+  "shipping_cost": "16",
+  "tax": "0",
+  "stated_subtotal": "16680.05",
+  "stated_total": "16696.05",
+  "line_items": [
+    {
+      "supplier_sku": "GH/H41-1",
+      "description": "sealed control enclosure",
+      "quantity": "444",
+      "uom": "EA",
+      "unit_price": "8.82",
+      "stated_line_total": "3916.08",
+      "moq": "10",
+      "lead_time_days": 10,
+      "delivery_date": "2026-12-10"
+    },
+    {
+      "supplier_sku": "RM/H41-2",
+      "description": "DIN rail interface relay",
+      "quantity": "569",
+      "uom": "EA",
+      "unit_price": "9.65",
+      "stated_line_total": "5490.85",
+      "moq": "20",
+      "lead_time_days": 14,
+      "delivery_date": "2026-12-14"
+    },
+    {
+      "supplier_sku": "NC/H41-3",
+      "description": "braided grounding strap",
+      "quantity": "694",
+      "uom": "EA",
+      "unit_price": "10.48",
+      "stated_line_total": "7273.12",
+      "moq": "30",
+      "lead_time_days": 18,
+      "delivery_date": "2026-12-18"
+    }
+  ]
+}

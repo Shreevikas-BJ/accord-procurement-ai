@@ -1,0 +1,26 @@
+{
+  "supplier_name": "Red Mesa Electromechanical",
+  "quote_number": "HOLD-030-Q",
+  "rfq_number": "PILOT-RFQ-9330",
+  "currency": "EUR",
+  "quote_date": "2026-10-01",
+  "expiration_date": "2026-12-15",
+  "payment_terms": "Net 45",
+  "shipping_cost": "16",
+  "tax": "0",
+  "stated_subtotal": "2397.75",
+  "stated_total": "2413.75",
+  "line_items": [
+    {
+      "supplier_sku": "RM/H30-1",
+      "description": "DIN rail interface relay",
+      "quantity": "345",
+      "uom": "EA",
+      "unit_price": "6.95",
+      "stated_line_total": "2397.75",
+      "moq": "10",
+      "lead_time_days": 19,
+      "delivery_date": "2026-12-10"
+    }
+  ]
+}

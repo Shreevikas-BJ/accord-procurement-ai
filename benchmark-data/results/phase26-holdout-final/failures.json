@@ -1,0 +1,3845 @@
+[
+  {
+    "document_id": "holdout-001",
+    "field": "supplier_name",
+    "expected": "North Cove Industrial Supply",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-001",
+    "field": "quote_number",
+    "expected": "HOLD-001-Q",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-001",
+    "field": "rfq_number",
+    "expected": "PILOT-RFQ-9301",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-001",
+    "field": "currency",
+    "expected": "CAD",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-001",
+    "field": "line_items.0.supplier_sku",
+    "expected": "NC/H01-1",
+    "extracted": "strNaCp/H01-1",
+    "error_type": "SKU_EXTRACTION_ERROR",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-001",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-001",
+    "field": "line_items.1.supplier_sku",
+    "expected": "PP/H01-2",
+    "extracted": "adPaPp/tHer01-2",
+    "error_type": "SKU_EXTRACTION_ERROR",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-001",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-002",
+    "field": "supplier_name",
+    "expected": "Ponderosa Process Equipment",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-002",
+    "field": "quote_number",
+    "expected": "HOLD-002-Q",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-002",
+    "field": "rfq_number",
+    "expected": "PILOT-RFQ-9302",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-002",
+    "field": "currency",
+    "expected": "EUR",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-002",
+    "field": "line_items.0.quantity",
+    "expected": "93",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-002",
+    "field": "line_items.0.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-002",
+    "field": "line_items.0.unit_price",
+    "expected": "2.19",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-002",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-002",
+    "field": "line_items.1.quantity",
+    "expected": "218",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-002",
+    "field": "line_items.1.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-002",
+    "field": "line_items.1.unit_price",
+    "expected": "3.02",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-002",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-002",
+    "field": "line_items.2.quantity",
+    "expected": "343",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-002",
+    "field": "line_items.2.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-002",
+    "field": "line_items.2.unit_price",
+    "expected": "3.85",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-002",
+    "field": "line_items.2.delivery_date",
+    "expected": "2026-12-18",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-003",
+    "field": "supplier_name",
+    "expected": "Ironwood Automation Group",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-003",
+    "field": "quote_number",
+    "expected": "HOLD-003-Q",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-003",
+    "field": "rfq_number",
+    "expected": "PILOT-RFQ-9303",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-003",
+    "field": "currency",
+    "expected": "GBP",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-003",
+    "field": "line_items.0.quantity",
+    "expected": "102",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-003",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-004",
+    "field": "supplier_name",
+    "expected": "Saguaro Technical Products",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-004",
+    "field": "quote_number",
+    "expected": "HOLD-004-Q",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-004",
+    "field": "rfq_number",
+    "expected": "PILOT-RFQ-9304",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-004",
+    "field": "currency",
+    "expected": "USD",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-004",
+    "field": "line_items.0.supplier_sku",
+    "expected": "SG/H04-1",
+    "extracted": "cabSleG/H04-1",
+    "error_type": "SKU_EXTRACTION_ERROR",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-004",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-004",
+    "field": "line_items.1.supplier_sku",
+    "expected": "GH/H04-2",
+    "extracted": "enclosGuHre/H04-2",
+    "error_type": "SKU_EXTRACTION_ERROR",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-004",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-005",
+    "field": "supplier_name",
+    "expected": "Granite Harbor Components",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-005",
+    "field": "quote_number",
+    "expected": "HOLD-005-Q",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-005",
+    "field": "rfq_number",
+    "expected": "PILOT-RFQ-9305",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-005",
+    "field": "currency",
+    "expected": "CAD",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-005",
+    "field": "line_items.0.quantity",
+    "expected": "120",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-005",
+    "field": "line_items.0.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-005",
+    "field": "line_items.0.unit_price",
+    "expected": "2.7",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-005",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-005",
+    "field": "line_items.1.quantity",
+    "expected": "245",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-005",
+    "field": "line_items.1.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-005",
+    "field": "line_items.1.unit_price",
+    "expected": "3.53",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-005",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-005",
+    "field": "line_items.2.quantity",
+    "expected": "370",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-005",
+    "field": "line_items.2.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-005",
+    "field": "line_items.2.unit_price",
+    "expected": "4.36",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-005",
+    "field": "line_items.2.delivery_date",
+    "expected": "2026-12-18",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-006",
+    "field": "supplier_name",
+    "expected": "Lighthouse Motion Controls",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-006",
+    "field": "quote_number",
+    "expected": "HOLD-006-Q",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-006",
+    "field": "rfq_number",
+    "expected": "PILOT-RFQ-9306",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-006",
+    "field": "currency",
+    "expected": "EUR",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-006",
+    "field": "line_items.0.quantity",
+    "expected": "129",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-006",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-007",
+    "field": "supplier_name",
+    "expected": "Canyon Spring Instrumentation",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-007",
+    "field": "quote_number",
+    "expected": "HOLD-007-Q",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-007",
+    "field": "rfq_number",
+    "expected": "PILOT-RFQ-9307",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-007",
+    "field": "currency",
+    "expected": "GBP",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-007",
+    "field": "line_items.0.supplier_sku",
+    "expected": "NC/H07-1",
+    "extracted": "strNaCp/H07-1",
+    "error_type": "SKU_EXTRACTION_ERROR",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-007",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-007",
+    "field": "line_items.1.supplier_sku",
+    "expected": "PP/H07-2",
+    "extracted": "adPaPp/tHer07-2",
+    "error_type": "SKU_EXTRACTION_ERROR",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-007",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-008",
+    "field": "supplier_name",
+    "expected": "Rainier Assembly Partners",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-008",
+    "field": "quote_number",
+    "expected": "HOLD-008-Q",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-008",
+    "field": "rfq_number",
+    "expected": "PILOT-RFQ-9308",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-008",
+    "field": "line_items.0.quantity",
+    "expected": "147",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-008",
+    "field": "line_items.0.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-008",
+    "field": "line_items.0.unit_price",
+    "expected": "3.21",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-008",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-008",
+    "field": "line_items.1.quantity",
+    "expected": "272",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-008",
+    "field": "line_items.1.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-008",
+    "field": "line_items.1.unit_price",
+    "expected": "4.04",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-008",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-008",
+    "field": "line_items.2.quantity",
+    "expected": "397",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-008",
+    "field": "line_items.2.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-008",
+    "field": "line_items.2.unit_price",
+    "expected": "4.87",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-008",
+    "field": "line_items.2.delivery_date",
+    "expected": "2026-12-18",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-009",
+    "field": "supplier_name",
+    "expected": "Copper Basin Materials",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-009",
+    "field": "quote_number",
+    "expected": "HOLD-009-Q",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-009",
+    "field": "rfq_number",
+    "expected": "PILOT-RFQ-9309",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-009",
+    "field": "currency",
+    "expected": "CAD",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-009",
+    "field": "line_items.0.quantity",
+    "expected": "156",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-009",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-010",
+    "field": "supplier_name",
+    "expected": "Red Mesa Electromechanical",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-010",
+    "field": "quote_number",
+    "expected": "HOLD-010-Q",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-010",
+    "field": "rfq_number",
+    "expected": "PILOT-RFQ-9310",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-010",
+    "field": "currency",
+    "expected": "EUR",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-010",
+    "field": "line_items.0.supplier_sku",
+    "expected": "SG/H10-1",
+    "extracted": "cabSleG/H10-1",
+    "error_type": "SKU_EXTRACTION_ERROR",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-010",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-010",
+    "field": "line_items.1.supplier_sku",
+    "expected": "GH/H10-2",
+    "extracted": "enclosGuHre/H10-2",
+    "error_type": "SKU_EXTRACTION_ERROR",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-010",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-011",
+    "field": "supplier_name",
+    "expected": "North Cove Industrial Supply",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-011",
+    "field": "quote_number",
+    "expected": "HOLD-011-Q",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-011",
+    "field": "rfq_number",
+    "expected": "PILOT-RFQ-9311",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-011",
+    "field": "currency",
+    "expected": "GBP",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-011",
+    "field": "line_items.0.quantity",
+    "expected": "174",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-011",
+    "field": "line_items.0.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-011",
+    "field": "line_items.0.unit_price",
+    "expected": "3.72",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-011",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-011",
+    "field": "line_items.1.quantity",
+    "expected": "299",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-011",
+    "field": "line_items.1.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-011",
+    "field": "line_items.1.unit_price",
+    "expected": "4.55",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-011",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-011",
+    "field": "line_items.2.quantity",
+    "expected": "424",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-011",
+    "field": "line_items.2.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-011",
+    "field": "line_items.2.unit_price",
+    "expected": "5.38",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-011",
+    "field": "line_items.2.delivery_date",
+    "expected": "2026-12-18",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-012",
+    "field": "supplier_name",
+    "expected": "Ponderosa Process Equipment",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-012",
+    "field": "quote_number",
+    "expected": "HOLD-012-Q",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-012",
+    "field": "rfq_number",
+    "expected": "PILOT-RFQ-9312",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-012",
+    "field": "currency",
+    "expected": "USD",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-012",
+    "field": "line_items.0.quantity",
+    "expected": "183",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-012",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-013",
+    "field": "supplier_name",
+    "expected": "Ironwood Automation Group",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-013",
+    "field": "quote_number",
+    "expected": "HOLD-013-Q",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-013",
+    "field": "rfq_number",
+    "expected": "PILOT-RFQ-9313",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-013",
+    "field": "currency",
+    "expected": "CAD",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-013",
+    "field": "line_items.0.supplier_sku",
+    "expected": "NC/H13-1",
+    "extracted": "strNaCp/H13-1",
+    "error_type": "SKU_EXTRACTION_ERROR",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-013",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-013",
+    "field": "line_items.1.supplier_sku",
+    "expected": "PP/H13-2",
+    "extracted": "adPaPp/tHer13-2",
+    "error_type": "SKU_EXTRACTION_ERROR",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-013",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-014",
+    "field": "supplier_name",
+    "expected": "Saguaro Technical Products",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-014",
+    "field": "quote_number",
+    "expected": "HOLD-014-Q",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-014",
+    "field": "rfq_number",
+    "expected": "PILOT-RFQ-9314",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-014",
+    "field": "currency",
+    "expected": "EUR",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-014",
+    "field": "line_items.0.quantity",
+    "expected": "201",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-014",
+    "field": "line_items.0.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-014",
+    "field": "line_items.0.unit_price",
+    "expected": "4.23",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-014",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-014",
+    "field": "line_items.1.quantity",
+    "expected": "326",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-014",
+    "field": "line_items.1.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-014",
+    "field": "line_items.1.unit_price",
+    "expected": "5.06",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-014",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-014",
+    "field": "line_items.2.quantity",
+    "expected": "451",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-014",
+    "field": "line_items.2.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-014",
+    "field": "line_items.2.unit_price",
+    "expected": "5.89",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-014",
+    "field": "line_items.2.delivery_date",
+    "expected": "2026-12-18",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-015",
+    "field": "supplier_name",
+    "expected": "Granite Harbor Components",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-015",
+    "field": "quote_number",
+    "expected": "HOLD-015-Q",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-015",
+    "field": "rfq_number",
+    "expected": "PILOT-RFQ-9315",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-015",
+    "field": "currency",
+    "expected": "GBP",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-015",
+    "field": "line_items.0.quantity",
+    "expected": "210",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-015",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-016",
+    "field": "supplier_name",
+    "expected": "Lighthouse Motion Controls",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-016",
+    "field": "quote_number",
+    "expected": "HOLD-016-Q",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-016",
+    "field": "rfq_number",
+    "expected": "PILOT-RFQ-9316",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-016",
+    "field": "currency",
+    "expected": "USD",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-016",
+    "field": "line_items.0.supplier_sku",
+    "expected": "SG/H16-1",
+    "extracted": "cati6/H16-1",
+    "error_type": "SKU_EXTRACTION_ERROR",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-016",
+    "field": "line_items.0.unit_price",
+    "expected": "4.57",
+    "extracted": "457",
+    "error_type": "DECIMAL_ERROR",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-016",
+    "field": "line_items.0.moq",
+    "expected": "10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-016",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-016",
+    "field": "line_items.1.supplier_sku",
+    "expected": "GH/H16-2",
+    "extracted": "enclosiyH16-2",
+    "error_type": "SKU_EXTRACTION_ERROR",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-016",
+    "field": "line_items.1.moq",
+    "expected": "20",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-016",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-017",
+    "field": "supplier_name",
+    "expected": "Canyon Spring Instrumentation",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-017",
+    "field": "quote_number",
+    "expected": "HOLD-017-Q",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-017",
+    "field": "rfq_number",
+    "expected": "PILOT-RFQ-9317",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-017",
+    "field": "currency",
+    "expected": "CAD",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-017",
+    "field": "line_items.0.quantity",
+    "expected": "228",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-017",
+    "field": "line_items.0.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-017",
+    "field": "line_items.0.unit_price",
+    "expected": "4.74",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-017",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-017",
+    "field": "line_items.1.quantity",
+    "expected": "353",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-017",
+    "field": "line_items.1.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-017",
+    "field": "line_items.1.unit_price",
+    "expected": "5.57",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-017",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-017",
+    "field": "line_items.2.quantity",
+    "expected": "478",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-017",
+    "field": "line_items.2.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-017",
+    "field": "line_items.2.unit_price",
+    "expected": "6.4",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-017",
+    "field": "line_items.2.delivery_date",
+    "expected": "2026-12-18",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-018",
+    "field": "supplier_name",
+    "expected": "Rainier Assembly Partners",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-018",
+    "field": "quote_number",
+    "expected": "HOLD-018-Q",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-018",
+    "field": "rfq_number",
+    "expected": "PILOT-RFQ-9318",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-018",
+    "field": "currency",
+    "expected": "EUR",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-018",
+    "field": "line_items.0.supplier_sku",
+    "expected": "RM/H18-1",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-018",
+    "field": "line_items.0.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-018",
+    "field": "line_items.0.unit_price",
+    "expected": "4.91",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-018",
+    "field": "line_items.0.moq",
+    "expected": "10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-018",
+    "field": "line_items.0.lead_time_days",
+    "expected": 27,
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-018",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-019",
+    "field": "supplier_name",
+    "expected": "Copper Basin Materials",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-019",
+    "field": "quote_number",
+    "expected": "HOLD-019-Q",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-019",
+    "field": "rfq_number",
+    "expected": "PILOT-RFQ-9319",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-019",
+    "field": "currency",
+    "expected": "GBP",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-019",
+    "field": "line_items.0.supplier_sku",
+    "expected": "NC/H19-1",
+    "extracted": "stW@/H19-1",
+    "error_type": "SKU_EXTRACTION_ERROR",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-019",
+    "field": "line_items.0.moq",
+    "expected": "10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-019",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-019",
+    "field": "line_items.1.supplier_sku",
+    "expected": "PP/H19-2",
+    "extracted": "adepiidd.9-2",
+    "error_type": "SKU_EXTRACTION_ERROR",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-019",
+    "field": "line_items.1.moq",
+    "expected": "20",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-019",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-020",
+    "field": "supplier_name",
+    "expected": "Red Mesa Electromechanical",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-020",
+    "field": "quote_number",
+    "expected": "HOLD-020-Q",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-020",
+    "field": "rfq_number",
+    "expected": "PILOT-RFQ-9320",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-020",
+    "field": "currency",
+    "expected": "USD",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-020",
+    "field": "line_items.0.quantity",
+    "expected": "255",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-020",
+    "field": "line_items.0.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-020",
+    "field": "line_items.0.unit_price",
+    "expected": "5.25",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-020",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-020",
+    "field": "line_items.1.supplier_sku",
+    "expected": "IW/H20-2",
+    "extracted": "1wAH20-2",
+    "error_type": "SKU_EXTRACTION_ERROR",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-020",
+    "field": "line_items.1.quantity",
+    "expected": "380",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-020",
+    "field": "line_items.1.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-020",
+    "field": "line_items.1.unit_price",
+    "expected": "6.08",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-020",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-020",
+    "field": "line_items.2.quantity",
+    "expected": "505",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-020",
+    "field": "line_items.2.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-020",
+    "field": "line_items.2.unit_price",
+    "expected": "6.91",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-020",
+    "field": "line_items.2.delivery_date",
+    "expected": "2026-12-18",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-021",
+    "field": "supplier_name",
+    "expected": "North Cove Industrial Supply",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-021",
+    "field": "quote_number",
+    "expected": "HOLD-021-Q",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-021",
+    "field": "rfq_number",
+    "expected": "PILOT-RFQ-9321",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-021",
+    "field": "currency",
+    "expected": "CAD",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-021",
+    "field": "line_items.0.supplier_sku",
+    "expected": "IW/H21-1",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-021",
+    "field": "line_items.0.quantity",
+    "expected": "264",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-021",
+    "field": "line_items.0.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-021",
+    "field": "line_items.0.unit_price",
+    "expected": "5.42",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-021",
+    "field": "line_items.0.moq",
+    "expected": "10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-021",
+    "field": "line_items.0.lead_time_days",
+    "expected": 10,
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-021",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-022",
+    "field": "supplier_name",
+    "expected": "Ponderosa Process Equipment",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-022",
+    "field": "quote_number",
+    "expected": "HOLD-022-Q",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-022",
+    "field": "rfq_number",
+    "expected": "PILOT-RFQ-9322",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-022",
+    "field": "currency",
+    "expected": "EUR",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-022",
+    "field": "line_items.0.supplier_sku",
+    "expected": "SG/H22-1",
+    "extracted": "cat6/H22-1",
+    "error_type": "SKU_EXTRACTION_ERROR",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-022",
+    "field": "line_items.0.moq",
+    "expected": "10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-022",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-022",
+    "field": "line_items.1.supplier_sku",
+    "expected": "GH/H22-2",
+    "extracted": "enclosityH22-2",
+    "error_type": "SKU_EXTRACTION_ERROR",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-022",
+    "field": "line_items.1.moq",
+    "expected": "20",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-022",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-023",
+    "field": "supplier_name",
+    "expected": "Ironwood Automation Group",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-023",
+    "field": "quote_number",
+    "expected": "HOLD-023-Q",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-023",
+    "field": "rfq_number",
+    "expected": "PILOT-RFQ-9323",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-023",
+    "field": "currency",
+    "expected": "GBP",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-023",
+    "field": "line_items.0.quantity",
+    "expected": "282",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-023",
+    "field": "line_items.0.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-023",
+    "field": "line_items.0.unit_price",
+    "expected": "5.76",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-023",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-023",
+    "field": "line_items.1.quantity",
+    "expected": "407",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-023",
+    "field": "line_items.1.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-023",
+    "field": "line_items.1.unit_price",
+    "expected": "6.59",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-023",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-023",
+    "field": "line_items.2.quantity",
+    "expected": "532",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-023",
+    "field": "line_items.2.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-023",
+    "field": "line_items.2.unit_price",
+    "expected": "7.42",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-023",
+    "field": "line_items.2.delivery_date",
+    "expected": "2026-12-18",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-024",
+    "field": "supplier_name",
+    "expected": "Saguaro Technical Products",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-024",
+    "field": "quote_number",
+    "expected": "HOLD-024-Q",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-024",
+    "field": "rfq_number",
+    "expected": "PILOT-RFQ-9324",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-024",
+    "field": "currency",
+    "expected": "USD",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-024",
+    "field": "line_items.0.supplier_sku",
+    "expected": "RM/H24-1",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-024",
+    "field": "line_items.0.quantity",
+    "expected": "291",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-024",
+    "field": "line_items.0.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-024",
+    "field": "line_items.0.unit_price",
+    "expected": "5.93",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-024",
+    "field": "line_items.0.moq",
+    "expected": "10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-024",
+    "field": "line_items.0.lead_time_days",
+    "expected": 13,
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-024",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-025",
+    "field": "supplier_name",
+    "expected": "Granite Harbor Components",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-025",
+    "field": "quote_number",
+    "expected": "HOLD-025-Q",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-025",
+    "field": "rfq_number",
+    "expected": "PILOT-RFQ-9325",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-025",
+    "field": "currency",
+    "expected": "CAD",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-025",
+    "field": "line_items.0.supplier_sku",
+    "expected": "NC/H25-1",
+    "extracted": "st@/H25-1",
+    "error_type": "SKU_EXTRACTION_ERROR",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-025",
+    "field": "line_items.0.unit_price",
+    "expected": "6.1",
+    "extracted": "61",
+    "error_type": "DECIMAL_ERROR",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-025",
+    "field": "line_items.0.moq",
+    "expected": "10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-025",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-025",
+    "field": "line_items.1.supplier_sku",
+    "expected": "PP/H25-2",
+    "extracted": "afepytd25-2",
+    "error_type": "SKU_EXTRACTION_ERROR",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-025",
+    "field": "line_items.1.moq",
+    "expected": "20",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-025",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-026",
+    "field": "supplier_name",
+    "expected": "Lighthouse Motion Controls",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-026",
+    "field": "quote_number",
+    "expected": "HOLD-026-Q",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-026",
+    "field": "rfq_number",
+    "expected": "PILOT-RFQ-9326",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-026",
+    "field": "currency",
+    "expected": "EUR",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-026",
+    "field": "line_items.0.quantity",
+    "expected": "309",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-026",
+    "field": "line_items.0.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-026",
+    "field": "line_items.0.unit_price",
+    "expected": "6.27",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-026",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-026",
+    "field": "line_items.1.quantity",
+    "expected": "434",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-026",
+    "field": "line_items.1.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-026",
+    "field": "line_items.1.unit_price",
+    "expected": "7.1",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-026",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-026",
+    "field": "line_items.2.quantity",
+    "expected": "559",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-026",
+    "field": "line_items.2.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-026",
+    "field": "line_items.2.unit_price",
+    "expected": "7.93",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-026",
+    "field": "line_items.2.delivery_date",
+    "expected": "2026-12-18",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-027",
+    "field": "supplier_name",
+    "expected": "Canyon Spring Instrumentation",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-027",
+    "field": "quote_number",
+    "expected": "HOLD-027-Q",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-027",
+    "field": "rfq_number",
+    "expected": "PILOT-RFQ-9327",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-027",
+    "field": "currency",
+    "expected": "GBP",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-027",
+    "field": "line_items.0.supplier_sku",
+    "expected": "IW/H27-1",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-027",
+    "field": "line_items.0.quantity",
+    "expected": "318",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-027",
+    "field": "line_items.0.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-027",
+    "field": "line_items.0.moq",
+    "expected": "10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-027",
+    "field": "line_items.0.lead_time_days",
+    "expected": 16,
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-027",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-028",
+    "field": "supplier_name",
+    "expected": "Rainier Assembly Partners",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-028",
+    "field": "quote_number",
+    "expected": "HOLD-028-Q",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-028",
+    "field": "rfq_number",
+    "expected": "PILOT-RFQ-9328",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-028",
+    "field": "currency",
+    "expected": "USD",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-028",
+    "field": "line_items.0.supplier_sku",
+    "expected": "SG/H28-1",
+    "extracted": "cal6/H28-1",
+    "error_type": "SKU_EXTRACTION_ERROR",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-028",
+    "field": "line_items.0.quantity",
+    "expected": "327",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-028",
+    "field": "line_items.0.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-028",
+    "field": "line_items.0.moq",
+    "expected": "10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-028",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-028",
+    "field": "line_items.1.supplier_sku",
+    "expected": "GH/H28-2",
+    "extracted": "enclosaHyH28-2",
+    "error_type": "SKU_EXTRACTION_ERROR",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-028",
+    "field": "line_items.1.quantity",
+    "expected": "452",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-028",
+    "field": "line_items.1.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-028",
+    "field": "line_items.1.moq",
+    "expected": "20",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-028",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-029",
+    "field": "supplier_name",
+    "expected": "Copper Basin Materials",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-029",
+    "field": "quote_number",
+    "expected": "HOLD-029-Q",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-029",
+    "field": "rfq_number",
+    "expected": "PILOT-RFQ-9329",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-029",
+    "field": "currency",
+    "expected": "CAD",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-029",
+    "field": "line_items.0.quantity",
+    "expected": "336",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-029",
+    "field": "line_items.0.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-029",
+    "field": "line_items.0.unit_price",
+    "expected": "6.78",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-029",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-029",
+    "field": "line_items.1.quantity",
+    "expected": "461",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-029",
+    "field": "line_items.1.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-029",
+    "field": "line_items.1.unit_price",
+    "expected": "7.61",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-029",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-029",
+    "field": "line_items.2.quantity",
+    "expected": "586",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-029",
+    "field": "line_items.2.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-029",
+    "field": "line_items.2.unit_price",
+    "expected": "8.44",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-029",
+    "field": "line_items.2.delivery_date",
+    "expected": "2026-12-18",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-030",
+    "field": "supplier_name",
+    "expected": "Red Mesa Electromechanical",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-030",
+    "field": "quote_number",
+    "expected": "HOLD-030-Q",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-030",
+    "field": "rfq_number",
+    "expected": "PILOT-RFQ-9330",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-030",
+    "field": "currency",
+    "expected": "EUR",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-030",
+    "field": "line_items.0.supplier_sku",
+    "expected": "RM/H30-1",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-030",
+    "field": "line_items.0.quantity",
+    "expected": "345",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-030",
+    "field": "line_items.0.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-030",
+    "field": "line_items.0.unit_price",
+    "expected": "6.95",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-030",
+    "field": "line_items.0.moq",
+    "expected": "10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-030",
+    "field": "line_items.0.lead_time_days",
+    "expected": 19,
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-030",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-031",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-031",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-032",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-032",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-032",
+    "field": "line_items.2.delivery_date",
+    "expected": "2026-12-18",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-033",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-034",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-034",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-035",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-035",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-035",
+    "field": "line_items.2.delivery_date",
+    "expected": "2026-12-18",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-036",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-037",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-037",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-038",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-038",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-038",
+    "field": "line_items.2.delivery_date",
+    "expected": "2026-12-18",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-039",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-040",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-040",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-041",
+    "field": "line_items.1.supplier_sku",
+    "expected": "RM/H41-2",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-041",
+    "field": "line_items.1.quantity",
+    "expected": "569",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-041",
+    "field": "line_items.1.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-041",
+    "field": "line_items.1.unit_price",
+    "expected": "9.65",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-041",
+    "field": "line_items.1.moq",
+    "expected": "20",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-041",
+    "field": "line_items.1.lead_time_days",
+    "expected": 14,
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-041",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-041",
+    "field": "line_items.2.supplier_sku",
+    "expected": "NC/H41-3",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-041",
+    "field": "line_items.2.quantity",
+    "expected": "694",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-041",
+    "field": "line_items.2.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-041",
+    "field": "line_items.2.unit_price",
+    "expected": "10.48",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-041",
+    "field": "line_items.2.moq",
+    "expected": "30",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-041",
+    "field": "line_items.2.lead_time_days",
+    "expected": 18,
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-041",
+    "field": "line_items.2.delivery_date",
+    "expected": "2026-12-18",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-043",
+    "field": "line_items.1.supplier_sku",
+    "expected": "PP/H43-2",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-043",
+    "field": "line_items.1.quantity",
+    "expected": "587",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-043",
+    "field": "line_items.1.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-043",
+    "field": "line_items.1.unit_price",
+    "expected": "9.99",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-043",
+    "field": "line_items.1.moq",
+    "expected": "20",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-043",
+    "field": "line_items.1.lead_time_days",
+    "expected": 16,
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-043",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-044",
+    "field": "line_items.1.supplier_sku",
+    "expected": "IW/H44-2",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-044",
+    "field": "line_items.1.quantity",
+    "expected": "596",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-044",
+    "field": "line_items.1.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-044",
+    "field": "line_items.1.unit_price",
+    "expected": "10.16",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-044",
+    "field": "line_items.1.moq",
+    "expected": "20",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-044",
+    "field": "line_items.1.lead_time_days",
+    "expected": 17,
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-044",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-044",
+    "field": "line_items.2.supplier_sku",
+    "expected": "SG/H44-3",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-044",
+    "field": "line_items.2.quantity",
+    "expected": "721",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-044",
+    "field": "line_items.2.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-044",
+    "field": "line_items.2.unit_price",
+    "expected": "10.99",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-044",
+    "field": "line_items.2.moq",
+    "expected": "30",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-044",
+    "field": "line_items.2.lead_time_days",
+    "expected": 21,
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-044",
+    "field": "line_items.2.delivery_date",
+    "expected": "2026-12-18",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-046",
+    "field": "line_items.1.supplier_sku",
+    "expected": "SG/H46-1",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-046",
+    "field": "line_items.1.quantity",
+    "expected": "525",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-046",
+    "field": "line_items.1.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-046",
+    "field": "line_items.1.unit_price",
+    "expected": "4.10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-046",
+    "field": "line_items.1.moq",
+    "expected": "10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-046",
+    "field": "line_items.1.lead_time_days",
+    "expected": 15,
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-046",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-22",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-048",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-049",
+    "field": "supplier_name",
+    "expected": "Copper Basin Materials",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-049",
+    "field": "quote_number",
+    "expected": "HOLD-049-Q",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-049",
+    "field": "rfq_number",
+    "expected": "PILOT-RFQ-9349",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-049",
+    "field": "currency",
+    "expected": "CAD",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-049",
+    "field": "line_items.0.supplier_sku",
+    "expected": "NC/H49-1",
+    "extracted": "strNaCp/H49-1",
+    "error_type": "SKU_EXTRACTION_ERROR",
+    "source_page": 2,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-049",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-049",
+    "field": "line_items.1.supplier_sku",
+    "expected": "PP/H49-2",
+    "extracted": "adPaPp/tHer49-2",
+    "error_type": "SKU_EXTRACTION_ERROR",
+    "source_page": 2,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-049",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-050",
+    "field": "supplier_name",
+    "expected": "Red Mesa Electromechanical",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-050",
+    "field": "quote_number",
+    "expected": "HOLD-050-Q",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-050",
+    "field": "rfq_number",
+    "expected": "PILOT-RFQ-9350",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-050",
+    "field": "currency",
+    "expected": "EUR",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-050",
+    "field": "line_items.0.supplier_sku",
+    "expected": "PP/H50-1",
+    "extracted": "PP/HSO-1",
+    "error_type": "SKU_EXTRACTION_ERROR",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-050",
+    "field": "line_items.0.quantity",
+    "expected": "525",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-050",
+    "field": "line_items.0.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-050",
+    "field": "line_items.0.unit_price",
+    "expected": "10.35",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-050",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-12-10",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-050",
+    "field": "line_items.1.quantity",
+    "expected": "650",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-050",
+    "field": "line_items.1.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-050",
+    "field": "line_items.1.unit_price",
+    "expected": "11.18",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-050",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-12-14",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-050",
+    "field": "line_items.2.quantity",
+    "expected": "775",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-050",
+    "field": "line_items.2.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-050",
+    "field": "line_items.2.unit_price",
+    "expected": "12.01",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": 1,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "holdout-050",
+    "field": "line_items.2.delivery_date",
+    "expected": "2026-12-18",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  }
+]

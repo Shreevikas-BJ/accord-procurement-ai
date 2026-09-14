@@ -1,0 +1,17 @@
+COMMERCIAL OFFER,Holdout layout 1
+Supplier,Red Mesa Electromechanical
+Quote number,HOLD-040-Q
+RFQ number,PILOT-RFQ-9340
+Settlement currency,USD
+Quote date,2026-10-01
+Valid until,2026-12-15
+
+Description,Stock No,Unit Cost,Quoted Quantity,Unit of Measure,Extension,MOQ,Lead
+shielded actuator cable,SG/H40-1,8.65,435,EA,3762.75,10,9 days
+sealed control enclosure,GH/H40-2,9.48,560,EA,5308.80,20,13 days
+
+Subtotal,9071.55
+Freight charge,15
+Sales tax,18.25
+Amount due,9104.80
+Payment terms,Net 45

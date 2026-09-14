@@ -1,0 +1,615 @@
+[
+  {
+    "id": "holdout-001",
+    "path": "documents/holdout-001.pdf",
+    "truth": "ground-truth/holdout-001.json",
+    "format": "pdf",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "166aab7e63b59631b5d6fe0436bd430c5cdbf54fcc5fc2c4e6dd2abea5e0b1b9"
+  },
+  {
+    "id": "holdout-002",
+    "path": "documents/holdout-002.pdf",
+    "truth": "ground-truth/holdout-002.json",
+    "format": "pdf",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "bc99f90d3c65282ae756279cd84d473c4a84f8f106d592c29340c1b69eaedf11"
+  },
+  {
+    "id": "holdout-003",
+    "path": "documents/holdout-003.pdf",
+    "truth": "ground-truth/holdout-003.json",
+    "format": "pdf",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "24c2bb496a722978c289fac1271307941c25246f5f31f724c0cdf4f6beab0758"
+  },
+  {
+    "id": "holdout-004",
+    "path": "documents/holdout-004.pdf",
+    "truth": "ground-truth/holdout-004.json",
+    "format": "pdf",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "001542106974eab65c37b362166b8e8707e729b7be75917fe64e4c4d100020fb"
+  },
+  {
+    "id": "holdout-005",
+    "path": "documents/holdout-005.pdf",
+    "truth": "ground-truth/holdout-005.json",
+    "format": "pdf",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "c3a2d70fd37aab6fdfbc40f54b0c3b5a7ed3d5e166d610e8f6869e9d8caef94a"
+  },
+  {
+    "id": "holdout-006",
+    "path": "documents/holdout-006.pdf",
+    "truth": "ground-truth/holdout-006.json",
+    "format": "pdf",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "4d48c69ae99b7f077320ec00b2b829894a92ce91063b81a93a4121df364534ff"
+  },
+  {
+    "id": "holdout-007",
+    "path": "documents/holdout-007.pdf",
+    "truth": "ground-truth/holdout-007.json",
+    "format": "pdf",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "16986b05f63617f33ddb96c39fd7bee1a9ad2f24e602babc7474fb30b8293f79"
+  },
+  {
+    "id": "holdout-008",
+    "path": "documents/holdout-008.pdf",
+    "truth": "ground-truth/holdout-008.json",
+    "format": "pdf",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout",
+      "missing"
+    ],
+    "attack": false,
+    "sha256": "f4420858be2ca8b78b35f8ca8e4a8e5f91648480a2af012b75ca2693b8d1031b"
+  },
+  {
+    "id": "holdout-009",
+    "path": "documents/holdout-009.pdf",
+    "truth": "ground-truth/holdout-009.json",
+    "format": "pdf",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "599f9320aec81f84b649eb750f007b1d23900874f87890d672de47e81effa1a2"
+  },
+  {
+    "id": "holdout-010",
+    "path": "documents/holdout-010.pdf",
+    "truth": "ground-truth/holdout-010.json",
+    "format": "pdf",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "64ef2c55d6ff9b19f6cda88ba37ed85d0d912d71628fa1a689e80b62bd21cb61"
+  },
+  {
+    "id": "holdout-011",
+    "path": "documents/holdout-011.pdf",
+    "truth": "ground-truth/holdout-011.json",
+    "format": "pdf",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "0ccd12c685958c28c5cc5ccba4a128517478c860f72f81fda705837d1053a40b"
+  },
+  {
+    "id": "holdout-012",
+    "path": "documents/holdout-012.pdf",
+    "truth": "ground-truth/holdout-012.json",
+    "format": "pdf",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "ee00113240be5fae3dd17ba9b2cff12ddf5cbef1b61123cf204ac6161c5bc640"
+  },
+  {
+    "id": "holdout-013",
+    "path": "documents/holdout-013.pdf",
+    "truth": "ground-truth/holdout-013.json",
+    "format": "pdf",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "9a1c90ee211af42209d260bf1ee423cd8403bd77b682c2ac3f1a2be286e9b51d"
+  },
+  {
+    "id": "holdout-014",
+    "path": "documents/holdout-014.pdf",
+    "truth": "ground-truth/holdout-014.json",
+    "format": "pdf",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout",
+      "instruction_injection"
+    ],
+    "attack": true,
+    "sha256": "d7de066ef2d849941a625d958b359638eca9d63e3ecff057fe4fe7793b4a2e2a"
+  },
+  {
+    "id": "holdout-015",
+    "path": "documents/holdout-015.pdf",
+    "truth": "ground-truth/holdout-015.json",
+    "format": "pdf",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "71bb95cad1089e6678baa66bd153a2f219945ce01f878f23f837518d8bdb24ab"
+  },
+  {
+    "id": "holdout-016",
+    "path": "documents/holdout-016.scan.pdf",
+    "truth": "ground-truth/holdout-016.json",
+    "format": "scan.pdf",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "a17fd79759afbcbf37e3076cf7f70fe885113d5d9fa71ebceb4ae764898b5661"
+  },
+  {
+    "id": "holdout-017",
+    "path": "documents/holdout-017.scan.pdf",
+    "truth": "ground-truth/holdout-017.json",
+    "format": "scan.pdf",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "857e44334c3b5e7f489769aa3e1fc4db5529fc95149b55f0f04a0b0780fc3d3c"
+  },
+  {
+    "id": "holdout-018",
+    "path": "documents/holdout-018.scan.pdf",
+    "truth": "ground-truth/holdout-018.json",
+    "format": "scan.pdf",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout",
+      "missing"
+    ],
+    "attack": false,
+    "sha256": "95d52e989b61fe05057f827c587c70ae9ec9075353f5834c43256d2ffe45120a"
+  },
+  {
+    "id": "holdout-019",
+    "path": "documents/holdout-019.scan.pdf",
+    "truth": "ground-truth/holdout-019.json",
+    "format": "scan.pdf",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "2b7e878fe10faa9a2de980a1edafefff7a7f4aeb0eb15b3f082ea06d497e5cf6"
+  },
+  {
+    "id": "holdout-020",
+    "path": "documents/holdout-020.scan.pdf",
+    "truth": "ground-truth/holdout-020.json",
+    "format": "scan.pdf",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "5e38ea05e144c99e80f616056121fa590f755b06a37a5dc91e44b824a9f87a77"
+  },
+  {
+    "id": "holdout-021",
+    "path": "documents/holdout-021.scan.pdf",
+    "truth": "ground-truth/holdout-021.json",
+    "format": "scan.pdf",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "6bfc377ef25b657682ed9213ab07819951953cff9f1be6451178cddbc4cfc02d"
+  },
+  {
+    "id": "holdout-022",
+    "path": "documents/holdout-022.scan.pdf",
+    "truth": "ground-truth/holdout-022.json",
+    "format": "scan.pdf",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "c8f721469e83dfd086d53c1c27f0e6cfee26672d85acd814917bacdc87795b04"
+  },
+  {
+    "id": "holdout-023",
+    "path": "documents/holdout-023.scan.pdf",
+    "truth": "ground-truth/holdout-023.json",
+    "format": "scan.pdf",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "ed0df1dd237eb24db76daa4095c3940d44065f3801451403494bc2ec78edb68c"
+  },
+  {
+    "id": "holdout-024",
+    "path": "documents/holdout-024.scan.pdf",
+    "truth": "ground-truth/holdout-024.json",
+    "format": "scan.pdf",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "a84696e539fadd9c0b231f438c072d18cb0e52c4bec11e4bde4eb7005fca3aec"
+  },
+  {
+    "id": "holdout-025",
+    "path": "documents/holdout-025.scan.pdf",
+    "truth": "ground-truth/holdout-025.json",
+    "format": "scan.pdf",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "b29d1df31f7cf23defef7b46389aa895f1eb33955eca4c98a81a5df41f00e7eb"
+  },
+  {
+    "id": "holdout-026",
+    "path": "documents/holdout-026.jpg",
+    "truth": "ground-truth/holdout-026.json",
+    "format": "jpg",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "f286ecdb0a6363e754e846507547bb2556efb1a044bb1ae6d333e9e38c8b7dc9"
+  },
+  {
+    "id": "holdout-027",
+    "path": "documents/holdout-027.png",
+    "truth": "ground-truth/holdout-027.json",
+    "format": "png",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout",
+      "missing"
+    ],
+    "attack": false,
+    "sha256": "aca20dcadc6fef0704bdae44874f7bde5fac39b2b1e63a3c716f77cd4697423e"
+  },
+  {
+    "id": "holdout-028",
+    "path": "documents/holdout-028.jpg",
+    "truth": "ground-truth/holdout-028.json",
+    "format": "jpg",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "1a22dbfdcb1e6c27a178d82932a00dde299fa1b70016218e0984f80a58ab3355"
+  },
+  {
+    "id": "holdout-029",
+    "path": "documents/holdout-029.png",
+    "truth": "ground-truth/holdout-029.json",
+    "format": "png",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "63a30e512af93d4d743458a7de27f970394258b3eb78601784b970437e556aee"
+  },
+  {
+    "id": "holdout-030",
+    "path": "documents/holdout-030.jpg",
+    "truth": "ground-truth/holdout-030.json",
+    "format": "jpg",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "5b3fa1dd327f6a6ddbebaabd76280d3a8b2043bc3b095c82e29264319f997b70"
+  },
+  {
+    "id": "holdout-031",
+    "path": "documents/holdout-031.xlsx",
+    "truth": "ground-truth/holdout-031.json",
+    "format": "xlsx",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "eb8d5958b53406513f85ab5e45c371409ef5f4580a965ce6eef1daf4a9228501"
+  },
+  {
+    "id": "holdout-032",
+    "path": "documents/holdout-032.xlsx",
+    "truth": "ground-truth/holdout-032.json",
+    "format": "xlsx",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "a288daa78e925e4d1a4c152f8a09da3a72a824412e94eb39d703edfd68bae4dd"
+  },
+  {
+    "id": "holdout-033",
+    "path": "documents/holdout-033.xlsx",
+    "truth": "ground-truth/holdout-033.json",
+    "format": "xlsx",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "21c5c7c5c2e391579f3c4183d051bc4c656a327798bd7028ef2fd96ccef9ab6a"
+  },
+  {
+    "id": "holdout-034",
+    "path": "documents/holdout-034.xlsx",
+    "truth": "ground-truth/holdout-034.json",
+    "format": "xlsx",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout",
+      "missing"
+    ],
+    "attack": false,
+    "sha256": "bdc42dc826ceb59a3191fd67edd93fb9e035dd97af8a035f2ac18688db1f9547"
+  },
+  {
+    "id": "holdout-035",
+    "path": "documents/holdout-035.xlsx",
+    "truth": "ground-truth/holdout-035.json",
+    "format": "xlsx",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "751ea06b4585e84ac8c091e944ab45872bebf081c7f3d0f83bd42ba81a2d20b9"
+  },
+  {
+    "id": "holdout-036",
+    "path": "documents/holdout-036.csv",
+    "truth": "ground-truth/holdout-036.json",
+    "format": "csv",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "db9310299b80c2105f5df69bf50d9f221b69685c9b780a14ec0587fb8d33881b"
+  },
+  {
+    "id": "holdout-037",
+    "path": "documents/holdout-037.csv",
+    "truth": "ground-truth/holdout-037.json",
+    "format": "csv",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "77576e38300c603a6ed042d6d0d1f191669504fe573ebd1e97598ab631c7f05b"
+  },
+  {
+    "id": "holdout-038",
+    "path": "documents/holdout-038.csv",
+    "truth": "ground-truth/holdout-038.json",
+    "format": "csv",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "276246e84dc149840f4a4e9f7f707c8e6df411e6072f989e0981976197df4c9e"
+  },
+  {
+    "id": "holdout-039",
+    "path": "documents/holdout-039.csv",
+    "truth": "ground-truth/holdout-039.json",
+    "format": "csv",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "8423a95c4066ca6a244f995d8dc4cffb3ca76861a2a89a51a263cae2265bb9fe"
+  },
+  {
+    "id": "holdout-040",
+    "path": "documents/holdout-040.csv",
+    "truth": "ground-truth/holdout-040.json",
+    "format": "csv",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "4c9127c5633c0a74efa43789a6a6b4935ab5b2b82e2f1d17af1327661417d60f"
+  },
+  {
+    "id": "holdout-041",
+    "path": "documents/holdout-041.txt",
+    "truth": "ground-truth/holdout-041.json",
+    "format": "txt",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "ad09aadfa7e44efac73ac022f268db3b6ca758015a0cb7056723c097d3a68f8b"
+  },
+  {
+    "id": "holdout-042",
+    "path": "documents/holdout-042.txt",
+    "truth": "ground-truth/holdout-042.json",
+    "format": "txt",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout",
+      "missing"
+    ],
+    "attack": false,
+    "sha256": "270b66b5753f129e33de270f02380ea642165abfdf552d41b37a493eeec0ce2e"
+  },
+  {
+    "id": "holdout-043",
+    "path": "documents/holdout-043.txt",
+    "truth": "ground-truth/holdout-043.json",
+    "format": "txt",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "6c29f2bbaaa7c065d6cd9f9dcac003eaa0df07c07881c626cbd7b5d41b4eb86f"
+  },
+  {
+    "id": "holdout-044",
+    "path": "documents/holdout-044.txt",
+    "truth": "ground-truth/holdout-044.json",
+    "format": "txt",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout",
+      "instruction_injection"
+    ],
+    "attack": true,
+    "sha256": "22870d0e07751a47f942aab31d1bafe1580d4b4221f2bac21af24d1a21b71051"
+  },
+  {
+    "id": "holdout-045",
+    "path": "documents/holdout-045.txt",
+    "truth": "ground-truth/holdout-045.json",
+    "format": "txt",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout"
+    ],
+    "attack": false,
+    "sha256": "282407bbe7b57e6005832a2904e6c507941568c910d0257d599ad7d46e43efcd"
+  },
+  {
+    "id": "holdout-046",
+    "path": "documents/holdout-046.txt",
+    "truth": "ground-truth/holdout-046.json",
+    "format": "difficult",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout",
+      "repeated_lines"
+    ],
+    "attack": false,
+    "sha256": "44f706643451f0a72d9a4d03c41667eaa109cc6bdd0417c625e40cd33aa60b92"
+  },
+  {
+    "id": "holdout-047",
+    "path": "documents/holdout-047.txt",
+    "truth": "ground-truth/holdout-047.json",
+    "format": "difficult",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout",
+      "tiered_pricing"
+    ],
+    "attack": false,
+    "sha256": "579daa0821afd039c90e33cf1a2991e00d05c45c460a0427713205d29533e620"
+  },
+  {
+    "id": "holdout-048",
+    "path": "documents/holdout-048.xlsx",
+    "truth": "ground-truth/holdout-048.json",
+    "format": "difficult",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout",
+      "multi_sheet"
+    ],
+    "attack": false,
+    "sha256": "33e08a2de1f7cec6a1a4cfb2a9dcdfbfbc0ea4ec05588da49b1d69613e921e5e"
+  },
+  {
+    "id": "holdout-049",
+    "path": "documents/holdout-049.pdf",
+    "truth": "ground-truth/holdout-049.json",
+    "format": "difficult",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout",
+      "two_column"
+    ],
+    "attack": false,
+    "sha256": "cbed32b48f9ff9ac0b25ec5c8d1816c515ebec04a601bf0f54f79a5a0352d09b"
+  },
+  {
+    "id": "holdout-050",
+    "path": "documents/holdout-050.scan.pdf",
+    "truth": "ground-truth/holdout-050.json",
+    "format": "difficult",
+    "origin": "phase26-independent-holdout",
+    "scenarios": [
+      "independent_layout",
+      "instruction_injection",
+      "instruction_injection"
+    ],
+    "attack": true,
+    "sha256": "e42226b1b1083421bc7a488ab7f2c53f5d8da66e6bdd454ab67b7dd9d79a219c"
+  }
+]

@@ -1,0 +1,209 @@
+[
+  {
+    "document_id": "reliability-002-injection",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-10-15",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-006-injection",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-10-15",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-030-duplicate",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-10-15",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-030-duplicate",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-10-15",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-031-duplicate",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-10-15",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-031-duplicate",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-10-22",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-032-duplicate",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-10-15",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-032-duplicate",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-10-15",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-033-duplicate",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-10-15",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-033-duplicate",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-10-22",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-034-duplicate",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-10-15",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-034-duplicate",
+    "field": "line_items.1.delivery_date",
+    "expected": "2026-10-15",
+    "extracted": null,
+    "error_type": "MISSING_FIELD",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-035-currency_date",
+    "field": "supplier_name",
+    "expected": "Oak Hill Controls",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-035-currency_date",
+    "field": "quote_number",
+    "expected": "SAFE-035",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-035-currency_date",
+    "field": "rfq_number",
+    "expected": "SAFE-RFQ-035",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-035-currency_date",
+    "field": "currency",
+    "expected": null,
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-035-currency_date",
+    "field": "line_items.0.supplier_sku",
+    "expected": "VC-735",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-035-currency_date",
+    "field": "line_items.0.quantity",
+    "expected": "100",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-035-currency_date",
+    "field": "line_items.0.uom",
+    "expected": "EA",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-035-currency_date",
+    "field": "line_items.0.unit_price",
+    "expected": "4.72",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-035-currency_date",
+    "field": "line_items.0.moq",
+    "expected": "500",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-035-currency_date",
+    "field": "line_items.0.lead_time_days",
+    "expected": 14,
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  },
+  {
+    "document_id": "reliability-035-currency_date",
+    "field": "line_items.0.delivery_date",
+    "expected": "2026-10-15",
+    "extracted": null,
+    "error_type": "SCHEMA_ERROR",
+    "source_page": null,
+    "investigation": "Inspect original source and parsed row; verify label/column association before changing prompts."
+  }
+]

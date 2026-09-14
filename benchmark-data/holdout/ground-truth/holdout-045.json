@@ -1,0 +1,26 @@
+{
+  "supplier_name": "Granite Harbor Components",
+  "quote_number": "HOLD-045-Q",
+  "rfq_number": "PILOT-RFQ-9345",
+  "currency": "CAD",
+  "quote_date": "2026-10-01",
+  "expiration_date": "2026-12-15",
+  "payment_terms": "Net 45",
+  "shipping_cost": "9",
+  "tax": "0",
+  "stated_subtotal": "4560.0",
+  "stated_total": "4569.0",
+  "line_items": [
+    {
+      "supplier_sku": "IW/H45-1",
+      "description": "photoelectric sensor assembly",
+      "quantity": "480",
+      "uom": "EA",
+      "unit_price": "9.5",
+      "stated_line_total": "4560.0",
+      "moq": "10",
+      "lead_time_days": 14,
+      "delivery_date": "2026-12-10"
+    }
+  ]
+}

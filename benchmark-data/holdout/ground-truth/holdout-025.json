@@ -1,0 +1,37 @@
+{
+  "supplier_name": "Granite Harbor Components",
+  "quote_number": "HOLD-025-Q",
+  "rfq_number": "PILOT-RFQ-9325",
+  "currency": "CAD",
+  "quote_date": "2026-10-01",
+  "expiration_date": "2026-12-15",
+  "payment_terms": "Net 45",
+  "shipping_cost": "11",
+  "tax": "0",
+  "stated_subtotal": "4775.25",
+  "stated_total": "4786.25",
+  "line_items": [
+    {
+      "supplier_sku": "NC/H25-1",
+      "description": "braided grounding strap",
+      "quantity": "300",
+      "uom": "EA",
+      "unit_price": "6.1",
+      "stated_line_total": "1830.0",
+      "moq": "10",
+      "lead_time_days": 14,
+      "delivery_date": "2026-12-10"
+    },
+    {
+      "supplier_sku": "PP/H25-2",
+      "description": "stainless pressure adapter",
+      "quantity": "425",
+      "uom": "EA",
+      "unit_price": "6.93",
+      "stated_line_total": "2945.25",
+      "moq": "20",
+      "lead_time_days": 18,
+      "delivery_date": "2026-12-14"
+    }
+  ]
+}

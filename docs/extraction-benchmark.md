@@ -1,6 +1,6 @@
 # Phase 2 extraction benchmark
 
-The historical Phase 2 runs below are retained unchanged. [Phase 2.5 reliability results](phase2.5-reliability.md) provide a freshly reproduced baseline, the 144-document expanded corpus, field-specific safety metrics and the current readiness decision. Compare the same original 100 cases before/after; the 44 new development cases are also reported separately. The current pipeline is `quote-v3` / `local-2.5.2`.
+The historical Phase 2 runs below are retained unchanged. [Phase 2.5 reliability results](phase2.5-reliability.md) record the prior evidence gate. [Phase 2.6 results](phase2.6-pilot-exit.md) add structured row/cell candidates, a freshly reproduced 144-document baseline/development comparison, and a once-run independent 50-document holdout. The current pipeline is `quote-v4` / `local-2.6.1`; its holdout result is **not ready for a buyer pilot**.
 
 This is a development benchmark using actual local Qwen inference. It is not a blinded evaluation or a claim of production accuracy.
 

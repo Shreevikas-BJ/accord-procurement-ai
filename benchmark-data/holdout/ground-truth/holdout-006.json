@@ -1,0 +1,26 @@
+{
+  "supplier_name": "Lighthouse Motion Controls",
+  "quote_number": "HOLD-006-Q",
+  "rfq_number": "PILOT-RFQ-9306",
+  "currency": "EUR",
+  "quote_date": "2026-10-01",
+  "expiration_date": "2026-12-15",
+  "payment_terms": "Net 45",
+  "shipping_cost": "14",
+  "tax": "0",
+  "stated_subtotal": "370.23",
+  "stated_total": "384.23",
+  "line_items": [
+    {
+      "supplier_sku": "RM/H06-1",
+      "description": "DIN rail interface relay",
+      "quantity": "129",
+      "uom": "EA",
+      "unit_price": "2.87",
+      "stated_line_total": "370.23",
+      "moq": "10",
+      "lead_time_days": 15,
+      "delivery_date": "2026-12-10"
+    }
+  ]
+}

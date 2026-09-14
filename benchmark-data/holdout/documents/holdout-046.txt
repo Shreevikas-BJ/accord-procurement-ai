@@ -1,0 +1,18 @@
+From: commercial@holdout.invalid
+Subject: supplier quotation response
+
+COMMERCIAL OFFER: Holdout layout 2
+Supplier: Lighthouse Motion Controls
+Quote number: HOLD-046-Q
+RFQ number: PILOT-RFQ-9346
+Settlement currency: EUR
+Quote date: 2026-10-01
+Valid until: 2026-12-15
+
+SG/H46-1 | shielded actuator cable | Qty 489 | UOM EA | Unit price 9.67 | Line total 4728.63 | MOQ 10 | Lead time 15 days | Delivery 2026-12-10
+SG/H46-1 | shielded actuator cable | Qty 525 | UOM EA | Unit price 4.10 | Line total 2152.50 | MOQ 10 | Lead time 15 days | Delivery 2026-12-22
+Subtotal: 6881.13
+Freight charge: 10
+Sales tax: 0
+Amount due: 6891.13
+Payment terms: Net 45

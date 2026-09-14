@@ -1,0 +1,37 @@
+{
+  "supplier_name": "Lighthouse Motion Controls",
+  "quote_number": "HOLD-046-Q",
+  "rfq_number": "PILOT-RFQ-9346",
+  "currency": "EUR",
+  "quote_date": "2026-10-01",
+  "expiration_date": "2026-12-15",
+  "payment_terms": "Net 45",
+  "shipping_cost": "10",
+  "tax": "0",
+  "stated_subtotal": "6881.13",
+  "stated_total": "6891.13",
+  "line_items": [
+    {
+      "supplier_sku": "SG/H46-1",
+      "description": "shielded actuator cable",
+      "quantity": "489",
+      "uom": "EA",
+      "unit_price": "9.67",
+      "stated_line_total": "4728.63",
+      "moq": "10",
+      "lead_time_days": 15,
+      "delivery_date": "2026-12-10"
+    },
+    {
+      "supplier_sku": "SG/H46-1",
+      "description": "shielded actuator cable",
+      "quantity": "525",
+      "uom": "EA",
+      "unit_price": "4.10",
+      "stated_line_total": "2152.50",
+      "moq": "10",
+      "lead_time_days": 15,
+      "delivery_date": "2026-12-22"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+From: commercial@holdout.invalid
+Subject: supplier quotation response
+
+COMMERCIAL OFFER: Holdout layout 2
+Supplier: North Cove Industrial Supply
+Quote number: HOLD-041-Q
+RFQ number: PILOT-RFQ-9341
+Settlement currency: CAD
+Quote date: 2026-10-01
+Valid until: 2026-12-15
+
+GH/H41-1 | sealed control enclosure | Qty 444 | UOM EA | Unit price 8.82 | Line total 3916.08 | MOQ 10 | Lead time 10 days | Delivery 2026-12-10
+RM/H41-2 | DIN rail interface relay | Qty 569 | UOM EA | Unit price 9.65 | Line total 5490.85 | MOQ 20 | Lead time 14 days | Delivery 2026-12-14
+NC/H41-3 | braided grounding strap | Qty 694 | UOM EA | Unit price 10.48 | Line total 7273.12 | MOQ 30 | Lead time 18 days | Delivery 2026-12-18
+Subtotal: 16680.05
+Freight charge: 16
+Sales tax: 0
+Amount due: 16696.05
+Payment terms: Net 45

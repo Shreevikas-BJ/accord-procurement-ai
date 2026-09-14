@@ -1,0 +1,48 @@
+{
+  "supplier_name": "Saguaro Technical Products",
+  "quote_number": "HOLD-014-Q",
+  "rfq_number": "PILOT-RFQ-9314",
+  "currency": "EUR",
+  "quote_date": "2026-10-01",
+  "expiration_date": "2026-12-15",
+  "payment_terms": "Net 45",
+  "shipping_cost": "11",
+  "tax": "0",
+  "stated_subtotal": "5156.18",
+  "stated_total": "5167.18",
+  "line_items": [
+    {
+      "supplier_sku": "PP/H14-1",
+      "description": "stainless pressure adapter",
+      "quantity": "201",
+      "uom": "EA",
+      "unit_price": "4.23",
+      "stated_line_total": "850.23",
+      "moq": "10",
+      "lead_time_days": 23,
+      "delivery_date": "2026-12-10"
+    },
+    {
+      "supplier_sku": "IW/H14-2",
+      "description": "photoelectric sensor assembly",
+      "quantity": "326",
+      "uom": "EA",
+      "unit_price": "5.06",
+      "stated_line_total": "1649.56",
+      "moq": "20",
+      "lead_time_days": 27,
+      "delivery_date": "2026-12-14"
+    },
+    {
+      "supplier_sku": "SG/H14-3",
+      "description": "shielded actuator cable",
+      "quantity": "451",
+      "uom": "EA",
+      "unit_price": "5.89",
+      "stated_line_total": "2656.39",
+      "moq": "30",
+      "lead_time_days": 31,
+      "delivery_date": "2026-12-18"
+    }
+  ]
+}
