@@ -4,7 +4,7 @@ from decimal import Decimal
 from sqlalchemy import select
 
 from app.models import DocumentExtraction, FieldCorrection, Quote, QuoteItem
-from app.pipeline import process_document
+from app.pipeline import has_supported_quote_fact, process_document
 from app.schemas import LineItemExtraction, QuoteExtraction
 from app.seed import sid
 
@@ -31,6 +31,12 @@ def local_payload():
             ],
         }
     )
+
+
+def test_all_null_extraction_is_not_a_supported_quote():
+    empty = QuoteExtraction(line_items=[LineItemExtraction()])
+    assert not has_supported_quote_fact(empty)
+    assert has_supported_quote_fact(local_payload())
 
 
 def test_local_failure_preserves_source_and_metadata(buyer, db_factory, monkeypatch):

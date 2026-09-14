@@ -16,6 +16,20 @@ from .engine import refresh_alerts
 log = logging.getLogger(__name__)
 
 
+def has_supported_quote_fact(extraction: QuoteExtraction) -> bool:
+    """Prevent an evidence-hardened, all-null payload from becoming a quote."""
+    if any(
+        getattr(extraction, field) is not None
+        for field in ("supplier_name", "quote_number", "rfq_number", "currency")
+    ):
+        return True
+    return any(
+        getattr(line, field) is not None
+        for line in extraction.line_items
+        for field in ("supplier_sku", "quantity", "uom", "unit_price")
+    )
+
+
 def invalidate(db, rfq):
     rfq.revision += 1
     for rec in db.scalars(
@@ -176,6 +190,11 @@ def process_document(document_id, organization_id):
             extraction, provider = extract_quote(
                 text, document.sha256, document_input, diagnostics, allow_fallback=False
             )
+            if not has_supported_quote_fact(extraction):
+                raise ValueError(
+                    "NO_QUOTATION_FIELDS: No supported supplier, quote/RFQ identifier, currency, "
+                    "or line-item fact was found. Enter the quote manually."
+                )
             diagnostics["total_seconds"] = round(time.monotonic() - started, 4)
             stage("Matching Supplier")
             stage("Matching Items")

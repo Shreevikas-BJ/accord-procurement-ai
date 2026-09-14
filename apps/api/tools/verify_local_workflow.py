@@ -57,7 +57,8 @@ def main():
             for correction in corrections:
                 assert correction.provenance["document_id"] == document.id
                 assert correction.provenance["model"] == "qwen2.5vl:7b"
-                assert correction.provenance["prompt_version"] == "quote-v2"
+                assert correction.provenance["prompt_version"] == extraction.diagnostics["prompt_version"]
+                assert correction.provenance["pipeline_version"] == extraction.diagnostics["pipeline_version"]
                 assert correction.created_at and correction.corrected_by
                 assert "original_ai_value" in correction.provenance
             if filename == FILES[0]:
