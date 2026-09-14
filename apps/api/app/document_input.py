@@ -14,7 +14,7 @@ from pathlib import Path
 from PIL import Image
 from pypdf import PdfReader
 
-PIPELINE_VERSION = "local-2.6.1"
+PIPELINE_VERSION = "local-2.7.0"
 
 
 def layout_ocr(path):
@@ -35,6 +35,7 @@ class DocumentInput:
     pages: dict[int, str] = field(default_factory=dict)
     structured_rows: list[dict] = field(default_factory=list)
     metadata: dict = field(default_factory=dict)
+    canonical_document: object | None = None
 
 
 def image_data(path):
@@ -135,6 +136,16 @@ def prepare_document(path: Path) -> DocumentInput:
                     result.image_pages.append(number)
             result.pages[number] = content
         result.text = "\n".join(f"[Page {n}]\n{p}" for n, p in result.pages.items())
+        from .document_structure import canonical_from_rows
+
+        result.canonical_document = canonical_from_rows(
+            path,
+            result.structured_rows,
+            parser_name="pdfplumber",
+            parser_version="0.11.10",
+            source_format="scan.pdf" if any(len(p.strip()) < 80 for p in pages.values()) else "pdf",
+            page_text=result.pages,
+        )
     elif suffix in (".png", ".jpg", ".jpeg"):
         from .structured_input import ocr_candidates
 
@@ -149,6 +160,11 @@ def prepare_document(path: Path) -> DocumentInput:
         ocr_seconds = time.monotonic() - t
         result.pages = {1: content}
         result.text = "[Page 1]\n" + content
+        from .document_structure import canonical_from_rows
+
+        result.canonical_document = canonical_from_rows(
+            path, result.structured_rows, parser_name="tesseract_ocr", parser_version="5.x", page_text=result.pages
+        )
     elif suffix in (".xlsx", ".csv"):
         from .structured_input import spreadsheet_candidates
 
@@ -158,6 +174,14 @@ def prepare_document(path: Path) -> DocumentInput:
         result.metadata.update(spreadsheet_metadata)
         chunks = [json.dumps(row, ensure_ascii=False, default=str) for row in result.structured_rows]
         result.text = "Structured spreadsheet rows; empty cells are missing values.\n" + "\n".join(chunks)
+        from .document_structure import canonical_from_rows
+
+        result.canonical_document = canonical_from_rows(
+            path,
+            result.structured_rows,
+            parser_name="openpyxl" if suffix == ".xlsx" else "python_csv",
+            parser_version="3.1.5" if suffix == ".xlsx" else "3.12",
+        )
     else:
         result.text = parser_for(path.name).parse(path)
     # Reject oversize input rather than silently extract a truncated quotation.
@@ -176,4 +200,13 @@ def prepare_document(path: Path) -> DocumentInput:
         structured_source_types=sorted({row.get("source_type") for row in result.structured_rows if row.get("source_type")}),
         parser_quality="low" if len(result.text.strip()) < 80 else "normal",
     )
+    if result.canonical_document:
+        assessment = result.canonical_document.assessment
+        result.metadata.update(
+            parser=result.canonical_document.parser_name,
+            parser_version=result.canonical_document.parser_version,
+            structure_quality=assessment.state.value,
+            structure_quality_score=assessment.score,
+            structure_quality_signals=assessment.signals,
+        )
     return result
