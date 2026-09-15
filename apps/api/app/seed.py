@@ -293,9 +293,11 @@ def seed():
                     id=supplier_id,
                     organization_id=org,
                     name=name,
+                    normalized_name="".join(ch for ch in name.casefold() if ch.isalnum()),
                     aliases=[name + " LLC", prefix.title() + " Industrial"] if i == 0 else [name + " Ltd"],
                     category=CATEGORIES[0 if i < 4 else i % 8],
                     email_domain=prefix + ".example",
+                    primary_email=f"sales@{prefix}.example",
                     preferred_supplier=i == 1,
                 )
             )
@@ -307,6 +309,7 @@ def seed():
                     supplier_id=sid(f"supplier-{i}"),
                     name="Sales Team",
                     email=f"sales@{name.split()[0].lower()}.example",
+                    normalized_email=f"sales@{name.split()[0].lower()}.example",
                 )
             )
         for i in range(250):

@@ -1,5 +1,5 @@
 import re
-from datetime import date
+from datetime import date, datetime
 from decimal import Decimal
 from typing import Annotated, Literal
 from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
@@ -31,6 +31,13 @@ class Evidence(Strict):
     reason: str | None = Field(default=None, max_length=1000)
     raw_candidate: str | None = Field(default=None, max_length=4000)
     accepted_value: str | None = Field(default=None, max_length=4000)
+    email_id: str | None = None
+    message_id: str | None = Field(default=None, max_length=998)
+    sent_at: datetime | None = None
+    sender: str | None = Field(default=None, max_length=320)
+    subject: str | None = Field(default=None, max_length=998)
+    source_type: Literal["EMAIL_BODY", "EMAIL_TABLE", "EMAIL_HEADER", "SIGNATURE", "ATTACHMENT"] | None = None
+    attachment_id: str | None = None
 
 
 class PriceTier(Strict):
@@ -150,6 +157,37 @@ class PasteInput(Strict):
     subject: str = Field(min_length=1, max_length=200)
     text: str = Field(min_length=20, max_length=100000)
     rfq_id: str | None = None
+
+
+class EmailPasteInput(Strict):
+    raw_email: str | None = Field(default=None, min_length=20, max_length=500000)
+    sender: str | None = Field(default=None, max_length=320)
+    to: list[str] = Field(default_factory=list, max_length=100)
+    cc: list[str] = Field(default_factory=list, max_length=100)
+    subject: str | None = Field(default=None, max_length=998)
+    sent_at: datetime | None = None
+    message_id: str | None = Field(default=None, max_length=998)
+    in_reply_to: str | None = Field(default=None, max_length=998)
+    references: list[str] = Field(default_factory=list, max_length=100)
+    body_text: str | None = Field(default=None, max_length=500000)
+    body_html: str | None = Field(default=None, max_length=500000)
+    rfq_id: str | None = None
+
+    @model_validator(mode="after")
+    def has_message_content(self):
+        if not self.raw_email and not self.body_text and not self.body_html:
+            raise ValueError("Provide raw_email, body_text, or body_html")
+        return self
+
+
+class EmailFieldConfirmation(Strict):
+    field: str = Field(min_length=1, max_length=300)
+    value: str | None = Field(default=None, max_length=4000)
+
+
+class SupplierResolution(Strict):
+    action: Literal["USE_EXISTING", "CREATE_NEW", "REVIEW_LATER", "VERIFY"]
+    supplier_id: str | None = None
 
 
 class UserInput(Strict):
