@@ -1,0 +1,32 @@
+From: Tender Desk <final2@gmail.com>
+To: sourcing@apex.example
+Cc: buyer@apex.example
+Date: Thu, 10 Sep 2026 08:00:00 +0000
+Subject: Response RFQ-1303 =?utf-8?b?4oCU?= Quote No. ZR-8802
+Message-ID: <phase28-final-003@final.local>
+In-Reply-To: <phase28-final-002@final.local>
+References: <phase28-final-002@final.local>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============5123444361644892842=="
+
+--===============5123444361644892842==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Currency: USD
+
+Best regards,
+Mesa Verde Engineering
+
+--===============5123444361644892842==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<table><tr><th>Vendor Part Number</th><th>Quoted Quantity</th><th>Unit Cost</=
+th><th>MOQ</th></tr><tr><td>MV-930</td><td>275</td><td>87.125</td><td>300</td=
+></tr></table><p>Currency: USD</p><p>Best regards,<br>Sam Torres<br>Mesa Verd=
+e Engineering</p>
+
+--===============5123444361644892842==--

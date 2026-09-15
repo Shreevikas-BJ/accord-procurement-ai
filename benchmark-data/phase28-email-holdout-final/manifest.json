@@ -1,0 +1,1311 @@
+{
+  "corpus": "phase28-email-holdout-final",
+  "created_at": "2026-09-15T00:00:00Z",
+  "pipeline_frozen_after_safety_repair": true,
+  "purpose": "Untouched final readiness holdout; never used for parser tuning.",
+  "case_count": 40,
+  "catalog": [
+    {
+      "name": "Saguaro Instrumentation",
+      "domain": "saguaroinstrumentation.invalid",
+      "email": "offers@saguaroinstrumentation.invalid",
+      "aliases": [
+        "Saguaro Systems"
+      ]
+    },
+    {
+      "name": "Canyon State Bearings",
+      "domain": "canyonstatebearings.invalid",
+      "email": "quotes@canyonstatebearings.invalid",
+      "aliases": [
+        "Canyon State Industrial"
+      ]
+    },
+    {
+      "name": "Mesa Verde Electromechanical",
+      "domain": "mesaverdeelectro.invalid",
+      "email": "rfq@mesaverdeelectro.invalid",
+      "aliases": [
+        "Mesa Verde Engineering"
+      ]
+    },
+    {
+      "name": "Copper Basin Fabrication",
+      "domain": "copperbasinfab.invalid",
+      "email": "estimating@copperbasinfab.invalid",
+      "aliases": [
+        "Copper Basin Company"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "phase28-final-001",
+      "file": "emails/phase28-final-001.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_exact_contact_email",
+        "final_variant_0"
+      ],
+      "thread_group": "final-thread-00",
+      "expected": {
+        "supplier_name": "Saguaro Instrumentation",
+        "supplier_method": "EXACT_CONTACT_EMAIL",
+        "rfq_number": "RFQ-1301",
+        "quote_number": "ZR-8800",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "SG-611",
+        "quantity": "600",
+        "unit_price": "13.625",
+        "currency": "USD",
+        "moq": null,
+        "lead_time_days": null,
+        "payment_terms": "Net 60",
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "68845ea1342127861de2c51fd3a36aceab7f1fc56f47d575d71b6d1d76d9c575"
+    },
+    {
+      "id": "phase28-final-002",
+      "file": "emails/phase28-final-002.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_exact_verified_domain",
+        "final_variant_1"
+      ],
+      "thread_group": "final-thread-00",
+      "expected": {
+        "supplier_name": "Canyon State Bearings",
+        "supplier_method": "EXACT_VERIFIED_DOMAIN",
+        "rfq_number": "RFQ-1302",
+        "quote_number": "ZR-8801",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "CS-208",
+        "quantity": "1400",
+        "unit_price": "8.44",
+        "currency": "USD",
+        "moq": null,
+        "lead_time_days": 14,
+        "payment_terms": null,
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "80f929781df157d3083fea694b91a41f6d286c93bc7fea8f96dda0e0842e990a"
+    },
+    {
+      "id": "phase28-final-003",
+      "file": "emails/phase28-final-003.eml",
+      "tags": [
+        "independent_final_holdout",
+        "html_table",
+        "supplier_known_alias",
+        "final_variant_2"
+      ],
+      "thread_group": "final-thread-00",
+      "expected": {
+        "supplier_name": "Mesa Verde Electromechanical",
+        "supplier_method": "KNOWN_ALIAS",
+        "rfq_number": "RFQ-1303",
+        "quote_number": "ZR-8802",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "MV-930",
+        "quantity": "275",
+        "unit_price": "87.125",
+        "currency": "USD",
+        "moq": "300",
+        "lead_time_days": null,
+        "payment_terms": null,
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "3f38bca86656beac18970a47b963ccd35cb4cc533f158cc6d8885a9d116e93b1"
+    },
+    {
+      "id": "phase28-final-004",
+      "file": "emails/phase28-final-004.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_normalized_name",
+        "final_variant_3",
+        "attachment"
+      ],
+      "thread_group": "final-thread-00",
+      "expected": {
+        "supplier_name": "Copper Basin Fabrication",
+        "supplier_method": "NORMALIZED_NAME",
+        "rfq_number": "RFQ-1304",
+        "quote_number": "ZR-8803",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "CB-145",
+        "quantity": "3600",
+        "unit_price": "3.205",
+        "currency": "USD",
+        "moq": "300",
+        "lead_time_days": 14,
+        "payment_terms": "Net 60",
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "cb9e6347e29cdbbba0a4fea10f8d6ad51a5bc857c1287263f58fa93c65b917ab"
+    },
+    {
+      "id": "phase28-final-005",
+      "file": "emails/phase28-final-005.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_new_unverified_created",
+        "final_variant_4",
+        "attachment"
+      ],
+      "thread_group": "final-thread-00",
+      "expected": {
+        "supplier_name": "Thunderbird Motion Systems 4 LLC",
+        "supplier_method": "NEW_UNVERIFIED_CREATED",
+        "rfq_number": "RFQ-1305",
+        "quote_number": "ZR-8804",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "SG-777",
+        "quantity": "825",
+        "unit_price": "24.90",
+        "currency": "USD",
+        "moq": "300",
+        "lead_time_days": 14,
+        "payment_terms": "Net 60",
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "0c321ac6dbb0e0a8e5dd3242b4704b3e6821251d97a27c768b050b91f0a90fc5"
+    },
+    {
+      "id": "phase28-final-006",
+      "file": "emails/phase28-final-006.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_possible_existing_supplier",
+        "final_variant_5",
+        "attachment"
+      ],
+      "thread_group": "final-thread-01",
+      "expected": {
+        "supplier_name": "Canyon State Bearingss Ltd",
+        "supplier_method": "POSSIBLE_EXISTING_SUPPLIER",
+        "rfq_number": "RFQ-1301",
+        "quote_number": "ZR-8805",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "SG-611",
+        "quantity": "600",
+        "unit_price": "13.625",
+        "currency": "USD",
+        "moq": "300",
+        "lead_time_days": 14,
+        "payment_terms": "Net 60",
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "3a1f28a71e90f9b3a88f0fca65da111ccfe15c051791b123b24e158a5ec7686b"
+    },
+    {
+      "id": "phase28-final-007",
+      "file": "emails/phase28-final-007.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_new_unverified_created",
+        "final_variant_6",
+        "attachment"
+      ],
+      "thread_group": "final-thread-01",
+      "expected": {
+        "supplier_name": "Ocotillo Process Controls 6 Inc",
+        "supplier_method": "NEW_UNVERIFIED_CREATED",
+        "rfq_number": "RFQ-1302",
+        "quote_number": "ZR-8806",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "CS-208",
+        "quantity": "1400",
+        "unit_price": "8.44",
+        "currency": "USD",
+        "moq": "300",
+        "lead_time_days": 14,
+        "payment_terms": "Net 60",
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "085666ca7e7d043ea784d41b8bdf89940bff4ff6e2e1cd256e36628c9df0e3c5"
+    },
+    {
+      "id": "phase28-final-008",
+      "file": "emails/phase28-final-008.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_exact_contact_email",
+        "final_variant_7"
+      ],
+      "thread_group": "final-thread-01",
+      "expected": {
+        "supplier_name": "Copper Basin Fabrication",
+        "supplier_method": "EXACT_CONTACT_EMAIL",
+        "rfq_number": "RFQ-1303",
+        "quote_number": "ZR-8807",
+        "email_type": "NEGOTIATION",
+        "quote_expected": true,
+        "sku": "MV-930",
+        "quantity": "275",
+        "unit_price": "87.125",
+        "currency": "USD",
+        "moq": null,
+        "lead_time_days": null,
+        "payment_terms": null,
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "c1580df484bde4df8c0c838da68cf1414e45205835a229ef5909fc2b326ec2cd"
+    },
+    {
+      "id": "phase28-final-009",
+      "file": "emails/phase28-final-009.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_exact_verified_domain",
+        "final_variant_8",
+        "attachment",
+        "conflict"
+      ],
+      "thread_group": "final-thread-01",
+      "expected": {
+        "supplier_name": "Saguaro Instrumentation",
+        "supplier_method": "EXACT_VERIFIED_DOMAIN",
+        "rfq_number": "RFQ-1304",
+        "quote_number": "ZR-8808",
+        "email_type": "QUOTE_REVISION",
+        "quote_expected": true,
+        "sku": "CB-145",
+        "quantity": "3600",
+        "unit_price": "3.205",
+        "currency": "USD",
+        "moq": "300",
+        "lead_time_days": null,
+        "payment_terms": null,
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": true,
+        "prompt_injection_price": null
+      },
+      "sha256": "f98c36c6097b96fba14719c34b6892823d4b86543cbb35b55c90191a9817e1d8"
+    },
+    {
+      "id": "phase28-final-010",
+      "file": "emails/phase28-final-010.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_known_alias",
+        "final_variant_9",
+        "quoted_history"
+      ],
+      "thread_group": "final-thread-01",
+      "expected": {
+        "supplier_name": "Canyon State Bearings",
+        "supplier_method": "KNOWN_ALIAS",
+        "rfq_number": "RFQ-1305",
+        "quote_number": "ZR-8809",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "SG-777",
+        "quantity": "825",
+        "unit_price": "24.90",
+        "currency": "USD",
+        "moq": null,
+        "lead_time_days": null,
+        "payment_terms": null,
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "8dac1c6ae4c86eb9c8cbdcb102a1561ea6c6d9d7815dc346173e4b305452b67a"
+    },
+    {
+      "id": "phase28-final-011",
+      "file": "emails/phase28-final-011.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_normalized_name",
+        "final_variant_0"
+      ],
+      "thread_group": "final-thread-02",
+      "expected": {
+        "supplier_name": "Mesa Verde Electromechanical",
+        "supplier_method": "NORMALIZED_NAME",
+        "rfq_number": "RFQ-1301",
+        "quote_number": "ZR-8810",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "SG-611",
+        "quantity": "600",
+        "unit_price": "13.625",
+        "currency": "USD",
+        "moq": null,
+        "lead_time_days": null,
+        "payment_terms": "Net 60",
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "53ee67910dbfa5e204699c5b76474c8d09b4f7ca43f822ac81fe4592d2bbfe93"
+    },
+    {
+      "id": "phase28-final-012",
+      "file": "emails/phase28-final-012.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_new_unverified_created",
+        "final_variant_1"
+      ],
+      "thread_group": "final-thread-02",
+      "expected": {
+        "supplier_name": "Thunderbird Motion Systems 11 LLC",
+        "supplier_method": "NEW_UNVERIFIED_CREATED",
+        "rfq_number": "RFQ-1302",
+        "quote_number": "ZR-8811",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "CS-208",
+        "quantity": "1400",
+        "unit_price": "8.44",
+        "currency": "USD",
+        "moq": null,
+        "lead_time_days": 14,
+        "payment_terms": null,
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "3eea4ae122463fd67279f4c3417cc7129ffa5f894ec1361a1ec111de4f516e3c"
+    },
+    {
+      "id": "phase28-final-013",
+      "file": "emails/phase28-final-013.eml",
+      "tags": [
+        "independent_final_holdout",
+        "html_table",
+        "supplier_possible_existing_supplier",
+        "final_variant_2",
+        "prompt_injection"
+      ],
+      "thread_group": "final-thread-02",
+      "expected": {
+        "supplier_name": "Saguaro Instrumentations Ltd",
+        "supplier_method": "POSSIBLE_EXISTING_SUPPLIER",
+        "rfq_number": "RFQ-1303",
+        "quote_number": "ZR-8812",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "MV-930",
+        "quantity": "275",
+        "unit_price": "87.125",
+        "currency": "USD",
+        "moq": "300",
+        "lead_time_days": null,
+        "payment_terms": null,
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": "0.01"
+      },
+      "sha256": "ca62f152f525f3322a702b74b8ccc376f8f3a1f6520cfa06c43607fa9b0c96c2"
+    },
+    {
+      "id": "phase28-final-014",
+      "file": "emails/phase28-final-014.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_new_unverified_created",
+        "final_variant_3",
+        "attachment"
+      ],
+      "thread_group": "final-thread-02",
+      "expected": {
+        "supplier_name": "Ocotillo Process Controls 13 Inc",
+        "supplier_method": "NEW_UNVERIFIED_CREATED",
+        "rfq_number": "RFQ-1304",
+        "quote_number": "ZR-8813",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "CB-145",
+        "quantity": "3600",
+        "unit_price": "3.205",
+        "currency": "USD",
+        "moq": "300",
+        "lead_time_days": 14,
+        "payment_terms": "Net 60",
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "f12f792c44ce3d58b8b242b2591eaf8e80322993a9c8f5730f055117b4c1597a"
+    },
+    {
+      "id": "phase28-final-015",
+      "file": "emails/phase28-final-015.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_exact_contact_email",
+        "final_variant_4",
+        "attachment"
+      ],
+      "thread_group": "final-thread-02",
+      "expected": {
+        "supplier_name": "Mesa Verde Electromechanical",
+        "supplier_method": "EXACT_CONTACT_EMAIL",
+        "rfq_number": "RFQ-1305",
+        "quote_number": "ZR-8814",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "SG-777",
+        "quantity": "825",
+        "unit_price": "24.90",
+        "currency": "USD",
+        "moq": "300",
+        "lead_time_days": 14,
+        "payment_terms": "Net 60",
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "1041baafee805334e801e29afd045a09e6cd8345f84af052206a678a23c44494"
+    },
+    {
+      "id": "phase28-final-016",
+      "file": "emails/phase28-final-016.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_exact_verified_domain",
+        "final_variant_5",
+        "attachment"
+      ],
+      "thread_group": "final-thread-03",
+      "expected": {
+        "supplier_name": "Copper Basin Fabrication",
+        "supplier_method": "EXACT_VERIFIED_DOMAIN",
+        "rfq_number": "RFQ-1301",
+        "quote_number": "ZR-8815",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "SG-611",
+        "quantity": "600",
+        "unit_price": "13.625",
+        "currency": "USD",
+        "moq": "300",
+        "lead_time_days": 14,
+        "payment_terms": "Net 60",
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "6541d5c96b45fdaf49d0a9efa71edc84683c4123be0c70caf0db6aa4d6baa6f1"
+    },
+    {
+      "id": "phase28-final-017",
+      "file": "emails/phase28-final-017.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_known_alias",
+        "final_variant_6",
+        "attachment"
+      ],
+      "thread_group": "final-thread-03",
+      "expected": {
+        "supplier_name": "Saguaro Instrumentation",
+        "supplier_method": "KNOWN_ALIAS",
+        "rfq_number": "RFQ-1302",
+        "quote_number": "ZR-8816",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "CS-208",
+        "quantity": "1400",
+        "unit_price": "8.44",
+        "currency": "USD",
+        "moq": "300",
+        "lead_time_days": 14,
+        "payment_terms": "Net 60",
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "f1a6847e84b37f3f81cfce5b3c1d6956fe0b375c57b6366bfb5d1e3492a57043"
+    },
+    {
+      "id": "phase28-final-018",
+      "file": "emails/phase28-final-018.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_normalized_name",
+        "final_variant_7"
+      ],
+      "thread_group": "final-thread-03",
+      "expected": {
+        "supplier_name": "Canyon State Bearings",
+        "supplier_method": "NORMALIZED_NAME",
+        "rfq_number": "RFQ-1303",
+        "quote_number": "ZR-8817",
+        "email_type": "NEGOTIATION",
+        "quote_expected": true,
+        "sku": "MV-930",
+        "quantity": "275",
+        "unit_price": "87.125",
+        "currency": "USD",
+        "moq": null,
+        "lead_time_days": null,
+        "payment_terms": null,
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "6811acda478ccad658e43a2515a58d8b7025b4ef61ad856e69cdf6dddb3c6bb4"
+    },
+    {
+      "id": "phase28-final-019",
+      "file": "emails/phase28-final-019.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_sender_not_supplier",
+        "final_variant_8"
+      ],
+      "thread_group": "final-thread-03",
+      "expected": {
+        "supplier_name": "Apex Industrial Manufacturing",
+        "supplier_method": "SENDER_NOT_SUPPLIER",
+        "rfq_number": "RFQ-1304",
+        "quote_number": "ZR-8818",
+        "email_type": "NEGOTIATION",
+        "quote_expected": false,
+        "sku": null,
+        "quantity": null,
+        "unit_price": null,
+        "currency": null,
+        "moq": null,
+        "lead_time_days": null,
+        "payment_terms": null,
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "00d52e3727c80ddf66cd3ce9ec8e3fa5824f1f3699859fb4c1c8b0e75b31dfb8"
+    },
+    {
+      "id": "phase28-final-020",
+      "file": "emails/phase28-final-020.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_possible_existing_supplier",
+        "final_variant_9",
+        "quoted_history"
+      ],
+      "thread_group": "final-thread-03",
+      "expected": {
+        "supplier_name": "Copper Basin Fabrications Ltd",
+        "supplier_method": "POSSIBLE_EXISTING_SUPPLIER",
+        "rfq_number": "RFQ-1305",
+        "quote_number": "ZR-8819",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "SG-777",
+        "quantity": "825",
+        "unit_price": "24.90",
+        "currency": "USD",
+        "moq": null,
+        "lead_time_days": null,
+        "payment_terms": null,
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "0089a5cfe088d3950ef5a9ce17942f239ba4eb15dbdee2bf9b2cf3434eda6ec6"
+    },
+    {
+      "id": "phase28-final-021",
+      "file": "emails/phase28-final-021.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_new_unverified_created",
+        "final_variant_0"
+      ],
+      "thread_group": "final-thread-04",
+      "expected": {
+        "supplier_name": "Ocotillo Process Controls 20 Inc",
+        "supplier_method": "NEW_UNVERIFIED_CREATED",
+        "rfq_number": "RFQ-1301",
+        "quote_number": "ZR-8820",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "SG-611",
+        "quantity": "600",
+        "unit_price": "13.625",
+        "currency": "USD",
+        "moq": null,
+        "lead_time_days": null,
+        "payment_terms": "Net 60",
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "4db1bc143e3d11a81cf2b8edcc5f8f3f9acc802a6c6ae08283cd1ce90fce8a3b"
+    },
+    {
+      "id": "phase28-final-022",
+      "file": "emails/phase28-final-022.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_exact_contact_email",
+        "final_variant_1"
+      ],
+      "thread_group": "final-thread-04",
+      "expected": {
+        "supplier_name": "Canyon State Bearings",
+        "supplier_method": "EXACT_CONTACT_EMAIL",
+        "rfq_number": "RFQ-1302",
+        "quote_number": "ZR-8821",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "CS-208",
+        "quantity": "1400",
+        "unit_price": "8.44",
+        "currency": "USD",
+        "moq": null,
+        "lead_time_days": 14,
+        "payment_terms": null,
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "fca9ccef7cebd8c8ac22a7532c0f384c0755609df332d45b2e6029b8786c786d"
+    },
+    {
+      "id": "phase28-final-023",
+      "file": "emails/phase28-final-023.eml",
+      "tags": [
+        "independent_final_holdout",
+        "html_table",
+        "supplier_exact_verified_domain",
+        "final_variant_2"
+      ],
+      "thread_group": "final-thread-04",
+      "expected": {
+        "supplier_name": "Mesa Verde Electromechanical",
+        "supplier_method": "EXACT_VERIFIED_DOMAIN",
+        "rfq_number": "RFQ-1303",
+        "quote_number": "ZR-8822",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "MV-930",
+        "quantity": "275",
+        "unit_price": "87.125",
+        "currency": "USD",
+        "moq": "300",
+        "lead_time_days": null,
+        "payment_terms": null,
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "e8795f85d36bba27ee7f87534ff267114f2af6f28fcb1b9a8256ea21a59c173d"
+    },
+    {
+      "id": "phase28-final-024",
+      "file": "emails/phase28-final-024.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_known_alias",
+        "final_variant_3",
+        "attachment"
+      ],
+      "thread_group": "final-thread-04",
+      "expected": {
+        "supplier_name": "Copper Basin Fabrication",
+        "supplier_method": "KNOWN_ALIAS",
+        "rfq_number": "RFQ-1304",
+        "quote_number": "ZR-8823",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "CB-145",
+        "quantity": "3600",
+        "unit_price": "3.205",
+        "currency": "USD",
+        "moq": "300",
+        "lead_time_days": 14,
+        "payment_terms": "Net 60",
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "ca3bd884b8edec8d0778424a8bfd9a243a543e9f06a619344bf5a46c53af9492"
+    },
+    {
+      "id": "phase28-final-025",
+      "file": "emails/phase28-final-025.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_normalized_name",
+        "final_variant_4",
+        "attachment"
+      ],
+      "thread_group": "final-thread-04",
+      "expected": {
+        "supplier_name": "Saguaro Instrumentation",
+        "supplier_method": "NORMALIZED_NAME",
+        "rfq_number": "RFQ-1305",
+        "quote_number": "ZR-8824",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "SG-777",
+        "quantity": "825",
+        "unit_price": "24.90",
+        "currency": "USD",
+        "moq": "300",
+        "lead_time_days": 14,
+        "payment_terms": "Net 60",
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "257f896282f5e95c4b4671fc2a5691c27eaef844203ed16a8bd6df6f1ab902b9"
+    },
+    {
+      "id": "phase28-final-026",
+      "file": "emails/phase28-final-026.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_new_unverified_created",
+        "final_variant_5",
+        "attachment"
+      ],
+      "thread_group": "final-thread-05",
+      "expected": {
+        "supplier_name": "Thunderbird Motion Systems 25 LLC",
+        "supplier_method": "NEW_UNVERIFIED_CREATED",
+        "rfq_number": "RFQ-1301",
+        "quote_number": "ZR-8825",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "SG-611",
+        "quantity": "600",
+        "unit_price": "13.625",
+        "currency": "USD",
+        "moq": "300",
+        "lead_time_days": 14,
+        "payment_terms": "Net 60",
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "96c1ee9c59cd90d83fb08d2109311cc88080cdfda9aa6a427d185fa819cce9b5"
+    },
+    {
+      "id": "phase28-final-027",
+      "file": "emails/phase28-final-027.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_possible_existing_supplier",
+        "final_variant_6",
+        "attachment"
+      ],
+      "thread_group": "final-thread-05",
+      "expected": {
+        "supplier_name": "Mesa Verde Electromechanicals Ltd",
+        "supplier_method": "POSSIBLE_EXISTING_SUPPLIER",
+        "rfq_number": "RFQ-1302",
+        "quote_number": "ZR-8826",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "CS-208",
+        "quantity": "1400",
+        "unit_price": "8.44",
+        "currency": "USD",
+        "moq": "300",
+        "lead_time_days": 14,
+        "payment_terms": "Net 60",
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "d9e1e876fb3feb533ad23a31b06eb72c834033c96fa04ba04e7d2ee0c5a579ae"
+    },
+    {
+      "id": "phase28-final-028",
+      "file": "emails/phase28-final-028.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_new_unverified_created",
+        "final_variant_7"
+      ],
+      "thread_group": "final-thread-05",
+      "expected": {
+        "supplier_name": "Ocotillo Process Controls 27 Inc",
+        "supplier_method": "NEW_UNVERIFIED_CREATED",
+        "rfq_number": "RFQ-1303",
+        "quote_number": "ZR-8827",
+        "email_type": "NEGOTIATION",
+        "quote_expected": true,
+        "sku": "MV-930",
+        "quantity": "275",
+        "unit_price": "87.125",
+        "currency": "USD",
+        "moq": null,
+        "lead_time_days": null,
+        "payment_terms": null,
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "157e7f871f9e713cf853d7bad5bc8a1dd1b133d41e26affa264524f6a95726ca"
+    },
+    {
+      "id": "phase28-final-029",
+      "file": "emails/phase28-final-029.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_exact_contact_email",
+        "final_variant_8",
+        "attachment",
+        "conflict"
+      ],
+      "thread_group": "final-thread-05",
+      "expected": {
+        "supplier_name": "Saguaro Instrumentation",
+        "supplier_method": "EXACT_CONTACT_EMAIL",
+        "rfq_number": "RFQ-1304",
+        "quote_number": "ZR-8828",
+        "email_type": "QUOTE_REVISION",
+        "quote_expected": true,
+        "sku": "CB-145",
+        "quantity": "3600",
+        "unit_price": "3.205",
+        "currency": "USD",
+        "moq": "300",
+        "lead_time_days": null,
+        "payment_terms": null,
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": true,
+        "prompt_injection_price": null
+      },
+      "sha256": "76f24666847445ee8ec6d0702572c41b2c49529c0d613671b226dd0e8b54e118"
+    },
+    {
+      "id": "phase28-final-030",
+      "file": "emails/phase28-final-030.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_exact_verified_domain",
+        "final_variant_9",
+        "quoted_history"
+      ],
+      "thread_group": "final-thread-05",
+      "expected": {
+        "supplier_name": "Canyon State Bearings",
+        "supplier_method": "EXACT_VERIFIED_DOMAIN",
+        "rfq_number": "RFQ-1305",
+        "quote_number": "ZR-8829",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "SG-777",
+        "quantity": "825",
+        "unit_price": "24.90",
+        "currency": "USD",
+        "moq": null,
+        "lead_time_days": null,
+        "payment_terms": null,
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "c8a8cb01a8d05a17610dd7575acc7a0bbd274c239ff2853a8522b8c07ab4663e"
+    },
+    {
+      "id": "phase28-final-031",
+      "file": "emails/phase28-final-031.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_known_alias",
+        "final_variant_0"
+      ],
+      "thread_group": "final-thread-06",
+      "expected": {
+        "supplier_name": "Mesa Verde Electromechanical",
+        "supplier_method": "KNOWN_ALIAS",
+        "rfq_number": "RFQ-1301",
+        "quote_number": "ZR-8830",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "SG-611",
+        "quantity": "600",
+        "unit_price": "13.625",
+        "currency": "USD",
+        "moq": null,
+        "lead_time_days": null,
+        "payment_terms": "Net 60",
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "c81dc1583057752431e97c5f289b1aefa372ffabf078c4b4a85fe74d1e60ae32"
+    },
+    {
+      "id": "phase28-final-032",
+      "file": "emails/phase28-final-032.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_normalized_name",
+        "final_variant_1",
+        "prompt_injection"
+      ],
+      "thread_group": "final-thread-06",
+      "expected": {
+        "supplier_name": "Copper Basin Fabrication",
+        "supplier_method": "NORMALIZED_NAME",
+        "rfq_number": "RFQ-1302",
+        "quote_number": "ZR-8831",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "CS-208",
+        "quantity": "1400",
+        "unit_price": "8.44",
+        "currency": "USD",
+        "moq": null,
+        "lead_time_days": 14,
+        "payment_terms": null,
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": "0.01"
+      },
+      "sha256": "701e055716c297e4277c3fa81748c440708cdd91cbc5db9c3b70a93386d911c0"
+    },
+    {
+      "id": "phase28-final-033",
+      "file": "emails/phase28-final-033.eml",
+      "tags": [
+        "independent_final_holdout",
+        "html_table",
+        "supplier_new_unverified_created",
+        "final_variant_2"
+      ],
+      "thread_group": "final-thread-06",
+      "expected": {
+        "supplier_name": "Thunderbird Motion Systems 32 LLC",
+        "supplier_method": "NEW_UNVERIFIED_CREATED",
+        "rfq_number": "RFQ-1303",
+        "quote_number": "ZR-8832",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "MV-930",
+        "quantity": "275",
+        "unit_price": "87.125",
+        "currency": "USD",
+        "moq": "300",
+        "lead_time_days": null,
+        "payment_terms": null,
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "dc96c3701c655a130885dfc9a9c0199cddc7746df31e6823c9ed5e994884caa1"
+    },
+    {
+      "id": "phase28-final-034",
+      "file": "emails/phase28-final-034.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_possible_existing_supplier",
+        "final_variant_3",
+        "attachment"
+      ],
+      "thread_group": "final-thread-06",
+      "expected": {
+        "supplier_name": "Canyon State Bearingss Ltd",
+        "supplier_method": "POSSIBLE_EXISTING_SUPPLIER",
+        "rfq_number": "RFQ-1304",
+        "quote_number": "ZR-8833",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "CB-145",
+        "quantity": "3600",
+        "unit_price": "3.205",
+        "currency": "USD",
+        "moq": "300",
+        "lead_time_days": 14,
+        "payment_terms": "Net 60",
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "94c4f73f4a4fd40c21a7d99123fad9c814f8a89241ddeb62a9fc3e10c43fe547"
+    },
+    {
+      "id": "phase28-final-035",
+      "file": "emails/phase28-final-035.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_new_unverified_created",
+        "final_variant_4",
+        "attachment"
+      ],
+      "thread_group": "final-thread-06",
+      "expected": {
+        "supplier_name": "Ocotillo Process Controls 34 Inc",
+        "supplier_method": "NEW_UNVERIFIED_CREATED",
+        "rfq_number": "RFQ-1305",
+        "quote_number": "ZR-8834",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "SG-777",
+        "quantity": "825",
+        "unit_price": "24.90",
+        "currency": "USD",
+        "moq": "300",
+        "lead_time_days": 14,
+        "payment_terms": "Net 60",
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "1ea9f59c4146d0de3b8628d14baeee12c3ce3c8133b5b1f49f8706a3be6b1dbc"
+    },
+    {
+      "id": "phase28-final-036",
+      "file": "emails/phase28-final-036.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_exact_contact_email",
+        "final_variant_5",
+        "attachment"
+      ],
+      "thread_group": "final-thread-07",
+      "expected": {
+        "supplier_name": "Copper Basin Fabrication",
+        "supplier_method": "EXACT_CONTACT_EMAIL",
+        "rfq_number": "RFQ-1301",
+        "quote_number": "ZR-8835",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "SG-611",
+        "quantity": "600",
+        "unit_price": "13.625",
+        "currency": "USD",
+        "moq": "300",
+        "lead_time_days": 14,
+        "payment_terms": "Net 60",
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "645654f354f4d9a25e019f4d18d753ed150661668d73b42b14c284dce79ee615"
+    },
+    {
+      "id": "phase28-final-037",
+      "file": "emails/phase28-final-037.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_exact_verified_domain",
+        "final_variant_6",
+        "attachment"
+      ],
+      "thread_group": "final-thread-07",
+      "expected": {
+        "supplier_name": "Saguaro Instrumentation",
+        "supplier_method": "EXACT_VERIFIED_DOMAIN",
+        "rfq_number": "RFQ-1302",
+        "quote_number": "ZR-8836",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "CS-208",
+        "quantity": "1400",
+        "unit_price": "8.44",
+        "currency": "USD",
+        "moq": "300",
+        "lead_time_days": 14,
+        "payment_terms": "Net 60",
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "e5413f7dbc4d14696584a736c250eabbd044151663d95dfa8e93ad20caa132b6"
+    },
+    {
+      "id": "phase28-final-038",
+      "file": "emails/phase28-final-038.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_sender_not_supplier",
+        "final_variant_7"
+      ],
+      "thread_group": "final-thread-07",
+      "expected": {
+        "supplier_name": "Apex Industrial Manufacturing",
+        "supplier_method": "SENDER_NOT_SUPPLIER",
+        "rfq_number": "RFQ-1303",
+        "quote_number": "ZR-8837",
+        "email_type": "NEGOTIATION",
+        "quote_expected": false,
+        "sku": null,
+        "quantity": null,
+        "unit_price": null,
+        "currency": null,
+        "moq": null,
+        "lead_time_days": null,
+        "payment_terms": null,
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "b963afb63c20ffcb9f536721c07d7dbca91cefa655f46f036b638a476c28a2dc"
+    },
+    {
+      "id": "phase28-final-039",
+      "file": "emails/phase28-final-039.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_normalized_name",
+        "final_variant_8",
+        "attachment",
+        "conflict"
+      ],
+      "thread_group": "final-thread-07",
+      "expected": {
+        "supplier_name": "Mesa Verde Electromechanical",
+        "supplier_method": "NORMALIZED_NAME",
+        "rfq_number": "RFQ-1304",
+        "quote_number": "ZR-8838",
+        "email_type": "QUOTE_REVISION",
+        "quote_expected": true,
+        "sku": "CB-145",
+        "quantity": "3600",
+        "unit_price": "3.205",
+        "currency": "USD",
+        "moq": "300",
+        "lead_time_days": null,
+        "payment_terms": null,
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": true,
+        "prompt_injection_price": null
+      },
+      "sha256": "f5caa89846d08b7407a156edc44e070be78acfb82b70cbc7d807c2773f9c33d0"
+    },
+    {
+      "id": "phase28-final-040",
+      "file": "emails/phase28-final-040.eml",
+      "tags": [
+        "independent_final_holdout",
+        "plain_text",
+        "supplier_new_unverified_created",
+        "final_variant_9",
+        "quoted_history"
+      ],
+      "thread_group": "final-thread-07",
+      "expected": {
+        "supplier_name": "Thunderbird Motion Systems 39 LLC",
+        "supplier_method": "NEW_UNVERIFIED_CREATED",
+        "rfq_number": "RFQ-1305",
+        "quote_number": "ZR-8839",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "SG-777",
+        "quantity": "825",
+        "unit_price": "24.90",
+        "currency": "USD",
+        "moq": null,
+        "lead_time_days": null,
+        "payment_terms": null,
+        "shipping_cost": null,
+        "tax": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "0437d1e36c55ff15f417a65e2447eec5592f9bdb66ba5f86490b55a65ef99299"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+From: Offer Desk <offers@saguaroinstrumentation.invalid>
+To: sourcing@apex.example
+Cc: buyer@apex.example
+Date: Mon, 14 Sep 2026 16:00:00 +0000
+Subject: RE: Updated Response RFQ-1304 =?utf-8?b?4oCU?= Quote No. ZR-8828
+Message-ID: <phase28-final-029@final.local>
+In-Reply-To: <phase28-final-028@final.local>
+References: <phase28-final-028@final.local>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============6401109879578469369=="
+
+--===============6401109879578469369==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+This final quotation in the attachment supersedes earlier pricing.
+CB-145 Qty: 3600 Unit Price: 777.00
+USD
+
+Best regards,
+Sam Torres
+Saguaro Instrumentation
+
+--===============6401109879578469369==
+Content-Type: text/csv
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="pricing-schedule.csv"
+MIME-Version: 1.0
+
+VmVuZG9yIFBhcnQgTnVtYmVyLFF1b3RlZCBRdWFudGl0eSxVbml0IENvc3QsTU9RDQpDQi0xNDUs
+MzYwMCwzLjIwNSwzMDA=
+
+--===============6401109879578469369==--
