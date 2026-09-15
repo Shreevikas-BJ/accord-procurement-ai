@@ -23,6 +23,81 @@ export interface Evidence {
   reason?: string | null;
   raw_candidate?: string | null;
   accepted_value?: string | null;
+  email_id?: string | null;
+  message_id?: string | null;
+  sent_at?: string | null;
+  sender?: string | null;
+  subject?: string | null;
+  source_type?:
+    | "EMAIL_BODY"
+    | "EMAIL_TABLE"
+    | "EMAIL_HEADER"
+    | "SIGNATURE"
+    | "ATTACHMENT"
+    | null;
+  attachment_id?: string | null;
+}
+
+export interface ProcurementEmail extends Row {
+  thread_id: string | null;
+  message_id: string | null;
+  sender_name: string;
+  sender_email: string;
+  sender_domain: string;
+  recipient_emails: string[];
+  cc_emails: string[];
+  subject: string;
+  sent_at: string | null;
+  body_text: string;
+  normalized_body: string;
+  quoted_history: string;
+  signature: string;
+  email_type: string;
+  sender_role: string;
+  supplier_id: string | null;
+  supplier_name?: string;
+  rfq_id: string | null;
+  quote_id: string | null;
+  status: string;
+  status_reason: string | null;
+  attachment_count?: number;
+  processing_metrics: Record<string, unknown>;
+  supplier: (Row & { name: string; status: string; primary_email?: string }) | null;
+  rfq: (Row & { number: string; title: string }) | null;
+  attachments: (Row & {
+    filename: string;
+    content_type: string;
+    size: number;
+    supported: boolean;
+    processed: boolean;
+    status: string;
+    error: string | null;
+  })[];
+  evidence: (Row & {
+    field: string;
+    value: { value: string | null };
+    source_type: string;
+    source_snippet: string;
+    decision_status: string;
+    reason: string | null;
+  })[];
+  conflicts: (Row & {
+    field: string;
+    email_value: { value: string };
+    attachment_value: { value: string };
+    resolution: string;
+    reason: string;
+  })[];
+  supplier_candidates: Row[];
+  timeline: {
+    email_id: string;
+    sent_at: string | null;
+    sender: string;
+    type: string;
+    subject: string;
+    status: string;
+    quote_id: string | null;
+  }[];
 }
 export interface Finding {
   code: string;

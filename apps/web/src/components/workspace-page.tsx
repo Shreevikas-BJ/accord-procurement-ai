@@ -5,6 +5,7 @@ import { Comparison } from "./comparison";
 import { ReviewPage } from "./review";
 import { Inbox, DocumentPage } from "./inbox";
 import { SettingsPage } from "./settings";
+import { EmailDetailPage } from "./email-intake";
 import { Empty } from "./shared";
 export function WorkspacePage({ path }: { path: string[] }) {
   const [section, id] = path;
@@ -12,6 +13,7 @@ export function WorkspacePage({ path }: { path: string[] }) {
   if (section === "rfqs" && id) return <Comparison id={id} />;
   if (section === "quotes" && id) return <ReviewPage id={id} />;
   if (section === "documents" && id) return <DocumentPage id={id} />;
+  if (section === "emails" && id) return <EmailDetailPage id={id} />;
   if (["suppliers", "items"].includes(section) && id)
     return <DetailPage kind={section} id={id} />;
   if (

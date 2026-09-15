@@ -33,3 +33,214 @@
   display: block;
   margin-top: 12px;
 }
+
+.email-table td:nth-child(4),
+.email-table td:nth-child(4) svg {
+  vertical-align: middle;
+}
+.email-sender {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  min-width: 260px;
+}
+.email-sender > div {
+  display: grid;
+  gap: 2px;
+}
+.email-sender small,
+.email-sender time {
+  display: block;
+  color: var(--color-muted-foreground);
+  font-size: 10px;
+}
+.mail-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: #49675a;
+  background: #edf4f0;
+  flex-shrink: 0;
+}
+.email-review-banner {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 18px;
+  padding: 14px 16px;
+  border: 1px solid #e8c97c;
+  border-radius: 7px;
+  background: #fff9e9;
+  color: #7c5a17;
+}
+.email-review-banner p {
+  margin: 3px 0 0;
+  font-size: 12px;
+}
+.email-detail-grid,
+.email-lower-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(300px, 0.85fr);
+  gap: 18px;
+  align-items: start;
+  margin-bottom: 18px;
+}
+.email-lower-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.email-side-stack {
+  display: grid;
+  gap: 18px;
+}
+.email-header-grid {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  gap: 8px 12px;
+  padding: 16px 18px;
+  margin: -20px -20px 20px;
+  border-bottom: 1px solid var(--color-border);
+  background: #fafcfb;
+}
+.email-header-grid > span {
+  color: var(--color-muted-foreground);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.email-header-grid strong,
+.email-header-grid p,
+.email-header-grid code {
+  grid-column: 2;
+  margin: -27px 0 0;
+  overflow-wrap: anywhere;
+  font-size: 11px;
+}
+.email-header-grid small {
+  grid-column: 2;
+  margin-top: -5px;
+  color: var(--color-muted-foreground);
+}
+.clean-email-body h2 {
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+.clean-email-body pre,
+.quoted-history pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font: inherit;
+  font-size: 12px;
+  line-height: 1.65;
+}
+.quoted-history {
+  margin-top: 22px;
+  border-top: 1px solid var(--color-border);
+  padding-top: 14px;
+  color: var(--color-muted-foreground);
+}
+.quoted-history summary {
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+}
+.identity-card dl {
+  display: grid;
+  grid-template-columns: 105px 1fr;
+  gap: 12px;
+  margin: 18px 0;
+}
+.identity-card dt {
+  color: var(--color-muted-foreground);
+  font-size: 10px;
+}
+.identity-card dd {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 600;
+}
+.attachment-list,
+.timeline-list,
+.email-evidence-list,
+.conflict-list {
+  display: grid;
+  gap: 9px;
+}
+.attachment-list a,
+.timeline-list a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  color: inherit;
+  text-decoration: none;
+}
+.attachment-list a:hover,
+.timeline-list a:hover {
+  border-color: #92aa9e;
+  background: #f9fbfa;
+}
+.attachment-list span,
+.timeline-list span {
+  display: grid;
+  gap: 2px;
+  flex: 1;
+}
+.attachment-list small,
+.timeline-list small {
+  color: var(--color-muted-foreground);
+  font-size: 9px;
+}
+.timeline-list time {
+  width: 76px;
+  color: var(--color-muted-foreground);
+  font-size: 9px;
+}
+.conflict-card {
+  margin-bottom: 18px;
+  border-color: #e8c97c !important;
+}
+.conflict-list > div {
+  display: grid;
+  grid-template-columns: minmax(150px, 1.4fr) 1fr 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--color-border);
+  font-size: 11px;
+}
+.email-evidence-list details {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 10px 12px;
+}
+.email-evidence-list summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 10px;
+}
+.email-evidence-list blockquote {
+  margin: 12px 0 7px;
+  padding-left: 10px;
+  border-left: 2px solid #91aa9e;
+  color: #42554c;
+  font-size: 11px;
+}
+.email-evidence-list > details > small {
+  color: var(--color-muted-foreground);
+  font-size: 9px;
+}
+@media (max-width: 900px) {
+  .email-detail-grid,
+  .email-lower-grid {
+    grid-template-columns: 1fr;
+  }
+  .conflict-list > div {
+    grid-template-columns: 1fr;
+  }
+}

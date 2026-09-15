@@ -1,0 +1,31 @@
+From: Atlas Quotes <sales@atlas.example>
+To: buyer@apex.example
+Date: Mon, 14 Sep 2026 10:00:00 -0700
+Subject: RE: RFQ-1003 Revised Quote #ATL-EMAIL-28
+Message-ID: <phase28-atlas-revised@atlas.example>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="accord-phase28"
+
+--accord-phase28
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Hello,
+
+Please use the revised attached quotation. Pricing is in USD.
+Lead time: 3 weeks
+Payment terms: Net 30
+Freight included
+
+Regards,
+Jamie Lee
+Atlas Industrial Supply LLC
+
+--accord-phase28
+Content-Type: text/csv; charset="utf-8"; name="Atlas_RFQ1003_Revised.csv"
+Content-Disposition: attachment; filename="Atlas_RFQ1003_Revised.csv"
+Content-Transfer-Encoding: base64
+
+U0tVLFF0eSxVbml0IFByaWNlLE1PUQ0KQVgtMTAwLDUwMDAsNC40OCw1MDANCg==
+
+--accord-phase28--
