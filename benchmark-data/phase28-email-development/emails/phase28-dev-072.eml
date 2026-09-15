@@ -1,0 +1,20 @@
+From: Jamie Lee <jamie.71@vertexindustrial.com>
+To: buyer@apex.example
+Date: Mon, 03 Aug 2026 23:00:00 +0000
+Subject: RFQ-1005 Quote #Q28-072
+Message-ID: <phase28-dev-072@example.local>
+In-Reply-To: <phase28-dev-071@example.local>
+References: <phase28-dev-071@example.local>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+CX-300
+Quantity: 2500
+Unit price: 19.80
+USD
+Lead time: 3 weeks
+
+Regards,
+Jamie Lee
+Vertex Industrial

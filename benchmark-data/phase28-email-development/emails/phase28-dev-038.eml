@@ -1,0 +1,30 @@
+From: Quotes <supplier37@gmail.com>
+To: buyer@apex.example
+Date: Sun, 02 Aug 2026 13:00:00 +0000
+Subject: RFQ-1004 Quote #Q28-038
+Message-ID: <phase28-dev-038@example.local>
+In-Reply-To: <phase28-dev-037@example.local>
+References: <phase28-dev-037@example.local>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============4912707914443511066=="
+
+--===============4912707914443511066==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+BX-220 Qty: 1000 Unit Price: 4.60
+Currency: USD
+
+Regards,
+Jamie Lee
+Meridian Components Ltd
+
+--===============4912707914443511066==
+Content-Type: text/csv
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="quote.csv"
+MIME-Version: 1.0
+
+U0tVLFF0eSxVbml0IFByaWNlLE1PUQpCWC0yMjAsMTAwMCw0Ni41OCw1MDAK
+
+--===============4912707914443511066==--

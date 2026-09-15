@@ -1,0 +1,32 @@
+From: Morgan Chen <copper76@yahoo.com>
+To: buyer@apex.example
+Date: Tue, 04 Aug 2026 04:00:00 +0000
+Subject: RFQ-1004 Quote #Q28-077
+Message-ID: <phase28-dev-077@example.local>
+In-Reply-To: <phase28-dev-076@example.local>
+References: <phase28-dev-076@example.local>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============3638726932197350812=="
+
+--===============3638726932197350812==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Attached is our quotation. Currency: EUR
+Lead time: 21 days
+Payment terms: Net 30
+
+Regards,
+Jamie Lee
+Copper Ridge Automation 76 LLC
+
+--===============3638726932197350812==
+Content-Type: text/plain
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="quote.txt"
+MIME-Version: 1.0
+
+Q3VycmVuY3k6IEVVUgpCWC0yMjAgUXR5OiAxMDAwIFVuaXQgUHJpY2U6IDQ2LjU4IE1PUTogNTAw
+Cg==
+
+--===============3638726932197350812==--

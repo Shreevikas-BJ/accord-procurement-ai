@@ -160,7 +160,9 @@ def extract_candidate(
         f"{context.subject or ''}\n{text}",
         re.I,
     )
-    if quote_match and not quote_match.group(1).casefold().startswith(("is", "for", "attached", "revised", "updated")):
+    if quote_match and not quote_match.group(1).casefold().startswith(
+        ("is", "for", "attached", "revised", "updated", "generated", "available", "only", "subject")
+    ):
         _set(candidate, "quote_number", quote_match.group(1), quote_match.group(0), context)
     currency_match = re.search(r"\b(USD|EUR|GBP|CAD|AUD|JPY|CNY|CHF|MXN)\b", text, re.I)
     if currency_match:

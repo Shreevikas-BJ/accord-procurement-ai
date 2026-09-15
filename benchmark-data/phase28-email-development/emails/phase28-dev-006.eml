@@ -1,0 +1,29 @@
+From: Quotes <supplier5@gmail.com>
+To: buyer@apex.example
+Date: Sat, 01 Aug 2026 05:00:00 +0000
+Subject: RFQ-1005 Quote #Q28-006
+Message-ID: <phase28-dev-006@example.local>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============0186995623420891885=="
+
+--===============0186995623420891885==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Attached is our quotation. Currency: USD
+Lead time: 21 days
+Payment terms: Net 30
+
+Regards,
+Jamie Lee
+Meridian Componentss LLC
+
+--===============0186995623420891885==
+Content-Type: text/csv
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="quote.csv"
+MIME-Version: 1.0
+
+U0tVLFF0eSxVbml0IFByaWNlLE1PUQpDWC0zMDAsMjUwMCwxOS44MCw1MDAK
+
+--===============0186995623420891885==--

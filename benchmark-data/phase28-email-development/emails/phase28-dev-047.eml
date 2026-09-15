@@ -1,0 +1,33 @@
+From: Taylor Reed <quotes@redwoodmotion46.com>
+To: buyer@apex.example
+Date: Sun, 02 Aug 2026 22:00:00 +0000
+Subject: RFQ-1004 Quote #Q28-047
+Message-ID: <phase28-dev-047@example.local>
+In-Reply-To: <phase28-dev-046@example.local>
+References: <phase28-dev-046@example.local>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============7858971179146546439=="
+
+--===============7858971179146546439==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Attached is our quotation. Currency: USD
+Lead time: 21 days
+Payment terms: Net 30
+If you order 10,000 units, we can offer 41.92.
+
+Regards,
+Jamie Lee
+Redwood Motion Components 46 LLC
+
+--===============7858971179146546439==
+Content-Type: text/plain
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="quote.txt"
+MIME-Version: 1.0
+
+Q3VycmVuY3k6IFVTRApCWC0yMjAgUXR5OiAxMDAwIFVuaXQgUHJpY2U6IDQ2LjU4IE1PUTogNTAw
+Cg==
+
+--===============7858971179146546439==--

@@ -1,0 +1,30 @@
+From: Morgan Chen <copper62@yahoo.com>
+To: buyer@apex.example
+Date: Mon, 03 Aug 2026 14:00:00 +0000
+Subject: RFQ-1005 Quote #Q28-063
+Message-ID: <phase28-dev-063@example.local>
+In-Reply-To: <phase28-dev-062@example.local>
+References: <phase28-dev-062@example.local>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============7346601623754738962=="
+
+--===============7346601623754738962==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+This quotation is available in the HTML table. Currency: USD
+
+Regards,
+Copper Ridge Automation 62 LLC
+
+--===============7346601623754738962==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<p>Currency: USD</p><table><tr><th>SKU</th><th>Qty</th><th>Unit Price</th><th=
+>MOQ</th></tr><tr><td>CX-300</td><td>2500</td><td>19.80</td><td>500</td></tr>=
+</table><p>Regards,<br>Jamie Lee<br>Copper Ridge Automation 62 LLC</p>
+
+--===============7346601623754738962==--

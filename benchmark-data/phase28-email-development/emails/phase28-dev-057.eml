@@ -1,0 +1,32 @@
+From: Sales Team <quotes@atlasindustrial.com>
+To: buyer@apex.example
+Date: Mon, 03 Aug 2026 08:00:00 +0000
+Subject: RFQ-1005 Quote #Q28-057
+Message-ID: <phase28-dev-057@example.local>
+In-Reply-To: <phase28-dev-056@example.local>
+References: <phase28-dev-056@example.local>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============0297455638266118971=="
+
+--===============0297455638266118971==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Attached is our quotation. Currency: USD
+Lead time: 21 days
+Payment terms: Net 30
+
+Regards,
+Jamie Lee
+Atlas Industrial Supply
+
+--===============0297455638266118971==
+Content-Type: text/plain
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="quote.txt"
+MIME-Version: 1.0
+
+Q3VycmVuY3k6IFVTRApDWC0zMDAgUXR5OiAyNTAwIFVuaXQgUHJpY2U6IDE5LjgwIE1PUTogNTAw
+Cg==
+
+--===============0297455638266118971==--

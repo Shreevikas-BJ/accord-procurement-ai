@@ -1,0 +1,20 @@
+From: Quotes <supplier61@gmail.com>
+To: buyer@apex.example
+Date: Mon, 03 Aug 2026 13:00:00 +0000
+Subject: RFQ-1004 Quote #Q28-062
+Message-ID: <phase28-dev-062@example.local>
+In-Reply-To: <phase28-dev-061@example.local>
+References: <phase28-dev-061@example.local>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+BX-220
+Quantity: 1000
+Unit price: 46.58
+USD
+Lead time: 3 weeks
+
+Regards,
+Jamie Lee
+Meridian Componentss LLC

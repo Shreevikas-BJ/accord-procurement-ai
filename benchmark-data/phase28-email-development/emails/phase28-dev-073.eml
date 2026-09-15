@@ -1,0 +1,30 @@
+From: Quotes <supplier72@gmail.com>
+To: buyer@apex.example
+Date: Tue, 04 Aug 2026 00:00:00 +0000
+Subject: RFQ-1003 Quote #Q28-073
+Message-ID: <phase28-dev-073@example.local>
+In-Reply-To: <phase28-dev-072@example.local>
+References: <phase28-dev-072@example.local>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============4878760310471700968=="
+
+--===============4878760310471700968==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+This quotation is available in the HTML table. Currency: USD
+
+Regards,
+Atlas Industrial
+
+--===============4878760310471700968==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<p>Currency: USD</p><table><tr><th>SKU</th><th>Qty</th><th>Unit Price</th><th=
+>MOQ</th></tr><tr><td>AX-100</td><td>5000</td><td>4.48</td><td>500</td></tr><=
+/table><p>Regards,<br>Jamie Lee<br>Atlas Industrial</p>
+
+--===============4878760310471700968==--

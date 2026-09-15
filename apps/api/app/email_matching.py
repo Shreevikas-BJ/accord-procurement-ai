@@ -44,6 +44,10 @@ def normalized_email(value: str | None) -> str:
 
 def normalized_supplier_name(value: str | None) -> str:
     tokens = re.findall(r"[a-z0-9]+", (value or "").casefold())
+    if tokens[-3:] == ["l", "l", "c"]:
+        tokens = tokens[:-3]
+    elif tokens[-3:] == ["l", "l", "p"]:
+        tokens = tokens[:-3]
     while tokens and tokens[-1] in LEGAL_SUFFIXES:
         tokens.pop()
     return "".join(tokens)

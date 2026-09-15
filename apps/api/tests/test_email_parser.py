@@ -104,3 +104,10 @@ def test_prompt_injection_is_only_untrusted_text():
     )
     assert str(candidate["line_items"][0]["unit_price"]) == "4.48"
 
+
+def test_quote_prose_does_not_become_quote_number():
+    candidate = extract_candidate(
+        "Digital quotation generated for local parser evaluation only.\nAX-100 Qty: 5000 Unit Price: 4.48",
+        context=SourceContext(source_type="ATTACHMENT"),
+    )
+    assert candidate.get("quote_number") is None
