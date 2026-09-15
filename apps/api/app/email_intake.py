@@ -17,7 +17,7 @@ from sqlalchemy import func, select
 from .common import audit, serialize
 from .db import SessionLocal
 from .document_input import DocumentInput, prepare_document
-from .email_extraction import SourceContext, candidate_has_quote, extract_candidate
+from .email_extraction import SourceContext, candidate_has_quote, extract_candidate, has_prompt_injection
 from .email_matching import (
     GENERIC_DOMAINS,
     match_rfq,
@@ -375,7 +375,11 @@ def _merge_semantic(base: dict, semantic: dict) -> dict:
 
 
 def _qwen_candidate(text: str, sha: str, context: SourceContext, document_input=None) -> dict | None:
-    if os.getenv("AI_MODE", "demo") != "local" or os.getenv("EMAIL_USE_QWEN", "true").lower() != "true":
+    if (
+        has_prompt_injection(text)
+        or os.getenv("AI_MODE", "demo") != "local"
+        or os.getenv("EMAIL_USE_QWEN", "true").lower() != "true"
+    ):
         return None
     try:
         diagnostics = {}

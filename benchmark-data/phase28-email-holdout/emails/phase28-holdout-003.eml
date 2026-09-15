@@ -1,0 +1,31 @@
+From: Bid Desk <holdout2@gmail.com>
+To: buyer@apex.example
+Date: Tue, 01 Sep 2026 06:00:00 +0000
+Subject: RFQ-1203 / Quotation #HX-7402
+Message-ID: <phase28-holdout-003@holdout.local>
+In-Reply-To: <phase28-holdout-002@holdout.local>
+References: <phase28-holdout-002@holdout.local>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============5746774065007923224=="
+
+--===============5746774065007923224==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Currency: USD
+
+Sincerely,
+Ironwood Technical
+
+--===============5746774065007923224==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<div>Currency: USD</div><table><tr><th>Supplier Part Number</th><th>Order Qty=
+</th><th>Price Each</th><th>Minimum Order Quantity</th></tr><tr><td>IT-905</t=
+d><td>320</td><td>104.50</td><td>250</td></tr></table><p>Sincerely,<br>Riley =
+Park<br>Ironwood Technical</p>
+
+--===============5746774065007923224==--

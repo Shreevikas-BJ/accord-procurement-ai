@@ -1,0 +1,33 @@
+From: Commercial Desk <pricing@ironwoodtechnical.test>
+To: buyer@apex.example
+Date: Wed, 02 Sep 2026 18:00:00 +0000
+Subject: RFQ-1203 / Quotation #HX-7414
+Message-ID: <phase28-holdout-015@holdout.local>
+In-Reply-To: <phase28-holdout-014@holdout.local>
+References: <phase28-holdout-014@holdout.local>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============4671027411139178472=="
+
+--===============4671027411139178472==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Please review the enclosed commercial schedule.
+Currency: USD
+Lead time: 12 days
+Terms: Net 45
+
+Sincerely,
+Riley Park
+Ironwood Technical Supply
+
+--===============4671027411139178472==
+Content-Type: text/plain
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="commercial-offer.txt"
+MIME-Version: 1.0
+
+SVQtOTA1IFF1YW50aXR5OiAzMjAgUHJpY2UgZWFjaDogMTA0LjUwIE1PUTogMjUwCkN1cnJlbmN5
+OiBVU0QK
+
+--===============4671027411139178472==--

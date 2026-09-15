@@ -1,0 +1,33 @@
+From: Commercial Desk <commercial@kestrelcontrols.test>
+To: buyer@apex.example
+Date: Thu, 03 Sep 2026 15:00:00 +0000
+Subject: RFQ-1202 / Quotation #HX-7421
+Message-ID: <phase28-holdout-022@holdout.local>
+In-Reply-To: <phase28-holdout-021@holdout.local>
+References: <phase28-holdout-021@holdout.local>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============8752301815675394655=="
+
+--===============8752301815675394655==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Please review the enclosed commercial schedule.
+Currency: USD
+Lead time: 12 days
+Terms: Net 45
+
+Sincerely,
+Riley Park
+Kestrel Process Controls
+
+--===============8752301815675394655==
+Content-Type: text/csv
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="commercial-offer.csv"
+MIME-Version: 1.0
+
+OyBnZW5lcmF0ZWQgbG9jYWxseQpTdXBwbGllciBQYXJ0IE51bWJlcixPcmRlciBRdHksUHJpY2Ug
+RWFjaCxNaW5pbXVtIE9yZGVyIFF1YW50aXR5CkJNLTQ0MCwxODAwLDcuOTIsMjUwCg==
+
+--===============8752301815675394655==--

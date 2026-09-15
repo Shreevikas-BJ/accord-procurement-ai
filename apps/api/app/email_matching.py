@@ -142,7 +142,7 @@ def match_supplier_email(db, org: str, *, email: str, domain: str, name: str | N
 def supplier_name_from_identity(sender_name: str, signature: str, sender_domain: str) -> str:
     lines = [re.sub(r"\s+", " ", line).strip(" ,|-") for line in signature.splitlines() if line.strip()]
     company_words = re.compile(
-        r"\b(?:supply|supplies|industrial|industries|manufacturing|components|automation|engineering|company|corp|inc|llc|ltd|gmbh)\b",
+        r"\b(?:supply|supplies|industrial|industries|manufacturing|component|components|controls|technical|systems|automation|engineering|company|co|corp|inc|incorporated|llc|ltd|gmbh)\b",
         re.I,
     )
     for line in reversed(lines):

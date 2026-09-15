@@ -1,0 +1,31 @@
+From: Bid Desk <holdout10@outlook.com>
+To: buyer@apex.example
+Date: Wed, 02 Sep 2026 06:00:00 +0000
+Subject: RFQ-1203 / Quotation #HX-7410
+Message-ID: <phase28-holdout-011@holdout.local>
+In-Reply-To: <phase28-holdout-010@holdout.local>
+References: <phase28-holdout-010@holdout.local>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============5844316291552664270=="
+
+--===============5844316291552664270==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Currency: USD
+
+Sincerely,
+Blue Mesa Components Incorporated
+
+--===============5844316291552664270==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<div>Currency: USD</div><table><tr><th>Supplier Part Number</th><th>Order Qty=
+</th><th>Price Each</th><th>Minimum Order Quantity</th></tr><tr><td>IT-905</t=
+d><td>320</td><td>104.50</td><td>250</td></tr></table><p>Sincerely,<br>Riley =
+Park<br>Blue Mesa Components Incorporated</p>
+
+--===============5844316291552664270==--

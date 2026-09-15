@@ -40,13 +40,17 @@ CATALOG = [
 ]
 
 
-def database() -> tuple[object, Session]:
+def database(catalog=CATALOG) -> tuple[object, Session]:
     engine = create_engine("sqlite://")
     Base.metadata.create_all(engine)
     db = Session(engine)
     db.add(Organization(id="benchmark-org", name="Benchmark", currency="USD"))
     db.flush()
-    for index, (name, domain, email, aliases) in enumerate(CATALOG):
+    for index, entry in enumerate(catalog):
+        if isinstance(entry, dict):
+            name, domain, email, aliases = entry["name"], entry["domain"], entry["email"], entry["aliases"]
+        else:
+            name, domain, email, aliases = entry
         supplier = Supplier(
             id=f"supplier-{index}",
             organization_id="benchmark-org",
@@ -127,7 +131,7 @@ def attachment_candidates(parsed, case_id: str) -> tuple[list[dict], list[str]]:
 
 def evaluate(manifest_path: Path, output: Path) -> dict:
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-    engine, db = database()
+    engine, db = database(manifest.get("catalog", CATALOG))
     counters = Counter()
     totals = Counter()
     latency_all, latency_email, latency_attachment = [], [], []
@@ -178,8 +182,8 @@ def evaluate(manifest_path: Path, output: Path) -> dict:
                 totals[metric] += 1
                 correct_supplier = match.supplier is not None and match.supplier.name == expected["supplier_name"]
                 counters[metric] += correct_supplier
-                totals["automatic_links"] += 1
-                counters["correct_automatic_links"] += correct_supplier
+                totals["automatic_links"] += match.supplier is not None
+                counters["correct_automatic_links"] += match.supplier is not None and correct_supplier
             elif expected_method == "POSSIBLE_EXISTING_SUPPLIER":
                 totals["duplicate_risk"] += 1
                 counters["duplicate_risk"] += actual_method == expected_method
@@ -223,12 +227,26 @@ def evaluate(manifest_path: Path, output: Path) -> dict:
                 (
                     "moq",
                     line.moq if line else None,
-                    "500" if (parsed.attachments or parsed.html_tables) and expected["quote_expected"] else None,
+                    expected.get(
+                        "moq",
+                        "500" if (parsed.attachments or parsed.html_tables) and expected["quote_expected"] else None,
+                    ),
                 ),
-                ("lead_time", line.lead_time_days if line else None, 21 if "Lead time" in parsed.normalized_body and expected["quote_expected"] else None),
-                ("payment_terms", extraction.payment_terms if extraction else None, "Net 30" if "terms" in parsed.normalized_body.casefold() and expected["quote_expected"] else None),
-                ("shipping", extraction.shipping_cost if extraction else None, None),
-                ("tax", extraction.tax if extraction else None, None),
+                (
+                    "lead_time",
+                    line.lead_time_days if line else None,
+                    expected.get("lead_time_days", 21 if "Lead time" in parsed.normalized_body and expected["quote_expected"] else None),
+                ),
+                (
+                    "payment_terms",
+                    extraction.payment_terms if extraction else None,
+                    expected.get(
+                        "payment_terms",
+                        "Net 30" if "terms" in parsed.normalized_body.casefold() and expected["quote_expected"] else None,
+                    ),
+                ),
+                ("shipping", extraction.shipping_cost if extraction else None, expected.get("shipping_cost")),
+                ("tax", extraction.tax if extraction else None, expected.get("tax")),
             ):
                 totals[metric] += 1
                 counters[metric] += equal(actual, wanted)

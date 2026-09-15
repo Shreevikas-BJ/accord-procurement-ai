@@ -1,0 +1,33 @@
+From: Bid Desk <holdout30@gmail.com>
+To: buyer@apex.example
+Date: Fri, 04 Sep 2026 18:00:00 +0000
+Subject: RFQ-1203 / Quotation #HX-7430
+Message-ID: <phase28-holdout-031@holdout.local>
+In-Reply-To: <phase28-holdout-030@holdout.local>
+References: <phase28-holdout-030@holdout.local>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============9091134016549099930=="
+
+--===============9091134016549099930==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Please review the enclosed commercial schedule.
+Currency: USD
+Lead time: 12 days
+Terms: Net 45
+
+Sincerely,
+Riley Park
+Kestrel Controls
+
+--===============9091134016549099930==
+Content-Type: text/plain
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="commercial-offer.txt"
+MIME-Version: 1.0
+
+SVQtOTA1IFF1YW50aXR5OiAzMjAgUHJpY2UgZWFjaDogMTA0LjUwIE1PUTogMjUwCkN1cnJlbmN5
+OiBVU0QK
+
+--===============9091134016549099930==--

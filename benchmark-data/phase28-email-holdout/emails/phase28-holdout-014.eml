@@ -1,0 +1,33 @@
+From: Robin Diaz <holdout13@yahoo.com>
+To: buyer@apex.example
+Date: Wed, 02 Sep 2026 15:00:00 +0000
+Subject: RFQ-1202 / Quotation #HX-7413
+Message-ID: <phase28-holdout-014@holdout.local>
+In-Reply-To: <phase28-holdout-013@holdout.local>
+References: <phase28-holdout-013@holdout.local>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============6439252420226013685=="
+
+--===============6439252420226013685==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Please review the enclosed commercial schedule.
+Currency: USD
+Lead time: 12 days
+Terms: Net 45
+
+Sincerely,
+Riley Park
+Desert Peak Automation 13 LLC
+
+--===============6439252420226013685==
+Content-Type: text/csv
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="commercial-offer.csv"
+MIME-Version: 1.0
+
+OyBnZW5lcmF0ZWQgbG9jYWxseQpTdXBwbGllciBQYXJ0IE51bWJlcixPcmRlciBRdHksUHJpY2Ug
+RWFjaCxNaW5pbXVtIE9yZGVyIFF1YW50aXR5CkJNLTQ0MCwxODAwLDcuOTIsMjUwCg==
+
+--===============6439252420226013685==--

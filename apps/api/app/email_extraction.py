@@ -10,6 +10,18 @@ from .email_matching import rfq_token
 from .structured_input import semantic_header
 
 
+PROMPT_INJECTION = re.compile(
+    r"\b(?:ignore|override)\s+(?:all\s+)?(?:previous|system|developer|safety|policy|instructions?)|"
+    r"\b(?:disregard|bypass)\s+(?:the\s+)?(?:safety|policy|rules?|instructions?)|"
+    r"\b(?:set\s+all\s+prices|record\s+(?:the\s+)?unit\s+price)\b",
+    re.I,
+)
+
+
+def has_prompt_injection(value: str) -> bool:
+    return bool(PROMPT_INJECTION.search(value or ""))
+
+
 @dataclass(frozen=True)
 class SourceContext:
     source_type: str
@@ -160,7 +172,7 @@ def extract_candidate(
         f"{context.subject or ''}\n{text}",
         re.I,
     )
-    if quote_match and not quote_match.group(1).casefold().startswith(
+    if quote_match and re.search(r"\d", quote_match.group(1)) and not quote_match.group(1).casefold().startswith(
         ("is", "for", "attached", "revised", "updated", "generated", "available", "only", "subject")
     ):
         _set(candidate, "quote_number", quote_match.group(1), quote_match.group(0), context)
@@ -199,6 +211,8 @@ def _text_lines(text: str, context: SourceContext, sender_role: str) -> list[dic
     current: dict | None = None
     conditional = re.compile(r"\bif\s+you\s+(?:order|purchase)|\b(?:minimum|at least)\s+[0-9,]+", re.I)
     for index, raw in enumerate(lines):
+        if has_prompt_injection(raw):
+            continue
         sku_match = re.search(r"(?:\bSKU\s*[:#-]?\s*)?\b([A-Z]{1,8}[-_][A-Z0-9][A-Z0-9._/-]{1,30})\b", raw)
         if sku_match and not rfq_token(raw):
             if current and any(current.get(key) is not None for key in ("quantity", "unit_price")):
