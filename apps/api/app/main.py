@@ -7,7 +7,7 @@ from sqlalchemy.exc import IntegrityError
 from .db import engine
 from .config import REDIS_URL
 from .logging_config import configure_logging
-from . import routes_auth, routes_catalog, routes_quotes, routes_decisions
+from . import routes_auth, routes_catalog, routes_quotes, routes_decisions, routes_email
 
 
 configure_logging()
@@ -55,3 +55,4 @@ app.include_router(routes_auth.router)
 app.include_router(routes_quotes.router)
 app.include_router(routes_decisions.router)
 app.include_router(routes_catalog.router)
+app.include_router(routes_email.router)

@@ -1,0 +1,32 @@
+From: Offer Desk <estimating@copperbasinfab.invalid>
+To: sourcing@apex.example
+Cc: buyer@apex.example
+Date: Tue, 15 Sep 2026 20:00:00 +0000
+Subject: Response RFQ-1301 =?utf-8?b?4oCU?= Quote No. ZR-8835
+Message-ID: <phase28-final-036@final.local>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============2630646452539330444=="
+
+--===============2630646452539330444==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+The commercial schedule is attached.
+Currency: USD
+Lead time: 14 days
+Payment terms: Net 60
+
+Best regards,
+Sam Torres
+Copper Basin Fabrication
+
+--===============2630646452539330444==
+Content-Type: text/csv
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="pricing-schedule.csv"
+MIME-Version: 1.0
+
+VmVuZG9yIFBhcnQgTnVtYmVyLFF1b3RlZCBRdWFudGl0eSxVbml0IENvc3QsTU9RDQpTRy02MTEs
+NjAwLDEzLjYyNSwzMDA=
+
+--===============2630646452539330444==--

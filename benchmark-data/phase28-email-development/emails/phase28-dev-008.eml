@@ -1,0 +1,30 @@
+From: Sales Team <bids@vertexindustrial.com>
+To: buyer@apex.example
+Date: Sat, 01 Aug 2026 07:00:00 +0000
+Subject: RFQ-1004 Quote #Q28-008
+Message-ID: <phase28-dev-008@example.local>
+In-Reply-To: <phase28-dev-007@example.local>
+References: <phase28-dev-007@example.local>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============5100922893252145215=="
+
+--===============5100922893252145215==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+BX-220 Qty: 1000 Unit Price: 4.60
+Currency: USD
+
+Regards,
+Jamie Lee
+Vertex Industrial
+
+--===============5100922893252145215==
+Content-Type: text/csv
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="quote.csv"
+MIME-Version: 1.0
+
+U0tVLFF0eSxVbml0IFByaWNlLE1PUQpCWC0yMjAsMTAwMCw0Ni41OCw1MDAK
+
+--===============5100922893252145215==--

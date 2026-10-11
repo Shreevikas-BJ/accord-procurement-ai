@@ -1,0 +1,29 @@
+From: Taylor Reed <quotes@redwoodmotion95.com>
+To: buyer@apex.example
+Date: Tue, 04 Aug 2026 23:00:00 +0000
+Subject: RFQ-1005 Quote #Q28-096
+Message-ID: <phase28-dev-096@example.local>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============3346051461827257321=="
+
+--===============3346051461827257321==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Attached is our quotation. Currency: EUR
+Lead time: 21 days
+Payment terms: Net 30
+
+Regards,
+Jamie Lee
+Redwood Motion Components 95 LLC
+
+--===============3346051461827257321==
+Content-Type: text/csv
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="quote.csv"
+MIME-Version: 1.0
+
+U0tVLFF0eSxVbml0IFByaWNlLE1PUQpDWC0zMDAsMjUwMCwxOS44MCw1MDAK
+
+--===============3346051461827257321==--

@@ -1,0 +1,30 @@
+From: Quotes <supplier87@outlook.com>
+To: buyer@apex.example
+Date: Tue, 04 Aug 2026 15:00:00 +0000
+Subject: RFQ-1003 Quote #Q28-088
+Message-ID: <phase28-dev-088@example.local>
+In-Reply-To: <phase28-dev-087@example.local>
+References: <phase28-dev-087@example.local>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============8291017147096535638=="
+
+--===============8291017147096535638==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+AX-100 Qty: 5000 Unit Price: 4.60
+Currency: USD
+
+Regards,
+Jamie Lee
+Vertex Industrial, L.L.C.
+
+--===============8291017147096535638==
+Content-Type: text/csv
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="quote.csv"
+MIME-Version: 1.0
+
+U0tVLFF0eSxVbml0IFByaWNlLE1PUQpBWC0xMDAsNTAwMCw0LjQ4LDUwMAo=
+
+--===============8291017147096535638==--

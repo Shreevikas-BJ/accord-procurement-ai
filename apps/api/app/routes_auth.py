@@ -27,6 +27,8 @@ def public_user(user, db):
 
 @router.post("/auth/login")
 def login(payload: Login, request: Request, response: Response, db: Session = Depends(get_db)):
+    redis = None
+    key = None
     try:
         redis = Redis.from_url(REDIS_URL, socket_connect_timeout=1, socket_timeout=1)
         key = "login:" + token_hash((request.client.host if request.client else "") + payload.email.lower())
@@ -43,6 +45,11 @@ def login(payload: Login, request: Request, response: Response, db: Session = De
     user = db.scalar(select(User).where(User.email == payload.email.lower(), User.active.is_(True)))
     if not user or not verify_password(payload.password, user.password_hash):
         raise HTTPException(401, "Email or password is incorrect.")
+    if redis is not None and key is not None:
+        try:
+            redis.delete(key)
+        except Exception:
+            pass
     token = secrets.token_urlsafe(48)
     db.add(
         AuthSession(

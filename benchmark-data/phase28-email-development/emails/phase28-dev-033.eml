@@ -1,0 +1,30 @@
+From: Taylor Reed <quotes@redwoodmotion32.com>
+To: buyer@apex.example
+Date: Sun, 02 Aug 2026 08:00:00 +0000
+Subject: RFQ-1005 Quote #Q28-033
+Message-ID: <phase28-dev-033@example.local>
+In-Reply-To: <phase28-dev-032@example.local>
+References: <phase28-dev-032@example.local>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============0359436291439542468=="
+
+--===============0359436291439542468==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+This quotation is available in the HTML table. Currency: USD
+
+Regards,
+Redwood Motion Components 32 LLC
+
+--===============0359436291439542468==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<p>Currency: USD</p><table><tr><th>SKU</th><th>Qty</th><th>Unit Price</th><th=
+>MOQ</th></tr><tr><td>CX-300</td><td>2500</td><td>19.80</td><td>500</td></tr>=
+</table><p>Regards,<br>Jamie Lee<br>Redwood Motion Components 32 LLC</p>
+
+--===============0359436291439542468==--

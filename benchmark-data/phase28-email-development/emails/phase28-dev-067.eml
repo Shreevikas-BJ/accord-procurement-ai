@@ -1,0 +1,31 @@
+From: Quotes <supplier66@outlook.com>
+To: buyer@apex.example
+Date: Mon, 03 Aug 2026 18:00:00 +0000
+Subject: RFQ-1003 Quote #Q28-067
+Message-ID: <phase28-dev-067@example.local>
+In-Reply-To: <phase28-dev-066@example.local>
+References: <phase28-dev-066@example.local>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============0832368054757229827=="
+
+--===============0832368054757229827==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Attached is our quotation. Currency: USD
+Lead time: 21 days
+Payment terms: Net 30
+
+Regards,
+Jamie Lee
+Nova Supply Group, L.L.C.
+
+--===============0832368054757229827==
+Content-Type: text/plain
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="quote.txt"
+MIME-Version: 1.0
+
+Q3VycmVuY3k6IFVTRApBWC0xMDAgUXR5OiA1MDAwIFVuaXQgUHJpY2U6IDQuNDggTU9ROiA1MDAK
+
+--===============0832368054757229827==--

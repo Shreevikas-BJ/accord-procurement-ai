@@ -3,7 +3,7 @@
 import uuid
 from datetime import datetime, timezone
 from decimal import Decimal
-from sqlalchemy import String, Text, Date, DateTime, Numeric, ForeignKey, JSON, UniqueConstraint
+from sqlalchemy import Boolean, String, Text, Date, DateTime, Numeric, ForeignKey, JSON, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column
 from .db import Base
 
@@ -58,6 +58,11 @@ class Supplier(Tenant, Base):
     currency: Mapped[str] = mapped_column(default="USD")
     payment_terms: Mapped[str] = mapped_column(default="Net 30")
     preferred_supplier: Mapped[bool] = mapped_column(default=False)
+    normalized_name: Mapped[str] = mapped_column(default="", index=True)
+    primary_email: Mapped[str | None]
+    created_source: Mapped[str] = mapped_column(default="CATALOG")
+    created_from_email_id: Mapped[str | None] = mapped_column(String(36))
+    auto_created: Mapped[bool] = mapped_column(Boolean, default=False)
 
 
 class SupplierContact(Tenant, Base):
@@ -65,6 +70,9 @@ class SupplierContact(Tenant, Base):
     supplier_id: Mapped[str] = mapped_column(ForeignKey("suppliers.id"), index=True)
     name: Mapped[str]
     email: Mapped[str]
+    normalized_email: Mapped[str] = mapped_column(default="", index=True)
+    created_from_email_id: Mapped[str | None] = mapped_column(String(36))
+    auto_created: Mapped[bool] = mapped_column(Boolean, default=False)
 
 
 class Item(Tenant, Base):
@@ -140,6 +148,100 @@ class DocumentExtraction(Tenant, Base):
     diagnostics: Mapped[dict] = mapped_column(JSON, default=dict)
 
 
+class EmailThread(Tenant, Base):
+    __tablename__ = "email_threads"
+    subject: Mapped[str]
+    normalized_subject: Mapped[str] = mapped_column(index=True)
+    supplier_id: Mapped[str | None] = mapped_column(ForeignKey("suppliers.id"), index=True)
+    rfq_id: Mapped[str | None] = mapped_column(ForeignKey("rfqs.id"), index=True)
+    status: Mapped[str] = mapped_column(default="OPEN")
+    last_message_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), index=True)
+
+
+class ProcurementEmail(Tenant, Base):
+    __tablename__ = "procurement_emails"
+    __table_args__ = (UniqueConstraint("organization_id", "message_id"),)
+    thread_id: Mapped[str | None] = mapped_column(ForeignKey("email_threads.id"), index=True)
+    message_id: Mapped[str | None] = mapped_column(index=True)
+    content_hash: Mapped[str] = mapped_column(index=True)
+    in_reply_to: Mapped[str | None]
+    references: Mapped[list] = mapped_column(JSON, default=list)
+    sender_name: Mapped[str]
+    sender_email: Mapped[str]
+    sender_domain: Mapped[str]
+    recipient_emails: Mapped[list] = mapped_column(JSON, default=list)
+    cc_emails: Mapped[list] = mapped_column(JSON, default=list)
+    subject: Mapped[str]
+    normalized_subject: Mapped[str] = mapped_column(index=True)
+    sent_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), index=True)
+    body_text: Mapped[str] = mapped_column(Text, default="")
+    body_html: Mapped[str] = mapped_column(Text, default="")
+    normalized_body: Mapped[str] = mapped_column(Text, default="")
+    quoted_history: Mapped[str] = mapped_column(Text, default="")
+    signature: Mapped[str] = mapped_column(Text, default="")
+    source_type: Mapped[str]
+    ingested_by: Mapped[str] = mapped_column(ForeignKey("users.id"), index=True)
+    email_type: Mapped[str] = mapped_column(default="UNKNOWN")
+    sender_role: Mapped[str] = mapped_column(default="UNKNOWN")
+    supplier_id: Mapped[str | None] = mapped_column(ForeignKey("suppliers.id"), index=True)
+    rfq_id: Mapped[str | None] = mapped_column(ForeignKey("rfqs.id"), index=True)
+    quote_id: Mapped[str | None] = mapped_column(ForeignKey("quotes.id"), index=True)
+    status: Mapped[str] = mapped_column(default="RECEIVED", index=True)
+    status_reason: Mapped[str | None] = mapped_column(Text)
+    processing_metrics: Mapped[dict] = mapped_column(JSON, default=dict)
+
+
+class EmailAttachment(Tenant, Base):
+    __tablename__ = "email_attachments"
+    __table_args__ = (UniqueConstraint("organization_id", "email_id", "sha256"),)
+    email_id: Mapped[str] = mapped_column(ForeignKey("procurement_emails.id"), index=True)
+    filename: Mapped[str]
+    content_type: Mapped[str]
+    size: Mapped[int]
+    sha256: Mapped[str] = mapped_column(index=True)
+    storage_path: Mapped[str]
+    supported: Mapped[bool] = mapped_column(Boolean, default=False)
+    processed: Mapped[bool] = mapped_column(Boolean, default=False)
+    status: Mapped[str] = mapped_column(default="RECEIVED")
+    error: Mapped[str | None] = mapped_column(Text)
+    document_id: Mapped[str | None] = mapped_column(ForeignKey("documents.id"), index=True)
+
+
+class EmailEvidence(Tenant, Base):
+    __tablename__ = "email_evidence"
+    email_id: Mapped[str] = mapped_column(ForeignKey("procurement_emails.id"), index=True)
+    field: Mapped[str] = mapped_column(index=True)
+    value: Mapped[dict] = mapped_column(JSON)
+    source_type: Mapped[str]
+    source_snippet: Mapped[str] = mapped_column(Text)
+    message_id: Mapped[str | None]
+    source_timestamp: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    attachment_id: Mapped[str | None] = mapped_column(ForeignKey("email_attachments.id"), index=True)
+    decision_status: Mapped[str] = mapped_column(default="ACCEPTED")
+    reason: Mapped[str | None] = mapped_column(Text)
+
+
+class SupplierMatchCandidate(Tenant, Base):
+    __tablename__ = "supplier_match_candidates"
+    email_id: Mapped[str] = mapped_column(ForeignKey("procurement_emails.id"), index=True)
+    supplier_id: Mapped[str] = mapped_column(ForeignKey("suppliers.id"), index=True)
+    incoming_name: Mapped[str]
+    match_method: Mapped[str]
+    score: Mapped[Decimal] = mapped_column(Numeric(5, 4))
+    status: Mapped[str] = mapped_column(default="PENDING")
+
+
+class EmailFieldConflict(Tenant, Base):
+    __tablename__ = "email_field_conflicts"
+    email_id: Mapped[str] = mapped_column(ForeignKey("procurement_emails.id"), index=True)
+    field: Mapped[str] = mapped_column(index=True)
+    email_value: Mapped[dict | None] = mapped_column(JSON)
+    attachment_value: Mapped[dict | None] = mapped_column(JSON)
+    attachment_id: Mapped[str | None] = mapped_column(ForeignKey("email_attachments.id"))
+    resolution: Mapped[str] = mapped_column(default="REVIEW_REQUIRED")
+    reason: Mapped[str] = mapped_column(Text)
+
+
 class Quote(Tenant, Base):
     __tablename__ = "quotes"
     document_id: Mapped[str] = mapped_column(ForeignKey("documents.id"), unique=True)
@@ -163,6 +265,20 @@ class Quote(Tenant, Base):
     source_references: Mapped[dict] = mapped_column(JSON, default=dict)
     review_status: Mapped[str] = mapped_column(default="Needs Review")
     version: Mapped[int] = mapped_column(default=1)
+
+
+class QuoteRevision(Tenant, Base):
+    __tablename__ = "quote_revisions"
+    __table_args__ = (UniqueConstraint("organization_id", "quote_id", "revision_number"),)
+    quote_id: Mapped[str] = mapped_column(ForeignKey("quotes.id"), index=True)
+    revision_number: Mapped[int]
+    email_id: Mapped[str | None] = mapped_column(ForeignKey("procurement_emails.id"), index=True)
+    document_id: Mapped[str | None] = mapped_column(ForeignKey("documents.id"), index=True)
+    source_timestamp: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    reason: Mapped[str]
+    supersedes_revision_id: Mapped[str | None] = mapped_column(ForeignKey("quote_revisions.id"))
+    snapshot: Mapped[dict] = mapped_column(JSON)
+    effective: Mapped[bool] = mapped_column(Boolean, default=True)
 
 
 class QuoteItem(Tenant, Base):

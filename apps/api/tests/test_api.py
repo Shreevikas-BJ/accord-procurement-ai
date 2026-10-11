@@ -22,6 +22,34 @@ def test_authentication_required(client):
     assert client.post("/auth/login", json={"email": "buyer@apex.example", "password": "incorrect"}).status_code == 401
 
 
+def test_successful_login_clears_rate_limit_key(client, monkeypatch):
+    class FakeRedis:
+        deleted = []
+
+        @classmethod
+        def from_url(cls, *_args, **_kwargs):
+            return cls()
+
+        def incr(self, _key):
+            return 1
+
+        def expire(self, _key, _seconds):
+            return True
+
+        def delete(self, key):
+            self.deleted.append(key)
+
+    monkeypatch.setattr("app.routes_auth.Redis", FakeRedis)
+    assert client.post(
+        "/auth/login", json={"email": "buyer@apex.example", "password": "Demo2026!accord"}
+    ).status_code == 200
+    assert len(FakeRedis.deleted) == 1
+    assert client.post(
+        "/auth/login", json={"email": "buyer@apex.example", "password": "incorrect"}
+    ).status_code == 401
+    assert len(FakeRedis.deleted) == 1
+
+
 def test_session_cookie_and_logout(buyer):
     assert "procurement_session" in buyer.cookies
     assert buyer.get("/auth/me").json()["role"] == "Buyer"

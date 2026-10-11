@@ -1,0 +1,1147 @@
+{
+  "corpus": "phase28-email-holdout",
+  "created_at": "2026-09-15T00:00:00Z",
+  "pipeline_frozen_at_commit": "ac351cb",
+  "purpose": "Independent holdout; do not tune the Phase 2.8 pipeline against these cases.",
+  "case_count": 40,
+  "catalog": [
+    {
+      "name": "Kestrel Process Controls",
+      "domain": "kestrelcontrols.test",
+      "email": "commercial@kestrelcontrols.test",
+      "aliases": [
+        "Kestrel Controls"
+      ]
+    },
+    {
+      "name": "Blue Mesa Components",
+      "domain": "bluemesacomponents.test",
+      "email": "tenders@bluemesacomponents.test",
+      "aliases": [
+        "Blue Mesa Component Co"
+      ]
+    },
+    {
+      "name": "Ironwood Technical Supply",
+      "domain": "ironwoodtechnical.test",
+      "email": "pricing@ironwoodtechnical.test",
+      "aliases": [
+        "Ironwood Technical"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "phase28-holdout-001",
+      "file": "emails/phase28-holdout-001.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_exact_contact_email",
+        "holdout_variant_0"
+      ],
+      "thread_group": "holdout-thread-00",
+      "expected": {
+        "supplier_name": "Kestrel Process Controls",
+        "supplier_method": "EXACT_CONTACT_EMAIL",
+        "rfq_number": "RFQ-1201",
+        "quote_number": "HX-7400",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "KP-710",
+        "quantity": "750",
+        "unit_price": "18.375",
+        "currency": "USD",
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "556f508ee28123a3fd0bcaf6657e9e73cb9fd543ef53ed5b1db09ac02bdd3f12"
+    },
+    {
+      "id": "phase28-holdout-002",
+      "file": "emails/phase28-holdout-002.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_exact_verified_domain",
+        "holdout_variant_1"
+      ],
+      "thread_group": "holdout-thread-00",
+      "expected": {
+        "supplier_name": "Blue Mesa Components",
+        "supplier_method": "EXACT_VERIFIED_DOMAIN",
+        "rfq_number": "RFQ-1202",
+        "quote_number": "HX-7401",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "BM-440",
+        "quantity": "1800",
+        "unit_price": "7.92",
+        "currency": "USD",
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "d22bc0c0f5fe6794fa729ab4574c485ef22db7b8c8683477ecfd4b3f55abe886"
+    },
+    {
+      "id": "phase28-holdout-003",
+      "file": "emails/phase28-holdout-003.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "html_table",
+        "supplier_known_alias",
+        "holdout_variant_2"
+      ],
+      "thread_group": "holdout-thread-00",
+      "expected": {
+        "supplier_name": "Ironwood Technical Supply",
+        "supplier_method": "KNOWN_ALIAS",
+        "rfq_number": "RFQ-1203",
+        "quote_number": "HX-7402",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "IT-905",
+        "quantity": "320",
+        "unit_price": "104.50",
+        "currency": "USD",
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "e5996ebbbd61693f4f0529b5cccfc44f3b6b944a81ffd078f739f118e075b2f7"
+    },
+    {
+      "id": "phase28-holdout-004",
+      "file": "emails/phase28-holdout-004.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_normalized_name",
+        "holdout_variant_3",
+        "attachment"
+      ],
+      "thread_group": "holdout-thread-00",
+      "expected": {
+        "supplier_name": "Kestrel Process Controls",
+        "supplier_method": "NORMALIZED_NAME",
+        "rfq_number": "RFQ-1204",
+        "quote_number": "HX-7403",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "KP-825",
+        "quantity": "2400",
+        "unit_price": "2.875",
+        "currency": "USD",
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "90842151d25d7302ffa7d8fbcf6897324c118219eba07ec0454b6a7ec790e74c"
+    },
+    {
+      "id": "phase28-holdout-005",
+      "file": "emails/phase28-holdout-005.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_new_unverified_created",
+        "holdout_variant_4",
+        "attachment"
+      ],
+      "thread_group": "holdout-thread-01",
+      "expected": {
+        "supplier_name": "Sonoran Drive Systems 4 Inc",
+        "supplier_method": "NEW_UNVERIFIED_CREATED",
+        "rfq_number": "RFQ-1201",
+        "quote_number": "HX-7404",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "KP-710",
+        "quantity": "750",
+        "unit_price": "18.375",
+        "currency": "USD",
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "8b2e63f55616ce55adbefd8d1a2d92f0bf7662184bfdb1ecd8d1c169c4b019e4"
+    },
+    {
+      "id": "phase28-holdout-006",
+      "file": "emails/phase28-holdout-006.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_possible_existing_supplier",
+        "holdout_variant_5",
+        "attachment"
+      ],
+      "thread_group": "holdout-thread-01",
+      "expected": {
+        "supplier_name": "Ironwood Technical Supplys Ltd",
+        "supplier_method": "POSSIBLE_EXISTING_SUPPLIER",
+        "rfq_number": "RFQ-1202",
+        "quote_number": "HX-7405",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "BM-440",
+        "quantity": "1800",
+        "unit_price": "7.92",
+        "currency": "USD",
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "3e46a06754187bf06886684832ee7599d64c5d2145be5a60b07830a8fba1cf2b"
+    },
+    {
+      "id": "phase28-holdout-007",
+      "file": "emails/phase28-holdout-007.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_new_unverified_created",
+        "holdout_variant_6",
+        "attachment"
+      ],
+      "thread_group": "holdout-thread-01",
+      "expected": {
+        "supplier_name": "Desert Peak Automation 6 LLC",
+        "supplier_method": "NEW_UNVERIFIED_CREATED",
+        "rfq_number": "RFQ-1203",
+        "quote_number": "HX-7406",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "IT-905",
+        "quantity": "320",
+        "unit_price": "104.50",
+        "currency": "USD",
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "a4a707a76e7cec8a06ebabf2e922ec21846ea0a430b7c78b0961f2e6a38115fd"
+    },
+    {
+      "id": "phase28-holdout-008",
+      "file": "emails/phase28-holdout-008.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_exact_contact_email",
+        "holdout_variant_7",
+        "attachment",
+        "conflict"
+      ],
+      "thread_group": "holdout-thread-01",
+      "expected": {
+        "supplier_name": "Blue Mesa Components",
+        "supplier_method": "EXACT_CONTACT_EMAIL",
+        "rfq_number": "RFQ-1204",
+        "quote_number": "HX-7407",
+        "email_type": "QUOTE_REVISION",
+        "quote_expected": true,
+        "sku": "KP-825",
+        "quantity": "2400",
+        "unit_price": "2.875",
+        "currency": "USD",
+        "conflict": true,
+        "prompt_injection_price": null
+      },
+      "sha256": "16c217b97e086bed106b2cb41c9db40af4d2292375db4382babfbd14c699716f"
+    },
+    {
+      "id": "phase28-holdout-009",
+      "file": "emails/phase28-holdout-009.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_exact_verified_domain",
+        "holdout_variant_0"
+      ],
+      "thread_group": "holdout-thread-02",
+      "expected": {
+        "supplier_name": "Ironwood Technical Supply",
+        "supplier_method": "EXACT_VERIFIED_DOMAIN",
+        "rfq_number": "RFQ-1201",
+        "quote_number": "HX-7408",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "KP-710",
+        "quantity": "750",
+        "unit_price": "18.375",
+        "currency": "USD",
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "036b267f6bc13026b2e08dd9c3b9f8fb7ec77ce54f75454c25c39f285a729418"
+    },
+    {
+      "id": "phase28-holdout-010",
+      "file": "emails/phase28-holdout-010.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_sender_not_supplier",
+        "holdout_variant_1"
+      ],
+      "thread_group": "holdout-thread-02",
+      "expected": {
+        "supplier_name": "Apex Industrial Manufacturing",
+        "supplier_method": "SENDER_NOT_SUPPLIER",
+        "rfq_number": "RFQ-1202",
+        "quote_number": "HX-7409",
+        "email_type": "NEGOTIATION",
+        "quote_expected": false,
+        "sku": null,
+        "quantity": null,
+        "unit_price": null,
+        "currency": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "d7a92494ef2659144cc40ea1a81eb597d0c74bb6eb60a7c49567bb5c7278377f"
+    },
+    {
+      "id": "phase28-holdout-011",
+      "file": "emails/phase28-holdout-011.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "html_table",
+        "supplier_normalized_name",
+        "holdout_variant_2"
+      ],
+      "thread_group": "holdout-thread-02",
+      "expected": {
+        "supplier_name": "Blue Mesa Components",
+        "supplier_method": "NORMALIZED_NAME",
+        "rfq_number": "RFQ-1203",
+        "quote_number": "HX-7410",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "IT-905",
+        "quantity": "320",
+        "unit_price": "104.50",
+        "currency": "USD",
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "16fbef91c8b3ae9ae93e8f40bef4e8ac4520ca188aef820b0ddc3598fe722e90"
+    },
+    {
+      "id": "phase28-holdout-012",
+      "file": "emails/phase28-holdout-012.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_new_unverified_created",
+        "holdout_variant_3",
+        "attachment",
+        "prompt_injection"
+      ],
+      "thread_group": "holdout-thread-02",
+      "expected": {
+        "supplier_name": "Sonoran Drive Systems 11 Inc",
+        "supplier_method": "NEW_UNVERIFIED_CREATED",
+        "rfq_number": "RFQ-1204",
+        "quote_number": "HX-7411",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "KP-825",
+        "quantity": "2400",
+        "unit_price": "2.875",
+        "currency": "USD",
+        "conflict": false,
+        "prompt_injection_price": "0.01"
+      },
+      "sha256": "88f82a2cf601493fe2d93b23af04e8bac50fb4fe4fa5282cf870380cb0413d01"
+    },
+    {
+      "id": "phase28-holdout-013",
+      "file": "emails/phase28-holdout-013.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_possible_existing_supplier",
+        "holdout_variant_4",
+        "attachment"
+      ],
+      "thread_group": "holdout-thread-03",
+      "expected": {
+        "supplier_name": "Kestrel Process Controlss Ltd",
+        "supplier_method": "POSSIBLE_EXISTING_SUPPLIER",
+        "rfq_number": "RFQ-1201",
+        "quote_number": "HX-7412",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "KP-710",
+        "quantity": "750",
+        "unit_price": "18.375",
+        "currency": "USD",
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "3d232b6755cfbdc7aef4a6c92917b56519d03da9b8b0f37b2c295a5bbb692b9b"
+    },
+    {
+      "id": "phase28-holdout-014",
+      "file": "emails/phase28-holdout-014.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_new_unverified_created",
+        "holdout_variant_5",
+        "attachment"
+      ],
+      "thread_group": "holdout-thread-03",
+      "expected": {
+        "supplier_name": "Desert Peak Automation 13 LLC",
+        "supplier_method": "NEW_UNVERIFIED_CREATED",
+        "rfq_number": "RFQ-1202",
+        "quote_number": "HX-7413",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "BM-440",
+        "quantity": "1800",
+        "unit_price": "7.92",
+        "currency": "USD",
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "bf8eda3bd12fd47dd702e2c1168f680bbc37cae062fc5d03ba5d52044a07214d"
+    },
+    {
+      "id": "phase28-holdout-015",
+      "file": "emails/phase28-holdout-015.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_exact_contact_email",
+        "holdout_variant_6",
+        "attachment"
+      ],
+      "thread_group": "holdout-thread-03",
+      "expected": {
+        "supplier_name": "Ironwood Technical Supply",
+        "supplier_method": "EXACT_CONTACT_EMAIL",
+        "rfq_number": "RFQ-1203",
+        "quote_number": "HX-7414",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "IT-905",
+        "quantity": "320",
+        "unit_price": "104.50",
+        "currency": "USD",
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "b469b870f1969985cf591a49200b143b9d6229b75ba607f7d8543f18065dcbba"
+    },
+    {
+      "id": "phase28-holdout-016",
+      "file": "emails/phase28-holdout-016.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_exact_verified_domain",
+        "holdout_variant_7",
+        "attachment",
+        "conflict"
+      ],
+      "thread_group": "holdout-thread-03",
+      "expected": {
+        "supplier_name": "Kestrel Process Controls",
+        "supplier_method": "EXACT_VERIFIED_DOMAIN",
+        "rfq_number": "RFQ-1204",
+        "quote_number": "HX-7415",
+        "email_type": "QUOTE_REVISION",
+        "quote_expected": true,
+        "sku": "KP-825",
+        "quantity": "2400",
+        "unit_price": "2.875",
+        "currency": "USD",
+        "conflict": true,
+        "prompt_injection_price": null
+      },
+      "sha256": "520f1589116856d34427ee2d1dbd387922fda1cc08345439d359ededb5c9dc1d"
+    },
+    {
+      "id": "phase28-holdout-017",
+      "file": "emails/phase28-holdout-017.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_known_alias",
+        "holdout_variant_0"
+      ],
+      "thread_group": "holdout-thread-04",
+      "expected": {
+        "supplier_name": "Blue Mesa Components",
+        "supplier_method": "KNOWN_ALIAS",
+        "rfq_number": "RFQ-1201",
+        "quote_number": "HX-7416",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "KP-710",
+        "quantity": "750",
+        "unit_price": "18.375",
+        "currency": "USD",
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "80dfe97bd075ca4358d1d2c54389a18b5e6cd8bffc38e02107ffaf90f45ba2e6"
+    },
+    {
+      "id": "phase28-holdout-018",
+      "file": "emails/phase28-holdout-018.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_normalized_name",
+        "holdout_variant_1"
+      ],
+      "thread_group": "holdout-thread-04",
+      "expected": {
+        "supplier_name": "Ironwood Technical Supply",
+        "supplier_method": "NORMALIZED_NAME",
+        "rfq_number": "RFQ-1202",
+        "quote_number": "HX-7417",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "BM-440",
+        "quantity": "1800",
+        "unit_price": "7.92",
+        "currency": "USD",
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "edee97f787cc522bd4d917dcba25db8ddf3486cd337ec09562d07a49a7c968a6"
+    },
+    {
+      "id": "phase28-holdout-019",
+      "file": "emails/phase28-holdout-019.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "html_table",
+        "supplier_new_unverified_created",
+        "holdout_variant_2"
+      ],
+      "thread_group": "holdout-thread-04",
+      "expected": {
+        "supplier_name": "Sonoran Drive Systems 18 Inc",
+        "supplier_method": "NEW_UNVERIFIED_CREATED",
+        "rfq_number": "RFQ-1203",
+        "quote_number": "HX-7418",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "IT-905",
+        "quantity": "320",
+        "unit_price": "104.50",
+        "currency": "USD",
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "b6ea952bb5e4e32b345035014e52da879ab5e9ead74f7e273c494b6a0a2197a8"
+    },
+    {
+      "id": "phase28-holdout-020",
+      "file": "emails/phase28-holdout-020.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_possible_existing_supplier",
+        "holdout_variant_3",
+        "attachment"
+      ],
+      "thread_group": "holdout-thread-04",
+      "expected": {
+        "supplier_name": "Blue Mesa Componentss Ltd",
+        "supplier_method": "POSSIBLE_EXISTING_SUPPLIER",
+        "rfq_number": "RFQ-1204",
+        "quote_number": "HX-7419",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "KP-825",
+        "quantity": "2400",
+        "unit_price": "2.875",
+        "currency": "USD",
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "7ccf6162ea34df408673f10b20b29bbb340b735f3279fb1d050cf4329733b98c"
+    },
+    {
+      "id": "phase28-holdout-021",
+      "file": "emails/phase28-holdout-021.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_new_unverified_created",
+        "holdout_variant_4",
+        "attachment"
+      ],
+      "thread_group": "holdout-thread-05",
+      "expected": {
+        "supplier_name": "Desert Peak Automation 20 LLC",
+        "supplier_method": "NEW_UNVERIFIED_CREATED",
+        "rfq_number": "RFQ-1201",
+        "quote_number": "HX-7420",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "KP-710",
+        "quantity": "750",
+        "unit_price": "18.375",
+        "currency": "USD",
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "02cc4c194a7dc87a8aada826ddebe76b570e0f60b041472b57ce5fb8accfb816"
+    },
+    {
+      "id": "phase28-holdout-022",
+      "file": "emails/phase28-holdout-022.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_exact_contact_email",
+        "holdout_variant_5",
+        "attachment"
+      ],
+      "thread_group": "holdout-thread-05",
+      "expected": {
+        "supplier_name": "Kestrel Process Controls",
+        "supplier_method": "EXACT_CONTACT_EMAIL",
+        "rfq_number": "RFQ-1202",
+        "quote_number": "HX-7421",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "BM-440",
+        "quantity": "1800",
+        "unit_price": "7.92",
+        "currency": "USD",
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "faa7d5af02d6516e110f122365ac73f298bb6b52f1acf5be0fa946b6c7e810b3"
+    },
+    {
+      "id": "phase28-holdout-023",
+      "file": "emails/phase28-holdout-023.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_exact_verified_domain",
+        "holdout_variant_6",
+        "attachment"
+      ],
+      "thread_group": "holdout-thread-05",
+      "expected": {
+        "supplier_name": "Blue Mesa Components",
+        "supplier_method": "EXACT_VERIFIED_DOMAIN",
+        "rfq_number": "RFQ-1203",
+        "quote_number": "HX-7422",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "IT-905",
+        "quantity": "320",
+        "unit_price": "104.50",
+        "currency": "USD",
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "bdf4d613a9e755689cb7797ae67d46fa1741f52d8ce24e7a5b13fb39be6dd87d"
+    },
+    {
+      "id": "phase28-holdout-024",
+      "file": "emails/phase28-holdout-024.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_known_alias",
+        "holdout_variant_7",
+        "attachment",
+        "conflict"
+      ],
+      "thread_group": "holdout-thread-05",
+      "expected": {
+        "supplier_name": "Ironwood Technical Supply",
+        "supplier_method": "KNOWN_ALIAS",
+        "rfq_number": "RFQ-1204",
+        "quote_number": "HX-7423",
+        "email_type": "QUOTE_REVISION",
+        "quote_expected": true,
+        "sku": "KP-825",
+        "quantity": "2400",
+        "unit_price": "2.875",
+        "currency": "USD",
+        "conflict": true,
+        "prompt_injection_price": null
+      },
+      "sha256": "942d06ed3f07b2490a8c9f90f2a2f35c3713ceaa428fd98d99f213d72d5a8fc5"
+    },
+    {
+      "id": "phase28-holdout-025",
+      "file": "emails/phase28-holdout-025.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_normalized_name",
+        "holdout_variant_0"
+      ],
+      "thread_group": "holdout-thread-06",
+      "expected": {
+        "supplier_name": "Kestrel Process Controls",
+        "supplier_method": "NORMALIZED_NAME",
+        "rfq_number": "RFQ-1201",
+        "quote_number": "HX-7424",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "KP-710",
+        "quantity": "750",
+        "unit_price": "18.375",
+        "currency": "USD",
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "74f369f62023a0a719b1fcf90dabb7dbf8acf6946b3b5b8059f15c980ed2efd4"
+    },
+    {
+      "id": "phase28-holdout-026",
+      "file": "emails/phase28-holdout-026.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_sender_not_supplier",
+        "holdout_variant_1"
+      ],
+      "thread_group": "holdout-thread-06",
+      "expected": {
+        "supplier_name": "Apex Industrial Manufacturing",
+        "supplier_method": "SENDER_NOT_SUPPLIER",
+        "rfq_number": "RFQ-1202",
+        "quote_number": "HX-7425",
+        "email_type": "NEGOTIATION",
+        "quote_expected": false,
+        "sku": null,
+        "quantity": null,
+        "unit_price": null,
+        "currency": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "d961c702b58dd686fbd9e5270ed329623bbe99881e756c725b47d2df705a9640"
+    },
+    {
+      "id": "phase28-holdout-027",
+      "file": "emails/phase28-holdout-027.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "html_table",
+        "supplier_possible_existing_supplier",
+        "holdout_variant_2"
+      ],
+      "thread_group": "holdout-thread-06",
+      "expected": {
+        "supplier_name": "Ironwood Technical Supplys Ltd",
+        "supplier_method": "POSSIBLE_EXISTING_SUPPLIER",
+        "rfq_number": "RFQ-1203",
+        "quote_number": "HX-7426",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "IT-905",
+        "quantity": "320",
+        "unit_price": "104.50",
+        "currency": "USD",
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "44cebe101791ec15afb5c5aa8e673d0fd9e4e9cd588820d2ea9f1958925dfa1b"
+    },
+    {
+      "id": "phase28-holdout-028",
+      "file": "emails/phase28-holdout-028.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_new_unverified_created",
+        "holdout_variant_3",
+        "attachment"
+      ],
+      "thread_group": "holdout-thread-06",
+      "expected": {
+        "supplier_name": "Desert Peak Automation 27 LLC",
+        "supplier_method": "NEW_UNVERIFIED_CREATED",
+        "rfq_number": "RFQ-1204",
+        "quote_number": "HX-7427",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "KP-825",
+        "quantity": "2400",
+        "unit_price": "2.875",
+        "currency": "USD",
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "1cffdc6c04931141e5333860eeb8547c4880a3577e3a08bc5fa60a4339128055"
+    },
+    {
+      "id": "phase28-holdout-029",
+      "file": "emails/phase28-holdout-029.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_exact_contact_email",
+        "holdout_variant_4",
+        "attachment"
+      ],
+      "thread_group": "holdout-thread-07",
+      "expected": {
+        "supplier_name": "Blue Mesa Components",
+        "supplier_method": "EXACT_CONTACT_EMAIL",
+        "rfq_number": "RFQ-1201",
+        "quote_number": "HX-7428",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "KP-710",
+        "quantity": "750",
+        "unit_price": "18.375",
+        "currency": "USD",
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "eadd99d47bbe5e1810ca3749f30bf211335b2a2d995d587c6c5961880665c5f8"
+    },
+    {
+      "id": "phase28-holdout-030",
+      "file": "emails/phase28-holdout-030.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_exact_verified_domain",
+        "holdout_variant_5",
+        "attachment",
+        "prompt_injection"
+      ],
+      "thread_group": "holdout-thread-07",
+      "expected": {
+        "supplier_name": "Ironwood Technical Supply",
+        "supplier_method": "EXACT_VERIFIED_DOMAIN",
+        "rfq_number": "RFQ-1202",
+        "quote_number": "HX-7429",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "BM-440",
+        "quantity": "1800",
+        "unit_price": "7.92",
+        "currency": "USD",
+        "conflict": false,
+        "prompt_injection_price": "0.01"
+      },
+      "sha256": "cd97504444519d9ff85a77b7501e35432132bf877991139d6d98a4582b90e860"
+    },
+    {
+      "id": "phase28-holdout-031",
+      "file": "emails/phase28-holdout-031.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_known_alias",
+        "holdout_variant_6",
+        "attachment"
+      ],
+      "thread_group": "holdout-thread-07",
+      "expected": {
+        "supplier_name": "Kestrel Process Controls",
+        "supplier_method": "KNOWN_ALIAS",
+        "rfq_number": "RFQ-1203",
+        "quote_number": "HX-7430",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "IT-905",
+        "quantity": "320",
+        "unit_price": "104.50",
+        "currency": "USD",
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "b3e99eaf1a864224dabca906ec807dee9ae3594ea783ed5040e1d7621f9a0c77"
+    },
+    {
+      "id": "phase28-holdout-032",
+      "file": "emails/phase28-holdout-032.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_normalized_name",
+        "holdout_variant_7",
+        "attachment",
+        "conflict"
+      ],
+      "thread_group": "holdout-thread-07",
+      "expected": {
+        "supplier_name": "Blue Mesa Components",
+        "supplier_method": "NORMALIZED_NAME",
+        "rfq_number": "RFQ-1204",
+        "quote_number": "HX-7431",
+        "email_type": "QUOTE_REVISION",
+        "quote_expected": true,
+        "sku": "KP-825",
+        "quantity": "2400",
+        "unit_price": "2.875",
+        "currency": "USD",
+        "conflict": true,
+        "prompt_injection_price": null
+      },
+      "sha256": "0d85ed0939b648893d39a096d4d0900252ac410d97a63d842dc11fc62112a43d"
+    },
+    {
+      "id": "phase28-holdout-033",
+      "file": "emails/phase28-holdout-033.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_new_unverified_created",
+        "holdout_variant_0"
+      ],
+      "thread_group": "holdout-thread-08",
+      "expected": {
+        "supplier_name": "Sonoran Drive Systems 32 Inc",
+        "supplier_method": "NEW_UNVERIFIED_CREATED",
+        "rfq_number": "RFQ-1201",
+        "quote_number": "HX-7432",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "KP-710",
+        "quantity": "750",
+        "unit_price": "18.375",
+        "currency": "USD",
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "27f80374392f04431542e40b357e2398ef2c431c550c60ec3d7025603bc7b30c"
+    },
+    {
+      "id": "phase28-holdout-034",
+      "file": "emails/phase28-holdout-034.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_sender_not_supplier",
+        "holdout_variant_1"
+      ],
+      "thread_group": "holdout-thread-08",
+      "expected": {
+        "supplier_name": "Apex Industrial Manufacturing",
+        "supplier_method": "SENDER_NOT_SUPPLIER",
+        "rfq_number": "RFQ-1202",
+        "quote_number": "HX-7433",
+        "email_type": "NEGOTIATION",
+        "quote_expected": false,
+        "sku": null,
+        "quantity": null,
+        "unit_price": null,
+        "currency": null,
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "3fe6d6338e05455cac4d90694e1742c552256924ac6385623e9b02799f1bbd28"
+    },
+    {
+      "id": "phase28-holdout-035",
+      "file": "emails/phase28-holdout-035.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "html_table",
+        "supplier_new_unverified_created",
+        "holdout_variant_2"
+      ],
+      "thread_group": "holdout-thread-08",
+      "expected": {
+        "supplier_name": "Desert Peak Automation 34 LLC",
+        "supplier_method": "NEW_UNVERIFIED_CREATED",
+        "rfq_number": "RFQ-1203",
+        "quote_number": "HX-7434",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "IT-905",
+        "quantity": "320",
+        "unit_price": "104.50",
+        "currency": "USD",
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "e260bdf0837b822638c8877177ccc07e8c78bb460bfebe130fac0f68be3944a5"
+    },
+    {
+      "id": "phase28-holdout-036",
+      "file": "emails/phase28-holdout-036.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_exact_contact_email",
+        "holdout_variant_3",
+        "attachment"
+      ],
+      "thread_group": "holdout-thread-08",
+      "expected": {
+        "supplier_name": "Ironwood Technical Supply",
+        "supplier_method": "EXACT_CONTACT_EMAIL",
+        "rfq_number": "RFQ-1204",
+        "quote_number": "HX-7435",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "KP-825",
+        "quantity": "2400",
+        "unit_price": "2.875",
+        "currency": "USD",
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "26eb1a0728f0b63282f1ef194a21be66928ba392b412321589d51ba07693b0b2"
+    },
+    {
+      "id": "phase28-holdout-037",
+      "file": "emails/phase28-holdout-037.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_exact_verified_domain",
+        "holdout_variant_4",
+        "attachment"
+      ],
+      "thread_group": "holdout-thread-09",
+      "expected": {
+        "supplier_name": "Kestrel Process Controls",
+        "supplier_method": "EXACT_VERIFIED_DOMAIN",
+        "rfq_number": "RFQ-1201",
+        "quote_number": "HX-7436",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "KP-710",
+        "quantity": "750",
+        "unit_price": "18.375",
+        "currency": "USD",
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "5342fd4eb0ac8230603c3b44274457d6f4df8769b4aa832c823c22d10f9fbb76"
+    },
+    {
+      "id": "phase28-holdout-038",
+      "file": "emails/phase28-holdout-038.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_known_alias",
+        "holdout_variant_5",
+        "attachment"
+      ],
+      "thread_group": "holdout-thread-09",
+      "expected": {
+        "supplier_name": "Blue Mesa Components",
+        "supplier_method": "KNOWN_ALIAS",
+        "rfq_number": "RFQ-1202",
+        "quote_number": "HX-7437",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "BM-440",
+        "quantity": "1800",
+        "unit_price": "7.92",
+        "currency": "USD",
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "5e8525adb9ea6ab1df1c8656b9e3287aad44131f926eed38dfa4942800c03855"
+    },
+    {
+      "id": "phase28-holdout-039",
+      "file": "emails/phase28-holdout-039.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_normalized_name",
+        "holdout_variant_6",
+        "attachment"
+      ],
+      "thread_group": "holdout-thread-09",
+      "expected": {
+        "supplier_name": "Ironwood Technical Supply",
+        "supplier_method": "NORMALIZED_NAME",
+        "rfq_number": "RFQ-1203",
+        "quote_number": "HX-7438",
+        "email_type": "QUOTE",
+        "quote_expected": true,
+        "sku": "IT-905",
+        "quantity": "320",
+        "unit_price": "104.50",
+        "currency": "USD",
+        "conflict": false,
+        "prompt_injection_price": null
+      },
+      "sha256": "39b55c61e8ad0fa4add4120a8a040ea491ab6445d40e56109dcff5cb81a1fe84"
+    },
+    {
+      "id": "phase28-holdout-040",
+      "file": "emails/phase28-holdout-040.eml",
+      "tags": [
+        "unseen_supplier",
+        "unseen_signature",
+        "plain_text",
+        "supplier_new_unverified_created",
+        "holdout_variant_7",
+        "attachment",
+        "conflict"
+      ],
+      "thread_group": "holdout-thread-09",
+      "expected": {
+        "supplier_name": "Sonoran Drive Systems 39 Inc",
+        "supplier_method": "NEW_UNVERIFIED_CREATED",
+        "rfq_number": "RFQ-1204",
+        "quote_number": "HX-7439",
+        "email_type": "QUOTE_REVISION",
+        "quote_expected": true,
+        "sku": "KP-825",
+        "quantity": "2400",
+        "unit_price": "2.875",
+        "currency": "USD",
+        "conflict": true,
+        "prompt_injection_price": null
+      },
+      "sha256": "cc5806c6c5697d4b01eb21200d58202b66709e32076ee8caf5af7e039c7cae1b"
+    }
+  ]
+}

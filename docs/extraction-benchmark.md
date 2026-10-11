@@ -1,8 +1,35 @@
 # Phase 2 extraction benchmark
 
-The historical Phase 2 runs below are retained unchanged. [Phase 2.5 reliability results](phase2.5-reliability.md) record the prior evidence gate. [Phase 2.6 results](phase2.6-pilot-exit.md) add structured row/cell candidates and an independent holdout. [Phase 2.7 results](phase2.7-document-generalization.md) add a canonical document boundary, isolated Docling and PaddleOCR structure benchmarks, a 144-document development confirmation, and a new sealed 50-document holdout. The current pipeline is `quote-v4` / `local-2.7.0`; its holdout result is **not ready for a buyer pilot**.
+The historical Phase 2 runs below are retained unchanged. [Phase 2.5 reliability results](phase2.5-reliability.md) record the prior evidence gate. [Phase 2.6 results](phase2.6-pilot-exit.md) add structured row/cell candidates and an independent holdout. [Phase 2.7 results](phase2.7-document-generalization.md) add a canonical document boundary, isolated Docling and PaddleOCR structure benchmarks, a 144-document development confirmation, and a new sealed 50-document holdout. [Phase 2.8 results](phase2.8-email-intake.md) add the separate `email-intake-2.8.0` / `local-email-2.8.0` email boundary, a 100-case development corpus, and a sealed 40-case final email holdout. The document pipeline remains `quote-v4` / `local-2.7.0`; neither the document nor email holdout supports pilot readiness.
 
 Phase 2.7 kept the current production routes after candidate evaluation. On the fixed parser subset, current structure recovered 84.615% of expected lines and associated 79.487%; Docling recovered and associated 0% on eight PDFs. PP-StructureV3 achieved 100% on one image but took 107.641 seconds, did not improve final extraction, and reached the 10 GiB batch ceiling. The final 144-document development result stayed at 99.588% critical accuracy and 99.658% line association. The sealed holdout reached 49.600% and 49.000%, with 0 unsupported accepted critical values, 100% evidence match, and 0 critical escapes. Use the Phase 2.7 report for per-format, resource, license, and interruption details.
+
+## Phase 2.8 email benchmark
+
+The email development corpus contains 100 cases across plain text, HTML tables, digital PDF/XLSX/CSV/TXT attachments, conflicts, revisions, negotiation, quoted history, buyer messages, safe new suppliers, possible duplicates, and prompt-injection text. All development metrics reached 100%, with zero unsafe counts. Those figures are development evidence and were not used as the readiness decision.
+
+An initial 40-case holdout exposed seven wrong supplier links and two accepted prompt-injection manipulations. That complete result is retained in `benchmark-data/results/phase28-email-holdout`. Safety repair then tightened untrusted-line filtering, disabled Qwen for detected injection, required digit-bearing quote identifiers, and improved signature identity. A separately generated final 40-case holdout was hashed, run once, committed, and never used for tuning.
+
+| Final email holdout metric | Result |
+|---|---:|
+| Supplier overall | 95.000% |
+| Exact email / verified domain | 100.000% / 100.000% |
+| Alias / normalized name | 80.000% / 100.000% |
+| New supplier / possible duplicate | 100.000% / 80.000% |
+| RFQ / quote number | 100.000% / 100.000% |
+| SKU / quantity / unit price | 90.000% / 90.000% / 82.500% |
+| Currency / MOQ / lead time | 100.000% / 90.000% / 100.000% |
+| Payment / shipping / tax | 100.000% / 100.000% / 100.000% |
+| Critical extraction | 86.842% |
+| Complete attachment-case reconciliation | 78.947% (15/19) |
+| Conflict / thread / revision | 100.000% / 100.000% / 100.000% |
+| Buyer/supplier separation | 100.000% |
+| Accepted evidence match | 95.739% |
+| Processing success | 100.000% |
+| Email-only / attachment median | 0.0069 s / 0.0127 s |
+| P95 latency | 0.0163 s |
+
+The final safety counts are zero wrong automatic supplier links, zero unsupported accepted critical values, zero critical-error escapes, zero missing-field hallucinations, and zero accepted prompt-injection manipulations. Ten new suppliers were created as `NEW_UNVERIFIED`. The misses are four PDF commercial-row selection failures, three negotiation-price phrase omissions, one alias false negative, one duplicate-risk false negative, and nonliteral evidence for some normalized supplier identities. These results make email intake **NOT READY for limited supervised use** even though its safety gates passed. Do not rerun or tune against this final holdout.
 
 This is a development benchmark using actual local Qwen inference. It is not a blinded evaluation or a claim of production accuracy.
 

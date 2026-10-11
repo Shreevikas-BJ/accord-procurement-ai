@@ -1,0 +1,30 @@
+From: Sales Team <sales@meridiancomponents.com>
+To: buyer@apex.example
+Date: Tue, 04 Aug 2026 05:00:00 +0000
+Subject: RFQ-1005 Quote #Q28-078
+Message-ID: <phase28-dev-078@example.local>
+In-Reply-To: <phase28-dev-077@example.local>
+References: <phase28-dev-077@example.local>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============1361417783083567588=="
+
+--===============1361417783083567588==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+CX-300 Qty: 2500 Unit Price: 4.60
+Currency: USD
+
+Regards,
+Jamie Lee
+Meridian Components
+
+--===============1361417783083567588==
+Content-Type: text/csv
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="quote.csv"
+MIME-Version: 1.0
+
+U0tVLFF0eSxVbml0IFByaWNlLE1PUQpDWC0zMDAsMjUwMCwxOS44MCw1MDAK
+
+--===============1361417783083567588==--

@@ -4,7 +4,7 @@
 
 Accord is a local B2B procurement application for comparing supplier quotations, finding price and delivery risks, reviewing source evidence, and recording a human decision. It includes a real Next.js frontend, FastAPI backend, relational database, document pipeline, and deterministic procurement engine.
 
-**Verification status:** the Docker stack and actual local `qwen2.5vl:7b` inference are verified on Windows with Linux containers. Current Phase 2.7 checks include 149 fast backend tests, 15 live Docker integration tests, nine opt-in real-model checks, all four Playwright workflows, and a direct visual/console browser check. See [Phase 2.7 document-generalization evidence](docs/phase2.7-document-generalization.md), [the benchmark history](docs/extraction-benchmark.md), and [original Docker evidence](docs/verification.md). No hosted service was exercised with supplier data.
+**Verification status:** Phase 2.8 adds local pasted-email and `.eml` intake, supplier/RFQ matching, attachment reconciliation, threads, quote revisions, conflicts, and email evidence. The Docker stack, migration, persistence, and actual local `qwen2.5vl:7b` inference are verified on Windows with Linux containers. Current checks include 165 fast backend tests, 15 live Docker integration tests, five passing and two expected-failure real-model email checks, and passing email plus core buyer Playwright workflows. The untouched email holdout kept every safety count at zero but reached only 86.842% critical extraction and 95.739% accepted evidence match, so email intake is **NOT READY for limited supervised use**. See [Phase 2.8 email-intake evidence](docs/phase2.8-email-intake.md), [Phase 2.7 document evidence](docs/phase2.7-document-generalization.md), and [benchmark history](docs/extraction-benchmark.md). No hosted service was exercised with supplier data.
 
 **Phase 2.5:** field-specific evidence acceptance, safe nulls, bounded repair, selective verification and 44 new adversarial/reliability documents are added. The verification suite now has 125 fast backend tests, 15 live integration tests and nine opt-in real-model tests. The unchanged 100-document comparison exposes an accuracy regression: critical fields 96.075% → 88.908%, unit price 95.473% → 83.951%. **Not ready for a 3–5 buyer pilot.** Read [the complete reliability findings, safety metrics and limitations](docs/phase2.5-reliability.md) before interpreting review flags or source support as correctness.
 
@@ -53,6 +53,7 @@ These are intentionally public development credentials. The stack binds publishe
 4. Open Meridian’s quote. Inspect a field’s source evidence, correct a price, and save. Comparison totals and ranking recalculate.
 5. Confirm review, generate a recommendation, create/edit a negotiation draft, and approve the recommendation.
 6. Open **Audit Log** and inspect the approval and field changes.
+7. Open **Inbox → Procurement emails** and import `demo-data/emails/Atlas_RFQ1003_Revised.eml` to inspect its thread, attachment, linked quote, and email evidence.
 
 Seeded RFQ-1003 totals before corrections:
 
@@ -70,7 +71,7 @@ The story is anchored to quotations dated September 9, 2026 and requested delive
 ## Product screens
 
 - Dashboard: sourcing counts, review workload, savings, alerts, and recent activity.
-- Inbox: multiple file upload, drag/drop, pasted supplier emails, visible processing stages, errors and retry, saved email drafts.
+- Inbox: quote-document upload plus a separate procurement-email tab for pasted mail and `.eml` import, processing states, threads, attachments, conflicts, evidence, and saved email drafts.
 - RFQs: search, filters, sorting, pagination, and the supplier comparison workspace.
 - Quote review: original document/text, editable metadata and lines, source snippets, confidence, item mapping, and recalculation.
 - Suppliers and Items: searchable masters, detail pages, purchasing history, contacts and aliases.
@@ -90,6 +91,7 @@ flowchart LR
     API --> Files[Private local uploads]
     API --> Redis[(Redis / RQ)]
     Redis --> Worker[Python worker]
+    Worker --> Email[EML / pasted email / HTML tables / threads]
     Worker --> Parsers[PDF / XLSX / CSV / Text / Tesseract]
     Parsers --> Structure[Canonical pages / tables / rows / cells]
     Structure --> Provider[Demo / native Ollama / hosted API extraction]
@@ -122,6 +124,7 @@ apps/
     e2e/                  Playwright decision and upload workflows
     Dockerfile
 demo-data/
+  emails/                 local .eml import samples
   quotes/                 PDF, XLSX, CSV, PNG and scanned PDF samples
   ground-truth/           validated extraction fixtures
   imports/                sample purchasing-history CSV
@@ -313,6 +316,19 @@ npm.cmd run test:e2e
 
 Or on Linux/macOS: `E2E_UPLOADS=true npm run test:e2e`.
 
+The Phase 2.8 email workflow is also opt-in because it imports a persistent local email and records confirmation/audit events:
+
+```powershell
+$env:E2E_EMAIL='true'
+npx.cmd playwright test e2e/email-intake.spec.ts
+```
+
+Representative real-Qwen email checks cover email-only prose, PDF and XLSX attachments, a revised thread, and a negotiation reply. Two currently document strict expected model gaps:
+
+```powershell
+docker compose exec -T -e RUN_LOCAL_AI_TESTS=true api pytest integration/test_local_ai.py integration/test_email_local_ai.py -q
+```
+
 On a freshly seeded database, the upload test verifies three newly enqueued jobs. On subsequent runs it asserts HTTP 409 duplicate rejection and verifies the existing persisted results. The comparison test accommodates revised quotes from those uploads. Fast backend tests use isolated temporary SQLite databases and uploads; the opt-in Docker integration suite intentionally uses the live demo stack.
 
 Extraction evaluation from `apps/api`:
@@ -338,8 +354,8 @@ This is a local MVP, not a production security certification. Before external de
 
 ## Known limitations and next milestone
 
-The Docker/PostgreSQL/Redis/OCR stack and actual local Qwen extraction are implemented. See [local AI setup and failure handling](docs/local-ai.md) and the [100-document extraction benchmark](docs/extraction-benchmark.md) for measured results, review safeguards and remaining limitations. Fuzzy item matches remain suggestions; semantic matching is a future extension. Manual entry uses a structured JSON form. Email drafts are templates. No exchange rates, UOM conversions, split awards, real email sending, purchase orders, ERP integrations, or payments are implemented.
+The Docker/PostgreSQL/Redis/OCR stack and actual local Qwen extraction are implemented. Local email intake deliberately excludes mailbox connections and outbound delivery. Digital PDF, XLSX, CSV, and TXT email attachments are supported; scanned/image-only PDF, JPG, and PNG email attachments remain stored but deferred. See [the Phase 2.8 readiness report](docs/phase2.8-email-intake.md), [local AI setup and failure handling](docs/local-ai.md), and [benchmark history](docs/extraction-benchmark.md). Fuzzy supplier and item matches remain review suggestions. Manual quote entry uses structured JSON. Email drafts are templates. No exchange rates, UOM conversions, split awards, real email sending, purchase orders, ERP integrations, or payments are implemented.
 
 The installed local model is `qwen2.5vl:7b` on Ollama 0.30.11. Inspect `ollama list` before configuring another machine, and use `ollama ps` / `nvidia-smi` to observe acceleration. For Docker set `AI_MODE=local`, `AI_MODEL=qwen2.5vl:7b`, `AI_BASE_URL=http://host.docker.internal:11434` and `AI_TIMEOUT=120` in `.env`, then recreate API and worker. If the CLI is not on PATH on Windows, use `& "$env:LOCALAPPDATA\Programs\Ollama\ollama.exe" list`. A stopped/missing model produces Needs Review with the source preserved; production local mode does not fall back to fixtures. `AI_MODE=demo` and the optional `AI_MODE=api` remain available.
 
-The next evaluation uses independent anonymized quotations and measured buyer correction effort before deciding whether to start a 3–5 buyer pilot. This phase does not launch a pilot. See [roadmap and user-validation questions](docs/roadmap.md).
+The next phase should generalize PDF row selection, negotiation-price language, generic-domain signature identity, and literal evidence for supplier identity on a new development set, followed by another untouched holdout. Do not tune against or rerun the Phase 2.8 final holdout. This phase does not launch a pilot. See [roadmap and user-validation questions](docs/roadmap.md).

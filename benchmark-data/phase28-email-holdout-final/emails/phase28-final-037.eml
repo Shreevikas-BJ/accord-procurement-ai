@@ -1,0 +1,34 @@
+From: Sam Torres <sam36@saguaroinstrumentation.invalid>
+To: sourcing@apex.example
+Cc: buyer@apex.example
+Date: Wed, 16 Sep 2026 00:00:00 +0000
+Subject: Response RFQ-1302 =?utf-8?b?4oCU?= Quote No. ZR-8836
+Message-ID: <phase28-final-037@final.local>
+In-Reply-To: <phase28-final-036@final.local>
+References: <phase28-final-036@final.local>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============0245769050740446784=="
+
+--===============0245769050740446784==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+The commercial schedule is attached.
+Currency: USD
+Lead time: 14 days
+Payment terms: Net 60
+
+Best regards,
+Sam Torres
+Saguaro Instrumentation
+
+--===============0245769050740446784==
+Content-Type: text/plain
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="pricing-schedule.txt"
+MIME-Version: 1.0
+
+U0tVOiBDUy0yMDggfCBRdWFudGl0eTogMTQwMCB8IFVuaXQgY29zdDogOC40NCB8IE1PUTogMzAw
+CkN1cnJlbmN5OiBVU0Q=
+
+--===============0245769050740446784==--

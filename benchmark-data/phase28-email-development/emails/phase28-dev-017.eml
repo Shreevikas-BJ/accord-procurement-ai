@@ -1,0 +1,32 @@
+From: Quotes <supplier16@gmail.com>
+To: buyer@apex.example
+Date: Sat, 01 Aug 2026 16:00:00 +0000
+Subject: RFQ-1004 Quote #Q28-017
+Message-ID: <phase28-dev-017@example.local>
+In-Reply-To: <phase28-dev-016@example.local>
+References: <phase28-dev-016@example.local>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============3144737492027195436=="
+
+--===============3144737492027195436==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Attached is our quotation. Currency: USD
+Lead time: 21 days
+Payment terms: Net 30
+
+Regards,
+Jamie Lee
+Atlas Industrial
+
+--===============3144737492027195436==
+Content-Type: text/plain
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="quote.txt"
+MIME-Version: 1.0
+
+Q3VycmVuY3k6IFVTRApCWC0yMjAgUXR5OiAxMDAwIFVuaXQgUHJpY2U6IDQ2LjU4IE1PUTogNTAw
+Cg==
+
+--===============3144737492027195436==--

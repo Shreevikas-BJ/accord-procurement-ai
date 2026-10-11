@@ -34,6 +34,7 @@ import { api, useResource, dateLabel } from "@/lib/api";
 import type { ListData, Draft } from "@/lib/types";
 import { PageHeader, Status, ErrorState, Loading, Empty } from "./shared";
 import { useUser } from "./shell";
+import { EmailIntakePanel, EmlUploadButton } from "./email-intake";
 export function Inbox() {
   const [search, setSearch] = useState(""),
     [page, setPage] = useState(1),
@@ -42,6 +43,7 @@ export function Inbox() {
     [busy, setBusy] = useState(false),
     [message, setMessage] = useState(""),
     [paste, setPaste] = useState(false),
+    [sender, setSender] = useState(""),
     [subject, setSubject] = useState(""),
     [text, setText] = useState("");
   const docs = useResource<ListData>(
@@ -86,6 +88,7 @@ export function Inbox() {
           <Mail size={16} />
           Paste supplier email
         </Button>
+        <EmlUploadButton />
       </PageHeader>
       <Card
         className={`dropzone ${drag ? "dragging" : ""}`}
@@ -160,6 +163,7 @@ export function Inbox() {
       <Tabs defaultValue="documents">
         <TabsList>
           <TabsTrigger value="documents">Documents</TabsTrigger>
+          <TabsTrigger value="emails">Procurement emails</TabsTrigger>
           <TabsTrigger value="drafts">
             Email drafts{" "}
             <span className="tab-count">{drafts.data?.length || 0}</span>
@@ -278,6 +282,9 @@ export function Inbox() {
             </div>
           </Card>
         </TabsContent>
+        <TabsContent value="emails">
+          <EmailIntakePanel />
+        </TabsContent>
         <TabsContent value="drafts">
           <Card className="section-card">
             <div className="section-heading">
@@ -300,10 +307,19 @@ export function Inbox() {
           <DialogHeader>
             <DialogTitle>Paste supplier email</DialogTitle>
             <DialogDescription>
-              The message is saved as a source document and queued for
-              extraction. You can attach its quotation using the same RFQ above.
+              Headers, thread context, supplier identity, and quote evidence stay
+              local and are queued for processing.
             </DialogDescription>
           </DialogHeader>
+          <label>
+            From
+            <Input
+              aria-label="Supplier email sender"
+              placeholder="Atlas Quotes <quotes@atlasindustrial.com>"
+              value={sender}
+              onChange={(e) => setSender(e.target.value)}
+            />
+          </label>
           <label>
             Subject
             <Input
@@ -325,16 +341,17 @@ export function Inbox() {
               onClick={async () => {
                 setBusy(true);
                 try {
-                  await api("/quotes/paste", {
+                  await api<{ id: string }>("/emails/paste", {
                     method: "POST",
                     body: JSON.stringify({
+                      sender,
                       subject,
-                      text,
+                      body_text: text,
                       rfq_id: rfq === "auto" ? null : rfq,
                     }),
                   });
                   setPaste(false);
-                  setMessage("Supplier email saved and queued.");
+                  setMessage("Supplier email saved to Procurement Inbox and queued.");
                   docs.reload();
                 } catch (e) {
                   setMessage((e as Error).message);
