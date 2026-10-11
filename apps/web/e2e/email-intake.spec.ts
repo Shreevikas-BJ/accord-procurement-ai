@@ -4,12 +4,21 @@ import path from "node:path";
 test("supplier email becomes an evidence-backed RFQ quote", async ({
   page,
 }) => {
+  const errors: string[] = [];
+  page.on("pageerror", (error) => errors.push(error.message));
   test.skip(
     process.env.E2E_EMAIL !== "true",
     "Enable when the API, Redis, and RQ worker are running.",
   );
   await page.goto("/login");
+  await page.waitForLoadState("networkidle");
+  const loginResponsePromise = page.waitForResponse(
+    (response) =>
+      response.url().endsWith("/api/auth/login") &&
+      response.request().method() === "POST",
+  );
   await page.getByRole("button", { name: "Sign in", exact: true }).click();
+  expect((await loginResponsePromise).status()).toBe(200);
   await page.goto("/inbox");
   const responsePromise = page.waitForResponse(
     (response) =>
@@ -30,9 +39,10 @@ test("supplier email becomes an evidence-backed RFQ quote", async ({
       name: "RE: RFQ-1003 Revised Quote #ATL-EMAIL-28",
     }),
   ).toBeVisible();
-  await expect(page.getByText("Atlas Industrial Supply", { exact: true })).toBeVisible({
-    timeout: 60000,
-  });
+  await expect(page.locator(".identity-card dd").first()).toHaveText(
+    "Atlas Industrial Supply",
+    { timeout: 60000 },
+  );
   await expect(page.getByText(/RFQ-1003 · Industrial Electrical/)).toBeVisible();
   await expect(page.getByText("Atlas_RFQ1003_Revised.csv")).toBeVisible();
   const quoteLink = page.getByRole("link", { name: "Review structured quote" });
@@ -54,4 +64,6 @@ test("supplier email becomes an evidence-backed RFQ quote", async ({
   expect(payload.quotes.some((quote: { id: string }) => quote.id === email.quote_id)).toBe(true);
   const audit = await page.request.get("/api/audit-events?search=EMAIL_FIELD_CONFIRMED");
   expect((await audit.json()).total).toBeGreaterThan(0);
+  await page.screenshot({ path: "test-results/email-intake.png", fullPage: true });
+  expect(errors).toEqual([]);
 });

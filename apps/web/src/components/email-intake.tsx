@@ -217,13 +217,25 @@ export function EmailDetailPage({ id }: { id: string }) {
       <div className="email-detail-grid">
         <Card className="section-card email-message-card">
           <div className="email-header-grid">
-            <span>FROM</span>
-            <strong>{data.sender_name || "Unknown sender"}</strong>
-            <small>{data.sender_email || "Missing From header"}</small>
-            <span>TO</span>
-            <p>{data.recipient_emails.join(", ") || "Not provided"}</p>
-            <span>MESSAGE ID</span>
-            <code>{data.message_id || "Generated from content hash"}</code>
+            <div className="email-header-field">
+              <span>FROM</span>
+              <div>
+                <strong>{data.sender_name || "Unknown sender"}</strong>
+                <small>{data.sender_email || "Missing From header"}</small>
+              </div>
+            </div>
+            <div className="email-header-field">
+              <span>TO</span>
+              <div>
+                <p>{data.recipient_emails.join(", ") || "Not provided"}</p>
+              </div>
+            </div>
+            <div className="email-header-field">
+              <span>MESSAGE ID</span>
+              <div>
+                <code>{data.message_id || "Generated from content hash"}</code>
+              </div>
+            </div>
           </div>
           <div className="clean-email-body">
             <h2>Current message</h2>
