@@ -1,6 +1,6 @@
 # Local quotation extraction
 
-Accord uses the existing local Ollama installation through its native `/api/chat` endpoint. The verified model on this laptop is **`qwen2.5vl:7b`**, Ollama **0.30.11**, with an NVIDIA RTX 5060 Laptop GPU. No additional model or fine-tuning is required. Phase 2.7 keeps current parsers as defaults after isolated Docling and PaddleOCR benchmarks. See [the Phase 2.7 report](phase2.7-document-generalization.md) and [benchmark history](extraction-benchmark.md) for measured accuracy and limitations.
+Accord uses the existing local Ollama installation through its native `/api/chat` endpoint. The verified model on this laptop is **`qwen2.5vl:7b`**, Ollama **0.30.11**, with an NVIDIA RTX 5060 Laptop GPU. No additional model or fine-tuning is required. Phase 2.7 keeps current document parsers as defaults. Phase 2.8 adds a deterministic-first email pipeline and calls Qwen only when a supported email body or attachment does not already contain a usable quote. See [the Phase 2.8 email report](phase2.8-email-intake.md), [the Phase 2.7 document report](phase2.7-document-generalization.md), and [benchmark history](extraction-benchmark.md).
 
 ## Configuration
 
@@ -42,6 +42,8 @@ Changing `.env` requires recreating API and worker: `docker compose up -d --forc
 - Text: pass bounded plain text directly. The text budget is 18,000 characters; oversized selected evidence fails with a clear review error rather than silently dropping text.
 
 Every parser crosses the same `CanonicalDocument` boundary: pages, blocks, tables, rows, cells, raw and normalized values, semantic headers, source references, parser name/version, and `STRONG_STRUCTURE`, `WEAK_STRUCTURE`, or `NO_STRUCTURE` assessment. Optional parser exceptions and weak output fall back to the existing local route. Tool-specific objects never enter procurement logic.
+
+Email crosses a separate context-preserving boundary before supported attachments enter `CanonicalDocument`. The email parser retains sender/recipient identity, RFC message references, normalized current body, quoted history, signature, HTML tables, attachment hashes, and thread/revision intent. `local-email-2.8.0` performs deterministic field extraction first. `email-intake-2.8.0` is the email prompt/version boundary; optional Qwen output can fill only missing candidates and still passes the existing evidence validation. A detected prompt-injection phrase disables the email Qwen call entirely. Scanned/image-only PDF, JPG, and PNG email attachments are deferred in Phase 2.8 even though the standalone document workflow supports OCR.
 
 `quote-v4` isolates supplier content in a JSON envelope marked `UNTRUSTED_DOCUMENT_DATA` and supplies compact row/cell candidates. The system instruction requests procurement facts, explicit nulls and separate quantity/MOQ and unit/extended prices. The model receives no actions, retrieval, database access or purchasing tools. JSON mode plus Pydantic validation is used because this installed Ollama/llama.cpp build rejected the full Decimal-heavy JSON-schema grammar. The evidence acceptance pipeline is `local-2.7.0`; its field-specific source checks are the acceptance boundary. Prompt compliance alone is insufficient. See [Phase 2.7 results and limitations](phase2.7-document-generalization.md).
 
@@ -93,6 +95,7 @@ After switching the running services to local mode:
 
 ```powershell
 docker compose exec -T -e RUN_LOCAL_AI_TESTS=true api pytest integration/test_local_ai.py -q
+docker compose exec -T -e RUN_LOCAL_AI_TESTS=true api pytest integration/test_email_local_ai.py -q
 docker compose cp benchmark-data api:/app/benchmark-data
 docker compose exec -T api python -m tools.seed_evaluation_lab
 cd apps/web
@@ -101,5 +104,7 @@ npx.cmd playwright test e2e/local-ai.spec.ts
 ```
 
 The opt-in browser test uploads five unknown synthetic documents in the separate Accord Evaluation Lab tenant, checks actual local-model provenance, opens source evidence, corrects a price, verifies recalculation and restores the original price. Its revised XLSX is in `benchmark-data/ui-documents`; it preserves the commercial cells of the original corpus file and permits a fresh extraction after the evidence fix. The test does not upload the benchmark corpus into Apex or create evaluation price history. Run `docker compose exec -T api python -m tools.verify_local_workflow` for read-only persistence/provenance checks. See [actual workflow results](phase2-verification.md) and the benchmark report.
+
+The Phase 2.8 real-model suite adds five representative email inputs. PDF, XLSX, and revised-message cases pass. Two strict expected failures record current `qwen2.5vl:7b` omissions: an alphanumeric RFQ ID in email-only prose and the SKU in a negotiation sentence. These are readiness evidence, not fixture fallbacks. The production email path remains deterministic-first, source-gated, and reviewable when the model omits a field.
 
 For the separate seven-case reliability workflow, seed `python -m tools.seed_reliability_lab`, run `integration/test_local_reliability.py` with `RUN_LOCAL_AI_TESTS=true`, and run `e2e/local-reliability.spec.ts` with `E2E_LOCAL_RELIABILITY=true`. The lab login is `buyer@reliability.example` / `Demo2026!accord` (fictional local development credentials). The browser test covers missing quantity and an injected instruction in addition to five formats, and exercises immutable evidence during price correction. `python -m tools.verify_reliability_workflow` checks persisted source hashes and original AI provenance without mutating records.
